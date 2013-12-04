@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+/********************************************************************************* SYSTEM.BASE/SCSS **/
+
+* {
+	margin: 0; padding: 0;
+
+	box-sizing: border-box;
+	cursor: default;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr,
+acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub,
+sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer,
+header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0; padding: 0;
+
+	border: 0;
+  font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+/** [-] HTML5 DISPLAY RESET FOR CLUNKERS **************************************************************/
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+input:focus { outline: 0; }
+
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: " "; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+a {
+	text-decoration: none;
+	&:visited { text-decoration: none; }
+}
+
+/** [-] CLEARFIX **************************************************************************************/
+
+.cf { zoom: 1; }
+.cf:before, .cf:after { content: " "; display: table; }
+.cf:after { clear: both; }
+
+/** [-] SUPER-BASIC STLYES ****************************************************************************/
+
+em, .em { font-style: italic; }
+strong, .strong { font-weight: 700; }
+
+.left { float: left; }
+.right { float: right; }
+
+/**************************************************************************************** [+] COLORS **/
+
+$black:     rgba(25, 25, 25, 1);    // #191919;
+$gray-i:		rgba(128, 128, 128, 1);	// #808080;
+$gray-ii:		rgba(173, 173, 173, 1);	// #adadad;
+$gray-iii:	rgba(207, 207, 207, 1);	// #cfcfcf;
+$white:     rgba(254, 254, 254, 1); // #fefefe;
+$teal:			rgba(80, 190, 191, 1);	// #50bebf;
+/**/
+$red:				rgba(255, 49, 49, 1);		// #ff3131;
+$orange:		rgba(255, 136, 49, 1);	// #ff8831;
+$yellow:		rgba(255, 222, 0, 1);		// #ffde00;
+$green:			rgba(0, 255, 0, 1);			// #00ff00;
+$blue:			rgba(0, 96, 255, 1);		// #0060ff;
+$purple:		rgba(162, 0, 255, 1);		// #a200ff;
+/**/
+$maroon:    rgba(140, 41, 63, 1);   // #8c293f;
+/**/
+.bg-black			{ background-color: $black; }
+.bg-gray-i		{ background-color: $gray-i; }
+.bg-gray-ii		{ background-color: $gray-ii; }
+.bg-gray-iii	{ background-color: $gray-iii; }
+.bg-white			{ background-color: $white; }
+.bg-teal			{ background-color: $teal; }
+.bg-red				{ background-color: $red; }
+.bg-orange		{ background-color: $orange; }
+.bg-yellow		{ background-color: $yellow; }
+.bg-green			{ background-color: $green; }
+.bg-blue			{ background-color: $blue; }
+.bg-purple		{ background-color: $purple; }
+
+/** [-] NOTE ******************************************************************************************/
+/****** This awesome color palette is called, "November" by ChairmanCao on ColourLovers.com
+        http://colourlovers.com/palette/1463444/November?widths=0
+*******************************************************************************************************/
+
+/*
+$blue:      rgba(39, 45, 77, 1);    // #272d4d;
+$red:       rgba(184, 53, 100, 1);  // #b83564;
+$orange:    rgba(255, 106, 90, 1);  // #ff6a5a;
+$yellow:    rgba(255, 179, 80, 1);  // #ffb350;
+$teal:      rgba(131, 184, 170, 1); // #83b8aa;
+*/
+
+/** [-] NOTE ******************************************************************************************/
+/****** This awesome color palette is called, "glowstick" by Rawrcakez on ColourLovers.com
+        http://www.colourlovers.com/palette/885591/glowstick
+*******************************************************************************************************/
+
+/*
+$red-00:    rgba(250, 107, 100, 1); // #fa6b64;
+$orange-00: rgba(250, 175, 100, 1); // #faaf64;
+$yellow-00: rgba(250, 230, 100, 1); // #fae664;
+$green-00:  rgba(177, 250, 100, 1); // #b1fa64;
+$blue-00:   rgba(100, 250, 187, 1); // #64fabb;
+$purple-00: rgba(206, 100, 250, 1); // #ce64fa;
+*/

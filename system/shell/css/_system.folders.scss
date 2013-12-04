@@ -1,0 +1,90 @@
+
+/****************************************************************************** SYSTEM.FOLDERS/SCSS **/
+
+/* #folder-ii { display: none; } */
+
+.desktop-icon {
+	img {
+		/* box-shadow: 0 8px 8px -8px $white; */
+	}
+}
+
+.folder, .window {
+	/* padding: 1rem; */
+
+	.sp-viewport {
+		width: 550px; /* 550px */ height: 250px; /* 250px */
+		/* overflow: hidden !important; */
+	}
+
+	.sp-scrollbar {
+		background-color: #ccc;
+		cursor: pointer;
+		width: 10px;
+
+		.sp-thumb {
+			background-color: #aaa;
+			transition: height 0.2s ease-in-out;
+		}
+	}
+
+	.sp-scrollbar.active .sp-thumb { background-color: #999; }
+
+	li {
+		width: auto; height: auto;
+		margin: 0; padding: 0;
+
+		display: inline-block;
+	}
+
+	.wallpaper-thumbnail {
+		width: 85px; height: 50px; /* 51 */
+
+		border: 1px solid $black;
+		box-shadow: 0 2px 3px -3px $black;
+		margin: 0 16px 2rem 0;
+		/* margin: 0 0 16px 16px; */
+		/* overflow: hidden; */
+		/* width: 150px; height: 95px; */
+
+		img {
+			width: 100%; height: 100%;
+			/* border: 5px solid $white; */
+		}
+
+		/* &:first-child { margin-left: 0; } */
+
+		span {
+			width: 85px; height: auto;
+
+			display: block;
+			font-size: 0.7em;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			text-align: center;
+			white-space: nowrap
+		}
+	}
+}
+
+#folder, #chip-folder, #subchip-folder, #datalib-folder,
+#netnavi-folder, #email-folder, #keyitem-folder,
+#network-folder, #map-folder {
+	max-width: 740px; max-height: 260px !important;
+
+	background-color: #f8f8f8;
+	display: none;
+	height: auto;
+	overflow: auto;
+	/* width: 400px; */
+}
+
+#chip-folder {
+	li {
+		margin: 0 0.5rem 0.5rem 0;
+	}
+}
+
+.viewport { overflow: hidden; }
+
+.ui-state-disabled { opacity: 1; }
