@@ -2,11 +2,9 @@
 /******************************************************************************** SYSTEM.FONTS/SCSS **/
 
 /*
-
 Japanese |
 	font-family: "ＭＳ Ｐゴシック", "MS PGothic", "メイリオ", Meiryo, sans-serif;
 	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-
 */
 
 /************************************************************************************* [+] MONOSPACE **/
@@ -488,7 +486,7 @@ Japanese |
 
 /************************************************************************************ [+] TYPOGRAPHY **/
 
-@mixin sans-serif {
+@mixin sans {
 	font-family: "SourceSansProRegular", "OpenSansRegular", "Open Sans", "open-sans", sans-serif;
 }
 

@@ -3,17 +3,8 @@
 
   <head>
 
-		<!--/ <script>if (window.ytcsi) {window.ytcsi.tick("ce", null, '');}</script> /-->
-
-		<!--/
-		<script>
-			ytimg.preload("http://r2---sn-ab5e6nl7.c.youtube.com/crossdomain.xml");
-			ytimg.preload("http://r2---sn-ab5e6nl7.c.youtube.com/generate_204");
-		</script>
-		/-->
-
     <meta charset="utf-8"/>
-    <title>hikari OS | Welcome to your operating system</title>
+    <title>hikari OS &middot; Welcome to your operating system</title>
 
     <!--/ HELPING TO MAKE THE 'NET A BETTER PLACE TO BE
 
@@ -22,31 +13,15 @@
 
     /-->
 
+		<meta name="author" content="Ideas Never Cease"/>
     <meta name="description" content="The OS of the future."/>
-    <meta name="author" content="Ideas Never Cease"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 		<link rel="stylesheet" href="system/shell/css/style.css"/>
 		<link rel="shortcut icon" href="system/shell/favicon.png"/>
 
-		<!--/ <script src="system/logic/vendor/modernizr-ii.js"></script> /-->
 		<script src="system/logic/jquery-2.0.3.min.js"></script>
-
-		<script src="system/logic/cors.js"></script>
-		<script src="system/logic/offline.min.js"></script>
-		<script src="system/logic/bg-resize.js"></script>
-
-		<script>
-			$(document).ready(function() {
-				$("body").bgResize({
-					img: "system/wallpaper/simple-sky-a.jpg"
-				});
-			});
-		</script>
-
-		<script src="system/logic/inheritance.js"></script>
-		<!--/ <script src="system/logic/draggabilly.pkgd.min.js"></script> /-->
 
 		<script src="system/logic/time/date.format.js"></script>
 		<script src="system/logic/time/alarm-clock.min.js"></script>
@@ -74,6 +49,21 @@
 					}
 				});
 
+			});
+		</script>
+
+		<!--/
+		<script src="system/logic/modernizr.custom.js"></script>
+
+		<script src="system/logic/cors.js"></script>
+		<script src="system/logic/offline.min.js"></script>
+		<script src="system/logic/bg-resize.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				$("body").bgResize({
+					img: "system/wallpaper/simple-sky-a.jpg"
+				});
 			});
 		</script>
 
@@ -169,308 +159,151 @@
 				});
 			});
 		</script>
+		/-->
 
   </head>
 
 	<!--/	LET'S BEGIN /-->
 
-  <body class="cbp-spmenu-push">
+	<body>
 
-		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-			<h5>Access</h5>
-			<a href="#">Chip Folder</a>
-			<a href="#">Subchip Folder</a>
-			<a href="#">Data Library</a>
-			<a href="#">NetNavi</a>
-			<a href="#">Email</a>
-			<a href="#">Key Item</a>
-			<a href="#">Network</a>
-			<a href="#">Map</a>
-			<a href="#">Save</a>
-		</nav>
+		<div id="hikari-container" class="hikari-container">
 
-		<section id="desktop-wrapper">
-			<section id="desktop-content">
+			<nav class="hikari-menu left">
+				<!--/ <h2>Access</h2> /-->
 
-				<!--/
-				<div class="www" style="display:none;">
-					<ul>
-						<li class="wallpaper-thumbnail" id="mint"><img src="system/wallpaper/mint.jpg"/><span>Mint</span></li>
-						<li class="wallpaper-thumbnail" id="mountains"><img src="system/wallpaper/mountains.jpg"/><span>Mountains</span></li>
-						<li class="wallpaper-thumbnail" id="quanta"><img src="system/wallpaper/quanta.jpg"/><span>Quanta</span></li>
-						<li class="wallpaper-thumbnail" id="summer-sky"><img src="system/wallpaper/summer-sky.jpg"/><span>Summer Sky</span></li>
-						<li class="wallpaper-thumbnail" id="tri-k"><img src="system/wallpaper/tri-k.jpg"/><span>Triangulace &#151; K</span></li>
-						<li class="wallpaper-thumbnail" id="singha"><img src="system/wallpaper/singha.jpg"/><span>Singha</span></li>
-						<li class="wallpaper-thumbnail" id="series-1995"><img src="system/wallpaper/series-1995.jpg"/><span>Series 1995</span></li>
-						<li class="wallpaper-thumbnail" id="can-run"><img src="system/wallpaper/can-run.jpg"/><span>Can Run</span></li>
-					</ul>
-				</div>
-				/-->
-
-				<!--/
-				<section id="helper">
-					<ul class="helper-palette">
-						<li class="bg-black"></li>
-						<li class="bg-gray-i"></li>
-						<li class="bg-gray-ii"></li>
-						<li class="bg-gray-iii"></li>
-						<li class="bg-white"></li>
-						<li class="bg-teal"></li>
-					</ul>
-
-					<ul class="helper-palette">
-						<li class="bg-red"></li>
-						<li class="bg-orange"></li>
-						<li class="bg-yellow"></li>
-						<li class="bg-green"></li>
-						<li class="bg-blue"></li>
-						<li class="bg-purple"></li>
-					</ul>
-				</section>
-				/-->
-
-				<!--/	FOLDERS /-->
-
-				<ul id="desktop-icons">
-					<li class="desktop-icon" id="icon-wallpaper">
-						<img src="system/shell/images/folders/folder-desktop-blue.png" alt=""/>
-						<span>Wallpaper</span>
-					</li>
-
-					<!--/
-					<li class="desktop-icon" onclick="openWallpaperFolderII();">
-						<img src="system/shell/images/folders/folder-desktop-gray.png" alt=""/>
-						<span>Wallpaper II</span>
-					</li>
-
-					<li id="icon-calculator" class="desktop-icon">
-						<img src="system/shell/images/folders/f-016.png" alt=""/>
-						<span>Calculator</span>
-					</li>
-
-					<li id="icon-browser" class="desktop-icon">
-						<img src="system/shell/images/folders/f-010.png" alt=""/>
-						<span>Browser</span>
-					</li>
-					/-->
+				<ul>
+					<li><a href="#">Chip Folder</a></li>
+					<li><a href="#">Subchip Folder</a></li>
+					<li><a href="#">Data Library</a></li>
+					<li><a href="#">NetNavi</a></li>
+					<li><a href="#">Email</a></li>
+					<li><a href="#">Key Item</a></li>
+					<li><a href="#">Network</a></li>
+					<li><a href="#">Map</a></li>
+					<li><a href="#">Save</a></li>
 				</ul>
+			</nav>
 
-				<div class="window-wrapper" style="display: none" unselectable="on">
-					<div id="folder-ii" class="folder">
-						<ul>
-							<li class="wallpaper-thumbnail" id="mint"><img src="system/wallpaper/mint.jpg"/><span>Mint</span></li>
-							<li class="wallpaper-thumbnail" id="mountains"><img src="system/wallpaper/mountains.jpg"/><span>Mountains</span></li>
-							<li class="wallpaper-thumbnail" id="quanta"><img src="system/wallpaper/quanta.jpg"/><span>Quanta</span></li>
-							<li class="wallpaper-thumbnail" id="summer-sky"><img src="system/wallpaper/summer-sky.jpg"/><span>Summer Sky</span></li>
-							<li class="wallpaper-thumbnail" id="tri-k"><img src="system/wallpaper/tri-k.jpg"/><span>Triangulace &#151; K</span></li>
-							<li class="wallpaper-thumbnail" id="singha"><img src="system/wallpaper/singha.jpg"/><span>Singha</span></li>
-							<li class="wallpaper-thumbnail" id="series-1995"><img src="system/wallpaper/series-1995.jpg"/><span>Series 1995</span></li>
-							<li class="wallpaper-thumbnail" id="can-run"><img src="system/wallpaper/can-run.jpg"/><span>Can Run</span></li>
+			<nav class="hikari-menu right">
+				<!--/ <h2>Notifications</h2> /-->
 
-							<li class="wallpaper-thumbnail" id="can-run"><img src="system/wallpaper/can-run.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="mint"><img src="system/wallpaper/mint.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="mountains"><img src="system/wallpaper/mountains.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="os-x-lion"><img src="system/wallpaper/os-x-lion.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="quanta"><img src="system/wallpaper/quanta.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="series-1995"><img src="system/wallpaper/series-1995.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="simple-sky-a"><img src="system/wallpaper/simple-sky-a.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="simple-sky-b"><img src="system/wallpaper/simple-sky-b.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="singha"><img src="system/wallpaper/singha.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="snow-borealis-night"><img src="system/wallpaper/snow-borealis-night.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="snow-borealis-toxic"><img src="system/wallpaper/snow-borealis-toxic.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="something-in-sand"><img src="system/wallpaper/something-in-sand.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="summer-sky"><img src="system/wallpaper/summer-sky.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="titanus"><img src="system/wallpaper/titanus.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="tri-k"><img src="system/wallpaper/tri-k.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="under-the-clouds"><img src="system/wallpaper/under-the-clouds.jpg"/></li>
-						</ul>
-					</div>
-				</div>
+				<ul>
+					<li><a href="#">Chip Folder</a></li>
+					<li><a href="#">Subchip Folder</a></li>
+					<li><a href="#">Library</a></li>
+					<li><a href="#">NetNavi</a></li>
+					<li><a href="#">Key Items</a></li>
+				</ul>
+			</nav>
 
-				<!--/
-				<div class="window-wrapper" style="display: none" unselectable="on">
-					<div id="folder">
-						<ul>
-							<li class="wallpaper-thumbnail" id="mint"><img src="system/wallpaper/mint.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="mountains"><img src="system/wallpaper/mountains.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="quanta"><img src="system/wallpaper/quanta.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="summer-sky"><img src="system/wallpaper/summer-sky.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="tri-k"><img src="system/wallpaper/tri-k.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="singha"><img src="system/wallpaper/singha.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="series-1995"><img src="system/wallpaper/series-1995.jpg"/></li>
-							<li class="wallpaper-thumbnail" id="can-run"><img src="system/wallpaper/can-run.jpg"/></li>
-						</ul>
-					</div>
-				</div>
-				/-->
+			<nav class="hikari-menu top">
+				<!--/ <h2>Running Apps</h2> /-->
 
-				<!--/	QUICK-ACCESS TAB /-->
+				<ul>
+					<li><a href="#">Chip Folder</a></li>
+					<li><a href="#">Subchip Folder</a></li>
+					<li><a href="#">Library</a></li>
+					<li><a href="#">NetNavi</a></li>
+					<li><a href="#">Key Items</a></li>
+				</ul>
+			</nav>
 
-				<!--/
-				<aside>
-					<div id="al-toggle" class="grabber"><img src="system/shell/common/grabber.png"/></div>
+			<nav class="hikari-menu bottom">
+				<!--/ <h2>Admin Menu</h2> /-->
 
-					<ul id="app-launcher">
-						<li id="icon-wallpaper-folder" onclick="openWallpaperFolder();">W</li>
-						<li id="icon-chip-folder" onclick="openChipFolder();">I</li>
-						<li id="icon-subchip-folder" onclick="openSubchipFolder();">II</li>
-						<li id="icon-datalib-folder" onclick="openDataLibFolder();">III</li>
-						<li id="icon-netnavi-folder" onclick="openNetNaviFolder();">IV</li>
-						<li id="icon-email-folder" onclick="openEmailFolder();">V</li>
-						<li id="icon-keyitem-folder" onclick="openKeyItemFolder();">VI</li>
-						<li id="icon-network-folder" onclick="openNetworkFolder();">VII</li>
-						<li id="icon-map-folder" onclick="openMapFolder();">VIII</li>
-						<li>IX</li>
-						<li>X</li>
-					</ul>
-				</aside>
-				/-->
+				<ul>
+					<li><a href="#">Chip Folder</a></li>
+					<li><a href="#">Subchip Folder</a></li>
+					<li><a href="#">Library</a></li>
+					<li><a href="#">NetNavi</a></li>
+					<li><a href="#">Key Items</a></li>
+				</ul>
+			</nav>
 
-			</section>
+			<div class="hikari-pusher">
+				<div class="hikari-content">
+					<div class="hikari-content-inner">
 
-			<!--/	DOCK/TASKBAR /-->
+						<section id="taskbar" class="docked-top">
+							<section class="wrapper">
+								<span class="left">
+									<!--/
+									<span id="time-content-before"></span>
+									<span id="time-content"><span id="clock6"></span>&nbsp;&nbsp;&nbsp;<span id="clock5"></span></span>
+									<span id="time-content-after"></span>
+									/-->
+									<ul id="running-apps">
 
-			<section id="taskbar" class="docked-top">
+										<!--/ <li id="start">Start</li> /-->
 
-				<section class="wrapper">
-					<span class="left">
+										<li id="start">
+											<button data-effect="left">Start</button>
+										</li>
+
+									</ul>
+								</span>
+
+								<span class="right">
+									<div id="user-bar">
+										<span id="user-avatar">
+											<img src="system/account/user-avatar-iii.jpg" alt=""/>
+										</span>
+
+										<!--/
+										<span id="user-name">
+											<span class="online"></span>
+											<span class="japanese">ポール ウェッブ</span>
+										</span>
+										/-->
+									</div>
+								</span>
+							</section>
+
+							<section id="subtaskbar">
+								<section class="wrapper">
+
+									<span id="weather" class="left">
+										<!--/ Weather /-->
+									</span>
+
+									<span class="right">
+										<span id="full-date"></span> &middot; <span id="time"></span>
+										<!--/ <span id="japan-time"></span> /-->
+										<!--/ <span id="clock4"></span> /-->
+										<!--/ <span id="taskbar-time"></span> /-->
+										<!--/ <span id="clock6"></span> | <span id="clock5"></span> /-->
+									</span>
+
+								</section>
+							</section>
+
+						</section>
+
 						<!--/
-						<span id="time-content-before"></span>
-						<span id="time-content"><span id="clock6"></span>&nbsp;&nbsp;&nbsp;<span id="clock5"></span></span>
-						<span id="time-content-after"></span>
-						/-->
-						<ul id="running-apps" class="cbp-tm-menu">
+						<div class="main clearfix">
+							<div id="hikari-trigger-effects">
 
-							<!--/ <li id="start">Start</li> /-->
+								<button data-effect="right">Right</button><br/>
+								<button data-effect="top">Top</button>
+								<button data-effect="bottom">Bottom</button>
 
-							<li id="start">
-								<a href="#">Start</a>
-							</li>
-
-							<li style="display: none;" class="minimized-app">Chip Folder</li>
-
-						</ul>
-					</span>
-
-					<span class="right">
-						<div id="user-bar">
-							<span id="user-avatar">
-								<img src="system/account/user-avatar-iii.jpg" alt=""/>
-							</span>
-
-							<!--/
-							<span id="user-name">
-								<span class="online"></span>
-								<span class="japanese">ポール ウェッブ</span>
-							</span>
-							/-->
+							</div>
 						</div>
-					</span>
-				</section>
+						/-->
 
-				<section id="subtaskbar">
-					<section class="wrapper">
+						<img id="desktop-background" src="system/wallpaper/tri-k.jpg" alt=""/>
 
-						<span id="weather" class="left">
-							<!--/ Weather /-->
-						</span>
+					</div>
+				</div>
+			</div>
 
-						<span class="right">
-							<span id="full-date"></span> &middot; <span id="time"></span>
-							<!--/ <span id="japan-time"></span> /-->
-							<!--/ <span id="clock4"></span> /-->
-							<!--/ <span id="taskbar-time"></span> /-->
-							<!--/ <span id="clock6"></span> | <span id="clock5"></span> /-->
-						</span>
-
-					</section>
-				</section>
-
-			</section>
-
-		</section>
+		</div>
 
 		<!--/	logic /-->
-		<script src="system/logic/draggabilly.pkgd.min.js"></script>
-		<script src="system/logic/www.js"></script>
-
-		<script>
-			window.onload = function() {
-
-				/*
-				var handleDraggie = new Draggabilly(document.querySelector('.window'), {
-					handle: '.window-titlebar',
-					containment: '#desktop-content'
-					// containment: 'body'
-				});
-				*/
-
-			};
-		</script>
-
 		<!--/ <script src="system/logic/www.js"></script> /-->
-
 		<script src="system/logic/classie.js"></script>
-
-		<script>
-			var menuLeft = document.getElementById("cbp-spmenu-s1"), showLeftPush = document.getElementById("start"), body = document.body;
-
-			showLeftPush.onclick = function () {
-
-				classie.toggle(this, "active");
-				classie.toggle(body, "cbp-spmenu-push-toright");
-				classie.toggle(menuLeft, "cbp-spmenu-open");
-				// disableOther("showLeftPush");
-
-			};
-		</script>
-
-		<script>
-			$(document).ready(function() {
-
-				var viewportWidth = $(window).width();
-				var viewportHeight = $(window).height();
-
-				var w = viewportWidth;
-				var h = viewportHeight - 50;
-
-				$("#desktop-wrapper").width(w).height(h);
-
-				$(window).resize(function() {
-				});
-
-			});
-		</script>
-
-		<!--/ scripts/window /-->
-		<script src="system/logic/mousewheel.js"></script>
-		<script src="system/logic/window/scrollpanel.js"></script>
-
-		<script>
-			$(document).ready(function () {
-
-				$("#can-run").click(function () { $("body").bgResize({ img: "system/wallpaper/can-run.jpg" }); });
-				$("#mint").click(function () { $("body").bgResize({ img: "system/wallpaper/mint.jpg" }); });
-				$("#mountains").click(function () { $("body").bgResize({ img: "system/wallpaper/mountains.jpg" }); });
-				$("#os-x-lion").click(function () { $("body").bgResize({ img: "system/wallpaper/os-x-lion.jpg" }); });
-				$("#quanta").click(function () { $("body").bgResize({ img: "system/wallpaper/quanta.jpg" }); });
-				$("#series-1995").click(function () { $("body").bgResize({ img: "system/wallpaper/series-1995.jpg" }); });
-				$("#simple-sky-a").click(function () { $("body").bgResize({ img: "system/wallpaper/simple-sky-a.jpg" }); });
-				$("#simple-sky-b").click(function () { $("body").bgResize({ img: "system/wallpaper/simple-sky-b.jpg" }); });
-				$("#singha").click(function () { $("body").bgResize({ img: "system/wallpaper/singha.jpg" }); });
-				$("#snow-borealis-night").click(function () { $("body").bgResize({ img: "system/wallpaper/snow-borealis-night.jpg" }); });
-				$("#snow-borealis-toxic").click(function () { $("body").bgResize({ img: "system/wallpaper/snow-borealis-toxic.jpg" }); });
-				$("#something-in-sand").click(function () { $("body").bgResize({ img: "system/wallpaper/something-in-sand.jpg" }); });
-				$("#summer-sky").click(function () { $("body").bgResize({ img: "system/wallpaper/summer-sky.jpg" }); });
-				$("#titanus").click(function () { $("body").bgResize({ img: "system/wallpaper/titanus.jpg" }); });
-				$("#tri-k").click(function () { $("body").bgResize({ img: "system/wallpaper/tri-k.jpg" }); });
-				$("#under-the-clouds").click(function () { $("body").bgResize({ img: "system/wallpaper/under-the-clouds.jpg" }); });
-
-				// $(".folder").scrollpanel();
-				$(".window-content").scrollpanel();
-
-			});
-		</script>
+		<script src="system/logic/hikariMenu.js"></script>
 		<!--//logic /-->
 
 	</body>
