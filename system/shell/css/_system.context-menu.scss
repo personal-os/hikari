@@ -22,7 +22,7 @@
 }
 */
 
-/* .css("opacity", "1") */
+// .css("opacity", "1")
 
 .context-menu-list {
 	margin: 0; padding: 0;
@@ -33,14 +33,14 @@
 	@include mono;
 	font-size: 12px;
 	display: inline-block;
-	/* opacity: 0; */
+	// opacity: 0;
 	transition: opacity 5s ease-out;
 	padding: 0.5rem 0;
 	position: absolute;
 	width: auto;
 
 	.context-menu-item {
-		padding: 3px 15px;
+		padding: 6px 15px;
 		position: relative;
 		user-select: none;
 
@@ -78,6 +78,6 @@
 }
 
 .context-menu-active {
-	/* background-color: $white; */
+	// background-color: $white;
 	opacity: 1;
 }

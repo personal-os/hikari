@@ -1,13 +1,5 @@
-/**
- * sidebarEffects.js v1.0.0
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- *
- * Copyright 2013, Codrops
- * http://www.codrops.com
-**/
+// based on sidebarEffects.js v1.0.0 from http://www.codrops.com
+
 var hikariMenus = (function () {
 
 	function hasParentClass(e, classname) {
@@ -38,6 +30,7 @@ var hikariMenus = (function () {
 		reset = document.getElementById("closeMenu"),
 		buttons = Array.prototype.slice.call(document.querySelectorAll("#hikari-trigger-effects > button")),
 		buttons = Array.prototype.slice.call(document.querySelectorAll("#start > button")),
+		// buttons = Array.prototype.slice.call(document.querySelectorAll("#contextGaea")),
 		// event type (if mobile use touch events)
 		eventtype = mobilecheck() ? "touchstart" : "click",
 		resetMenu = function () { classie.remove(container, "hikari-menu-open"); },
@@ -87,3 +80,21 @@ var hikariMenus = (function () {
 	init();
 
 })();
+
+//
+
+$(document).on("click", "#contextGaea", function(e) {
+
+	$(".hikari-container").removeClass("left right top").addClass("bottom hikari-menu-open");
+	$(".context-menu-list").hide();
+
+	e.preventDefault();
+	e.stopPropagation();
+
+});
+
+$(document).on("click", ".hikari-pusher", function() {
+
+	// $(".hikari-container").removeClass("left right top bottom hikari-menu-open");
+
+});
