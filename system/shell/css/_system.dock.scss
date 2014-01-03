@@ -38,9 +38,8 @@
 	}
 
 	#start {
-		width: 32px; height: 32px;
+		width: 47px; height: 47px;
 
-		background-image: url("../images/startup.png");
 		transition: all 0.2s ease;
 
 		@include hide-text;
@@ -52,6 +51,9 @@
 			margin: 0; padding: 0;
 
 			background-color: transparent;
+			background-image: url("../images/startup.png");
+			background-position: 7px 8px;
+			background-repeat: no-repeat;
 			border: 0;
 
 			@include hide-text;

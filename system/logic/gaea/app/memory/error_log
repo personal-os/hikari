@@ -1,0 +1,2 @@
+[15-Dec-2011 16:09:23] PHP Warning:  fopen() [<a href='function.fopen'>function.fopen</a>]: URL file-access is disabled in the server configuration in /home/dubbe/public_html/jawm/JS/jawm/app/memory/writeHighscore.php on line 4
+[15-Dec-2011 16:09:23] PHP Warning:  fopen(http://www.dubbe.se/test/high0.xml) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: no suitable wrapper could be found in /home/dubbe/public_html/jawm/JS/jawm/app/memory/writeHighscore.php on line 4

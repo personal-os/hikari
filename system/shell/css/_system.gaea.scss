@@ -7,7 +7,7 @@ html, body, .hikari-container, .hikari-pusher, .hikari-content {
 
 html {
 	background-color: $teal !important;
-	background-image: linear-gradient(to bottom, saturate($black, 100%), darken($blue, 10%)) !important;
+	background-image: linear-gradient(to top, saturate($white, 100%), darken($teal, 10%)) !important;
 }
 
 body {
@@ -21,7 +21,17 @@ body {
 	// overflow-y: scroll;
 }
 
-.hikari-content, .hikari-content-inner { position: relative; }
+.hikari-content, .hikari-content-inner { position: relative !important; } //
+
+// (HIKARI.gaea.wm.background)
+
+.hikari-content-inner {
+	width: 100%; height: 100%;
+
+	background-image: url("../wallpaper/spring-sriram.jpg"); 
+	// margin: 0;
+	overflow: hidden;
+}
 
 .hikari-container {
 	overflow: hidden;
@@ -95,22 +105,23 @@ body {
 
 			a {
 				// box-shadow: inset 0 -1px rgba($black, 0.2);
-				color: #f3efe0;
+				color: $white;
 				display: block;
 				font-weight: 400;
 				letter-spacing: 1px;
 				outline: none;
 				padding: 1em 1em 1em 1.2em;
-				text-shadow: 0 0 1px rgba(255,255,255,0.1);
+				// text-shadow: 0 0 1px rgba($white, 0.1);
+				text-shadow: 0 0 10px rgba($black, 0.2);
 				text-transform: uppercase;
 				transition: background 0.3s, box-shadow 0.3s;
 
 				-webkit-transition: background 0.3s, box-shadow 0.3s;
 
 				&:hover {
-					background: rgba($black, 0.2);
+					background-color: rgba($black, 0.2);
 					box-shadow: inset 0 -1px rgba($black, 0);
-					color: #fff;
+					color: $white;
 				}
 			}
 		}
@@ -316,6 +327,411 @@ body {
 		opacity: 1;
 		padding: 0.5rem 1.5rem;
 	}
+}
+
+/*****************************************************************************************************/
+
+/* (HIKARI.gaea.wm.background) */
+
+#background {
+	/* width: 1024px; height: 640px; */
+	width: 100%; height: 100%;
+
+	background-image: url("../wallpaper/summer-sky.jpg"); 
+	overflow: hidden;
+}
+
+.logo {
+	top: 15px; left: 15px;
+
+	position: absolute;
+	z-index: 0;
+}
+
+/* docka */
+
+.dock {
+	bottom: 0; left: 0; right: 0;
+
+	background: #fcfcfc;
+	// background: url("appPics/dockBg.png");
+	height: 50px;
+	position: absolute;
+}
+
+/* (HIKARI.gaea.wm.icon) */
+
+.icon {
+	float: left;
+	margin: 7px 5px;
+}
+
+.iconImg {
+	border: 0;
+	height: 42px;
+	position: relative;
+}
+
+/* tooltip */
+
+.tooltip {
+	background: #191919;
+	border-radius: 3px;
+	color: #fcfcfc;
+	font-size: 10px;
+	font-weight: 700;
+	padding: 5px;
+	position: absolute;
+}
+
+/* (HIKARI.gaea.wm.window) */
+
+.windowBase {
+	margin: 0; padding: 0;
+	position: absolute;
+}
+
+.windowTop {
+	top: 0; left: 0; right: 0; /* 10px */
+
+	/* background: url("appPics/top.png"); */
+	background-color: #191919;
+	height: 27px;
+	position: absolute;
+}
+
+.windowTopRight {
+	width: 10px; height: 27px;
+	top: 0; right: 0;
+
+	// background: url("appPics/topRight.png");
+	position: absolute;
+}
+
+.windowTopIcon {
+	height: 15px;
+	margin: 6px 0 0 10px;
+}
+
+.windowTopMaximize, .windowTopUnMaximize, .windowTopClose {
+	border: none;
+	float: right;
+	/* margin: 6px 0 0 0; */
+}
+
+.windowTopUnMaximize { display: none; }
+
+.maximized-window .windowTopUnMaximize { display: block; }
+.maximized-window .windowTopMaximize { display: none; }
+
+.windowTopText {
+	color: #fcfcfc;
+	font-size: 10px;
+	font-weight: 700;
+	margin: 0 0 0 5px;
+	position: relative;
+	top: -3px;
+}
+
+.windowMenuMain {
+	top: 27px; left: 0; right: 0; /* 10px */
+
+	/* background: url("appPics/menu.png"); */
+	background-color: #07d0eb;
+	height: 22px;
+	position: absolute;
+}
+
+.windowMenuRight {
+	width: 10px; height: 22px;
+	top: 27px; right: 0;
+
+	// background: url("appPics/menuRight.png");
+	position: absolute;
+}
+
+.windowMainLeft {
+	top: 49px; left: 0; bottom: 25px;
+
+	// background: url("appPics/borderLeft.png");
+	position: absolute;
+	width: 5px;
+}
+
+.windowMain {
+	top: 49px; left: 0; bottom: 25px;
+
+	background-color: #fcfcfc;
+	/* border-left: 1px solid #4d4943;
+	border-right: 1px solid #4d4943; */
+	overflow-y: auto;
+	position: absolute;
+	width: 100%;
+}
+
+.windowMainNoResize { overflow: hidden; }
+
+.windowMainRight {
+	top: 49px; right: 0; bottom: 25px;
+
+	// background: url("appPics/borderRight.png");
+	position: absolute;
+	width: 5px;
+}
+
+.windowBottom {
+	bottom: 0; left: 0; right: 16px;
+
+	// background: url("appPics/bottom.png");
+	background-color: #191919;
+	height: 25px;
+	position: absolute;
+}
+
+.windowBottomRight {
+	width: 16px; height: 25px;
+	bottom: 0; right: 0;
+
+	// background: url("appPics/resizer.png");
+	background-color: #191919;
+	position: absolute;
+} 
+
+.windowBottomRightNo {
+	width: 16px; height: 25px;
+	bottom: 0; right: 0;
+
+	// background: url("appPics/resizerNo.png");
+	background-color: #191919;
+	position: absolute;
+} 
+
+.windowBottomText {
+	margin: 4px; padding: 0 0 0 10px;
+
+	color: #fcfcfc;
+	float: left;
+	font-size: 10px;
+	height: 20px;
+}
+
+.windowBottomTextLoader { height: 15px; }
+
+.popupBg {
+	width: 100%; height: 100%;
+	top: 0; left: 0;
+
+	background: #191919;
+	opacity: 0.4;
+	position: absolute;
+	z-index: 60000;
+}
+
+.popup {
+	background: #fcfcfc;
+	border: 1px solid #191919;
+	border-radius: 10px;
+	z-index: 60100;
+}
+
+.popup form { padding: 25px; }
+.popUpLabel { font-size: 10px; }
+
+/* Meny-kod */
+
+.menuTop {
+	float: left;
+	list-style-type:none;
+	margin: 0 0 0 10px;
+	padding: 0;
+}
+
+.menuTop li {
+	float: left;
+	padding: 0 5px;	
+}
+
+.menuTop li a {
+	color: #fcfcfc;
+	font-size: 10px;	
+	text-decoration: none;
+}
+
+.menuOut {
+	margin: 0; padding: 2px 0;
+
+	background: #191919;
+	border: 1px solid #131312;
+	display: block;
+	position: absolute;
+	z-index: 50000;
+}
+
+.menuOut li {
+	margin: 2px 5px; padding: 0 5px;
+
+	height: 30px;
+	list-style-type:none;
+}
+
+.menuOut li:hover { background: #231913; }
+
+.menuOut li a {
+	color: #fcfcfc;
+	font-size: 10px;	
+	text-decoration: none;
+}
+
+.menuOut li a img {
+	border: none;
+	margin: 0 5px 0 0;
+	position: relative;
+	top: 5px;
+}
+
+// ImageViewer, HIKARI.gaea.app.imageViewer
+
+.imageViewerThumbCont {
+	margin: 10px; padding: 5px;
+
+	background: #c7c2b0;
+	border: 1px solid #b3af9e;
+	border-radius: 3px;
+	float: left;
+}
+
+.imageViewerThumbCont:hover { background: #b3af9e; }
+.imageViewerThumbImg { border: none; }
+.imageSingleWindowMain { overflow: hidden; }
+
+// Memory
+
+.divCont {
+	margin: 10px; padding: 10px;
+
+	background: #c7c2b0;
+	border: 1px solid #b3af9e;
+	border-radius: 5px;
+	float: left;
+}
+
+.divRow { clear: both; }
+
+.divBrick {
+	float: left;
+	margin: 5px;
+}
+
+.divBrick img { border: none; }
+.clear { clear: both; }
+
+.divInfo {
+	margin: 10px; padding: 10px;
+
+	background: #c7c2b0;
+	border: 1px solid #b3af9e;
+	border-radius: 5px;
+	float: left;
+	font-size: 10px;
+}
+
+.divHighscore {
+	margin: 10px; padding: 10px;
+
+	background: #c7c2b0;
+	border: 1px solid #b3af9e;
+	border-radius: 5px;
+	float: right;
+	font-size: 10px;
+}
+
+// RssReader
+
+.rssFeed h2 {
+	margin: 2px; padding: 0 5px;
+
+	background: #c7c2b0;
+	border-top: 1px solid #b3af9e;
+	border-bottom: 1px solid #b3af9e;
+	font-size: 10px;
+}
+
+.rssFeed a { font-size: 10px; }
+.rssFeed p { font-size: 10px; }
+.formSeconds { width: 25px; }
+.formSource { width: 150px; }
+
+// Chat
+
+.msgContainer {
+	top: 0; bottom: 80px;
+
+	margin-right: 5px;
+	overflow-y: scroll;
+	position: absolute;
+	width: 100%;
+}
+
+.writeMsgContainer {
+	width: 100%; height: 60px;
+
+	bottom: 0;
+	position: absolute;
+}
+
+.writeMsgContainer textarea {
+	width: 270px; height: 40px;
+	margin: 5px;
+}
+
+.writeMsgContainer input {
+}
+
+.chatMsg { margin-bottom: 20px; }
+
+.chatMsgText {
+	margin: 0; padding: 5px;
+	font-size: 12px;
+}
+
+.chatMsgInfo {
+	margin: 2px; padding: 0 5px;
+
+	background: #c7c2b0;
+	border-top: 1px solid #b3af9e;
+	border-bottom: 1px solid #b3af9e;
+}
+
+.chatMsgAlias {
+	font-size: 11px;
+	font-weight: 700;
+	float: left;
+	margin: 0;
+}
+
+.chatMsgDate {
+	float: right;
+	font-size: 11px;
+	margin: 0;
+}
+
+.clr { clear: both; }
+
+// About
+
+.aboutText {
+	font-size: 10px;
+	margin: 10px 10px;
+}
+
+.aboutVersionText {
+	font-size: 9px;
+	margin: 0 10px;
+}
+
+h1 {
+	font-size: 12px;
+	margin: 5px 10px 0 10px;
 }
 
 /*
