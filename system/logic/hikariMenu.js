@@ -32,7 +32,7 @@ $(window).on("ready", function() {
 			reset = document.getElementById("closeMenu"),
 			buttons = Array.prototype.slice.call(document.querySelectorAll("#hikari-trigger-effects > button")),
 			buttons = Array.prototype.slice.call(document.querySelectorAll("#start > button")),
-			// buttons = Array.prototype.slice.call(document.querySelectorAll("#contextGaea")),
+			// buttons = document.getElementById("contextGaea"),
 			// event type (if mobile use touch events)
 			eventtype = mobilecheck() ? "touchstart" : "click",
 			resetMenu = function () { classie.remove(container, "hikari-menu-open"); },
@@ -58,6 +58,7 @@ $(window).on("ready", function() {
 			buttons.forEach(function (el, i) {
 
 				var effect = el.getAttribute("data-effect");
+				// $(".context-menu-list #contextGaea").attr("data-effect", "bottom");
 
 				el.addEventListener(eventtype, function (ev) {
 
@@ -84,7 +85,10 @@ $(window).on("ready", function() {
 	})();
 
 	//
+	// custom hikari code
+	
 
+	/*
 	$(document).on("click", "#contextGaea", function(e) {
 
 		$(".hikari-container").removeClass("left right top").addClass("bottom hikari-menu-open");
@@ -94,6 +98,7 @@ $(window).on("ready", function() {
 		e.stopPropagation();
 
 	});
+	*/
 
 	$(document).on("click", ".hikari-pusher", function() {
 		// $(".hikari-container").removeClass("left right top bottom hikari-menu-open");
