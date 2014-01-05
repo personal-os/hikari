@@ -4,58 +4,164 @@
 	<head>
 
 		<meta charset="utf-8"/>
-		<title>hikari by IdeasNeverCease</title>
+		<title>hikari OS &middot; an ambitious project by Paul Anthony Webb</title>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-		<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+		<!--/ HIKARI
+			 __  __   __   __  __   ______   ______   __    
+			/\ \_\ \ /\ \ /\ \/ /  /\  __ \ /\  == \ /\ \   
+			\ \  __ \\ \ \\ \  _"-.\ \  __ \\ \  __< \ \ \  
+			 \ \_\ \_\\ \_\\ \_\ \_\\ \_\ \_\\ \_\ \_\\ \_\ 
+			  \/_/\/_/ \/_/ \/_/\/_/ \/_/\/_/ \/_/ /_/ \/_/ 
 
-		<link rel="stylesheet" href="css/styles.css"/>
-		<link rel="stylesheet" href="css/pygment_trac.css"/>
+			//////// 011010000110100101101011011000010111001001101001
+
+			hikari is coming soon.
+
+			Creating an operating system isn't easy and I'm probably
+			crazy for trying to do so. Still, it isn't impossible.
+
+			You'll love it. But first, a bit of backstory...
+
+			///
+
+			In our technology-driven world, we rely on various gadgets
+			to stay connected, work, and play; mobile/portable devices
+			and desktop computers. The experience, however, is
+			fragmented. Why are we using compromised operating systems
+			on the go, leaving the full experience at home?
+
+			hikari aims to change that. Welcome to the world's first
+			responsive operating system.
+
+		/-->
+
+		<meta name="author" content="NetOperator Wibby"/>
+		<meta name="description" content="The world's first responsive operating system"/>
+		<meta name="keywords" content="hikari, OS, light, mmbn, rokkuman, dr thomas, mega man, megaman"/>
+
+		<link rel="shortcut icon" href="favicon.png"/>
+
+		<style>
+			* {
+				margin: 0; padding: 0;
+			}
+
+			html {
+				width: 100%; height: 100%;
+			}
+
+			body {
+				background-color: #fcfcfc;
+				color: #50bebe;
+				font-family: "anago", "Source Sans Pro", "Open Sans", Arial, serif;
+				font-size: 30px;
+				font-weight: 400;
+				padding: 6rem 6rem 0 6rem;
+			}
+
+			a {
+				border-bottom: 1px dotted #50bebe;
+				color: inherit;
+				text-decoration: none;
+				transition: all 0.2s ease;
+			}
+
+			a:hover { opacity: 0.3; }
+
+			p { margin: 0 0 1.5rem 0; }
+
+			h1 {
+				margin: 0; padding: 0;
+				font-weight: 500;
+			}
+
+			#message {
+				width: 100%; height: auto;
+				margin: 0 auto; padding: 0;
+
+				display: table-cell;
+				text-align: center;
+				vertical-align: middle;
+			}
+		</style>
+
+		<!--/
+		<script src="//use.typekit.net/wob6fsl.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+		/-->
+
+		<script>
+			(function () {
+
+				var config = {
+					kitId: "wob6fsl",
+					scriptTimeout: 3000
+				};
+
+				var h = document.getElementsByTagName("html")[0];
+				h.className += " wf-loading";
+
+				var t = setTimeout(function () {
+					h.className = h.className.replace(/(\s|^)wf-loading(\s|$)/g, " ");
+					h.className += " wf-inactive";
+				}, config.scriptTimeout);
+
+				var
+				tk = document.createElement("script"),
+				d = false;
+
+				tk.src = "//use.typekit.net/" + config.kitId + ".js";
+				tk.type = "text/javascript";
+				tk.async = "true";
+
+				tk.onload = tk.onreadystatechange = function () {
+
+					var a = this.readyState;
+					if (d || a && a != "complete" && a != "loaded") return;
+					d = true;
+					clearTimeout(t);
+
+					try {
+						Typekit.load(config);
+					} catch (b) {}
+
+				};
+
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(tk, s);
+
+			})();
+
+			var _gauges = _gauges || [];
+
+			(function() {
+
+				var t   = document.createElement("script");
+				t.type  = "text/javascript";
+				t.async = true;
+				t.id    = "gauges-tracker";
+				t.setAttribute("data-site-id", "4f21fccc613f5d5a40000003");
+				t.src = "//secure.gaug.es/track.js";
+
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(t, s);
+
+			})();
+		</script>
 
 	</head>
 
 	<body>
 
-		<div class="wrapper">
-			<header>
-				<h1>hikari</h1>
-				<p>An operating system concept, *very* much in progress.</p>
+		<h1>hikari</h1>
 
-				<p class="view"><a href="https://github.com/IdeasNeverCease/hikari">View the Project on GitHub <small>IdeasNeverCease/hikari</small></a></p>
+		<p>In our technology-driven world, we rely on various devices to stay connected, work, and play — mobile devices and desktop computers. The software, however, is fragmented. Why are we using compromised operating systems on the go, leaving the full experience at home?</p>
 
+		<p>hikari aims to change that.</p>
 
-				<ul>
-					<li><a href="https://github.com/IdeasNeverCease/hikari/zipball/master">Download <strong>ZIP File</strong></a></li>
-					<li><a href="https://github.com/IdeasNeverCease/hikari/tarball/master">Download <strong>TAR Ball</strong></a></li>
-					<li><a href="https://github.com/IdeasNeverCease/hikari">View On <strong>GitHub</strong></a></li>
-				</ul>
-			</header>
+		<p>Welcome to the world’s first responsive operating system.</p>
 
-			<section>
-				<p>
-					Official Site: <a href="http://hikari.pw-software.com">http://hikari.pw-software.com</a><br>
-					Dribbble: <a href="http://dribbble.com/nokadota/projects/127021-hikari-OS">http://dribbble.com/nokadota/projects/127021-hikari-OS</a><br>
-					Twitter: <a href="http://twitter.com/tadashihikari">http://twitter.com/tadashihikari</a>
-				</p>
-
-				<h3>
-				<a name="backstory" class="anchor" href="#backstory"><span class="octicon octicon-link"></span></a>Backstory</h3>
-
-				<p>TL;DR: I had the idea that it would be nifty if my smartphone could dock into something on my desk and the OS within the phone would become a full-fledged desktop. <a href="http://dsgn.pw-software.com/notebook/the-future-of-the-operating-system">Long version, ready to read</a>.</p>
-
-				<h3>
-				<a name="coded-screenshot-as-of-july-2013" class="anchor" href="#coded-screenshot-as-of-july-2013"><span class="octicon octicon-link"></span></a>Coded Screenshot (as of July 2013)</h3>
-
-				<p><img src="http://hikari.pw-software.com/images/tfotos-01.png" alt="Screenshot"></p>
-			</section>
-
-			<footer>
-				<p>This project is maintained by <a href="https://github.com/IdeasNeverCease">IdeasNeverCease</a></p>
-				<p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-			</footer>
-		</div>
-
-		<script src="javascripts/scale.fix.js"></script>
+		<p>Stay up to date on <a href="https://github.com/IdeasNeverCease/hikari">GitHub</a> and <a href="http://twitter.com/tadashihikari">Twitter</a>. In progress shots are also on <a href="http://dribbble.com/nokadota/projects/127021-hikari-OS">Dribbble</a>.</p>
 
 	</body>
 

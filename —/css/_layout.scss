@@ -1,0 +1,432 @@
+
+/*************************************************************************************** LAYOUT/SCSS **/
+
+html, body {
+	width: 100%; height: 100%;
+}
+
+body {
+  background-color: $white;
+  color: $black;
+	@include sans;
+	font-size: 16px;
+	overflow-x: hidden; // overflow: hidden;
+	position: relative;
+}
+
+::selection {
+	background-color: transparent;
+	color: $magenta;
+}
+
+/** HEADER ********************************************************************************************/
+
+header, footer {
+	background-position: center center;
+	background-size: cover;
+	box-shadow: inset 0 0 10px $black;
+	display: inline-block;
+	left: -2%; // 0
+	width: 104%; // 100%
+}
+
+header {
+	background-image: url("../images/portrait-01b.jpg");
+	color: $black; // inherit
+	font-size: 36px;
+	height: 510px;
+	overflow: hidden;
+	position: absolute;
+	top: -10px;
+
+	img {
+		width: 100%; height: auto;
+	}
+
+	a {
+		color: $black; // inherit
+	}
+
+	.wrapper {
+		margin: 20px 0 0 2%;
+		position: relative;
+		z-index: 1;
+	}
+
+	#logo-text, nav {
+		font-weight: 600;
+		line-height: 30px;
+		text-transform: uppercase;
+		z-index: 1;
+	}
+
+	.hide { display: none; }
+	.show { display: block; }
+
+	#logo-text {
+		top: 2rem; left: 2rem;
+
+		position: fixed;
+		width: auto;
+
+		#no-scroll {
+			opacity: 1;
+			position: fixed;
+			text-shadow: 0 0 1px rgba($black, 0.3);
+			top: 2rem;
+
+			span {
+				font-size: 14px;
+				letter-spacing: 6px;
+				line-height: 15px;
+				position: absolute;
+				margin: 6px 0 0 0;
+				text-shadow: 0 0 1px rgba($black, 0.3);
+			}
+		}
+
+		#scroll {
+			opacity: 0.001;
+			position: fixed;
+			text-shadow: 0 0 1px rgba($black, 0.3);
+			top: -2rem;
+		}
+	}
+	
+	#no-scroll, #scroll, #work-availibility { transition: all 0.2s ease; }
+
+	#work-availibility {
+		cursor: default;
+		font-size: 14px;
+		font-weight: 400;
+		position: fixed;
+		text-shadow: 0 0 1px rgba($black, 0.3);
+		text-transform: none;
+		top: 7.4rem;
+
+		&:before { content: "\00a0"; }
+	}
+
+	nav {
+		top: 23.5rem; left: 2rem;
+
+		color: $black; // inherit
+		position: fixed;
+		transition: all 0.2s ease;
+		width: auto;
+
+		a {
+			color: $black; // inherit
+			text-shadow: 0 0 1px rgba($black, 0.3);
+
+			&:hover {
+				opacity: 1;
+				&:after { content: " *"; }
+			}
+		}
+
+		ul {
+			&:nth-child(2) {
+				color: $black;
+				font-size: 18px;
+				line-height: 1;
+				margin: 3rem 0 0 0;
+				opacity: 0;
+				transition: all 0.5s ease;
+			}
+		}
+	}
+
+	#link-me, #link-thoughts, #link-projects { transition: all 0.2s ease; }
+	.no-more { opacity: 0; }
+
+	.star {
+		display: inline-block;
+		margin: 0.2rem 0 0 0;
+		position: absolute;
+		text-shadow: 0 0 1px rgba($black, 0.3);
+	}
+}
+
+/** MAIN CONTENT **************************************************************************************/
+
+#container {
+	padding: 540px 0 0 0;
+
+	.wrapper {
+		margin: 0; padding: 0 10rem 0 18rem;
+	}
+}
+
+h2 ~ small, img ~ small, a ~ small {
+	cursor: default;
+	margin: -2rem 0 0 0.2rem;
+	opacity: 0.3;
+	position: absolute;
+}
+
+h2 ~ small ~ .inline-list { margin: 1rem 0 0 0.2rem; }
+h2 ~ .inline-list { margin: -2rem 0 0 0.2rem; }
+
+p, .inline-list {
+	a {
+		color: $cyan;
+		font-weight: 600;
+
+		&:hover { opacity: 0.3; }
+	}
+}
+
+code {
+	margin: 0 0 2.5rem 0; padding: 1rem 0;
+
+	background-color: #1c2232;
+	counter-reset: item;
+	display: block;
+	font-size: 24px;
+	position: relative;
+
+	.num-bg {
+		width: 40px; height: 100%;
+		top: 0; left: -40px;
+
+		background-color: #2e3436;
+		position: absolute;
+		z-index: -1;
+	}
+
+	li {
+		padding: 0 0 1rem 1rem;
+		position: relative;
+
+		&:last-child { padding: 0 0 0 1rem; }
+
+		&:before {
+			/* margin: 0 2rem 0 0; */ padding: 1.25rem 0;
+			width: 38px; height: 56px;
+			top: -16px; left: -39px;
+
+			color: $white;
+			content: counter(item) "";
+			counter-increment: item;
+			display: inline-block;
+			font-size: 18px;
+			position: absolute;
+			text-align: center;
+		}
+	}
+
+	.indent { padding: 0 0 1rem 2.8rem; }
+}
+
+.ruby-01 { color: #e98417; }
+.ruby-02 { color: #3ac65c; }
+.ruby-03 { color: #97a1b9; }
+.ruby-04 { color: #c69d3a; }
+.ruby-05 { color: #488bb8; }
+
+.inline-list {
+  font-size: 24px;
+	line-height: 36px;
+
+	li {
+		display: inline;
+
+		&:after {
+			content: "\00a0\00a0/\00a0";
+			font-style: italic;
+			font-weight: 300;
+		}
+
+		&:last-child {
+			&:after { content: ""; }
+		}
+	}
+}
+
+.split-left, .split-right {
+	display: table-cell;
+	position: relative;
+	vertical-align: top;
+}
+
+.split-left { width: 40%; }
+
+.split-right {
+	padding: 1rem;
+	width: 60%;
+}
+
+.iphone-preview, .browser-preview {
+	cursor: default;
+
+	.dsgn-viewport { padding: 0 !important; }
+
+	.dsgn-scrollbar {
+		background-color: transparent;
+		cursor: pointer;
+		opacity: 0;
+		right: 0.1rem !important;
+		transition: opacity 0.2s ease;
+		width: 2px;
+
+		.dsgn-thumb {
+			background-color: rgba($black, 0.7);
+			transition: height 0.2s ease-in-out;
+
+			&:hover { background-color: $black; }
+		}
+	}
+
+	.dsgn-scrollbar.active .dsgn-thumb { background-color: $black; }
+
+	&:hover {
+		.dsgn-scrollbar { opacity: 1; }
+	}
+}
+
+.iphone-preview, .iphone-wall-preview {
+	width: 154px; height: 329px;
+	bottom: 3rem; left: 2rem;
+
+	background-image: url("../images/iphone-body.png");
+	background-size: 154px 329px;
+	position: absolute;
+	z-index: 1;
+
+	.content-wrapper {
+		width: 135px; height: 239px;
+		top: 45px; left: 9px;
+
+		background-color: $cyan;
+		overflow: hidden;
+		position: absolute;
+	}
+}
+
+.iphone-wall-preview {
+	img { margin: 0 0 0 -12px; }
+}
+
+.browser-preview, .desktop-preview {
+	width: 400px; height: 360px;
+	top: 0; left: 108px; // right: 0;
+
+	background-size: 400px 38px;
+	overflow: hidden;
+	position: absolute;
+
+	.content-wrapper {
+		width: 100%; height: 322px;
+		top: 38px; left: 0;
+
+		position: absolute;
+	}
+}
+
+.browser-preview { background: url("../images/chrome-windows.jpg") no-repeat; }
+.desktop-preview { background: url("../images/taskbar-windows.jpg") no-repeat; }
+
+.thought {
+	img {
+		width: 100%; height: auto;
+		margin: 0 0 2rem 0;
+	}
+
+	.attribution {
+		&:before {
+			content: " / ";
+			font-style: italic;
+			font-weight: 300;
+		}
+	}
+}
+
+/** CONTENT ETC ***************************************************************************************/
+
+.more {
+	border-bottom: 3px solid $black;
+	font-weight: 600;
+	margin: 0 0 3rem 0;
+	position: relative;
+	text-transform: uppercase;
+
+	.read, .top {
+		margin: -1.1rem 0 0 0; padding: 0.2rem 0.5rem;
+
+		font-size: 80%;
+		position: absolute;
+		transition: all 0.2s ease;
+
+		&:hover { opacity: 1; }
+	}
+
+	.read {
+		background-color: $black;
+		color: $white;
+		left: 0;
+
+		&:hover { padding-left: 1rem; }
+	}
+
+	.top {
+		right: 0;
+		&:hover { padding-right: 1rem; }
+	}
+}
+
+.hr {
+	width: 100%; height: 1rem;
+
+	cursor: default;
+	font-size: 4em;
+	line-height: 0.5em;
+	margin: 0 0 3rem 0;
+	text-align: center;
+
+	span {
+		&:first-child { color: $cyan; }
+		&:nth-child(2) { color: $magenta; }
+		&:nth-child(3) { color: $yellow; }
+		&:last-child { color: $key; }
+	}
+}
+
+/** FOOTER ********************************************************************************************/
+
+footer {
+	background-image: url("../images/portrait-02.jpg");
+	background-position: 0 -11rem;
+	bottom: -10px;
+	color: $black; // #8d758d
+	font-weight: 600;
+	height: 310px;
+	margin: 2rem 0 0 0;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+
+	a {
+		color: $black; // #8d758d
+		text-shadow: 0 0 1px rgba($black, 0.3);
+	}
+
+	nav {
+		font-size: 36px;
+		margin: 7rem 0 5rem 0;
+	}
+
+	li {
+		display: inline-block;
+
+		&:after {
+			content: " / ";
+			font-style: italic;
+			font-weight: 300;
+		}
+
+		&:last-child:after { content: ""; }
+	}
+
+	#copy { cursor: default; }
+}
