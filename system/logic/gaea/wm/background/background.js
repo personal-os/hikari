@@ -15,6 +15,7 @@ HIKARI.gaea.wm.background = function (bgImg, width, height) {
 	this.setBackground = function (_img) {
 		// $("#background").css({ "background": "url(" + _img + ")" });
 		$(".hikari-content-inner").css({ "background": "url(" + _img + ")" });
+		// $(".hikari-content-inner").backstretch("system/shell/wallpaper/summer-sky.jpg");
 	};
 
 };
