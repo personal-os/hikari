@@ -58,7 +58,6 @@ $(window).on("ready", function() {
 			buttons.forEach(function (el, i) {
 
 				var effect = el.getAttribute("data-effect");
-				// $(".context-menu-list #contextGaea").attr("data-effect", "bottom");
 
 				el.addEventListener(eventtype, function (ev) {
 
@@ -78,6 +77,28 @@ $(window).on("ready", function() {
 
 			});
 
+			// custom hikari code
+			$(".context-menu-list #contextGaea").attr("data-effect", "bottom");
+
+			$(".context-menu-list #contextGaea").on("click", function(ev) {
+
+				$(".context-menu-list").contextMenu("hide");
+
+				ev.stopPropagation();
+				ev.preventDefault();
+
+				container.className = "hikari-container"; // clear
+				classie.add(container, "bottom");
+
+				setTimeout(function () {
+					classie.add(container, "hikari-menu-open");
+				}, 25);
+
+				document.addEventListener(eventtype, bodyClickFn);
+				document.addEventListener(eventtype, resetClickFn);
+
+			});
+
 		}
 
 		init();
@@ -85,8 +106,6 @@ $(window).on("ready", function() {
 	})();
 
 	//
-	// custom hikari code
-	
 
 	/*
 	$(document).on("click", "#contextGaea", function(e) {
