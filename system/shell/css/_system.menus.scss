@@ -1,143 +1,20 @@
 
 /******************************************************************************** SYSTEM.MENUS/SCSS **/
 
-// General styles for all menus
-/*
-.cbp-spmenu {
-	background-color: $white;
-	border-right: 3px solid $black;
-	position: fixed;
+.hikari-content-inner {
+	width: 100%; height: 100%;
 
-	h5 {
-		margin: 0; padding: 2px 1rem; // padding: 20px;
-
-		background-color: $black;
-		// border-bottom: 3px solid $black;
-		color: $white;
-		font-family: "OpenSansSemibold";
-		font-size: 14px; // font-size: 1.9em;
-		height: 25px;
-		text-transform: uppercase;
-	}
-
-	a {
-		color: $gray-i;
-		display: block;
-		font-family: "OpenSansLight";
-		font-size: 1.1em;
-
-		&:active, &:hover {
-			background-color: $black;
-			color: $white;
-			// transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-
-			&:before { background-color: $gray-i; }
-		}
-
-		&:before {
-			width: 32px; height: 32px;
-
-			background-color: $black;
-			border-radius: 5000px;
-			content: " ";
-			display: inline-block;
-			margin: 0 1rem 0 0;
-			vertical-align: middle;
-		}
-	}
-}
-
-// Orientation-dependent styles for the content of the menu
-
-.cbp-spmenu-vertical {
-	width: 240px; height: 100%;
-
-	top: 0;
-	z-index: 1000;
-
-	a {
-		// border-bottom: 3px solid $gray-iii;
-		height: 50px;
-		padding: 0.65rem 1rem; // padding: 1rem;
-
-		// &:hover { border-bottom: 3px solid $black; }
-	}
-}
-
-.cbp-spmenu-horizontal {
-	width: 100%; height: 150px;
-
-	left: 0;
+	background-image: url("../wallpaper/spring-sriram.jpg"); 
+	// margin: 0;
 	overflow: hidden;
-	z-index: 1000;
-
-	h3 {
-		width: 20%; height: 100%;
-		float: left;
-	}
-
-	a {
-		border-left: 1px solid $gray-iii;
-		float: left;
-		padding: 0.8rem;
-		width: 20%;
-	}
 }
 
-// Vertical menu that slides from the left or right
-
-.cbp-spmenu-left { left: -240px; }
-.cbp-spmenu-right { right: -240px; }
-.cbp-spmenu-left.cbp-spmenu-open { left: 0; }
-.cbp-spmenu-right.cbp-spmenu-open { right: 0; }
-
-// Push classes applied to the body
-
-.cbp-spmenu-push {
-	left: 0;
-	overflow-x: hidden;
-	position: relative;
-}
-
-.cbp-spmenu-push-toright { left: 240px; }
-.cbp-spmenu-push-toleft { left: -240px; }
-
-// Transitions
-
-.cbp-spmenu, .cbp-spmenu-push { transition: all 0.3s ease; }
-
-// Example media queries
-
-@media screen and (max-width: 55.1875em) {
-	.cbp-spmenu-horizontal {
-		font-size: 75%;
-		height: 110px;
-	}
-
-	.cbp-spmenu-top { top: -110px; }
-	.cbp-spmenu-bottom { bottom: -110px; }
-}
-
-@media screen and (max-height: 26.375em) {
-	.cbp-spmenu-vertical {
-		font-size: 90%;
-		width: 190px;
-	}
-
-	.cbp-spmenu-left, .cbp-spmenu-push-toleft { left: -190px; }
-	.cbp-spmenu-right { right: -190px; }
-	.cbp-spmenu-push-toright { left: 190px; }
-}
-*/
-
-.st-content, .st-content-inner { position: relative; }
-
-.st-container {
+.hikari-container {
 	overflow: hidden;
 	position: relative;
 }
 
-.st-pusher {
+.hikari-pusher {
 	height: 100%;
 	left: 0;
 	position: relative;
@@ -145,22 +22,22 @@
 	z-index: 99;
 
 	-webkit-transition: -webkit-transform 0.5s;
+
+	&:after {
+		width: 0; height: 0;
+		top: 0; right: 0;
+
+		background: rgba($black, 0.2);
+		content: "";
+		opacity: 0;
+		position: absolute;
+		transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+
+		-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+	}
 }
 
-.st-pusher::after {
-	width: 0; height: 0;
-	top: 0; right: 0;
-
-	background: rgba(0,0,0,0.2);
-	content: "";
-	opacity: 0;
-	position: absolute;
-	transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
-
-	-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
-}
-
-.st-menu-open .st-pusher::after {
+.hikari-menu-open .hikari-pusher::after {
 	width: 100%; height: 100%;
 
 	opacity: 1;
@@ -169,8 +46,9 @@
 	-webkit-transition: opacity 0.5s;
 }
 
-.st-menu {	
-	background: #48a770;
+.hikari-menu {
+	// background: #48a770;
+	background-color: transparent;
 	overflow: hidden;
 	position: absolute;
 	transition: all 0.5s;
@@ -178,6 +56,55 @@
 	z-index: 100;
 
 	-webkit-transition: all 0.5s;
+
+	&:after {
+		width: 100%; height: 100%;
+		top: 0; right: 0;
+
+		background: rgba($black, 0.2);
+		content: "";
+		opacity: 1;
+		position: absolute;
+		transition: opacity 0.5s;
+
+		-webkit-transition: opacity 0.5s;
+	}
+
+	ul {
+		margin: 0; padding: 0;
+		list-style: none;
+
+		li {
+			a {
+				color: $white;
+				cursor: pointer;
+				display: block;
+				font-weight: 400;
+				letter-spacing: 1px;
+				outline: none;
+				padding: 1rem 1rem 1rem 1.2rem;
+				text-shadow: 0 0 10px rgba($black, 0.2);
+				text-transform: uppercase;
+				transition: background 0.3s;
+
+				-webkit-transition: background 0.3s;
+
+				&:hover {
+					background-color: rgba($black, 0.2);
+					color: $white;
+				}
+			}
+		}
+	}
+
+	h2 {
+		margin: 0; padding: 1em;
+
+		color: rgba($black, 0.4);
+		font-size: 2em;
+		font-weight: 300;
+		text-shadow: 0 0 1px rgba($black, 0.1);
+	}
 }
 
 /*
@@ -185,20 +112,7 @@
 	top: 0; left: 0;
 */
 
-.st-menu::after {
-	width: 100%; height: 100%;
-	top: 0; right: 0;
-
-	background: rgba(0,0,0,0.2);
-	content: "";
-	opacity: 1;
-	position: absolute;
-	transition: opacity 0.5s;
-
-	-webkit-transition: opacity 0.5s;
-}
-
-.st-menu-open .st-menu::after {
+.hikari-menu-open .hikari-menu::after {
 	width: 0; height: 0;
 
 	opacity: 0;
@@ -207,77 +121,43 @@
 	-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 }
 
-/* content style */
-
-.st-menu ul {
-	margin: 0; padding: 0;
-	list-style: none;
-}
-
-.st-menu h2 {
-	margin: 0; padding: 1em;
-
-	color: rgba(0,0,0,0.4);
-	font-size: 2em;
-	font-weight: 300;
-	text-shadow: 0 0 1px rgba(0,0,0,0.1);
-}
-
-.st-menu ul li a {
-	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
-	color: #f3efe0;
-	display: block;
-	font-weight: 400;
-	letter-spacing: 1px;
-	outline: none;
-	padding: 1em 1em 1em 1.2em;
-	text-shadow: 0 0 1px rgba(255,255,255,0.1);
-	text-transform: uppercase;
-	transition: background 0.3s, box-shadow 0.3s;
-
-	-webkit-transition: background 0.3s, box-shadow 0.3s;
-}
-
-.st-menu ul li:first-child a { box-shadow: inset 0 -1px rgba(0,0,0,0.2), inset 0 1px rgba(0,0,0,0.2); }
-
-.st-menu ul li a:hover {
-	background: rgba(0,0,0,0.2);
-	box-shadow: inset 0 -1px rgba(0,0,0,0);
-	color: #fff;
-}
-/* Fallback example for browsers that don't support 3D transforms (and no JS fallback) */
-.no-csstransforms3d .st-pusher, .no-js .st-pusher { padding-left: 300px; }
+// Fallback example for browsers that don't support 3D transforms (and no JS fallback)
+.no-csstransforms3d .hikari-pusher, .no-js .hikari-pusher { padding-left: 300px; }
 
 /************************************************************************************************* Individual effects */
 
 /* Left Menu Push *****************************************************************************************************/
 
-.left.st-container {
+.left.hikari-container {
 	perspective: 1500px;
 	-webkit-perspective: 1500px;
 }
 
-.left .st-pusher {
+.left .hikari-pusher {
 	transform-style: preserve-3d;
 	-webkit-transform-style: preserve-3d;
 }
 
-.left.st-menu-open .st-pusher {
+.left.hikari-menu-open .hikari-pusher {
 	transform: translate3d(300px, 0, -300px);
 	-webkit-transform: translate3d(300px, 0, -300px);
 }
 
-.left.st-menu {
+.left.hikari-menu {
 	width: 300px; height: 100%;
 	top: 0; left: 0;
 
+	// font-size: 2em;
+	font-size: 2.5vh;
 	opacity: 1;
+	// padding: 2.5rem 0;
+	text-align: right;
 	transform: translate3d(-100%, 0, 0);
 
 	-webkit-transform: translate3d(-100%, 0, 0);
 }
 
-.left.st-menu-open .left.st-menu {
+.left.hikari-menu-open .left.hikari-menu {
 	transform: translate3d(0, 0, 0);
 	transition: transform 0.5s;
 	visibility: visible;
@@ -286,26 +166,26 @@
 	-webkit-transition: -webkit-transform 0.5s;
 }
 
-.left.st-menu::after { display: none; }
+.left.hikari-menu::after { display: none; }
 
 /* Right Menu Push ****************************************************************************************************/
 
-.right.st-container {
+.right.hikari-container {
 	perspective: 1500px;
 	-webkit-perspective: 1500px;
 }
 
-.right .st-pusher {
+.right .hikari-pusher {
 	transform-style: preserve-3d;
 	-webkit-transform-style: preserve-3d;
 }
 
-.right.st-menu-open .st-pusher {
+.right.hikari-menu-open .hikari-pusher {
 	transform: translate3d(-300px, 0, -300px);
 	-webkit-transform: translate3d(-300px, 0, -300px);
 }
 
-.right.st-menu {
+.right.hikari-menu {
 	width: 300px; height: 100%;
 	top: 0; right: 0;
 
@@ -315,7 +195,7 @@
 	-webkit-transform: translate3d(100%, 0, 0);
 }
 
-.right.st-menu-open .right.st-menu {
+.right.hikari-menu-open .right.hikari-menu {
 	transform: translate3d(0, 0, 0);
 	transition: transform 0.5s;
 	visibility: visible;
@@ -324,26 +204,26 @@
 	-webkit-transition: -webkit-transform 0.5s;
 }
 
-.right.st-menu::after { display: none; }
+.right.hikari-menu::after { display: none; }
 
 /* Top Menu Push ******************************************************************************************************/
 
-.top.st-container {
+.top.hikari-container {
 	perspective: 1500px;
 	-webkit-perspective: 1500px;
 }
 
-.top .st-pusher {
+.top .hikari-pusher {
 	transform-style: preserve-3d;
 	-webkit-transform-style: preserve-3d;
 }
 
-.top.st-menu-open .st-pusher {
+.top.hikari-menu-open .hikari-pusher {
 	transform: translate3d(0, 100px, -300px);
 	-webkit-transform: translate3d(0, 100px, -300px);
 }
 
-.top.st-menu {
+.top.hikari-menu {
 	width: 100%; height: 100px;
 	top: 0; left: 0;
 
@@ -353,7 +233,7 @@
 	-webkit-transform: translate3d(0, -100%, 0);
 }
 
-.top.st-menu-open .top.st-menu {
+.top.hikari-menu-open .top.hikari-menu {
 	transform: translate3d(0, 0, 0);
 	transition: transform 0.5s;
 	visibility: visible;
@@ -362,26 +242,26 @@
 	-webkit-transition: -webkit-transform 0.5s;
 }
 
-.top.st-menu::after { display: none; }
+.top.hikari-menu::after { display: none; }
 
 /* Bottom Menu Push ***************************************************************************************************/
 
-.bottom.st-container {
+.bottom.hikari-container {
 	perspective: 1500px;
 	-webkit-perspective: 1500px;
 }
 
-.bottom .st-pusher {
+.bottom .hikari-pusher {
 	transform-style: preserve-3d;
 	-webkit-transform-style: preserve-3d;
 }
 
-.bottom.st-menu-open .st-pusher {
+.bottom.hikari-menu-open .hikari-pusher {
 	transform: translate3d(0, -100px, -300px);
 	-webkit-transform: translate3d(0, -100px, -300px);
 }
 
-.bottom.st-menu {
+.bottom.hikari-menu {
 	width: 100%; height: 100px;
 	bottom: 0; left: 0;
 
@@ -389,9 +269,18 @@
 	transform: translate3d(0, 100%, 0);
 
 	-webkit-transform: translate3d(0, 100%, 0);
+
+	ul {
+		font-size: 1.2vw;
+		text-align: center;
+
+		li {
+			display: inline-block;
+		}
+	}
 }
 
-.bottom.st-menu-open .bottom.st-menu {
+.bottom.hikari-menu-open .bottom.hikari-menu {
 	transform: translate3d(0, 0, 0);
 	transition: transform 0.5s;
 	visibility: visible;
@@ -400,4 +289,4 @@
 	-webkit-transition: -webkit-transform 0.5s;
 }
 
-.bottom.st-menu::after { display: none; }
+.bottom.hikari-menu::after { display: none; }
