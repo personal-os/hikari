@@ -324,10 +324,12 @@
 			<div class="hikari-pusher">
 				<div class="hikari-content">
 
+					<!--/
 					<div class="buttonbar">
 						<button class="button create-button">Create Window</button>
-						<!--/ <button class="button expose-button">Exposé</button> /-->
+						<button class="button expose-button">Exposé</button>
 					</div>
+					/-->
 
 				</div>
 			</div>
@@ -351,6 +353,9 @@
 		<script>
 			$(document).ready(function () {
 
+				var wm = new Gaea.WindowManager();
+				window.wm = wm; // For debugging reasons
+
 				/*
 				var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 				var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
@@ -366,6 +371,7 @@
 				}
 				*/
 
+				/*
 				var
 				wm = new Gaea.WindowManager(),
 				pos = 50,
@@ -396,6 +402,7 @@
 					return false;
 
 				}, 1000));
+				*/
 
 			});
 		</script>
