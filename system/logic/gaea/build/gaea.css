@@ -1,9 +1,11 @@
 
 .wm-space.expose .wm-window:hover { box-shadow: 0 0 40px #008; }
 
-.wm-space.expose .wm-window.active,.wm-space.expose .wm-window { transition: top 0.5s ease-out, left 0.5s ease-out; }
+.wm-space.expose .wm-window.active,
+.wm-space.expose .wm-window { transition: top 0.5s ease-out, left 0.5s ease-out; }
 
-.wm-space.expose .wm-window.active section.wm-content,.wm-space.expose .wm-window section.wm-content {
+.wm-space.expose .wm-window.active section.wm-content,
+.wm-space.expose .wm-window section.wm-content {
 	user-select: none;
 
 	-o-user-select: none;
@@ -390,13 +392,14 @@
 	-webkit-user-select: text;
 }
 
-.wm-window.noresizable .wm-window-box header.wm-window-title button.wm-maximize,.wm-window.noresizable .wm-window-box header.wm-window-title button.wm-minimize { display: none; }
+.wm-window.noresizable .wm-window-box header.wm-window-title button.wm-maximize,
+.wm-window.noresizable .wm-window-box header.wm-window-title button.wm-minimize { display: none; }
 
 .wm-window.noresizable .wm-window-box section.wm-content { overflow-y: hidden; }
 
 .wm-window.noresizable .wm-window-box button.wm-resize { display: none; }
 
-.wm-window.minimizing,.wm-window.maximazing {
+.wm-window.minimizing, .wm-window.maximazing {
 	transition: all 0.5s ease-out;
 
 	-o-transition: all 0.5s ease-out;

@@ -1,4 +1,4 @@
-// Based on Ventus, by Ramón Lamana * https://github.com/rlamana
+// Based on Ventus, by Ramón Lamana × https://github.com/rlamana
 (function (root, factory) {
 
 	if (typeof define === "function" && define.amd) { // AMD.
@@ -9,17 +9,19 @@
 
 }(this, function ($, Handlebars) {
 
-	// almond 0.1.2, by The Dojo Foundation * http://github.com/jrburke/almond
+	// almond 0.1.2, by The Dojo Foundation × http://github.com/jrburke/almond
 
 	var requirejs, require, define;
 
 	(function (undef) {
-		var defined = {},
-			waiting = {},
-			config = {},
-			defining = {},
-			aps = [].slice,
-			main, req;
+
+		var
+		defined = {},
+		waiting = {},
+		config = {},
+		defining = {},
+		aps = [].slice,
+		main, req;
 
 		/**
 		 * Given a relative module name, like ./something, normalize it to
@@ -28,43 +30,43 @@
 		 * @param {String} baseName a real name that the name arg is relative
 		 * to.
 		 * @returns {String} normalized name
-		 */
+		**/
 		function normalize(name, baseName) {
-			var baseParts = baseName && baseName.split("/"),
-				map = config.map,
-				starMap = (map && map['*']) || {},
-				nameParts, nameSegment, mapValue, foundMap,
-				foundI, foundStarMap, starI, i, j, part;
 
-			//Adjust any relative paths.
+			var
+			baseParts = baseName && baseName.split("/"),
+			map = config.map,
+			starMap = (map && map["*"]) || {},
+			nameParts, nameSegment, mapValue, foundMap,
+			foundI, foundStarMap, starI, i, j, part;
+
+			// Adjust any relative paths.
 			if (name && name.charAt(0) === ".") {
-				//If have a base name, try to normalize against it,
-				//otherwise, assume it is a top-level require that will
-				//be relative to baseUrl in the end.
+				// If have a base name, try to normalize against it,
+				// otherwise, assume it is a top-level require that will
+				// be relative to baseUrl in the end.
 				if (baseName) {
-					//Convert baseName to array, and lop off the last part,
-					//so that . matches that "directory" and not name of the baseName's
-					//module. For instance, baseName of "one/two/three", maps to
-					//"one/two/three.js", but we want the directory, "one/two" for
-					//this normalization.
+					// Convert baseName to array, and lop off the last part,
+					// so that . matches that "directory" and not name of the baseName's
+					// module. For instance, baseName of "one/two/three", maps to
+					// "one/two/three.js", but we want the directory, "one/two" for
+					// this normalization.
 					baseParts = baseParts.slice(0, baseParts.length - 1);
-
 					name = baseParts.concat(name.split("/"));
 
-					//start trimDots
-					for (i = 0;
-						(part = name[i]); i++) {
+					// start trimDots
+					for (i = 0; (part = name[i]); i++) {
 						if (part === ".") {
 							name.splice(i, 1);
 							i -= 1;
 						} else if (part === "..") {
-							if (i === 1 && (name[2] === '..' || name[0] === '..')) {
-								//End of the line. Keep at least one non-dot
-								//path segment at the front so it can be mapped
-								//correctly to disk. Otherwise, there is likely
-								//no path mapping for a path starting with '..'.
-								//This can still fail, but catches the most reasonable
-								//uses of ..
+							if (i === 1 && (name[2] === ".." || name[0] === "..")) {
+								// End of the line. Keep at least one non-dot
+								// path segment at the front so it can be mapped
+								// correctly to disk. Otherwise, there is likely
+								// no path mapping for a path starting with "..".
+								// This can still fail, but catches the most reasonable
+								// uses of ..
 								return true;
 							} else if (i > 0) {
 								name.splice(i - 1, 2);
@@ -72,46 +74,45 @@
 							}
 						}
 					}
-					//end trimDots
 
+					// end trimDots
 					name = name.join("/");
 				}
 			}
 
-			//Apply map config if available.
+			// Apply map config if available.
 			if ((baseParts || starMap) && map) {
-				nameParts = name.split('/');
+				nameParts = name.split("/");
 
 				for (i = nameParts.length; i > 0; i -= 1) {
 					nameSegment = nameParts.slice(0, i).join("/");
 
 					if (baseParts) {
-						//Find the longest baseName segment match in the config.
-						//So, do joins on the biggest to smallest lengths of baseParts.
+						// Find the longest baseName segment match in the config.
+						// So, do joins on the biggest to smallest lengths of baseParts.
 						for (j = baseParts.length; j > 0; j -= 1) {
-							mapValue = map[baseParts.slice(0, j).join('/')];
+							mapValue = map[baseParts.slice(0, j).join("/")];
 
-							//baseName segment has  config, find if it has one for
-							//this name.
+							// baseName segment has  config, find if it has one for this name.
 							if (mapValue) {
 								mapValue = mapValue[nameSegment];
+
 								if (mapValue) {
-									//Match, update name to the new value.
+									// Match, update name to the new value.
 									foundMap = mapValue;
 									foundI = i;
+
 									break;
 								}
 							}
 						}
 					}
 
-					if (foundMap) {
-						break;
-					}
+					if (foundMap) { break; }
 
-					//Check for a star map match, but just hold on to it,
-					//if there is a shorter segment match later in a matching
-					//config, then favor over this star map.
+					// Check for a star map match, but just hold on to it,
+					// if there is a shorter segment match later in a matching
+					// config, then favor over this star map.
 					if (!foundStarMap && starMap && starMap[nameSegment]) {
 						foundStarMap = starMap[nameSegment];
 						starI = i;
@@ -125,63 +126,68 @@
 
 				if (foundMap) {
 					nameParts.splice(0, foundI, foundMap);
-					name = nameParts.join('/');
+					name = nameParts.join("/");
 				}
 			}
 
 			return name;
+
 		}
 
 		function makeRequire(relName, forceSync) {
 			return function () {
-				//A version of a require function that passes a moduleName
-				//value for items that may need to
-				//look up paths relative to the moduleName
+
+				// A version of a require function that passes a moduleName
+				// value for items that may need to
+				// look up paths relative to the moduleName
 				return req.apply(undef, aps.call(arguments, 0).concat([relName, forceSync]));
+
 			};
 		}
 
 		function makeNormalize(relName) {
-			return function (name) {
-				return normalize(name, relName);
-			};
+			return function (name) { return normalize(name, relName); };
 		}
 
 		function makeLoad(depName) {
-			return function (value) {
-				defined[depName] = value;
-			};
+			return function (value) { defined[depName] = value; };
 		}
 
 		function callDep(name) {
+
 			if (waiting.hasOwnProperty(name)) {
 				var args = waiting[name];
 				delete waiting[name];
+
 				defining[name] = true;
 				main.apply(undef, args);
 			}
 
 			if (!defined.hasOwnProperty(name)) {
-				throw new Error('No ' + name);
+				throw new Error("No " + name);
 			}
+
 			return defined[name];
+
 		}
 
 		/**
 		 * Makes a name map, normalizing the name, and using a plugin
 		 * for normalization if necessary. Grabs a ref to plugin
 		 * too, as an optimization.
-		 */
+		**/
 		function makeMap(name, relName) {
-			var prefix, plugin,
-				index = name.indexOf('!');
+
+			var
+			prefix, plugin,
+			index = name.indexOf("!");
 
 			if (index !== -1) {
 				prefix = normalize(name.slice(0, index), relName);
 				name = name.slice(index + 1);
 				plugin = callDep(prefix);
 
-				//Normalize according
+				// Normalize according
 				if (plugin && plugin.normalize) {
 					name = plugin.normalize(name, makeNormalize(relName));
 				} else {
@@ -191,12 +197,13 @@
 				name = normalize(name, relName);
 			}
 
-			//Using ridiculous property names for space reasons
+			// Using ridiculous property names for space reasons
 			return {
-				f: prefix ? prefix + '!' + name : name, //fullName
+				f: prefix ? prefix + "!" + name : name, // fullName
 				n: name,
 				p: plugin
 			};
+
 		}
 
 		function makeConfig(name) {
@@ -206,36 +213,37 @@
 		}
 
 		main = function (name, deps, callback, relName) {
-			var args = [],
-				usingExports,
-				cjsModule, depName, ret, map, i;
 
-			//Use name if no relName
+			var
+			args = [],
+			usingExports,
+			cjsModule, depName, ret, map, i;
+
+			// Use name if no relName
 			relName = relName || name;
 
-			//Call the callback to define the module, if necessary.
-			if (typeof callback === 'function') {
+			// Call the callback to define the module, if necessary.
+			if (typeof callback === "function") {
+				// Pull out the defined dependencies and pass the ordered values to the callback.
+				// Default to [require, exports, module] if no deps
+				deps = !deps.length && callback.length ? ["require", "exports", "module"] : deps;
 
-				//Pull out the defined dependencies and pass the ordered
-				//values to the callback.
-				//Default to [require, exports, module] if no deps
-				deps = !deps.length && callback.length ? ['require', 'exports', 'module'] : deps;
 				for (i = 0; i < deps.length; i++) {
 					map = makeMap(deps[i], relName);
 					depName = map.f;
 
-					//Fast path CommonJS standard dependencies.
+					// Fast path CommonJS standard dependencies.
 					if (depName === "require") {
 						args[i] = makeRequire(name);
 					} else if (depName === "exports") {
-						//CommonJS module spec 1.1
+						// CommonJS module spec 1.1
 						args[i] = defined[name] = {};
 						usingExports = true;
 					} else if (depName === "module") {
-						//CommonJS module spec 1.1
+						// CommonJS module spec 1.1
 						cjsModule = args[i] = {
 							id: name,
-							uri: '',
+							uri: "",
 							exports: defined[name],
 							config: makeConfig(name)
 						};
@@ -245,44 +253,47 @@
 						map.p.load(map.n, makeRequire(relName, true), makeLoad(depName), {});
 						args[i] = defined[depName];
 					} else if (!defining[depName]) {
-						throw new Error(name + ' missing ' + depName);
+						throw new Error(name + " missing " + depName);
 					}
 				}
 
 				ret = callback.apply(defined[name], args);
 
 				if (name) {
-					//If setting exports via "module" is in play,
-					//favor that over return value and exports. After that,
-					//favor a non-undefined return value over exports use.
+					// If setting exports via "module" is in play,
+					// favor that over return value and exports. After that,
+					// favor a non-undefined return value over exports use.
 					if (cjsModule && cjsModule.exports !== undef &&
 						cjsModule.exports !== defined[name]) {
 						defined[name] = cjsModule.exports;
 					} else if (ret !== undef || !usingExports) {
-						//Use the return value from the function.
+						// Use the return value from the function.
 						defined[name] = ret;
 					}
 				}
 			} else if (name) {
-				//May just be an object definition for the module. Only
-				//worry about defining if have a module name.
+				// May just be an object definition for the module. Only
+				// worry about defining if have a module name.
 				defined[name] = callback;
 			}
+
 		};
 
 		requirejs = require = req = function (deps, callback, relName, forceSync) {
+
 			if (typeof deps === "string") {
-				//Just return the module wanted. In this scenario, the
-				//deps arg is the module name, and second arg (if passed)
-				//is just the relName.
-				//Normalize module name, if it contains . or ..
+				// Just return the module wanted. In this scenario, the
+				// deps arg is the module name, and second arg (if passed)
+				// is just the relName.
+				// Normalize module name, if it contains . or ..
 				return callDep(makeMap(deps, callback).f);
 			} else if (!deps.splice) {
-				//deps is a config object, not an array.
+				// deps is a config object, not an array.
 				config = deps;
+
 				if (callback.splice) {
-					//callback is an array, which means it is a dependency list.
-					//Adjust args if there are dependencies
+					// callback is an array, which means it is a dependency list.
+					// Adjust args if there are dependencies
 					deps = callback;
 					callback = relName;
 					relName = null;
@@ -291,10 +302,10 @@
 				}
 			}
 
-			//Support require(['a'])
+			// Support require(['a'])
 			callback = callback || function () {};
 
-			//Simulate async callback;
+			// Simulate async callback;
 			if (forceSync) {
 				main(undef, deps, callback, relName);
 			} else {
@@ -304,34 +315,37 @@
 			}
 
 			return req;
+
 		};
 
 		/**
 		 * Just drops the config on the floor, but returns req in case
 		 * the config return value is used.
-		 */
+		**/
 		req.config = function (cfg) {
+
 			config = cfg;
 			return req;
+
 		};
 
 		define = function (name, deps, callback) {
 
-			//This module may not have dependencies
+			// This module may not have dependencies
 			if (!deps.splice) {
-				//deps is not an array, so probably means
-				//an object literal or factory function for
-				//the value. Adjust args.
+				// deps is not an array, so probably means
+				// an object literal or factory function for
+				// the value. Adjust args.
 				callback = deps;
 				deps = [];
 			}
 
 			waiting[name] = [name, deps, callback];
+
 		};
 
-		define.amd = {
-			jQuery: true
-		};
+		define.amd = { jQuery: true };
+
 	}());
 
 	define("almond", function () {});
@@ -753,18 +767,19 @@
 	});
 
 	// Gaea
-	define('gaea/wm/window', [ 'gaea/core/emitter', 'gaea/core/view', 'tpl!gaea/tpl/window', 'less!gaea/css/window' ], function (Emitter, View, WindowTemplate) {
+	// define("gaea/wm/window", ["gaea/core/emitter", "gaea/core/view", "tpl!gaea/tpl/window", "less!gaea/css/window"], function (Emitter, View, WindowTemplate) {
+	define("gaea/wm/window", ["gaea/core/emitter", "gaea/core/view", "tpl!gaea/tpl/window"], function (Emitter, View, WindowTemplate) {
 
 		var Window = function (options) {
 			this.signals = new Emitter();
 
 			options = options || {
-				title: 'Untitle Window',
+				title: "Untitled Window",
 				width: 400,
 				height: 200,
 				x: 0,
 				y: 0,
-				content: '',
+				content: "",
 
 				movable: true,
 				resizable: true,
@@ -775,20 +790,22 @@
 			// View
 			this.el = View(WindowTemplate({
 				title: options.title,
-				classname: options.classname || ''
+				classname: options.classname || ""
 			}));
+
 			this.el.listen(this.events.window, this);
 
 			if (options.opacity)
-				this.el.css('opacity', options.opacity);
+				this.el.css("opacity", options.opacity);
 
 			// Cache content element
-			this.$content = this.el.find('.wm-content');
+			this.$content = this.el.find(".wm-content");
+
 			if (options.content)
 				this.$content.append(options.content);
 
 			// Cache header element
-			this.$titlebar = this.el.find('header');
+			this.$titlebar = this.el.find("header");
 
 			this.width = options.width || 400;
 			this.height = options.height || 200;
@@ -808,7 +825,7 @@
 			// Properties
 			this.widget = false;
 			this.movable = true;
-			this.resizable = (typeof options.resizable !== 'undefined') ?
+			this.resizable = (typeof options.resizable !== "undefined") ?
 				options.resizable :
 				true;
 
@@ -822,6 +839,7 @@
 
 			slots: {
 				move: function (e) {
+
 					if (!this.enabled || !this.movable) return;
 
 					this._moving = this.toLocal({
@@ -829,71 +847,82 @@
 						y: e.originalEvent.pageY
 					});
 
-					this.el.addClass('move');
-
+					this.el.addClass("move");
 					e.preventDefault();
+
 				}
 			},
 
 			events: {
 				window: {
-					'click': function (e) {
-						this.signals.emit('select', this, e);
+					"click": function (e) {
+						this.signals.emit("select", this, e);
 					},
 
-					'mousedown': function (e) {
+					"mousedown": function (e) {
+
 						this.focus();
 
 						if (this.widget)
 							this.slots.move.call(this, e);
+
 					},
 
-					'.wm-content click': function (e) {
+					".wm-content click": function (e) {
 						if (this.enabled)
-							this.signals.emit('click', this, e);
+							this.signals.emit("click", this, e);
 					},
 
-					'.wm-window-title mousedown': function (e) {
+					".wm-window-title mousedown": function (e) {
 						this.slots.move.call(this, e);
 					},
 
-					'.wm-window-title dblclick': function () {
+					".wm-window-title dblclick": function () {
 						if (this.enabled && this.resizable)
 							this.maximize();
 					},
 
-					'.wm-window-title button.wm-close click': function (e) {
+					".wm-window-title button.wm-close click": function (e) {
+
 						e.stopPropagation();
 						e.preventDefault();
 
 						if (this.enabled)
 							this.close();
+
 					},
 
-					'.wm-window-title button.wm-maximize click': function (e) {
+					".wm-window-title button.wm-maximize click": function (e) {
+
 						e.stopPropagation();
 						e.preventDefault();
 
 						if (this.enabled && this.resizable)
 							this.maximize();
+
 					},
 
-					'.wm-window-title button.wm-minimize click': function (e) {
+					".wm-window-title button.wm-minimize click": function (e) {
+
 						e.stopPropagation();
 						e.preventDefault();
 
 						if (this.enabled)
 							this.minimize();
+
 					},
 
-					'.wm-window-title button mousedown': function (e) {
+					".wm-window-title button mousedown": function (e) {
+
 						this.focus();
 
 						e.stopPropagation();
 						e.preventDefault();
+
 					},
 
-					'button.wm-resize mousedown': function (e) {
+					"button.wm-resize mousedown": function (e) {
+
 						if (!this.enabled || !this.resizable) return;
 
 						this._resizing = {
@@ -901,14 +930,14 @@
 							height: this.height - e.originalEvent.pageY
 						};
 
-						this.el.addClass('resizing');
-
+						this.el.addClass("resizing");
 						e.preventDefault();
+
 					}
 				},
 
 				space: {
-					'mousemove': function (e) {
+					"mousemove": function (e) {
 						if (this._moving)
 							this.move(
 								e.originalEvent.pageX - this._moving.x,
@@ -922,24 +951,26 @@
 							);
 					},
 
-					'mouseup': function () {
+					"mouseup": function () {
+
 						if (this._moving) {
-							this.el.removeClass('move');
+							this.el.removeClass("move");
 							this._moving = null;
 						}
 
 						if (this._resizing) {
-							this.el.removeClass('resizing');
+							this.el.removeClass("resizing");
 							this._restore = null;
 							this._resizing = null;
 						}
+
 					}
 				}
 			},
 
 			set space(el) {
 				if (el && !el.listen) {
-					console.error('The given space element is not a valid View');
+					console.error("The given space element is not a valid View");
 					return;
 				}
 
@@ -959,9 +990,9 @@
 			set maximized(value) {
 				if (value) {
 					this._restoreMaximized = this.stamp();
-					this.signals.emit('maximize', this, this._restoreMaximized);
+					this.signals.emit("maximize", this, this._restoreMaximized);
 				} else {
-					this.signals.emit('restore', this, this._restoreMaximized);
+					this.signals.emit("restore", this, this._restoreMaximized);
 				}
 				this._maximized = value;
 			},
@@ -974,9 +1005,9 @@
 			set minimized(value) {
 				if (value) {
 					this._restoreMinimized = this.stamp();
-					this.signals.emit('minimize', this, this._restoreMinimized);
+					this.signals.emit("minimize", this, this._restoreMinimized);
 				} else {
-					this.signals.emit('restore', this, this._restoreMinimized);
+					this.signals.emit("restore", this, this._restoreMinimized);
 				}
 
 				this._minimized = value;
@@ -984,13 +1015,13 @@
 
 			set active(value) {
 				if (value) {
-					this.signals.emit('focus', this);
-					this.el.addClass('active');
-					this.el.removeClass('inactive');
+					this.signals.emit("focus", this);
+					this.el.addClass("active");
+					this.el.removeClass("inactive");
 				} else {
-					this.signals.emit('blur', this);
-					this.el.removeClass('active');
-					this.el.addClass('inactive');
+					this.signals.emit("blur", this);
+					this.el.removeClass("active");
+					this.el.addClass("inactive");
 				}
 
 				this._active = value;
@@ -1002,9 +1033,9 @@
 
 			set enabled(value) {
 				if (!value) {
-					this.el.addClass('disabled');
+					this.el.addClass("disabled");
 				} else {
-					this.el.removeClass('disabled');
+					this.el.removeClass("disabled");
 				}
 
 				this._enabled = value;
@@ -1024,9 +1055,9 @@
 
 			set resizable(value) {
 				if (!value) {
-					this.el.addClass('noresizable');
+					this.el.addClass("noresizable");
 				} else {
-					this.el.removeClass('noresizable');
+					this.el.removeClass("noresizable");
 				}
 
 				this._resizable = !! value;
@@ -1038,16 +1069,18 @@
 
 			set closed(value) {
 				if (value) {
-					this.signals.emit('close', this);
+					this.signals.emit("close", this);
+					this.el.addClass("closing");
 
-					this.el.addClass('closing');
 					this.el.onAnimationEnd(function () {
-						this.el.removeClass('closing');
-						this.el.addClass('closed');
+
+						this.el.removeClass("closing");
+						this.el.addClass("closed");
 						this.el.hide();
 
 						// Remove element
-						this.$content.html('');
+						this.$content.html("");
+
 					}, this);
 				}
 
@@ -1060,13 +1093,14 @@
 
 			set opened(value) {
 				if (value) {
-					this.signals.emit('open', this);
+					this.signals.emit("open", this);
 
 					// Open animation
 					this.el.show();
-					this.el.addClass('opening');
+					this.el.addClass("opening");
+
 					this.el.onAnimationEnd(function () {
-						this.el.removeClass('opening');
+						this.el.removeClass("opening");
 					}, this);
 				}
 
@@ -1088,9 +1122,9 @@
 
 			set titlebar(value) {
 				if (value)
-					this.$titlebar.removeClass('hide');
+					this.$titlebar.removeClass("hide");
 				else
-					this.$titlebar.addClass('hide');
+					this.$titlebar.addClass("hide");
 
 				this._titlebar = value;
 			},
@@ -1110,7 +1144,7 @@
 			set height(value) {
 				// This shouldn't be done if flexible box model
 				// worked properly with overflow-y: auto
-				//this.$content.height(value - this.$header.outerHeight());
+				// this.$content.height(value - this.$header.outerHeight());
 
 				this.el.height(value);
 			},
@@ -1120,27 +1154,27 @@
 			},
 
 			set x(value) {
-				this.el.css('left', value);
+				this.el.css("left", value);
 			},
 
 			set y(value) {
-				this.el.css('top', value);
+				this.el.css("top", value);
 			},
 
 			get x() {
-				return parseInt(this.el.css('left'), 10);
+				return parseInt(this.el.css("left"), 10);
 			},
 
 			get y() {
-				return parseInt(this.el.css('top'), 10);
+				return parseInt(this.el.css("top"), 10);
 			},
 
 			set z(value) {
-				this.el.css('z-index', value);
+				this.el.css("z-index", value);
 			},
 
 			get z() {
-				return parseInt(this.el.css('z-index'), 10);
+				return parseInt(this.el.css("z-index"), 10);
 			},
 
 			open: function () {
@@ -1246,68 +1280,76 @@
 
 	});
 
-	/**
-	 * Gaea
-	 * Copyright © 2012 Ramón Lamana
-	 * https://github.com/rlamana
-	 */
-	define('gaea/wm/modes/default', ['less!../../../css/windowmanager'], function () {
+	// Gaea × Maximized mode
+	// define("gaea/wm/modes/default", ["less!../../../css/windowmanager"], function () {
+	define("gaea/wm/modes/default", function () {
+
+		var
+		$vW = $(window).width(),
+		$vH = $(window).height();
 
 		var DefaultMode = {
-			register: function () {
-				console.log("Default mode registered.");
-			},
-
+			register: function () { console.log("Default mode registered."); },
 			plug: function () {},
-
 			unplug: function () {},
 
 			actions: {
 				maximize: function (win) {
+
 					win.move(0, 0);
-					win.el.css('-webkit-transform', 'translate3d(0, 0, 0);');
-					win.resize(this.el.width(), this.el.height());
+
+					win.el.css({
+						// account for taskbar
+						"height": $vH - 50 + "px",
+						"top": "50px",
+						"transform": "translate3d(0, 0, 0);",
+						"-moz-transform": "translate3d(0, 0, 0);",
+						"-webkit-transform": "translate3d(0, 0, 0);"
+					});
+
+					// win.resize(this.el.width(), this.el.height());
+					win.resize(this.el.width());
+
 				},
 
-				restore: function (win, restore) {
-					restore.call(win);
-				},
-
-				minimize: function (win) {
-					win.resize(0, 0);
-				}
+				restore: function (win, restore) { restore.call(win); },
+				minimize: function (win) { win.resize(0, 0); }
 			}
 		};
 
 		return DefaultMode;
+
 	});
 
 	(function () {
-		var n = this,
-			t = n._,
-			r = {}, e = Array.prototype,
-			u = Object.prototype,
-			i = Function.prototype,
-			a = e.push,
-			o = e.slice,
-			c = e.concat,
-			l = u.toString,
-			f = u.hasOwnProperty,
-			s = e.forEach,
-			p = e.map,
-			h = e.reduce,
-			v = e.reduceRight,
-			d = e.filter,
-			g = e.every,
-			m = e.some,
-			y = e.indexOf,
-			b = e.lastIndexOf,
-			x = Array.isArray,
-			_ = Object.keys,
-			j = i.bind,
-			w = function (n) {
-				return n instanceof w ? n : this instanceof w ? (this._wrapped = n, void 0) : new w(n);
-			};
+
+		var
+		n = this,
+		t = n._,
+		r = {}, e = Array.prototype,
+		u = Object.prototype,
+		i = Function.prototype,
+		a = e.push,
+		o = e.slice,
+		c = e.concat,
+		l = u.toString,
+		f = u.hasOwnProperty,
+		s = e.forEach,
+		p = e.map,
+		h = e.reduce,
+		v = e.reduceRight,
+		d = e.filter,
+		g = e.every,
+		m = e.some,
+		y = e.indexOf,
+		b = e.lastIndexOf,
+		x = Array.isArray,
+		_ = Object.keys,
+		j = i.bind,
+		w = function (n) {
+			return n instanceof w ? n : this instanceof w ? (this._wrapped = n, void 0) : new w(n);
+		};
+
 		"undefined" != typeof exports ? ("undefined" != typeof module && module.exports && (exports = module.exports = w), exports._ = w) : n._ = w, w.VERSION = "1.4.4";
 		var A = w.each = w.forEach = function (n, t, e) {
 			if (null !== n)
@@ -1879,6 +1921,7 @@
 				return this._wrapped
 			}
 		})
+
 	}).call(this);
 
 	define("Underscore", (function (global) {
@@ -1890,8 +1933,9 @@
 		};
 	}(this)));
 
-	// Gaea
-	define("gaea/wm/modes/expose", ["Underscore", "less!../../../css/expose"], function (_) {
+	// Gaea × Expose mode
+	// define("gaea/wm/modes/expose", ["Underscore", "less!../../../css/expose"], function (_) {
+	define("gaea/wm/modes/expose", function (_) {
 
 		var ExposeMode = {
 			// Launch when plugin is registered
@@ -1901,6 +1945,7 @@
 
 				console.log("Expose mode registered.");
 
+				/*
 				this.el.on("contextmenu", _.throttle(function () {
 
 					// Right click sets expose mode
@@ -1913,6 +1958,7 @@
 					return false;
 
 				}, 1000));
+				*/
 
 			},
 
@@ -2024,7 +2070,8 @@
 	});
 
 	// Gaea
-	define("gaea/wm/modes/fullscreen", ["less!../../../css/fullscreen"], function () {
+	// define("gaea/wm/modes/fullscreen", ["less!../../../css/fullscreen"], function () {
+	define("gaea/wm/modes/fullscreen", function () {
 
 		var FullscreenMode = {
 			// Launch when plugin is registered
@@ -2038,9 +2085,13 @@
 				for (var win, i = 0, len = this.windows.length; i < len; i++) {
 					win = this.windows[i];
 					win.move(0, 0);
-					win.el.css("transform", "translate3d(0, 0, 0);");
-					win.el.css("-moz-transform", "translate3d(0, 0, 0);");
-					win.el.css("-webkit-transform", "translate3d(0, 0, 0);");
+
+					win.el.css({
+						"transform": "translate3d(0, 0, 0);",
+						"-moz-transform": "translate3d(0, 0, 0);",
+						"-webkit-transform": "translate3d(0, 0, 0);"
+					});
+
 					win.resize(this.el.width(), this.el.height());
 				}
 
@@ -2304,8 +2355,10 @@
 
 			browser: {
 				animationEventName: function () {
-					var style = document.body.style;
-					var event = null;
+
+					var
+					style = document.body.style,
+					event = null;
 
 					if (style.animation === "")
 						event = "animationend";
@@ -2317,6 +2370,7 @@
 						event = "webkitAnimationEnd";
 
 					return event;
+
 				}
 			},
 
@@ -2327,13 +2381,8 @@
 	});
 
 	// Register in the values from the outer closure for common dependencies as local almond modules
-	define("$", function () {
-		return $;
-	});
-
-	define("handlebars", function () {
-		return Handlebars;
-	});
+	define("$", function () { return $; });
+	define("handlebars", function () { return Handlebars; });
 
 	return require("gaea");
 
