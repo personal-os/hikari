@@ -6,7 +6,8 @@
 	margin: 0; padding: 0;
 
 	box-sizing: border-box;
-	cursor: default;
+	// cursor: default;
+	cursor: url("../cursors/osx/normal.cur"), default !important;
 	outline: none;
 	text-rendering: optimizeLegibility !important;
 	text-shadow: 1px 1px 1px rgba(25, 25, 25, 0.004);
@@ -48,7 +49,9 @@ blockquote:before, blockquote:after, q:before, q:after { content: " "; content: 
 table { border-collapse: collapse; border-spacing: 0; }
 
 a {
+	cursor: url("../cursors/osx/link.cur"), default !important;
 	text-decoration: none;
+
 	&:visited { text-decoration: none; }
 }
 
