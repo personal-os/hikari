@@ -217,6 +217,7 @@
 	flex-direction: row;
 	font-size: 16px;
 	font-weight: 400;
+	letter-spacing: 0.1rem;
 	user-select: none;
 
 	-o-flex: 1;

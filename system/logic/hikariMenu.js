@@ -63,6 +63,7 @@ $(window).on("ready", function() {
 
 					ev.stopPropagation();
 					ev.preventDefault();
+
 					container.className = "hikari-container"; // clear
 					classie.add(container, effect);
 
@@ -99,28 +100,17 @@ $(window).on("ready", function() {
 
 			});
 
+			$("#select-chip-folder, #select-subchip-folder, #select-data-library, #select-netnavi, #select-email, #select-key-item, #select-network, #select-map, #select-save").on("click", function(ev) {
+				resetMenu();
+			});
+
+			$("#select-system-fonts, #select-system-language, #select-system-mail, #select-system-personalization, #select-system-progsFeats, #select-system-sync, #select-system-OS, #select-system-userAccounts, #select-system-update").on("click", function(ev) {
+				resetMenu();
+			});
 		}
 
 		init();
 
 	})();
-
-	//
-
-	/*
-	$(document).on("click", "#contextGaea", function(e) {
-
-		$(".hikari-container").removeClass("left right top").addClass("bottom hikari-menu-open");
-		$(".context-menu-list").hide();
-
-		e.preventDefault();
-		e.stopPropagation();
-
-	});
-	*/
-
-	$(document).on("click", ".hikari-pusher", function() {
-		// $(".hikari-container").removeClass("left right top bottom hikari-menu-open");
-	});
 
 });
