@@ -12,7 +12,7 @@ TL;DR: I had the idea that it would be nifty if my smartphone could dock into so
 ![Screenshot](http://hikari.pw-software.com/images/tfotos-01.png)
 
 (as of January 2014)
-![Screenshot](http://hikar.io/images/in-progress/01-04-2013.png)
+![Screenshot](http://hikar.io/images/in-progress/01-04-2014.png)
 
 =
 <sub><sup>The MIT License (MIT)</sup></sub>
