@@ -16,7 +16,7 @@ $(document).ready(function () {
 // Chips
 $("#select-chip-folder").click(function (e) {
 
-	$(".wm-space").append('<div id="chip-folder"></div>');
+	$(".wm-space").append('<section id="chip-folder">This is the Chip Folder.</section>');
 
 	var chipWin = wm.createWindow.fromQuery("#chip-folder", {
 
@@ -36,7 +36,7 @@ $("#select-chip-folder").click(function (e) {
 // SubChips
 $("#select-subchip-folder").click(function (e) {
 
-	$(".wm-space").append('<div id="subchip-folder"></div>');
+	$(".wm-space").append('<section id="subchip-folder">This is the SubChip Folder.</section>');
 
 	var chipWin = wm.createWindow.fromQuery("#subchip-folder", {
 
@@ -56,7 +56,7 @@ $("#select-subchip-folder").click(function (e) {
 // Data Library
 $("#select-data-library").click(function (e) {
 
-	$(".wm-space").append('<div id="data-library"></div>');
+	$(".wm-space").append('<section id="data-library">Kind of like an encyclopedia of sorts, this will have information about every single BattleChip from MMBN1-MMBN6. Possibly even 4.5 and OSS.</section>');
 
 	var chipWin = wm.createWindow.fromQuery("#data-library", {
 
@@ -76,7 +76,7 @@ $("#select-data-library").click(function (e) {
 // NetNavi
 $("#select-netnavi").click(function (e) {
 
-	$(".wm-space").append('<div id="netnavi"></div>');
+	$(".wm-space").append('<section id="netnavi">Awesome NetNavi stuff to come soon. Like, the NaviCustomizer from MMBN3!</section>');
 
 	var chipWin = wm.createWindow.fromQuery("#netnavi", {
 
@@ -96,7 +96,7 @@ $("#select-netnavi").click(function (e) {
 // EMail
 $("#select-email").click(function (e) {
 
-	$(".wm-space").append('<div id="email"></div>');
+	$(".wm-space").append('<section id="email">I will probably use <a href="https://github.com/khamidou/kite">Kite</a> for this.</section>');
 
 	var chipWin = wm.createWindow.fromQuery("#email", {
 
@@ -116,7 +116,7 @@ $("#select-email").click(function (e) {
 // Key Items
 $("#select-key-item").click(function (e) {
 
-	$(".wm-space").append('<div id="key-item"></div>');
+	$(".wm-space").append('<section id="key-item">This is the Key Items folder. Maybe NetBattler Licenses will reside here.</section>');
 
 	var chipWin = wm.createWindow.fromQuery("#key-item", {
 
@@ -136,7 +136,7 @@ $("#select-key-item").click(function (e) {
 // The Network × https://twitter.com/on_thenetwork
 $("#select-network").click(function (e) {
 
-	$(".wm-space").append('<div id="network"></div>');
+	$(".wm-space").append('<section id="network">Hehe, this is gonna be awesome. And, take a bajillion years to create. You know how the Internet in MMBN and the anime was 3D? Yeah. Exactly. A bajillion years.</section>');
 
 	var chipWin = wm.createWindow.fromQuery("#network", {
 
@@ -156,7 +156,7 @@ $("#select-network").click(function (e) {
 // Internet Maps
 $("#select-map").click(function (e) {
 
-	$(".wm-space").append('<div id="map"></div>');
+	$(".wm-space").append('<section id="map">This is where maps of areas on The Network will reside.</section>');
 
 	var chipWin = wm.createWindow.fromQuery("#map", {
 
@@ -176,7 +176,7 @@ $("#select-map").click(function (e) {
 // Save
 $("#select-save").click(function (e) {
 
-	$(".wm-space").append('<div id="save"></div>');
+	$(".wm-space").append('<section id="save">Hmm, idk. Sync on demand?</section>');
 
 	var chipWin = wm.createWindow.fromQuery("#save", {
 
@@ -193,11 +193,10 @@ $("#select-save").click(function (e) {
 
 });
 
-
 // System Fonts
 $("#select-system-fonts").click(function (e) {
 
-	$(".wm-space").append('<div id="system-fonts"></div>');
+	$(".wm-space").append('<section id="system-fonts"></section>');
 
 	var chipWin = wm.createWindow.fromQuery("#system-fonts", {
 
@@ -217,7 +216,7 @@ $("#select-system-fonts").click(function (e) {
 // System Language
 $("#select-system-language").click(function (e) {
 
-	$(".wm-space").append('<div id="system-language"></div>');
+	$(".wm-space").append('<section id="system-language"></section>');
 
 	var chipWin = wm.createWindow.fromQuery("#system-language", {
 
@@ -237,7 +236,7 @@ $("#select-system-language").click(function (e) {
 // System Mail Accounts
 $("#select-system-mail").click(function (e) {
 
-	$(".wm-space").append('<div id="system-mail"></div>');
+	$(".wm-space").append('<section id="system-mail"></section>');
 
 	var chipWin = wm.createWindow.fromQuery("#system-mail", {
 
@@ -257,7 +256,7 @@ $("#select-system-mail").click(function (e) {
 // Personalization
 $("#select-system-personalization").click(function (e) {
 
-	$(".wm-space").append('<div id="system-personalization"></div>');
+	$(".wm-space").append('<section id="system-personalization"></section>');
 
 	var chipWin = wm.createWindow.fromQuery("#system-personalization", {
 
@@ -277,7 +276,7 @@ $("#select-system-personalization").click(function (e) {
 // Programs & Features
 $("#select-system-progsFeats").click(function (e) {
 
-	$(".wm-space").append('<div id="system-progsFeats"></div>');
+	$(".wm-space").append('<section id="system-progsFeats"></section>');
 
 	var chipWin = wm.createWindow.fromQuery("#system-progsFeats", {
 
@@ -297,7 +296,7 @@ $("#select-system-progsFeats").click(function (e) {
 // Sync
 $("#select-system-sync").click(function (e) {
 
-	$(".wm-space").append('<div id="system-sync"></div>');
+	$(".wm-space").append('<section id="system-sync"></section>');
 
 	var chipWin = wm.createWindow.fromQuery("#system-sync", {
 
@@ -317,7 +316,7 @@ $("#select-system-sync").click(function (e) {
 // System
 $("#select-system-OS").click(function (e) {
 
-	$(".wm-space").append('<div id="system-OS"></div>');
+	$(".wm-space").append('<section id="system-OS"></section>');
 
 	var chipWin = wm.createWindow.fromQuery("#system-OS", {
 
@@ -337,7 +336,7 @@ $("#select-system-OS").click(function (e) {
 // User Accounts
 $("#select-system-userAccounts").click(function (e) {
 
-	$(".wm-space").append('<div id="system-userAccounts"></div>');
+	$(".wm-space").append('<section id="system-userAccounts"></section>');
 
 	var chipWin = wm.createWindow.fromQuery("#system-userAccounts", {
 
@@ -357,7 +356,7 @@ $("#select-system-userAccounts").click(function (e) {
 // System Update
 $("#select-system-update").click(function (e) {
 
-	$(".wm-space").append('<div id="system-update"></div>');
+	$(".wm-space").append('<section id="system-update"></section>');
 
 	var chipWin = wm.createWindow.fromQuery("#system-update", {
 
