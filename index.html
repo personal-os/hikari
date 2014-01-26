@@ -36,7 +36,9 @@
 
 		<link rel="shortcut icon" href="system/shell/favicon.png"/>
 
-		<script src="system/logic/jquery-2.0.3.min.js"></script>
+		<script src="system/logic/vendor/jquery-2.1.0.min.js"></script>
+		<script src="system/logic/vendor/handlebars.js"></script>
+
 		<script src="system/logic/backstretch.js"></script>
 
 		<!--//-->
@@ -324,7 +326,7 @@
 
 					<div class="buttonbar">
 						<button class="button create-button">Create Window</button>
-						<button class="button expose-button">Exposé</button>
+						<!--/ <button class="button expose-button">Exposé</button> /-->
 					</div>
 
 				</div>
@@ -344,7 +346,6 @@
 		<script src="system/logic/hikariMenu.js"></script>
 		<script src="system/logic/gaea.js"></script>
 
-		<script src="system/logic/gaea/vendor/handlebars.js"></script>
 		<script src="system/logic/gaea/build/gaea.js"></script>
 
 		<script>
@@ -365,10 +366,11 @@
 				}
 				*/
 
-				var wm = new Gaea.WindowManager();
+				var
+				wm = new Gaea.WindowManager(),
+				pos = 50,
+				num = 1;
 
-				var pos = 50;
-				var num = 1;
 				window.wm = wm; // For debugging reasons
 
 				$(".create-button").click(function () {
