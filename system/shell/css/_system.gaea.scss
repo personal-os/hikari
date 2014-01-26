@@ -43,6 +43,45 @@ body {
 }
 
 /*****************************************************************************************************/
+/*
+// Taken from http://discover.store.sony.com/be-moved, hehe!
+.scrollbar {
+	top: 0; right: 0; bottom: 0;
+
+	background-color: rgba(200, 200, 200, 0.3);
+	display: none;
+	opacity: 0;
+	margin: 0 -10px 0 0;
+	position: absolute;
+	width: 10px;
+	z-index: 21;
+
+	.track {
+		top: 0; left: 0;
+		bottom: 0; right: 0;
+
+		margin: 20px 0;
+		position: absolute;
+		width: 10px;
+	}
+
+	.thumb {
+		width: 10px; height: 40px;
+
+		background-color: #81C9DF;
+		cursor: pointer;
+		display: block;
+		margin: -20px 0;
+		position: absolute;
+		top: 0;
+		
+		-o-transition: background-color 0.2s linear;
+		-ms-transition: background-color 0.2s linear;
+		-moz-transition: background-color 0.2s linear;
+		-webkit-transition: background-color 0.2s linear;
+	}
+}
+*/
 
 /* (HIKARI.gaea.wm.background) */
 

@@ -7,9 +7,13 @@
 		<title></title>
 
 		<!--/ HELPING TO MAKE THE 'NET A BETTER PLACE TO BE
+			 __  __     __     __  __     ______     ______     __
+			/\ \_\ \   /\ \   /\ \/ /    /\  __ \   /\  == \   /\ \
+			\ \  __ \  \ \ \  \ \  _"-.  \ \  __ \  \ \  __<   \ \ \
+			 \ \_\ \_\  \ \_\  \ \_\ \_\  \ \_\ \_\  \ \_\ \_\  \ \_\
+			  \/_/\/_/   \/_/   \/_/\/_/   \/_/\/_/   \/_/ /_/   \/_/
 
-			|_  o  |  _  __ o 
-			| | |  |<(_| |  | 
+			01101000 01101001 01101011 01100001 01110010 01101001 
 
 		/-->
 
@@ -19,6 +23,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 		<link rel="stylesheet" href="system/shell/css/style.css"/>
+		<link rel="stylesheet" href="system/logic/gaea/build/gaea.css"/>
+
+		<style>
+			.buttonbar {
+				top: 50%; left: 44%;
+
+				position: fixed;
+				z-index: 2;
+			}
+		</style>
+
 		<link rel="shortcut icon" href="system/shell/favicon.png"/>
 
 		<script src="system/logic/jquery-2.0.3.min.js"></script>
@@ -243,7 +258,7 @@
 
 	<!--/	LET'S BEGIN /-->
 
-	<body>
+	<body unselectable="on">
 
 		<div id="hikari-container" class="hikari-container">
 
@@ -251,15 +266,15 @@
 				<!--/ <h2>Access</h2> /-->
 
 				<ul>
-					<li><a href="#">Chip Folder</a></li>
-					<li><a href="#">Subchip Folder</a></li>
-					<li><a href="#">Data Library</a></li>
-					<li><a href="#">NetNavi</a></li>
-					<li><a href="#">Email</a></li>
-					<li><a href="#">Key Item</a></li>
-					<li><a href="#">Network</a></li>
-					<li><a href="#">Map</a></li>
-					<li><a href="#">Save</a></li>
+					<li><a href="#" id="select-chip-folder">Chip Folder</a></li>
+					<li><a href="#" id="select-subchip-folder">Subchip Folder</a></li>
+					<li><a href="#" id="select-data-library">Data Library</a></li>
+					<li><a href="#" id="select-netnavi">NetNavi</a></li>
+					<li><a href="#" id="select-email">Email</a></li>
+					<li><a href="#" id="select-key-item">Key Item</a></li>
+					<li><a href="#" id="select-network">Network</a></li>
+					<li><a href="#" id="select-map">Map</a></li>
+					<li><a href="#" id="select-save">Save</a></li>
 				</ul>
 			</nav>
 
@@ -307,6 +322,11 @@
 			<div class="hikari-pusher">
 				<div class="hikari-content">
 
+					<div class="buttonbar">
+						<button class="button create-button">Create Window</button>
+						<button class="button expose-button">Exposé</button>
+					</div>
+
 				</div>
 			</div>
 
@@ -323,6 +343,60 @@
 		<script src="system/logic/classie.js"></script>
 		<script src="system/logic/hikariMenu.js"></script>
 		<script src="system/logic/gaea.js"></script>
+
+		<script src="system/logic/gaea/vendor/handlebars.js"></script>
+		<script src="system/logic/gaea/build/gaea.js"></script>
+
+		<script>
+			$(document).ready(function () {
+
+				/*
+				var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+				var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+				var $browserAlert = $(".browser-overlay");
+
+				if (!isChrome && !isSafari) {
+					$browserAlert.find(".close-button").click(function (e) {
+						$browserAlert.hide();
+						e.preventDefault();
+					});
+
+					$browserAlert.show();
+				}
+				*/
+
+				var wm = new Gaea.WindowManager();
+
+				var pos = 50;
+				var num = 1;
+				window.wm = wm; // For debugging reasons
+
+				$(".create-button").click(function () {
+
+					wm.createWindow({
+						title: "Window " + (num++),
+						x: (pos += 60),
+						y: pos,
+						width: 400,
+						height: 250
+					}).open();
+
+				});
+
+				$(".expose-button").click(_.throttle(function () {
+
+					if (wm.mode === "expose") {
+						wm.mode = "default";
+					} else {
+						wm.mode = "expose";
+					}
+
+					return false;
+
+				}, 1000));
+
+			});
+		</script>
 		<!--//logic /-->
 
 	</body>
