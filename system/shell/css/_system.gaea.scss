@@ -246,7 +246,7 @@ body {
 			-webkit-touch-callout: none;
 
 			h1 {
-				margin: 0; padding: 0 0 0 8px;
+				margin: 0; padding: 0;
 
 				align-items: center;
 				box-align: center;
@@ -295,7 +295,17 @@ body {
 				-moz-user-select: none;
 				-webkit-user-select: none;
 
-				-webkit-touch-callout: none;	
+				-webkit-touch-callout: none;
+
+				&:before {
+					width: 31px; height: 31px;
+
+					content: "\f20e";
+					font-family: "Ionicons";
+					font-size: 16px;
+					margin: 15px 0.5rem 0 0;
+					text-align: center;
+				}
 			}
 
 			.wm-button-group {
