@@ -1,0 +1,10 @@
+{
+	"name": "hikari",
+	"description": "The world's first responsive operating system",
+	"private": true,
+	"version": "0.0.3",
+	"dependencies": {
+		"express": "3.4.8",
+		"hbs": "2.4.0"
+	}
+}

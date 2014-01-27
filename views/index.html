@@ -23,53 +23,44 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-		<link rel="stylesheet" href="system/shell/css/style.css"/>
-		<link rel="stylesheet" href="system/logic/gaea/build/gaea.css"/>
+		<link rel="stylesheet" href="shell/css/style.css"/>
+		<link rel="stylesheet" href="logic/gaea/build/gaea.css"/>
 
-		<style>
-			.buttonbar {
-				top: 50%; left: 44%;
+		<link rel="shortcut icon" href="shell/favicon.png"/>
 
-				position: fixed;
-				z-index: 2;
-			}
-		</style>
+		<script src="logic/vendor/jquery-2.1.0.min.js"></script>
+		<script src="logic/vendor/handlebars.js"></script>
 
-		<link rel="shortcut icon" href="system/shell/favicon.png"/>
-
-		<script src="system/logic/vendor/jquery-2.1.0.min.js"></script>
-		<script src="system/logic/vendor/handlebars.js"></script>
-
-		<script src="system/logic/backstretch.js"></script>
+		<script src="logic/backstretch.js"></script>
 
 		<!--//-->
-		<script src="system/logic/gaea/jqueryExtend.js"></script>
-		<script src="system/logic/gaea/jQuery.parseXml.js"></script>
+		<script src="logic/gaea/jqueryExtend.js"></script>
+		<script src="logic/gaea/jQuery.parseXml.js"></script>
 
-		<script src="system/logic/gaea/wm/background/background.js"></script>
-		<script src="system/logic/gaea/wm/icon/icon.js"></script>
+		<script src="logic/gaea/wm/background/background.js"></script>
+		<script src="logic/gaea/wm/icon/icon.js"></script>
 
-		<script src="system/logic/gaea/wm/window/window.js"></script>
-		<script src="system/logic/gaea/wm/window/windowManager.js"></script>
+		<script src="logic/gaea/wm/window/window.js"></script>
+		<script src="logic/gaea/wm/window/windowManager.js"></script>
 
-		<script src="system/logic/gaea/wm/dock/dock.js"></script>
-		<script src="system/logic/gaea/wm/tooltip/tooltip.js"></script>
+		<script src="logic/gaea/wm/dock/dock.js"></script>
+		<script src="logic/gaea/wm/tooltip/tooltip.js"></script>
 
-		<script src="system/logic/gaea/app/imageViewer/imageViewer.js"></script>
-		<script src="system/logic/gaea/app/imageViewer/imageSingle.js"></script>
+		<script src="logic/gaea/app/imageViewer/imageViewer.js"></script>
+		<script src="logic/gaea/app/imageViewer/imageSingle.js"></script>
 
-		<script src="system/logic/gaea/app/memory/memory.js"></script>
-		<script src="system/logic/gaea/app/memory/random.js"></script>
+		<script src="logic/gaea/app/memory/memory.js"></script>
+		<script src="logic/gaea/app/memory/random.js"></script>
 
-		<script src="system/logic/gaea/app/about/about.js"></script>
-		<script src="system/logic/gaea/app/settings/settings.js"></script>
+		<script src="logic/gaea/app/about/about.js"></script>
+		<script src="logic/gaea/app/settings/settings.js"></script>
 		<!--//-->
 
-		<script src="system/logic/time/date.format.js"></script>
-		<script src="system/logic/time/alarm-clock.min.js"></script>
-		<script src="system/logic/time/clock.js"></script>
+		<script src="logic/time/date.format.js"></script>
+		<script src="logic/time/alarm-clock.min.js"></script>
+		<script src="logic/time/clock.js"></script>
 
-		<script src="system/logic/forecast/simpleWeather.js"></script>
+		<script src="logic/forecast/simpleWeather.js"></script>
 
 		<script>
 			// title
@@ -147,7 +138,7 @@
 			});
 		</script>
 
-		<script src="system/logic/contextMenu.js"></script>
+		<script src="logic/contextMenu.js"></script>
 
 		<script>
 			// $(function() { $("#taskbar").contextMenu("#context-menu"); });
@@ -242,11 +233,11 @@
 		</script>
 
 		<!--/
-		<script src="system/logic/modernizr.custom.js"></script>
+		<script src="logic/modernizr.custom.js"></script>
 
-		<script src="system/logic/cors.js"></script>
-		<script src="system/logic/offline.min.js"></script>
-		<script src="system/logic/bg-resize.js"></script>
+		<script src="logic/cors.js"></script>
+		<script src="logic/offline.min.js"></script>
+		<script src="logic/bg-resize.js"></script>
 
 		<script>
 			$(document).ready(function() {
@@ -331,72 +322,22 @@
 		</div>
 
 		<!--/	logic /-->
-		<!--/ <script src="system/logic/www.js"></script> /-->
-
 		<script>
 			// $.backstretch("system/shell/wallpaper/spring-sriram.jpg");
 			// $(".hikari-content-inner").backstretch("system/shell/wallpaper/summer-sky.jpg");
 		</script>
 
-		<script src="system/logic/classie.js"></script>
-		<script src="system/logic/hikariMenu.js"></script>
-		<script src="system/logic/gaea.js"></script>
+		<script src="logic/classie.js"></script>
+		<script src="logic/hikariMenu.js"></script>
+		<script src="logic/gaea.js"></script>
 
-		<script src="system/logic/gaea/build/gaea.js"></script>
+		<script src="logic/gaea/build/gaea.js"></script>
 
 		<script>
 			$(document).ready(function () {
 
 				var wm = new Gaea.WindowManager();
 				window.wm = wm; // For debugging reasons
-
-				/*
-				var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-				var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
-				var $browserAlert = $(".browser-overlay");
-
-				if (!isChrome && !isSafari) {
-					$browserAlert.find(".close-button").click(function (e) {
-						$browserAlert.hide();
-						e.preventDefault();
-					});
-
-					$browserAlert.show();
-				}
-				*/
-
-				/*
-				var
-				wm = new Gaea.WindowManager(),
-				pos = 50,
-				num = 1;
-
-				window.wm = wm; // For debugging reasons
-
-				$(".create-button").click(function () {
-
-					wm.createWindow({
-						title: "Window " + (num++),
-						x: (pos += 60),
-						y: pos,
-						width: 400,
-						height: 250
-					}).open();
-
-				});
-
-				$(".expose-button").click(_.throttle(function () {
-
-					if (wm.mode === "expose") {
-						wm.mode = "default";
-					} else {
-						wm.mode = "expose";
-					}
-
-					return false;
-
-				}, 1000));
-				*/
 
 			});
 		</script>
