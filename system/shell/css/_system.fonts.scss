@@ -1,14 +1,14 @@
 
-/******************************************************************************** SYSTEM.FONTS/SCSS **/
+///////////////////////////////////////////////////////////////////////////////// SYSTEM.FONTS/SCSS ///
 
-/*
-Japanese |
-	font-family: "ＭＳ Ｐゴシック", "MS PGothic", "メイリオ", Meiryo, sans-serif;
-	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-*/
+// Japanese
+// font-family: "ＭＳ Ｐゴシック", "MS PGothic", "メイリオ", Meiryo, sans-serif;
+// font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 
-/************************************************************************************* [+] MONOSPACE **/
-/** [-] AMBLE *****************************************************************************************/
+//////////////////////////////////////////////// SERIF /////////////////////////////////////////////////
+
+////////////////////////////////////////////// MONOSPACED //////////////////////////////////////////////
+/// AMBLE //////////////////////////////////////////////////////////////////////////////////////////////
 
 @font-face {
 	font-family: "AmbleLight";
@@ -98,7 +98,7 @@ Japanese |
 	font-style: normal;
 }
 
-/** [-] M+ ********************************************************************************************/
+/// M+ /////////////////////////////////////////////////////////////////////////////////////////////////
 
 @font-face {
 	font-family: "Mplus1mThin";
@@ -141,7 +141,7 @@ Japanese |
 	src: url("../../fonts/M+/Mplus-1m-bold.ttf") format("truetype");
 }
 
-/** [-] SOURCE CODE PRO *******************************************************************************/
+/// SOURCE CODE PRO ////////////////////////////////////////////////////////////////////////////////////
 
 @font-face {
 	font-family: "SourceCodeProExtraLight";
@@ -215,8 +215,8 @@ Japanese |
 			 url("../../fonts/SourceCodePro/SourceCodePro-Black.svg#SourceCodeProBlack") format("svg");
 }
 
-/************************************************************************************ [+] SANS-SERIF **/
-/** [-] OPEN SANS *************************************************************************************/
+////////////////////////////////////////////// SANS-SERIF //////////////////////////////////////////////
+/// OPEN SANS //////////////////////////////////////////////////////////////////////////////////////////
 
 @font-face {
 	font-family: "OpenSansLight";
@@ -338,7 +338,7 @@ Japanese |
 				url("../../fonts/OpenSans/OpenSans-ExtraBoldItalic.woff") format("woff");
 }
 
-/** [-] SOURCE SANS PRO *******************************************************************************/
+/// SOURCE SANS PRO ////////////////////////////////////////////////////////////////////////////////////
 
 @font-face {
 	font-family: "SourceSansProExtraLight";
@@ -484,28 +484,38 @@ Japanese |
 			 url("../../fonts/SourceSansPro/SourceSansPro-BlackIt.svg#SourceSansProBlackItalic") format("svg");
 }
 
-/************************************************************************************ [+] TYPOGRAPHY **/
+//////////////////////////////////////////////// ICONS /////////////////////////////////////////////////
+
+@font-face {
+	font-family: "Ionicons";
+	font-style: normal;
+	font-weight: normal;
+
+	src: url("../../fonts/Ionic/ionicons.eot?v=1.4.0");
+	src: url("../../fonts/Ionic/ionicons.eot?v=1.4.0#iefix") format("embedded-opentype"),
+			 url("../../fonts/Ionic/ionicons.ttf?v=1.4.0") format("truetype"),
+			 url("../../fonts/Ionic/ionicons.woff?v=1.4.0") format("woff"),
+			 url("../../fonts/Ionic/ionicons.svg?v=1.4.0#Ionicons") format("svg");	
+}
+
+////////////////////////////////////////////// TYPOGRAPHY //////////////////////////////////////////////
+
+@mixin mono {
+  font-family: "SourceCodeProRegular", "AmbleRegular", monospace;
+}
 
 @mixin sans {
 	font-family: "SourceSansProRegular", "OpenSansRegular", "Open Sans", "open-sans", sans-serif;
 }
 
-@mixin mono {
-  font-family: "SourceCodeProRegular", "AmbleRegular", monospace;
-}
+@mixin japanese { font-family: "Kozuka Gothic Pr6N", "Mplus1mMedium"; }
+
+.japanese { @include japanese; }
+.mono { @include mono; }
+.sans { @include sans; }
 
 @mixin hide-text {
 	color: transparent;
 	font-size: 0;
 	line-height: 0;
 }
-
-@mixin japanese { font-family: "Kozuka Gothic Pr6N", "Mplus1mMedium"; }
-
-.japanese { @include japanese; }
-
-/*
-@mixin script {
-	font-family: "AlexBrushRegular", cursive;
-}
-*/
