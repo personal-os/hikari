@@ -28,7 +28,7 @@ Take a look at <a href="localhost:1343">localhost:1343</a>!
 =
 <sup>The MIT License (MIT)</sup>
 
-<sup>Copyright (c) 2014 Ideas Never Cease</sup>
+<sup>Copyright &copy; 2014 Ideas Never Cease × Paul Anthony Webb</sup>
 
 <sup>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</sup>
 
