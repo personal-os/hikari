@@ -1,0 +1,6 @@
+// ICONS
+Ionicons
+https://github.com/driftyco/ionicons
+
+Aurora + Tinycons
+http://mannmitdertarnjacke.deviantart.com
