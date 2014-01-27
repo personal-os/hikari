@@ -9,7 +9,7 @@ $(document).ready(function () {
 	$(".left.hikari-menu").css("padding-top", $vH / 6);
 	// $(".left.hikari-menu").css("height", $(".hikari-pusher").height());
 	
-	$(".hikari-content-inner").backstretch("system/shell/wallpaper/spring-sriram.jpg");
+	$(".hikari-content-inner").backstretch("shell/wallpaper/spring-sriram.jpg");
 
 });
 
