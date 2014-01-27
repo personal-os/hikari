@@ -1,0 +1,2103 @@
+
+/******************************************************************************** SYSTEM.ICONS/SCSS **/
+
+/*** PECULIAR was created by Lucian Marin / lucianmarin.com / Licensed under GPL ***/
+
+/******************************************************************** BASE STYLE ***/
+/***********************************************************************************/
+
+.icon {
+  width: 16px; height: 16px;
+
+  margin: 16px;
+  position: relative;
+}
+
+.icon .name {
+  top: 18px; left: -8px;
+
+  font-size: 7pt;
+  position: absolute;
+  text-align: center;
+  width: 32px;
+}
+
+.icon-blank, .icon-add, .icon-edit, .icon-remove, .icon-save, .icon-cut, .icon-ok, .icon-no,
+.icon-cancel, .icon-reload, .icon-search, .icon-print, .icon-help, .icon-undo, .icon-redo,
+.icon-back, .icon-sum, .icon-tip, .icon-mini-add, .icon-mini-edit, .icon-mini-refresh {
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.icon-blank { background-image: url("../images/windows/blank.gif"); }
+.icon-add { background-image: url("../images/windows/edit_add.png"); }
+.icon-edit { background-image: url("../images/windows/pencil.png"); }
+.icon-remove { background-image: url("../images/windows/edit_remove.png"); }
+.icon-save { background-image: url("../images/windows/filesave.png"); }
+.icon-cut { background-image: url("../images/windows/cut.png"); }
+.icon-ok { background-image: url("../images/windows/ok.png"); }
+.icon-no { background-image: url("../images/windows/no.png"); }
+.icon-cancel { background-image: url("../images/windows/cancel.png"); }
+.icon-reload { background-image: url("../images/windows/reload.png"); }
+.icon-search { background-image: url("../images/windows/search.png"); }
+.icon-print { background-image: url("../images/windows/print.png"); }
+.icon-help { background-image: url("../images/windows/help.png"); }
+.icon-undo { background-image: url("../images/windows/undo.png"); }
+.icon-redo { background-image: url("../images/windows/redo.png"); }
+.icon-back { background-image: url("../images/windows/back.png"); }
+.icon-sum { background-image: url("../images/windows/sum.png"); }
+.icon-tip { background-image: url("../images/windows/tip.png"); }
+.icon-mini-add { background-image: url("../images/windows/mini_add.png"); }
+.icon-mini-edit { background-image: url("../images/windows/mini_edit.png"); }
+.icon-mini-refresh { background-image: url("../images/windows/mini_refresh.png"); }
+
+/******************************************************************** MINUS ICON ***/
+/***********************************************************************************/
+
+.icon-minus-circle {
+  width: 16px; height: 16px;
+  top: 0; left: 0;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+.icon-minus-line {
+  width: 8px; height: 2px;
+  top: 7px; left: 4px;
+
+  background-color: #fff;
+  position: absolute;
+
+  border-radius: 1px;
+  -o-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+}
+
+/********************************************************************* PLUS ICON ***/
+/***********************************************************************************/
+
+.icon-plus-circle {
+  width: 16px; height: 16px;
+  top: 0; left: 0;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+.icon-plus-line-1 {
+  width: 8px; height: 2px;
+  top: 7px; left: 4px;
+
+  background-color: #fff;
+  position: absolute;
+
+  border-radius: 1px;
+  -o-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+}
+
+.icon-plus-line-2 {
+  width: 2px; height: 8px;
+  top: 4px; left: 7px;
+
+  background-color: #fff;
+  position: absolute;
+
+  border-radius: 1px;
+  -o-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+}
+
+/********************************************************************* DISC ICON ***/
+/***********************************************************************************/
+
+.icon-disc-circle {
+  width: 16px; height: 16px;
+  top: 0; left: 0;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+.icon-disc-dot {
+  width: 4px; height: 4px;
+  top: 6px; left: 6px;
+
+  background-color: #fff;
+  position: absolute;
+
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+/******************************************************************** CLOCK ICON ***/
+/***********************************************************************************/
+
+.icon-clock-circle {
+  width: 12px; height: 12px;
+  top: 0; left: 0;
+
+  border-color: #000;
+  border-style: solid;
+  border-width: 2px;
+  position: absolute;
+
+  border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+.icon-clock-line-1 {
+  width: 1px; height: 6px;
+  top: 3px; left: 7px;
+
+  background-color: #000;
+  position: absolute;
+}
+
+.icon-clock-line-2 {
+  width: 4px; height: 1px;
+  top: 8px; left: 8px;
+
+  background-color: #000;
+  position: absolute;
+}
+
+/******************************************************************* VOLUME ICON ***/
+/***********************************************************************************/
+
+.icon-volume-rectangle {
+  width: 5px; height: 8px;
+  top: 4px; left: 2px;
+
+  background-color: #000;
+  position: absolute;
+
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  -o-border-top-left-radius: 2px;
+  -o-border-bottom-left-radius: 2px;
+  -ms-border-top-left-radius: 2px;
+  -ms-border-bottom-left-radius: 2px;
+  -moz-border-radius-topleft: 2px;
+  -moz-border-radius-bottomleft: 2px;
+  -webkit-border-top-left-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+}
+
+.icon-volume-triangle {
+  width: 0; height: 8px;
+  top: 0; right: 4px;
+
+  border: 4px solid #000;
+  position: absolute;
+
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.icon-volume-line {
+  width: 2px; height: 16px;
+  top: 0; right: 2px;
+
+  background-color: #000;
+  position: absolute;
+}
+
+/******************************************************************** PAUSE ICON ***/
+/***********************************************************************************/
+
+.icon-pause-circle {
+  width: 16px; height: 16px;
+  top: 0; left: 0;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+.icon-pause-line-1 {
+  width: 2px; height: 8px;
+  top: 4px; left: 5px;
+
+  background-color: #fff;
+  position: absolute;
+
+  border-radius: 1px;
+  -o-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+}
+
+.icon-pause-line-2 {
+  width: 2px; height: 8px;
+  top: 4px; left: 9px;
+
+  background-color: #fff;
+  position: absolute;
+
+  border-radius: 1px;
+  -o-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+}
+
+/*********************************************************** PLASMA DISPLAY ICON ***/
+/***********************************************************************************/
+
+.icon-plasma-rectangle {
+  width: 14px; height: 8px;
+  top: 2px; left: 0;
+
+  border: #000 1px solid;
+  position: absolute;
+
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+.icon-plasma-line-1 {
+  width: 4px; height: 1px;
+  top: 12px; left: 6px;
+
+  background-color: #000;
+  position: absolute;
+}
+
+.icon-plasma-line-2 {
+  width: 8px; height: 1px;
+  top: 13px; left: 4px;
+
+  background-color: #000;
+  position: absolute;
+}
+
+/*************************************************************** LIGHT BULB ICON ***/
+/***********************************************************************************/
+
+.icon-bulb-circle {
+  width: 8px; height: 8px;
+  top: 0; left: 2px;
+
+  border:#000 2px solid;
+  position: absolute;
+
+  border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+
+.icon-bulb-line-1 {
+  width: 4px; height: 3px;
+  top: 10px; left: 6px;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 1px;
+  -o-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+}
+
+.icon-bulb-line-2 {
+  width: 4px; height: 2px;
+  top: 14px; left: 6px;
+
+  background-color: #000;
+  position: absolute;
+
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+  -o-border-bottom-left-radius: 1px;
+  -o-border-bottom-right-radius: 1px;
+  -ms-border-bottom-left-radius: 1px;
+  -ms-border-bottom-right-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-bottom-left-radius: 1px;
+  -webkit-border-bottom-right-radius: 1px;
+}
+
+/******************************************************************* IPHONE ICON ***/
+/***********************************************************************************/
+
+.icon-iphone-rectangle-1 {
+  width: 10px; height: 3px;
+  top: 0; left: 3px;
+
+  background-color: #000;
+  position: absolute;
+
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  -o-border-top-left-radius: 2px;
+  -o-border-top-right-radius: 2px;
+  -ms-border-top-left-radius: 2px;
+  -ms-border-top-right-radius: 2px;
+  -moz-border-radius-topleft: 2px;
+  -moz-border-radius-topright: 2px;
+  -webkit-border-top-left-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+}
+
+.icon-iphone-rectangle-2 {
+  width: 8px; height: 9px;
+  top: 2px; left: 3px;
+
+  border: #000 1px solid;
+  position: absolute;
+}
+
+.icon-iphone-rectangle-3 {
+  width: 10px; height: 4px;
+  top: 12px; left: 3px;
+
+  background-color: #000;
+  position: absolute;
+
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  -o-border-bottom-left-radius: 2px;
+  -o-border-bottom-right-radius: 2px;
+  -ms-border-bottom-left-radius: 2px;
+  -ms-border-bottom-right-radius: 2px;
+  -moz-border-radius-bottomleft: 2px;
+  -moz-border-radius-bottomright: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+}
+
+.icon-iphone-line {
+  width: 4px; height: 1px;
+  top: 1px; left: 6px;
+
+  background-color: #fff;
+  position: absolute;
+}
+
+.icon-iphone-dot {
+  width: 2px; height: 2px;
+  top: 13px; left: 7px;
+
+  background-color: #fff;
+  position: absolute;
+
+  border-radius: 1px;
+  -o-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+}
+
+/***************************************************************** BATTERY ICONS ***/
+/***********************************************************************************/
+
+.icon-battery-rectangle {
+  width: 12px; height: 6px;
+  top: 4px; left: 0;
+
+  border: #000 1px solid;
+  position: absolute;
+
+  border-radius: 1px;
+  -o-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+}
+
+.icon-battery-dot {
+  width: 2px; height: 4px;
+  top: 6px; left: 14px;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius-top-right: 1px;
+  border-radius-bottom-right: 1px;
+  -o-border-radius-top-right: 1px;
+  -o-border-radius-bottom-right: 1px;
+  -ms-border-radius-top-right: 1px;
+  -ms-border-radius-bottom-right: 1px;
+  -moz-border-radius-topright: 1px;
+  -moz-border-radius-bottomright: 1px;
+  -webkit-border-radius-top-right: 1px;
+  -webkit-border-radius-bottom-right: 1px;
+}
+
+.icon-battery-line {
+  width: 10px; height: 4px;
+  top: 6px; left: 2px;
+
+  background-color: #000;
+  position: absolute;
+}
+
+/************************************************************* FULL BATTERY ICON ***/
+/***********************************************************************************/
+
+.green .icon-battery-line { background-color: #ad2; }
+
+/************************************************************ EMPTY BATTERY ICON ***/
+/***********************************************************************************/
+
+.red .icon-battery-line {
+  background-color: #f00;
+  width: 2px;
+
+  -webkit-transition-property: width, background-color;
+  -webkit-transition-duration: 0.333s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-property: width, background-color;  
+  -moz-transition-duration: 0.333s;  
+  -moz-transition-delay: 0; 
+  -moz-transition-timing-function: linear;
+}
+
+.red:hover .icon-battery-line {
+  width: 10px;
+  background-color: #ad2;
+}
+
+/******************************************************************** VIDEO ICON ***/
+/***********************************************************************************/
+
+.icon-video-rectangle {
+  width: 12px; height: 10px;
+  top: 3px; left: 0;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+.icon-video-triangle {
+  width: 0; height: 0;
+  top: 4px; right: 0;
+
+  border: 4px solid #000;
+  position: absolute;
+
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+/**************************************************************** NEWSPAPER ICON ***/
+/***********************************************************************************/
+
+.icon-paper-rectangle {
+  width: 12px; height: 14px;
+  top: 0; left: 1px;
+
+  border: #000 1px solid;
+  position: absolute;
+}
+
+.icon-paper-line-1 {
+  width: 4px; height: 1px;
+  top: 2px; left: 3px;
+
+  background-color: #000;
+  position: absolute;
+}
+
+.icon-paper-line-2 {
+  width: 4px; height: 1px;
+  top: 4px; left: 3px;
+
+  background-color: #000;
+  position: absolute;
+}
+
+.icon-paper-line-3 {
+  width: 4px; height: 1px;
+  top: 6px; left: 3px;
+
+  background-color: #000;
+  position: absolute;
+}
+
+.icon-paper-line-4 {
+  width: 5px; height: 7px;
+  top: 2px; left: 8px;
+
+  background-color: #000;
+  position: absolute;
+}
+
+.icon-paper-line-5 {
+  width: 10px; height: 4px;
+  top: 10px; left: 3px;
+
+  background-color: #000;
+  position: absolute;
+}
+
+/************************************************************** SMILEY FACE ICON ***/
+/***********************************************************************************/
+
+.icon-smile-circle {
+  width: 16px; height: 16px;
+  top: 0; left: 0;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+.icon-smile-dot-1 {
+  width: 2px; height: 3px;
+  top: 4px; left: 4px;
+
+  background-color: #fff;
+  position: absolute;
+
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+.icon-smile-dot-2 {
+  width: 2px; height: 3px;
+  top: 4px; left: 10px;
+
+  background-color: #fff;
+  position: absolute;
+
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+.icon-smile-line {
+  width: 8px; height: 3px;
+  top: 9px; left: 4px;
+
+  background-color: #fff;
+  position: absolute;
+
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  -o-border-bottom-left-radius: 8px;
+  -o-border-bottom-right-radius: 8px;
+  -ms-border-bottom-left-radius: 8px;
+  -ms-border-bottom-right-radius: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+}
+
+.icon-smile .icon-smile-line {
+  -moz-transition-delay: 0;
+  -moz-transition-duration: 0.333s;
+  -moz-transition-property: -moz-border-radius-bottomleft, -moz-border-radius-bottomright, -moz-border-radius-topleft, -moz-border-radius-topright;
+  -moz-transition-timing-function: linear;
+  -webkit-transition-duration: 0.333s;
+  -webkit-transition-property: -webkit-border-bottom-left-radius, -webkit-border-bottom-right-radius, -webkit-border-top-left-radius, -webkit-border-top-right-radius;
+  -webkit-transition-timing-function: linear;
+}
+
+.icon-smile:hover .icon-smile-line {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  -o-border-bottom-left-radius: 0;
+  -o-border-bottom-right-radius: 0;
+  -o-border-top-left-radius: 8px;
+  -o-border-top-right-radius: 8px;
+  -ms-border-bottom-left-radius: 0;
+  -ms-border-bottom-right-radius: 0;
+  -ms-border-top-left-radius: 8px;
+  -ms-border-top-right-radius: 8px;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-topleft: 8px;
+  -moz-border-radius-topright: 8px;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+}
+
+/****************************************************************** PICTURE ICON ***/
+/***********************************************************************************/
+
+.icon-picture-rectangle {
+  width: 14px; height: 10px;
+  top: 2px; left: 0;
+
+  border: #000 1px solid;
+  position: absolute;
+}
+
+.icon-picture-dot {
+  width: 2px; height: 2px;
+  top: 5px; left: 3px;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 1px;
+  -o-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+}
+
+.icon-picture-dune-1 {
+  width: 4px; height: 2px;
+  top: 10px; left: 2px;
+
+  background-color: #000;
+  position: absolute;
+
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  -o-border-top-left-radius: 2px;
+  -o-border-top-right-radius: 2px;
+  -ms-border-top-left-radius: 2px;
+  -ms-border-top-right-radius: 2px;
+  -moz-border-radius-topleft: 2px;
+  -moz-border-radius-topright: 2px;
+  -webkit-border-top-left-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+}
+
+.icon-picture-dune-2 {
+  width: 8px; height: 4px;
+  top: 8px; left: 6px;
+
+  background-color: #000;
+  position: absolute;
+
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  -o-border-top-left-radius: 4px;
+  -o-border-top-right-radius: 4px;
+  -ms-border-top-left-radius: 4px;
+  -ms-border-top-right-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+}
+
+/******************************************************************** REPLY ICON ***/
+/***********************************************************************************/
+
+.icon-comment-rectangle {
+  width: 16px; height: 10px;
+  top: 2px; left: 0;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+.icon-comment-triangle {
+  width: 0; height: 0;
+  top: 8px; right: 0;
+
+  border: 4px solid #000;
+  position: absolute;
+
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+/********************************************************** TYPING NOTIFIER ICON ***/
+/***********************************************************************************/
+
+.icon-typing-rectangle {
+  width: 16px; height: 10px;
+  top: 2px; left: 0;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+.icon-typing-triangle {
+  width: 0; height: 0;
+  top: 8px; right: 0;
+
+  border: 4px solid #000;
+  position: absolute;
+
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.icon-typing-circle-1 {
+  width: 2px; height: 2px;
+  top: 6px; left: 3px;
+
+  background-color: #fff;
+  position: absolute;
+
+  border-radius: 1px;
+  -o-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+}
+
+.icon-typing-circle-2 {
+  width: 2px; height: 2px;
+  top: 6px; left: 7px;
+
+  background-color: #fff;
+  position: absolute;
+
+  border-radius: 1px;
+  -o-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+}
+
+.icon-typing-circle-3 {
+  width: 2px; height: 2px;
+  top: 6px; left: 11px;
+
+  background-color: #fff;
+  position: absolute;
+
+  border-radius: 1px;
+  -o-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+}
+
+/************************************************************* DUAL-SCREENS ICON ***/
+/***********************************************************************************/
+
+.icon-screens-rectangle-1 {
+  width: 11px; height: 7px;
+  top: 2px; right: 0;
+
+  background-color: #fff;
+  border:#000 1px solid;
+  position: absolute;
+
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+.icon-screens-rectangle-2 {
+  width: 11px; height: 7px;
+  bottom: 2px; left: 0;
+
+  background-color: #fff;
+  border:#000 1px solid;
+  position: absolute;
+
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+/********************************************************************* PLAY ICON ***/
+/***********************************************************************************/
+
+.icon-play-circle {
+  width: 16px; height: 16px;
+  top: 0; left: 0;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+.icon-play-triangle {
+  width: 0; height: 0;
+  top: 3px; left: 6px;
+
+  border: 5px solid #fff;
+  position: absolute;
+
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+/*********************************************************************** UP ICON ***/
+/***********************************************************************************/
+
+.icon-up-circle {
+  width: 16px; height: 16px;
+  top: 0; left: 0;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+.icon-up-triangle {
+  width: 0; height: 0;
+  top: 0px; left: 4px;
+
+  border: 4px solid #fff;
+  position: absolute;
+
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
+.icon-up-line {
+  width: 2px; height: 6px;
+  top: 6px; left: 7px;
+
+  background-color: #fff;
+  position: absolute;
+
+  border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+/********************************************************************* DOWN ICON ***/
+/***********************************************************************************/
+
+.icon-down-circle {
+  width: 16px; height: 16px;
+  top: 0; left: 0;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+.icon-down-triangle {
+  width: 0; height: 0;
+  bottom: 0px; left: 4px;
+
+  border: 4px solid #fff;
+  position: absolute;
+
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.icon-down-line {
+  width: 2px; height: 6px;
+  bottom: 6px; left: 7px;
+
+  background-color: #fff;
+  position: absolute;
+
+  border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+/*************************************************************** BACK ARROW ICON ***/
+/***********************************************************************************/
+
+.icon-back-triangle-1 {
+  width: 0; height: 0;
+  top: 2px; right: 9px;
+
+  border: 6px solid #000;
+  position: absolute;
+
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.icon-back-triangle-2 {
+  width: 0; height: 0;
+  top: 2px; left: 7px;
+
+  border: 2px solid #000;
+  position: absolute;
+
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.icon-back-triangle-3 {
+  width: 0; height: 0;
+  bottom: 2px; left: 7px;
+
+  border: 2px solid #000;
+  position: absolute;
+
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.icon-back-line {
+  width: 12px; height: 4px;
+  top: 6px; right: 1px;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 1px;
+  -o-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+}
+
+/************************************************************ FORWARD ARROW ICON ***/
+/***********************************************************************************/
+
+.icon-forward-triangle-1 {
+  width: 0; height: 0;
+  top: 2px; left: 9px;
+
+  border: 6px solid #000;
+  position: absolute;
+
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.icon-forward-triangle-2 {
+  width: 0; height: 0;
+  top: 2px; right: 7px;
+
+  border: 2px solid #000;
+  position: absolute;
+
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.icon-forward-triangle-3 {
+  width: 0; height: 0;
+  bottom: 2px; right: 7px;
+
+  border: 2px solid #000;
+  position: absolute;
+
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.icon-forward-line {
+  width: 12px; height: 4px;
+  top: 6px; left: 1px;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 1px;
+  -o-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+}
+
+/******************************************************************* CAMERA ICON ***/
+/***********************************************************************************/
+
+.icon-camera-rectangle {
+  width: 16px; height: 10px;
+  top: 4px; left: 0;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+.icon-camera-circle {
+  width: 4px; height: 4px;
+  top: 5px; left: 5px;
+
+  background-color: #000;
+  border: #fff 2px solid;
+  position: absolute;
+
+  border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+.icon-camera-line {
+  width: 4px; height: 4px;
+  top: 2px; left: 3px;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+/***************************************************************** YIN/YANG ICON ***/
+/***********************************************************************************/
+
+.icon-yang-rectangle-1 {
+  width: 12px; height: 12px;
+  top: 0; left: 0;
+
+  background-color: #fff;
+  border: #000 2px solid;
+  position: absolute;
+
+  border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+.icon-yang-rectangle-2 {
+  width: 6px; height: 12px;
+  top: 2px; right: 2px;
+
+  background-color: #000;
+  position: absolute;
+
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  -o-border-top-right-radius: 6px;
+  -o-border-bottom-right-radius: 6px;
+  -ms-border-top-right-radius: 6px;
+  -ms-border-bottom-right-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  -moz-border-radius-bottomright: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+}
+
+.icon-yang-circle-1 {
+  width: 6px; height: 6px;
+  bottom: 2px; left: 5px;
+
+  background-color: #fff;
+  position: absolute;
+
+  border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+.icon-yang-circle-2 {
+  width: 6px; height: 6px;
+  top: 2px; right: 5px;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+.icon-yang-dot-1 {
+  width: 2px; height: 2px;
+  top: 4px; right: 7px;
+
+  background-color: #fff;
+  position: absolute;
+
+  border-radius: 1px;
+  -o-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+}
+
+.icon-yang-dot-2 {
+  width: 2px; height: 2px;
+  bottom: 4px; left: 7px;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 1px;
+  -o-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+}
+
+/********************************************************************* USER ICON ***/
+/***********************************************************************************/
+
+.icon-profile-circle {
+  width: 6px; height: 6px;
+  top: 1px; left: 5px;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+.icon-profile-rectangle {
+  width: 10px; height: 7px;
+  bottom: 1px; left: 3px;
+
+  background-color: #000;
+  position: absolute;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  -o-border-top-left-radius: 5px;
+  -o-border-top-right-radius: 5px;
+  -o-border-bottom-left-radius: 2px;
+  -o-border-bottom-right-radius: 2px;
+  -ms-border-top-left-radius: 5px;
+  -ms-border-top-right-radius: 5px;
+  -ms-border-bottom-left-radius: 2px;
+  -ms-border-bottom-right-radius: 2px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomleft: 2px;
+  -moz-border-radius-bottomright: 2px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+}
+
+/******************************************************************* FOLDER ICON ***/
+/***********************************************************************************/
+
+.icon-folder-rectangle-1 {
+  width: 16px; height: 8px;
+  bottom: 2px; left: 0;
+
+  background-color: #000;
+  position: absolute;
+
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  -o-border-bottom-left-radius: 2px;
+  -o-border-bottom-right-radius: 2px;
+  -ms-border-bottom-left-radius: 2px;
+  -ms-border-bottom-right-radius: 2px;
+  -moz-border-radius-bottomleft: 2px;
+  -moz-border-radius-bottomright: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+}
+
+.icon-folder-rectangle-2 {
+  width: 8px; height: 2px;
+  top: 4px; right: 0;
+
+  background-color: #000;
+  position: absolute;
+
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  -o-border-top-left-radius: 2px;
+  -o-border-top-right-radius: 2px;
+  -ms-border-top-left-radius: 2px;
+  -ms-border-top-right-radius: 2px;
+  -moz-border-radius-topleft: 2px;
+  -moz-border-radius-topright: 2px;
+  -webkit-border-top-left-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+}
+
+.icon-folder-rectangle-3 {
+  width: 7px; height: 3px;
+  top: 2px; left: 0;
+
+  background-color: #000;
+  position: absolute;
+
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  -o-border-top-left-radius: 2px;
+  -o-border-top-right-radius: 2px;
+  -ms-border-top-left-radius: 2px;
+  -ms-border-top-right-radius: 2px;
+  -moz-border-radius-topleft: 2px;
+  -moz-border-radius-topright: 2px;
+  -webkit-border-top-left-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+}
+
+/******************************************************************** HEART ICON ***/
+/***********************************************************************************/
+
+.icon-heart-triangle {
+  width: 0; height: 0;
+  top: 6px; left: 0;
+
+  border: 8px solid #000;
+  position: absolute;
+
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.icon-heart-circle-1 {
+  width: 8px; height: 4px;
+  top: 2px; left: 0;
+
+  background-color: #000;
+  position: absolute;
+
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  -o-border-top-left-radius: 4px;
+  -o-border-top-right-radius: 4px;
+  -ms-border-top-left-radius: 4px;
+  -ms-border-top-right-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+}
+
+.icon-heart-circle-2 {
+  width: 8px; height: 4px;
+  top: 2px; right: 0;
+
+  background-color: #000;
+  position: absolute;
+
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  -o-border-top-left-radius: 4px;
+  -o-border-top-right-radius: 4px;
+  -ms-border-top-left-radius: 4px;
+  -ms-border-top-right-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+}
+
+/***************************************************************** OS X CMD ICON ***/
+/***********************************************************************************/
+
+.icon-cmd-square {
+  width: 2px; height: 2px;
+  top: 5px; left: 5px;
+
+  border: #000 2px solid;
+  position: absolute;
+}
+
+.icon-cmd-circle-1 {
+  width: 2px; height: 2px;
+  top: 1px; left: 1px;
+
+  border: #000 2px solid;
+  position: absolute;
+
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -o-border-top-left-radius: 4px;
+  -o-border-top-right-radius: 4px;
+  -o-border-bottom-left-radius: 4px;
+  -ms-border-top-left-radius: 4px;
+  -ms-border-top-right-radius: 4px;
+  -ms-border-bottom-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+}
+
+.icon-cmd-circle-2 {
+  width: 2px; height: 2px;
+  top: 1px; right: 1px;
+
+  border: #000 2px solid;
+  position: absolute;
+
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -o-border-top-left-radius: 4px;
+  -o-border-top-right-radius: 4px;
+  -o-border-bottom-right-radius: 4px;
+  -ms-border-top-left-radius: 4px;
+  -ms-border-top-right-radius: 4px;
+  -ms-border-bottom-right-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+}
+
+.icon-cmd-circle-3 {
+  width: 2px; height: 2px;
+  bottom: 1px; left: 1px;
+
+  border: #000 2px solid;
+  position: absolute;
+
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -o-border-top-left-radius: 4px;
+  -o-border-bottom-left-radius: 4px;
+  -o-border-bottom-right-radius: 4px;
+  -ms-border-top-left-radius: 4px;
+  -ms-border-bottom-left-radius: 4px;
+  -ms-border-bottom-right-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+}
+
+.icon-cmd-circle-4 {
+  width: 2px; height: 2px;
+  bottom: 1px; right: 1px;
+
+  border: #000 2px solid;
+  position: absolute;
+
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -o-border-top-right-radius: 4px;
+  -o-border-bottom-left-radius: 4px;
+  -o-border-bottom-right-radius: 4px;
+  -ms-border-top-right-radius: 4px;
+  -ms-border-bottom-left-radius: 4px;
+  -ms-border-bottom-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+}
+
+/****************************************************************** PODCAST ICON ***/
+/***********************************************************************************/
+
+.icon-mic-circle {
+  width: 8px; height: 8px;
+  left: 2px; bottom: 2px;
+
+  border: #000 2px solid;
+  border-top: transparent;
+  position: absolute;
+
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  -o-border-bottom-left-radius: 6px;
+  -o-border-bottom-right-radius: 6px;
+  -ms-border-bottom-left-radius: 6px;
+  -ms-border-bottom-right-radius: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  -moz-border-radius-bottomright: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+}
+
+.icon-mic-line {
+  width: 4px; height: 10px;
+  top: 0; left: 6px;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+.icon-mic-dot {
+  width: 2px; height: 2px;
+  bottom: 0; left: 7px;
+
+  background-color: #000;
+  position: absolute;
+
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+  -o-border-bottom-left-radius: 1px;
+  -o-border-bottom-right-radius: 1px;
+  -ms-border-bottom-left-radius: 1px;
+  -ms-border-bottom-right-radius: 1px;
+  -moz-border-radius-bottomleft: 1px;
+  -moz-border-radius-bottomright: 1px;
+  -webkit-border-bottom-left-radius: 1px;
+  -webkit-border-bottom-right-radius: 1px;
+}
+
+/********************************************************************* HOME ICON ***/
+/***********************************************************************************/
+
+.icon-home-triangle {
+  width: 0; height: 0;
+  bottom: 7px; left: 0;
+
+  border: 8px solid #000;
+  position: absolute;
+
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+
+}
+
+.icon-home-rectangle {
+  width: 10px; height: 8px;
+  bottom: 1px; left: 3px;
+
+  background-color: #000;
+  position: absolute;
+
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+  -o-border-bottom-left-radius: 1px;
+  -o-border-bottom-right-radius: 1px;
+  -ms-border-bottom-left-radius: 1px;
+  -ms-border-bottom-right-radius: 1px;
+  -moz-border-radius-bottomleft: 1px;
+  -moz-border-radius-bottomright: 1px;
+  -webkit-border-bottom-left-radius: 1px;
+  -webkit-border-bottom-right-radius: 1px;
+}
+
+.icon-home-line {
+  width: 2px; height: 5px;
+  top: 2px; left: 3px;
+
+  background-color: #000;
+  position: absolute;
+
+  border-radius: 1px;
+  -o-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+}
+
+/***************************************************** OLYMPIC CIRCLES LOGO ICON ***/
+/***********************************************************************************/
+
+.icon-olympic-circle-1 {
+  width: 2px; height: 2px;
+  top: 5px; left: 0;
+
+  border: #09c 2px solid;
+  position: absolute;
+
+  border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+
+}
+
+.icon-olympic-circle-3 {
+  width: 2px; height: 2px;
+  top: 5px; left: 6px;
+
+  border: #000 2px solid;
+  position: absolute;
+
+  border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+.icon-olympic-circle-5 {
+  width: 2px; height: 2px;
+  top: 5px; left: 12px;
+
+  border: #f03 2px solid;
+  position: absolute;
+
+  border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+.icon-olympic-circle-2 {
+  width: 2px; height: 2px;
+  top: 8px; left: 3px;
+
+  border: #fc0 2px solid;
+  position: absolute;
+
+  border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+.icon-olympic-circle-4 {
+  width: 2px; height: 2px;
+  top: 8px; left: 9px;
+
+  border: #093 2px solid;
+  position: absolute;
+
+  border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+/*********************************************************************** HD ICON ***/
+/***********************************************************************************/
+
+.icon-hd-rectangle {
+  width: 16px; height: 10px;
+  top: 3px; left: 0;
+
+  background-color: #000;
+	border-radius: 2px;
+  position: absolute;
+}
+
+.icon-hd-line-1 {
+  width: 1px; height: 6px;
+  top: 5px; left: 3px;
+
+  background-color: #fff;
+	border-radius: 1px;
+  position: absolute;
+}
+
+.icon-hd-line-2 {
+  width: 4px; height: 1px;
+  top: 7px; left: 3px;
+
+  background-color: #fff;
+	border-radius: 1px;
+  position: absolute;
+}
+
+.icon-hd-line-3 {
+  width: 1px; height: 6px;
+  top: 5px; left: 6px;
+
+  background-color: #fff;
+	border-radius: 1px;
+  position: absolute;
+}
+
+.icon-hd-circle {
+  width: 2px; height: 4px;
+  top: 5px; right: 3px;
+
+  border: #fff 1px solid;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  position: absolute;
+}
+
+/************************************************************** THERMOMETER ICON ***/
+/***********************************************************************************/
+
+.icon-temp-circle {
+  width: 6px; height: 6px;
+  bottom: 1px; left: 5px;
+
+  background-color: #000;
+	border-radius: 4px;
+  position: absolute;
+}
+
+.icon-temp-line {
+  width: 2px; height: 10px;
+  top: 1px; left: 6px;
+
+  border: #000 1px solid;
+	border-radius: 4px;
+  position: absolute;
+}
+
+/************************************************************* POWER ON/OFF ICON ***/
+/***********************************************************************************/
+
+.icon-off-circle {
+  width: 8px; height: 8px;
+  bottom: 1px; left: 2px;
+
+  border: #000 2px solid;
+	border-radius: 8px;
+  position: absolute;
+}
+
+.icon-off-line {
+  width: 2px; height: 6px;
+  top: 1px; left: 6px;
+
+  background-color: #000;
+  border: #fff 1px solid;
+	border-radius: 1px;
+  position: absolute;
+}
+
+/******************************************************************** CLOUD ICON ***/
+/***********************************************************************************/
+
+.icon-cloud-rectangle {
+  width: 11px; height: 3px;
+  bottom: 3px; left: 2px;
+
+  background-color: #000;
+  position: absolute;
+}
+
+.icon-cloud-circle-1 {
+  width: 5px; height: 5px;
+  bottom: 3px; left: 0;
+
+  background-color: #000;
+	border-radius: 3px;
+  position: absolute;
+}
+
+.icon-cloud-circle-2 {
+  width: 8px; height: 8px;
+  bottom: 4px; left: 3px;
+
+  background-color: #000;
+	border-radius: 4px;
+  position: absolute;
+}
+
+.icon-cloud-circle-3 {
+  width: 7px; height: 7px;
+  bottom: 3px; right: 0;
+
+  background-color: #000;
+	border-radius: 4px;
+  position: absolute;
+}
+
+/******************************************************************* COFFEE ICON ***/
+/***********************************************************************************/
+
+.icon-coffee-line {
+  width: 14px; height: 2px;
+  bottom: 1px; left: 1px;
+
+  background-color: #000;
+	border-radius: 1px;
+  position: absolute;
+}
+
+.icon-coffee-circle-1 {
+  width: 6px; height: 6px;
+  top: 2px; left: 3px;
+
+  border: #000 2px solid;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  position: absolute;
+}
+
+.icon-coffee-circle-2 {
+  width: 4px; height: 4px;
+  top: 4px; right: 1px;
+
+  background-color: #000;
+	border-radius: 2px;
+  position: absolute;
+}
+
+/********************************************************************** EYE ICON ***/
+/***********************************************************************************/
+
+.icon-eye-triangle-1 {
+  width: 0; height: 0;
+  top: 4px; right: 11px;
+
+  border: 4px solid #000;
+  position: absolute;
+
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.icon-eye-triangle-2 {
+  width: 0; height: 0;
+  top: 4px; left: 11px;
+
+  border: 4px solid #000;
+  position: absolute;
+
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.icon-eye-circle-1 {
+  width: 6px; height: 6px;
+  top: 3px; left: 3px;
+
+  border: #000 2px solid;
+	border-radius: 6px;
+  position: absolute;
+}
+
+.icon-eye-circle-2 {
+  width: 2px; height: 2px;
+  top: 7px; left: 7px;
+
+  background-color: #000;
+	border-radius: 1px;
+  position: absolute;
+}
+
+/******************************************************************** TOUCH ICON ***/
+/***********************************************************************************/
+
+.icon-touch-line-1 {
+  width: 2px; height: 13px;
+  bottom: 0; left: 4px;
+
+  background-color: #000;
+  position: absolute;
+}
+
+.icon-touch-line-2 {
+  width: 2px; height: 7px;
+  bottom: 0; left: 7px;
+
+  background-color: #000;
+  position: absolute;
+}
+
+.icon-touch-line-3 {
+  width: 2px; height: 6px;
+  bottom: 0; left: 10px;
+
+  background-color: #000;
+  position: absolute;
+}
+
+.icon-touch-line-4 {
+  width: 2px; height: 4px;
+  bottom: 0; left: 13px;
+
+  background-color: #000;
+  position: absolute;
+}
+
+.icon-touch-circle {
+  width: 6px; height: 6px;
+  top: 0; left: 1px;
+
+  border: #000 1px solid;
+	border-radius: 4px;
+  position: absolute;
+}
+
+/******************************************************************* REPEAT ICON ***/
+/***********************************************************************************/
+
+.icon-repeat-triangle-1 {
+  width: 0; height: 0;
+  bottom: 1px; right: 13px;
+
+  border: 3px solid #000;
+  position: absolute;
+
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.icon-repeat-rectangle-1 {
+  width: 8px; height: 4px;
+  bottom: 3px; left: 2px;
+
+  border: 2px solid #000;
+  border-left: transparent;
+  border-top: transparent;
+	border-bottom-right-radius: 4px;
+  position: absolute;
+}
+
+.icon-repeat-triangle-2 {
+  width: 0; height: 0;
+  top: 1px; left: 13px;
+
+  border: 3px solid #000;
+  position: absolute;
+
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.icon-repeat-rectangle-2 {
+  width: 8px; height: 4px;
+  top: 3px; left: 4px;
+
+  border: 2px solid #000;
+  border-right: transparent;
+  border-bottom: transparent;
+	border-top-left-radius: 4px;
+  position: absolute;
+}
+
+/******************************************************************** EJECT ICON ***/
+/***********************************************************************************/
+
+.icon-eject-triangle {
+  width: 0; height: 0;
+  bottom: 6px; left: 2px;
+
+  border: 6px solid #000;
+  position: absolute;
+
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+}
+
+.icon-eject-line {
+  width: 12px; height: 2px;
+  bottom: 3px; left: 2px;
+
+  background-color: #000;
+  position: absolute;
+}
+
+/******************************************************************* FEMALE ICON ***/
+/***********************************************************************************/
+
+.icon-female-circle {
+  width: 6px; height: 6px;
+  top: 0; left: 3px;
+
+  border: #000 2px solid;
+	border-radius: 5px;
+  position: absolute;
+}
+
+.icon-female-line-1 {
+  width: 2px; height: 8px;
+  top: 8px; left: 7px;
+
+  background-color: #000;
+	border-radius: 1px;
+  position: absolute;
+}
+
+.icon-female-line-2 {
+  width: 8px; height: 2px;
+  top: 12px; left: 4px;
+
+  background-color: #000;
+	border-radius: 1px;
+  position: absolute;
+}
+
+/***************************************************************** RSS/FEED ICON ***/
+/***********************************************************************************/
+
+.icon-feed-dot {
+  width: 6px; height: 6px;
+  bottom: 1px; left: 1px;
+
+  background-color: #000;
+	border-radius: 3px;
+  position: absolute;
+}
+
+.icon-feed-circle-1 {
+  width: 6px; height: 6px;
+  bottom: 1px; left: 1px;
+
+  border: #000 2px solid;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+	border-radius: 5px;
+  position: absolute;
+}
+
+.icon-feed-circle-2 {
+  width: 10px; height: 10px;
+  bottom: 1px; left: 1px;
+
+  border: #000 2px solid;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+	border-radius: 7px;
+  position: absolute;
+}
+
+/********************************************************************* MAIL ICON ***/
+/***********************************************************************************/
+
+.icon-message-triangle-1 {
+  width: 0; height: 0;
+  top: 2px; left: 2px;
+
+  border: 6px solid #000;
+  position: absolute;
+
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.icon-message-triangle-2 {
+  width: 0; height: 0;
+  bottom: 2px; right: 0;
+
+  border: 6px solid #000;
+  border-top-color: transparent;
+  border-left-color: transparent;
+	border-bottom-right-radius: 2px;
+  position: absolute;
+}
+
+.icon-message-triangle-3 {
+  width: 0; height: 0;
+  left: 0; bottom: 2px;
+
+  border: 6px solid #000;
+  border-top-color: transparent;
+  border-right-color: transparent;
+	border-bottom-left-radius: 2px;
+  position: absolute;
+}
