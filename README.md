@@ -15,13 +15,15 @@ TL;DR: I had the idea that it would be nifty if my smartphone could dock into so
 <sup>01&middot;04&middot;14
 
 ### Running hikari
-&middot; Make sure you have <a href="http://nodejs.org">node</a> installed! Then, run the following commands in Terminal:
-&middot; `npm install -g express`
-&middot; `npm install -g nodemon`
-&middot; `npm install`
+&middot; Make sure you have <a href="http://nodejs.org">node</a> installed! Then, type the following commands in Terminal:<br/>
+&middot; `npm install -g express`<br/>
+&middot; `npm install -g nodemon`<br/>
+
+CD into hikari directory and type these in:<br/>
+&middot; `npm install`<br/>
 &middot; `nodemon app`
 
-Take a look at localhost:1343!
+Take a look at <a href="localhost:1343">localhost:1343</a>!
 
 =
 <sup>The MIT License (MIT)</sup>
