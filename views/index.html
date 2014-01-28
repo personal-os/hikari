@@ -100,21 +100,21 @@
 			tb8_pisi();
 			// end title
 
-			$(function() {
+			$(function () {
 
 				$.simpleWeather({
 					zipcode: "02148",
 					// woeid: "2357536",
 					location: "",
 					unit: "f",
-					success: function(weather) {
+					success: function (weather) {
 						// html = "<h3>"+weather.city+", "+weather.region+" "+weather.country+"</h3>";
 						html = "<p>"+ weather.temp +"&deg;"+ weather.units.temp +"&nbsp;"+ weather.currently +"</p>";
 
 						$("#weather").html(html);
 					},
 
-					error: function(error) {
+					error: function (error) {
 						$("#weather").html("<p>"+ error +"</p>");
 					}
 				});
@@ -125,10 +125,10 @@
 		<script src="logic/contextMenu.js"></script>
 
 		<script>
-			// $(function() { $("#taskbar").contextMenu("#context-menu"); });
-			$(function(){ $.contextMenu("html5", true); });
+			// $(function () { $("#taskbar").contextMenu("#context-menu"); });
+			$(function (){ $.contextMenu("html5", true); });
 
-			$(function() {
+			$(function () {
 				$.contextMenu({
 					selector: "#taskbar", // null
 					/*
@@ -224,7 +224,7 @@
 		<script src="logic/bg-resize.js"></script>
 
 		<script>
-			$(document).ready(function() {
+			$(document).ready(function () {
 				$("body").bgResize({
 					img: "system/wallpaper/simple-sky-a.jpg"
 				});

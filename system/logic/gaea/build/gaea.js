@@ -703,7 +703,7 @@
 				stack1 = typeof stack1 === functionType ? stack1() : stack1;
 			}
 
-			buffer += escapeExpression(stack1) + "\" >\n <div class=\"wm-window-box\">\n <header class=\"wm-window-title\" unselectable=\"on\">\n <h1 unselectable=\"on\">";
+			buffer += escapeExpression(stack1) + "\" >\n <div class=\"wm-window-box\">\n <header class=\"wm-window-title\" unselectable=\"on\">\n <button class=\"wm-settings\">&nbsp;</button><h1 unselectable=\"on\">";
 			foundHelper = helpers.title;
 
 			if (foundHelper) {
