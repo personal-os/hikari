@@ -7,3 +7,10 @@
 }
 
 .folder { display: block !important; }
+
+.inline-list {
+	li {
+		display: inline-block;
+		margin: 0 0.5rem 0.5rem 0;
+	}
+}

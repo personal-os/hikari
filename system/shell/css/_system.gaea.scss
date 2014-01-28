@@ -213,7 +213,7 @@ body {
 			flex-direction: row;
 			height: 36px;
 			overflow: hidden;
-			padding: 0 8px;
+			padding: 0 8px 0 0;
 			user-select: none;
 
 			display: -o-box;
@@ -296,16 +296,19 @@ body {
 				-webkit-user-select: none;
 
 				-webkit-touch-callout: none;
+			}
 
-				&:before {
-					width: 31px; height: 31px;
+			button.wm-settings {
+				width: 31px; height: 50px;
+				margin: 0 0.5rem 0 0.3rem; padding: 2px 0 0 0;
 
-					content: "\f20e";
-					font-family: "Ionicons";
-					font-size: 16px;
-					margin: 15px 0.5rem 0 0;
-					text-align: center;
-				}
+				border-right: 1px solid rgba($black, 0.05);
+				color: $black;
+				font-family: "Ionicons";
+				font-size: 16px;
+				text-align: center;
+
+				&:before { content: "\f20e"; }
 			}
 
 			.wm-button-group {
