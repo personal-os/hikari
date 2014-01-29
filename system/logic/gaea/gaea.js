@@ -540,7 +540,7 @@
 	 * Copyright © 2012 Ramón Lamana
 	 * https://github.com/rlamana
 	 */
-	define('gaea/core/view', ['$'], function ($, _) {
+	define("gaea/core/view", ["$"], function ($, _) {
 
 		var splitter = /^(?:(.*)\s)?(\w+)$/;
 
@@ -548,27 +548,31 @@
 		var animationEventNames = "animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd";
 
 		// CSS3 transform, transition, animation hooks, prefixless
-		var hooks = ['transform', 'transition', 'animation', 'transform-origin'];
+		var hooks = ["transform", "transition", "animation", "transform-origin"];
+
 		for (var i = hooks.length; i--;) {
 			(function (property) {
+
 				$.cssHooks[property] = {
-					get: function (elem, computed, extra) {
-						return null;
-					},
+					get: function (elem, computed, extra) { return null; },
 					set: function (elem, value) {
-						elem.style['-webkit-' + property] = value;
-						elem.style['-moz-' + property] = value;
-						elem.style['-ms-' + property] = value;
-						elem.style['-o-' + property] = value;
+
 						elem.style[property] = value;
+						elem.style["-o-" + property] = value;
+						elem.style["-moz-" + property] = value;
+						elem.style["-webkit-" + property] = value;
+
 					}
 				};
+
 			})(hooks[i]);
 		}
 
 		$.fn.extend({
 			listen: function (map, scope) {
+
 				var handler, data, selector, event;
+
 				for (var key in map) {
 					if (!map.hasOwnProperty(key))
 						continue;
@@ -588,11 +592,11 @@
 					else if (event === 'click')
 						event += ' touchend';
 
-					if (typeof handler === 'string')
+					if (typeof handler === "string")
 						handler = scope[handler];
 
 					if (!handler)
-						throw new Error('Handler not found');
+						throw new Error("Handler not found");
 
 					if (selector)
 						this.on(event, selector, handler.bind(scope));
@@ -601,6 +605,7 @@
 				}
 
 				return this;
+
 			},
 
 			onTransitionEnd: function (callback, scope) {
@@ -617,7 +622,7 @@
 		});
 
 		return function (root) {
-			if (typeof root === 'function') {
+			if (typeof root === "function") {
 				// It's a template
 				return function (options) {
 					return $(root(options || {}));
@@ -703,7 +708,7 @@
 				stack1 = typeof stack1 === functionType ? stack1() : stack1;
 			}
 
-			buffer += escapeExpression(stack1) + "\" >\n <div class=\"wm-window-box\">\n <header class=\"wm-window-title\" unselectable=\"on\">\n <button class=\"wm-settings\">&nbsp;</button><h1 unselectable=\"on\">";
+			buffer += escapeExpression(stack1) + "\" >\n <div class=\"wm-settings-panel\"></div>\n <div class=\"wm-window-box\">\n <header class=\"wm-window-title\" unselectable=\"on\">\n <button class=\"wm-settings\">&nbsp;</button><h1 unselectable=\"on\">";
 			foundHelper = helpers.title;
 
 			if (foundHelper) {
@@ -821,6 +826,8 @@
 			this.closed = false;
 			this.maximized = false;
 			this.minimized = false;
+			this.paneled = false;
+			// this.unpaneled = false;
 
 			// Properties
 			this.widget = false;
@@ -877,9 +884,20 @@
 						this.slots.move.call(this, e);
 					},
 
-					".wm-window-title dblclick": function () {
+					".wm-window-title h1 dblclick": function () {
+					// ".wm-window-title dblclick": function () {
 						if (this.enabled && this.resizable)
 							this.maximize();
+					},
+
+					".wm-window-title button.wm-settings click": function (e) {
+
+						e.stopPropagation();
+						e.preventDefault();
+
+						if (this.enabled)
+							this.panel();
+
 					},
 
 					".wm-window-title button.wm-close click": function (e) {
@@ -938,6 +956,7 @@
 
 				space: {
 					"mousemove": function (e) {
+
 						if (this._moving)
 							this.move(
 								e.originalEvent.pageX - this._moving.x,
@@ -949,6 +968,7 @@
 								e.originalEvent.pageX + this._resizing.width,
 								e.originalEvent.pageY + this._resizing.height
 							);
+
 					},
 
 					"mouseup": function () {
@@ -975,17 +995,12 @@
 				}
 
 				this._space = el;
+
 				el.append(this.el);
 				el.listen(this.events.space, this);
 			},
 
-			get space() {
-				return this._space;
-			},
-
-			get maximized() {
-				return this._maximized;
-			},
+			get space() { return this._space; },
 
 			set maximized(value) {
 				if (value) {
@@ -994,13 +1009,11 @@
 				} else {
 					this.signals.emit("restore", this, this._restoreMaximized);
 				}
+
 				this._maximized = value;
 			},
 
-
-			get minimized() {
-				return this._minimized;
-			},
+			get maximized() { return this._maximized; },
 
 			set minimized(value) {
 				if (value) {
@@ -1012,6 +1025,8 @@
 
 				this._minimized = value;
 			},
+
+			get minimized() { return this._minimized; },
 
 			set active(value) {
 				if (value) {
@@ -1027,9 +1042,7 @@
 				this._active = value;
 			},
 
-			get active() {
-				return this._active;
-			},
+			get active() { return this._active; },
 
 			set enabled(value) {
 				if (!value) {
@@ -1041,17 +1054,10 @@
 				this._enabled = value;
 			},
 
-			get enabled() {
-				return this._enabled;
-			},
+			get enabled() { return this._enabled; },
 
-			set movable(value) {
-				this._movable = !! value;
-			},
-
-			get movable() {
-				return this._movable;
-			},
+			set movable(value) { this._movable = !! value; },
+			get movable() { return this._movable; },
 
 			set resizable(value) {
 				if (!value) {
@@ -1063,9 +1069,31 @@
 				this._resizable = !! value;
 			},
 
-			get resizable() {
-				return this._resizable;
+			get resizable() { return this._resizable; },
+
+			set paneled(value) {
+				if (value) {
+					this.el.addClass("panel-open");
+
+					// this._restorePanel = this.stamp();
+					this._restoreMaximized = this.stamp();
+
+					// this.signals.emit("panel", this, this._restorePanel);
+					this.signals.emit("panel", this, this._restoreMaximized);
+
+					this.el.find(".wm-content").css("margin", "0 0 0 175px");
+					this.el.find(".wm-settings").css("margin", "0 0.5rem 0 178px");
+					this.el.find(".wm-settings-panel").css("left", "0");
+				} else {
+					// this.signals.emit("unpanel", this, this._restorePanel);
+					// this.signals.emit("panel", this, this._restorePanel);
+					this.signals.emit("restore", this, this._restoreMaximized);
+				}
+
+				this._paneled = value;
 			},
+
+			get paneled() { return this._paneled; },
 
 			set closed(value) {
 				if (value) {
@@ -1087,9 +1115,7 @@
 				this._closed = value;
 			},
 
-			get closed() {
-				return this._closed;
-			},
+			get closed() { return this._closed; },
 
 			set opened(value) {
 				if (value) {
@@ -1107,18 +1133,10 @@
 				this._opened = value;
 			},
 
-			get opened() {
-				return this._opened;
-			},
+			get opened() { return this._opened; },
 
-
-			set widget(value) {
-				this._widget = value;
-			},
-
-			get widget() {
-				return this._widget;
-			},
+			set widget(value) { this._widget = value; },
+			get widget() { return this._widget; },
 
 			set titlebar(value) {
 				if (value)
@@ -1129,76 +1147,56 @@
 				this._titlebar = value;
 			},
 
-			get titlebar() {
-				return this._titlebar;
-			},
+			get titlebar() { return this._titlebar; },
 
-			set width(value) {
-				this.el.width(value);
-			},
+			set width(value) { this.el.width(value); },
+			get width() { return parseInt(this.el.width(), 10); },
 
-			get width() {
-				return parseInt(this.el.width(), 10);
-			},
+			// This shouldn't be done if flexible box model
+			// worked properly with overflow-y: auto
+			// this.$content.height(value - this.$header.outerHeight());
+			set height(value) { this.el.height(value); },
+			get height() { return parseInt(this.el.height(), 10); },
 
-			set height(value) {
-				// This shouldn't be done if flexible box model
-				// worked properly with overflow-y: auto
-				// this.$content.height(value - this.$header.outerHeight());
+			set x(value) { this.el.css("left", value); },
+			get x() { return parseInt(this.el.css("left"), 10); },
 
-				this.el.height(value);
-			},
+			set y(value) { this.el.css("top", value); },
+			get y() { return parseInt(this.el.css("top"), 10); },
 
-			get height() {
-				return parseInt(this.el.height(), 10);
-			},
-
-			set x(value) {
-				this.el.css("left", value);
-			},
-
-			set y(value) {
-				this.el.css("top", value);
-			},
-
-			get x() {
-				return parseInt(this.el.css("left"), 10);
-			},
-
-			get y() {
-				return parseInt(this.el.css("top"), 10);
-			},
-
-			set z(value) {
-				this.el.css("z-index", value);
-			},
-
-			get z() {
-				return parseInt(this.el.css("z-index"), 10);
-			},
+			set z(value) { this.el.css("z-index", value); },
+			get z() { return parseInt(this.el.css("z-index"), 10); },
 
 			open: function () {
+
 				this.opened = true;
 				return this;
+
 			},
 
 			resize: function (w, h) {
+
 				this.width = w;
 				this.height = h;
+
 				return this;
+
 			},
 
 			move: function (x, y) {
+
 				this.x = x;
 				this.y = y;
+
 				return this;
+
 			},
 
-			/**
-			 * @return A function that restores this window
-			 */
+			// @return A function that restores this window
 			stamp: function () {
+
 				this.restore = (function () {
+
 					var size = {
 						width: this.width,
 						height: this.height
@@ -1215,65 +1213,88 @@
 
 						return this;
 					};
+
 				}).apply(this);
 
 				return this.restore;
+
 			},
 
 			restore: function () {},
 
 			maximize: function () {
-				this.el.addClass('maximazing');
+
+				this.el.addClass("maximazing");
+
 				this.el.onTransitionEnd(function () {
-					this.el.removeClass('maximazing');
+					this.el.removeClass("maximazing");
 				}, this);
 
 				this.maximized = !this.maximized;
 				return this;
+
 			},
 
 			minimize: function () {
-				this.el.addClass('minimizing');
+
+				this.el.addClass("minimizing");
+
 				this.el.onTransitionEnd(function () {
-					this.el.removeClass('minimizing');
+					this.el.removeClass("minimizing");
 				}, this);
 
 				this.minimized = !this.minimized;
 				return this;
+
 			},
 
 			close: function () {
+
 				this.closed = true;
 				return this;
+
+			},
+
+			panel: function () {
+
+				this.paneled = !this.paneled;
+				return this;
+
 			},
 
 			focus: function () {
+
 				this.active = true;
 				return this;
+
 			},
 
 			blur: function () {
+
 				this.active = false;
 				return this;
+
 			},
 
 			toLocal: function (coord) {
+
 				return {
 					x: coord.x - this.x,
 					y: coord.y - this.y
 				};
+
 			},
 
 			toGlobal: function (coord) {
+
 				return {
 					x: coord.x + this.x,
 					y: coord.y + this.y
 				};
+
 			},
 
-			append: function (el) {
-				el.appendTo(this.$content);
-			}
+			append: function (el) { el.appendTo(this.$content); }
 		};
 
 		return Window;
@@ -1312,7 +1333,15 @@
 
 				},
 
-				restore: function (win, restore) { restore.call(win); },
+				restore: function (win, restore) {
+					restore.call(win);
+
+					this.el.removeClass("panel-open");
+					this.el.find(".wm-content").css("margin", "0");
+					this.el.find(".wm-settings").css("margin", "0 0.5rem 0 0.3rem");
+					this.el.find(".wm-settings-panel").css("left", "-175px");
+
+				},
 				minimize: function (win) { win.resize(0, 0); }
 			}
 		};
@@ -1980,7 +2009,6 @@
 
 				for (var z, win, i = 0, len = this.windows.length; i < len; i++) {
 					win = this.windows[i];
-
 					win.stamp();
 
 					// Scale factor
@@ -2069,8 +2097,7 @@
 
 	});
 
-	// Gaea
-	// define("gaea/wm/modes/fullscreen", ["less!../../../css/fullscreen"], function () {
+	// Gaea × Fullscreen mode
 	define("gaea/wm/modes/fullscreen", function () {
 
 		var FullscreenMode = {
@@ -2144,7 +2171,7 @@
 
 	});
 
-	// Gaea
+	// Gaea × Window Manager
 	define("gaea/wm/windowmanager", ["require", "$", "gaea/wm/window", "gaea/core/view", "gaea/wm/modes/default", "gaea/wm/modes/expose", "gaea/wm/modes/fullscreen"], function (require) {
 
 		var
@@ -2197,6 +2224,7 @@
 				"focus",
 				"blur",
 				"close",
+				"panel",
 				"maximize",
 				"minimize",
 				"restore",
@@ -2245,6 +2273,8 @@
 				win.signals.on("focus", this._focus, this);
 				win.signals.on("blur", this._blur, this);
 				win.signals.on("close", this._close, this);
+				win.signals.on("panel", this._panel, this);
+				// win.signals.on("unpanel", this._unpanel, this);
 
 				// Connect window signals to manager mode actions
 				this.actions.forEach(function (action) {
@@ -2326,6 +2356,9 @@
 						this.active.focus();
 				}
 
+			},
+
+			_panel: function (win) {
 			}
 		};
 
@@ -2357,7 +2390,8 @@
 				animationEventName: function () {
 
 					var
-					style = document.body.style,
+					style = $(".hikari-content-inner"),
+					// style = document.body.style,
 					event = null;
 
 					if (style.animation === "")
