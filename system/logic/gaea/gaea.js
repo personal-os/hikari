@@ -1302,7 +1302,6 @@
 	});
 
 	// Gaea × Maximized mode
-	// define("gaea/wm/modes/default", ["less!../../../css/windowmanager"], function () {
 	define("gaea/wm/modes/default", function () {
 
 		var
