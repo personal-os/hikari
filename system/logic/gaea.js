@@ -1,14 +1,14 @@
 
 var $vW = $(window).width(), $vH = $(window).height();
 
-$(document).ready(function () {
+$(document).on("ready", function () {
 
 	var $verticalMenu = $(".left.hikari-menu ul").height();
-	// $(".hikari-pusher").height();
-	// $(".left.hikari-menu ul").css("margin-top", $vH - $verticalMenu * 2 + "px");
+
+	// will remove this soon
 	$(".left.hikari-menu").css("padding-top", $vH / 6);
-	// $(".left.hikari-menu").css("height", $(".hikari-pusher").height());
-	
+
+	// Wallpaper
 	$(".hikari-content-inner").backstretch("shell/wallpaper/spring-sriram.jpg");
 
 });
