@@ -776,6 +776,7 @@
 	define("gaea/wm/window", ["gaea/core/emitter", "gaea/core/view", "tpl!gaea/tpl/window"], function (Emitter, View, WindowTemplate) {
 
 		var Window = function (options) {
+
 			this.signals = new Emitter();
 
 			options = options || {
@@ -837,6 +838,7 @@
 				true;
 
 			this.titlebar = true;
+
 		};
 
 		Window.prototype = {
@@ -1081,12 +1083,19 @@
 					// this.signals.emit("panel", this, this._restorePanel);
 					this.signals.emit("panel", this, this._restoreMaximized);
 
+					viewStuff = "";
+					viewStuff += "<h1>Gaea Preferences</h1>";
+
 					this.el.find(".wm-content").css("margin", "0 0 0 175px");
 					this.el.find(".wm-settings").css("margin", "0 0.5rem 0 178px");
-					this.el.find(".wm-settings-panel").css("left", "0");
+					this.el.find(".wm-settings-panel").css("left", "0").append(viewStuff);
+
+					// $(".wm-settings-panel").append(viewStuff);
+
 				} else {
 					// this.signals.emit("unpanel", this, this._restorePanel);
 					// this.signals.emit("panel", this, this._restorePanel);
+					this.el.removeClass("panel-open");
 					this.signals.emit("restore", this, this._restoreMaximized);
 				}
 
