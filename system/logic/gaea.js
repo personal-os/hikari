@@ -9,7 +9,8 @@ $(document).on("ready", function () {
 	$(".left.hikari-menu").css("padding-top", $vH / 6);
 
 	// Wallpaper
-	$(".hikari-content-inner").backstretch("shell/wallpaper/spring-sriram.jpg");
+	// $(".hikari-content-inner").backstretch("shell/wallpaper/spring-sriram.jpg");
+	$(".hikari-content-inner").backstretch("shell/wallpaper/tokyoSkytree-observationDeck/14.darwinfish105.jpg");
 
 });
 
