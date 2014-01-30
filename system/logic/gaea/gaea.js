@@ -1083,15 +1083,11 @@
 					// this.signals.emit("panel", this, this._restorePanel);
 					this.signals.emit("panel", this, this._restoreMaximized);
 
-					viewStuff = "";
-					viewStuff += "<h1>Gaea Preferences</h1>";
-
 					this.el.find(".wm-content").css("margin", "0 0 0 175px");
 					this.el.find(".wm-settings").css("margin", "0 0.5rem 0 178px");
-					this.el.find(".wm-settings-panel").css("left", "0").append(viewStuff);
+					this.el.find(".wm-settings-panel").css("left", "0");
 
 					// $(".wm-settings-panel").append(viewStuff);
-
 				} else {
 					// this.signals.emit("unpanel", this, this._restorePanel);
 					// this.signals.emit("panel", this, this._restorePanel);
@@ -1350,7 +1346,18 @@
 					this.el.find(".wm-settings-panel").css("left", "-175px");
 
 				},
-				minimize: function (win) { win.resize(0, 0); }
+
+				minimize: function (win) { win.resize(0, 0); },
+				
+				panel: function (win) {
+
+					/*
+					viewStuff = "";
+					viewStuff += "<h1>Gaea Preferences</h1>";
+					this.el.find(".wm-settings-panel").css("left", "0").append(viewStuff);
+					*/
+
+				}
 			}
 		};
 
@@ -2367,6 +2374,11 @@
 			},
 
 			_panel: function (win) {
+
+				viewStuff = "";
+				viewStuff += "<h1>Gaea Preferences</h1>";
+				this.el.find(".wm-settings-panel").css("left", "0").append(viewStuff);
+
 			}
 		};
 
