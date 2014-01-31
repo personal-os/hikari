@@ -8,6 +8,9 @@ $(document).on("ready", function () {
 	// will remove this soon
 	$(".left.hikari-menu").css("padding-top", $vH / 6);
 
+	$(".wm-overlay").append('<div class="desktop"></div>');
+	$(".desktop").css("height", $vH - 50 + "px");
+
 	// Wallpaper
 	// $(".hikari-content-inner").backstretch("shell/wallpaper/spring-sriram.jpg");
 	$(".hikari-content-inner").backstretch("shell/wallpaper/tokyoSkytree-observationDeck/14.darwinfish105.jpg");
@@ -561,8 +564,27 @@ $("#select-system-update").click(function (e) {
 
 });
 
-// titleSignet × HubSpot × https://github.com/HubSpot/signet/tree/master/titleSignet
+// Change desktop background
+$(document).on("click", "#context-changeBG", function () {
 
+	$(".wm-space").append('<section id="hikari-changeBG"></section>');
+
+	var chipWin = wm.createWindow.fromQuery("#hikari-changeBG", {
+
+		title: "Change Background Image",
+		classname: "folder",
+		width: 800,
+		height: 500,
+		x: 283,
+		y: 100
+
+	});
+
+	$(".context-menu-root").trigger("contextmenu:hide");
+
+});
+
+// titleSignet × HubSpot × https://github.com/HubSpot/signet/tree/master/titleSignet
 (function () {
 
 	var autoInit, deferConsole, draw, getContent, getOptions, orDefault, tag;

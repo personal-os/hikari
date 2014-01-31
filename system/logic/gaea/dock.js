@@ -14,7 +14,7 @@ if (!HIKARI.gaea.wm.dock) {
 			$('<div id="start"><button data-effect="left">Start</button></div>').appendTo("#taskbar");
 			$('<div id="subtaskbar"></div>').appendTo("#taskbar");
 			$('<div id="weather"></div>').appendTo("#subtaskbar");
-			$('<div id="full-time"><span id="full-date"></span> &middot; <span id="time"></span></div>').appendTo("#subtaskbar");
+			$('<div id="full-time"><span id="full-date"></span> | <span id="time"></span></div>').appendTo("#subtaskbar");
 
 		},
 
