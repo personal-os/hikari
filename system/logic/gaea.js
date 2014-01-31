@@ -20,194 +20,35 @@ $(document).on("ready", function () {
 // Chips
 $("#select-chip-folder").click(function (e) {
 
-	// $(".wm-space").append('<section id="chip-folder">This is the Chip Folder.</section>');
-
 	$(".wm-space").append('<section id="chip-folder"></section>');
 
-	stuff = "";
+	// Oh shit, look at me using AJAX mom!
+	var xhr;
+	if (window.XMLHttpRequest) xhr = new XMLHttpRequest(); // All browsers, except IE. Fuck IE.
+	else xhr = new ActiveXObject("Microsoft.XMLHTTP"); // For IE. Fuck IE.
 
-	stuff += "<ul class=\"inline-list\">";
-	stuff += "<li><img src=\"chips/BN-I/001.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename that is long for no reason</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/002.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/003.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/004.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/005.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/006.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/007.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/008.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/009.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/010.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/011.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/012.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/013.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/014.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/015.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/016.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/017.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/018.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/019.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/020.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/021.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/022.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/023.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/024.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/025.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/026.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/027.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/028.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/029.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/030.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/031.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/032.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/033.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/034.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/035.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/036.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/037.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/038.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/039.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/040.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/041.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/042.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/043.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/044.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/045.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/046.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/047.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/048.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/049.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/050.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/051.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/052.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/053.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/054.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/055.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/056.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/057.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/058.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/059.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/060.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/061.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/062.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/063.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/064.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/065.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/066.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/067.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/068.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/069.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/070.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/071.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/072.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/073.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/074.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/075.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/076.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/077.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/078.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/079.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/080.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/081.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/082.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/083.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/084.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/085.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/086.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/087.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/088.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/089.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/090.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/091.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/092.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/093.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/094.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/095.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/096.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/097.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/098.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/099.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/100.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/101.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/102.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/103.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/104.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/105.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/106.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/107.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/108.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/109.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/110.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/111.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/112.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/113.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/114.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/115.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/116.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/117.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/118.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/119.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/120.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/121.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/122.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/123.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/124.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/125.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/126.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/127.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/128.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/129.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/130.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/131.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/132.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/133.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/134.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/135.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/136.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/137.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/138.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/139.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/140.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/141.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/142.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/143.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/144.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/145.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/146.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/147.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/148.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/149.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/150.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/151.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/152.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/153.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/154.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/155.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/156.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/157.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/158.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/159.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/160.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/161.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/162.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/163.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/164.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/165.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/166.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/167.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/168.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/169.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/170.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/171.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/172.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/173.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/174.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/175.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/176.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/null.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "<li><img src=\"chips/BN-I/zenny.gif\"/><span class=\"filename-title\" contenteditable=\"false\">Filename</span></li>";
-	stuff += "</ul>";
+	xhr.open("GET", "chips/BN-I/data.json", false);
 
-	$("#chip-folder").append(stuff);
+	xhr.onreadystatechange = function () {
+		if (xhr.readyState === 4 && xhr.status === 200) {
+			var
+			items = JSON.parse(xhr.responseText),
+			output = '<ul class="inline-list">';
+
+			for (var key in items) {
+				output += "<li>";
+				output += "<img src=" + items[key].image + ">";
+				output += "<span class=\"filename-title\" contenteditable=\"false\">" + items[key].name + "</span>";
+				output += "</li>";
+			}
+
+			output += "</ul>";
+			document.getElementById("chip-folder").innerHTML = output;
+		}
+	};
+
+	xhr.send();
+	//
 
 	var chipWin = wm.createWindow.fromQuery("#chip-folder", {
 
@@ -575,6 +416,26 @@ $(document).on("click", "#context-changeBG", function () {
 		classname: "folder",
 		width: 800,
 		height: 500,
+		x: 283,
+		y: 100
+
+	});
+
+	$(".context-menu-root").trigger("contextmenu:hide");
+
+});
+
+// About hikari
+$(document).on("click", "#context-about", function () {
+
+	$(".wm-space").append('<section id="hikari-about"></section>');
+
+	var chipWin = wm.createWindow.fromQuery("#hikari-about", {
+
+		title: "About",
+		classname: "folder",
+		width: 300,
+		height: 350,
 		x: 283,
 		y: 100
 
