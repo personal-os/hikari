@@ -1,0 +1,38 @@
+[
+	{
+		"number"			: "1",
+		"name"				: "Cannon",
+		"damage"			: "40",
+		"element"			: "null",
+		"description"	: "A nice, big Cannon!",
+		"rarity"			: "*",
+		"image"				: "chips/BN-I/001.gif"
+	},
+	{
+		"number"			: "2",
+		"name"				: "HiCannon",
+		"damage"			: "80",
+		"element"			: "null",
+		"description"	: "A nice, big Cannon!",
+		"rarity"			: "**",
+		"image"				: "chips/BN-I/002.gif"
+	},
+	{
+		"number"			: "3",
+		"name"				: "M-Cannon",
+		"damage"			: "120",
+		"element"			: "null",
+		"description"	: "A nice, big Cannon!",
+		"rarity"			: "***",
+		"image"				: "chips/BN-I/003.gif"
+	},
+	{
+		"number"			: "4",
+		"name"				: "Shotgun",
+		"damage"			: "30",
+		"element"			: "null",
+		"description"	: "Hits enemy and keeps goign 1pnl",
+		"rarity"			: "*",
+		"image"				: "chips/BN-I/004.gif"
+	}
+]
