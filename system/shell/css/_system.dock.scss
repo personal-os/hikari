@@ -67,7 +67,11 @@
 
 	#full-time {
 		top: 0.4rem; right: 1rem;
+
+		color: rgba($white, 0.2);
 		position: absolute;
+
+		#full-date, #time { color: $white; }
 	}
 
 	/*

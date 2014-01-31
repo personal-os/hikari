@@ -1977,25 +1977,24 @@
 		};
 	}(this)));
 
-	// Gaea × Expose mode
-	// define("gaea/wm/modes/expose", ["Underscore", "less!../../../css/expose"], function (_) {
-	define("gaea/wm/modes/expose", function (_) {
+	// Gaea × Showcase mode
+	define("gaea/wm/modes/showcase", function (_) {
 
-		var ExposeMode = {
+		var ShowcaseMode = {
 			// Launch when plugin is registered
 			register: function () {
 
 				var self = this;
 
-				console.log("Expose mode registered.");
+				console.log("Showcase mode registered.");
 
 				/*
 				this.el.on("contextmenu", _.throttle(function () {
 
-					// Right click sets expose mode
-					if (self.mode !== "expose") {
-						self.mode = "expose";
-					} else if (self.mode === "expose") {
+					// Right click sets showcase mode
+					if (self.mode !== "showcase") {
+						self.mode = "showcase";
+					} else if (self.mode === "showcase") {
 						self.mode = "default";
 					}
 
@@ -2020,7 +2019,7 @@
 
 				var scale, left, top, pos;
 
-				this.el.addClass("expose");
+				this.el.addClass("showcase");
 
 				for (var z, win, i = 0, len = this.windows.length; i < len; i++) {
 					win = this.windows[i];
@@ -2079,7 +2078,7 @@
 					var removeTransform = (function (win) {
 
 						return function () {
-							this.el.removeClass("expose");
+							this.el.removeClass("showcase");
 							win.el.css("transform", "");
 						};
 
@@ -2097,7 +2096,7 @@
 
 			actions: {
 				focus: function (win) {},
-				close: function () { this.mode = "expose"; },
+				close: function () { this.mode = "showcase"; },
 
 				select: function (win, e) {
 
@@ -2108,7 +2107,7 @@
 			}
 		};
 
-		return ExposeMode;
+		return ShowcaseMode;
 
 	});
 
@@ -2171,7 +2170,7 @@
 
 			actions: {
 				focus: function ( /*win*/ ) {},
-				close: function () { this.mode = "expose"; },
+				close: function () { this.mode = "showcase"; },
 
 				select: function (win /*, e*/ ) {
 
@@ -2187,14 +2186,14 @@
 	});
 
 	// Gaea × Window Manager
-	define("gaea/wm/windowmanager", ["require", "$", "gaea/wm/window", "gaea/core/view", "gaea/wm/modes/default", "gaea/wm/modes/expose", "gaea/wm/modes/fullscreen"], function (require) {
+	define("gaea/wm/windowmanager", ["require", "$", "gaea/wm/window", "gaea/core/view", "gaea/wm/modes/default", "gaea/wm/modes/showcase", "gaea/wm/modes/fullscreen"], function (require) {
 
 		var
 		$ = require("$"),
 		Window = require("gaea/wm/window"),
 		view = require("gaea/core/view"),
 		DefaultMode = require("gaea/wm/modes/default"),
-		ExposeMode = require("gaea/wm/modes/expose"),
+		ShowcaseMode = require("gaea/wm/modes/showcase"),
 		FullscreenMode = require("gaea/wm/modes/fullscreen");
 
 		var WindowManager = function () {
@@ -2248,7 +2247,7 @@
 
 			modes: {
 				"default": DefaultMode,
-				"expose": ExposeMode,
+				"showcase": ShowcaseMode,
 				"fullscreen": FullscreenMode
 			},
 
