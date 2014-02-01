@@ -50,7 +50,7 @@ $(function () {
 				}
 			},
 
-			"terminal-group": { "name": "Run" },
+			"terminal-group": { "name": "Run", "id": "context-run" },
 			"sep2": "---------",
 
 			"new-group": {
