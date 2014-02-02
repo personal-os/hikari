@@ -42,4 +42,52 @@ $(function () {
 		}
 	});
 
+	$("#contentView-details").click(function () {
+		$(".context-menu-root").trigger("contextmenu:hide");
+	});
+
+	$("#contentView-icons").click(function () {
+		$(".context-menu-root").trigger("contextmenu:hide");
+	});
+
+	$("#contentView-list").click(function () {
+		$(".context-menu-root").trigger("contextmenu:hide");
+	});
+
+	$("#contentView-tiles").click(function () {
+		$(".context-menu-root").trigger("contextmenu:hide");
+	});
+
+	$("#contextSort-name").click(function () {
+		$(".context-menu-root").trigger("contextmenu:hide");
+	});
+
+	$("#contextSort-size").click(function () {
+		$(".context-menu-root").trigger("contextmenu:hide");
+	});
+
+	$("#contextSort-type").click(function () {
+		$(".context-menu-root").trigger("contextmenu:hide");
+	});
+
+	$("#contextSort-ascending").click(function () {
+		$(".context-menu-root").trigger("contextmenu:hide");
+	});
+
+	$("#contextSort-descending").click(function () {
+		$(".context-menu-root").trigger("contextmenu:hide");
+	});
+
+	$("#contextGroup-name").click(function () {
+		$(".context-menu-root").trigger("contextmenu:hide");
+	});
+
+	$("#contextGroup-size").click(function () {
+		$(".context-menu-root").trigger("contextmenu:hide");
+	});
+
+	$("#contextGroup-type").click(function () {
+		$(".context-menu-root").trigger("contextmenu:hide");
+	});
+
 });

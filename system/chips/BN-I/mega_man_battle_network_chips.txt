@@ -1,0 +1,925 @@
+  ^    ^    ^    ^    ^    ^    ^       ^    ^    ^    ^    ^    ^  
+ /M\  /e\  /g\  /a\  /M\  /a\  /n\     /B\  /a\  /t\  /t\  /l\  /e\ 
+<___><___><___><___><___><___><___>   <___><___><___><___><___><___>
+  ^    ^    ^    ^    ^    ^    ^       ^    ^    ^    ^  
+ /N\  /e\  /t\  /w\  /o\  /r\  /k\     /C\  /h\  /i\  /p\ 
+<___><___><___><___><___><___><___>   <___><___><___><___>
+  ^    ^    ^    ^  
+                        /L\  /i\  /s\  /t\ 
+                       <___><___><___><___>
+
+Created by BF_Gamer
+Version 1.0
+
+Table of Contents
+______________________________________________________________________________
+I.    Introduction
+II.   Version History
+III.  Chip List
+IV.   Contact, Legal and Credits
+______________________________________________________________________________
+
+===Introduction===
+Chips are a very improtant part of MegaMan Battle Network.  They are the thing
+that makes this game like no other.  Below is a list of all the chips.
+
+===Version History===
+
+Version 1.0
+I made this awhile ago, and I just found it on my computer, so I decided to
+post it.  All Chips added.
+
+===Chip List===
+
+#1 Cannon *
+Damage: 40
+Element: Normal
+Description: A nice, big Cannon!
+
+#2 HiCannon **
+Damage: 80
+Element: Normal
+Description: A nice, big Cannon!
+
+#3 M-Cannon ***
+Damage: 120
+Element: Normal
+Description: A nice, big Cannon!
+
+#4 Shotgun *
+Damage: 30
+Element: Normal
+Description: Hits enemy and keeps goign 1pnl
+
+#5 CrossGun *
+Damage: 30
+Element: Normal
+Description:4-panel diagonal blast
+
+#6 Spreader **
+Damage: 30
+Element: Normal
+Description: Gun with a 1-panel blast
+
+#7 Bubbler *
+Damage: 50
+Element: Aqua
+Description: Bubbles w/ a 1-panel blast
+
+#8 Heater **
+Damage: 70
+Element: Fire
+Description: Fire with a 1-panel blast
+
+#9 MiniBomb *
+Damage: 50
+Element: Normal
+Description: Throw a bomb! Depth=3
+
+#10 LilBomb *
+Damage: 50
+Element: Normal
+Description:  Throw a bomb! Depth=3
+
+#11 CrosBomb **
+Damage: 70
+Element: Normal
+Description: Throw a bomb! Depth=3
+
+#12 Big Bomb ****
+Damage: 90
+Element: Normal
+Description: Bomb with a big boom Depth=3
+
+#13 Sword *
+Damage: 80
+Element: Normal
+Description: Cut down enemies! Range=1
+
+#14 WideSwrd *
+Damage: 80
+Element: Normal
+Description: Cut down column! Range=1
+
+#15 LongSwrd **
+Damage: 80
+Element: Normal
+Description: Cut down enemies! Range=2
+
+#16 FtrSword ***
+Damage: 100
+Element: Normal
+Description: Warrior's sword Range=3
+
+#17 KngtSwrd ****
+Damage: 150
+Element: Normal
+Description: Knight's sword Range=3
+
+#18 HeroSwrd *****
+Damage: 200
+Element:  Normal
+Description:  Legendary sword Range=3
+
+#19 FireSwrd **
+Damage: 100
+Element: Fire
+Description: Cuts down column Range=1
+
+#20 AquaSwrd ***
+Damage: 150
+Element: Aqua
+Description: Cuts down column Range=1
+
+#21 ElecSwrd ***
+Damage: 120
+Element: Elec
+Description: Cuts down column Range=1
+
+#22 Muramasa *****
+Damage: ???
+Element: Normal
+Description: Do damage = to your HP loss
+
+#23 ShokWave *
+Damage: 60
+Element: Normal
+Description: Piercing ground wave
+
+#24 SoniWave **
+Damage: 80
+Element: Normal
+Description: Piercing ground wave
+
+#25 DynaWave ***
+Damage: 100
+Element: Normal
+Description: Piercing ground wave
+
+#26 FireTowr **
+Damage: 100
+Element: Fire
+Description: Fire that can move up & down
+
+#27 AquaTowr **
+Damage: 120
+Element: Aqua
+Description: Water that can move up & down
+
+#28 WoodTowr **
+Damage: 140
+Element: Wood
+Description: Log that can move up & down
+
+#29 Quake1 *
+Damage: 90
+Element: Normal
+Description: Cracks a panel Depth=3
+
+#30 Quake2 **
+Damage: 120
+Element: Normal
+Description: Cracks a panel Depth=3
+
+#31 Quake3 ***
+Damage: 150
+Element: Normal
+Description: Cracks a panel Depth=3
+
+#32 GutsPnch *
+Damage: 60
+Element: Normal
+Description: Knocks stuff over Range=1
+
+#33 IcePunch **
+Damage: 80
+Element: Aqua
+Description: Knocks stuff over Range=1
+
+#34 Dash *
+Damage: 50
+Element: Normal
+Description: Knock over all in your path!
+
+#35 Howitzer ****
+Damage: 150
+Element: Normal
+Description: Breaks panels Depth=3
+
+#36 TriArrow *
+Damage: 40
+Element: Normal
+Description: Fires a 3-arrow burst
+
+#37 TriSpear **
+Damage: 50
+Element: Normal
+Description: Fires a 3-spear burst
+
+#38 TriLance ***
+Damage: 60
+Element: Normal
+Description: Fires a 3-lance burst
+
+#39 Ratton1 *
+Damage: 80
+Element: Normal
+Description: Missile that can turn once
+
+#40 Ratton2 **
+Damage: 100
+Element: Normal
+Description: Missile that can turn once
+
+#41 Ratton3 ***
+Damage: 120
+Element: Normal
+Description: Missile that can turn once
+
+#42 Wave ***
+Damage: 80
+Element: Aqua
+Description: 3-row wave! [Aqua]
+
+#43 RedWave ***
+Damage: 100
+Element: Fire
+Description: 3-row wave! [Fire]
+
+#44 BigWave ****
+Damage: 160
+Element: Aqua
+Description: 3-row giant wave [Aqua]
+
+#45 Gaia1 ***
+Damage: 100
+Element: Normal
+Description: Rolling 3-column explosion!
+
+#46 Gaia2 ****
+Damage: 130
+Element: Normal
+Description: Rolling 3-column explosion!
+
+#47 Gaia3 *****
+Damage: 160
+Element: Normal
+Description: Rolling 3-column explosion!
+
+#48 Thunder1 *
+Damage: 90
+Element: Elec
+Description: A rolling lightning attack
+
+#49 Thunder2 **
+Damage: 120
+Element: Elec
+Description: A rolling lightning attack
+
+#50 Thunder3 ***
+Damage: 150
+Element: Elec
+Description: A rolling lightning attack
+
+#51 RingZap1 *
+Damage: 100
+Element: Elec
+Description: Lightning circles you once
+
+#52 RingZap2 **
+Damage: 120
+Element: Elec
+Description: Lightning cirlces you twice
+
+#53 RingZap3 ***
+Damage: 100
+Element: Elec
+Description: Lightning cirlces you thrice
+
+#54 Typhoon *
+Damage: 30
+Element: Normal
+Description: Creates a twister w/ 3 hits
+
+#55 Huricane **
+Damage: 30
+Element: Normal
+Description: Creates a twister w/ 5 hits
+
+#56 Cyclone ***
+Damage: 30
+Element: Normal
+Description: Creates a twister w/ 8 hits
+
+#57 Snakegg1 *
+Damage: 130
+Element: Wood
+Description: Squirming snake attack!
+
+#58 Snakegg2 **
+Damage: 140
+Element: Elec
+Description: Shocking snake attack!
+
+#59 Snakegg3 ***
+Damage: 150
+Element: Fire
+Description: Scorchign snake attack!
+
+#60 Drain1 **
+Damage: 50
+Element: Normal
+Description: Charge to drain HP from enemy
+
+#61 Drain2 **
+Damage: 70
+Element: Normal
+Description: Charge to drain HP from enemy
+
+#62 Drain3 ***
+Damage: 90
+Element: Normal
+Description: Charge to drain HP from enemy
+
+#63 BodyBurn ****
+Damage: 100
+Element: Fire
+Description: Engulf all around you in flames!
+
+#64 X-Panel1 **
+Damage: None
+Element: Normal
+Description: Erase 1 panel Range=1
+
+#65 X-Panel3 ***
+Damage: None
+Element: Normal
+Description: Erase column Range=1
+
+#66 Hammer **
+Damage: 100
+Element: Normal
+Description: Breaks cubes Range=1
+
+#67 MetGuard *
+Damage: None
+Element: Normal
+Description: Hold A Btn for 3 sec defence!
+
+#68 IronShld **
+Damage: None
+Element: Normal
+Description: Hold btn. to create shield!
+
+#69 Recov10 *
+Damage: None
+Element: Normal
+Description: Recover 10HP
+
+#70 Recov30 *
+Damage: None
+Element: Normal
+Description: Recover 30HP
+
+#71 Recov50 *
+Damage: None
+Element: Normal
+Description: Recover 50HP
+
+#72 Recov80 *
+Damage: None
+Element: Normal
+Description: Recover 80HP
+
+#73 Recov120 **
+Damage: None
+Element: Normal
+Description: Recover 120HP
+
+#74 Recov150 **
+Damage: None
+Element: Normal
+Description: Recover 150HP
+
+#75 Recov200 ***
+Damage: None
+Element: Normal
+Description: Recover 200HP
+
+#76 Recov300 ****
+Damage: None
+Element: Normal
+Description: Recover 300HP
+
+#77 Steal ***
+Damage: None
+Element: Normal
+Description: Steal left column of enemy area
+
+#78 Geddon1 ***
+Damage: None
+Element: Normal
+Description: All Panels become cracked!
+
+#79 Geddon 2 ****
+Damage: None
+Element: Normal
+Description: Erases all empty panels
+
+#80 Escape ***
+Damage: None
+Element: Normal
+Description: Escape from most enemies
+
+#81 Interupt ***
+Damage: None
+Element: Normal
+Description: Destroy enemy chip data
+
+#82 Repair *
+Damage: None
+Element: Normal
+Description: Repair panels in your area
+
+#83 TimeBom1 **
+Damage: 80
+Element: Normal
+Description: Sets time bomb in enemy area
+
+#84 TimeBom2 ***
+Damage: 120
+Element: Normal
+Description: Sets time bomb in enemy area
+
+#85 TimeBom3 ****
+Damage: 160
+Element: Normal
+Description: Sets time bomb in enemy area
+
+#86 Cloud *
+Damage: 30
+Element: Aqua
+Description: Rains up & down on 1 column
+
+#87 Cloudier **
+Damage: 50
+Element: Aqua
+Description: Rains up & down on 1 column
+
+#88 Cloudest ***
+Damage: 100
+Element: Aqua
+Description: Rains up & down on 1 column
+
+#89 Mine1 **
+Damage: 160
+Element: Normal
+Description: Hides a mine in enemy area
+
+#90 Mine2 ***
+Damage: 180
+Element: Normal
+Description: Hides a mine in enemy area
+
+#91 Mine 3 ****
+Damage: 200
+Element: Normal
+Description: Hides a mine in enemy area
+
+#92 Dynamyt1 ***
+Damage: 100
+Element: Normal
+Description: Looks right for enemy
+
+#93 Dynamyt2 ***
+Damage: 120
+Element: Normal
+Description: Looks right for enemy
+
+#94 Dynamyt3 ***
+Damage: 150
+Element: Normal
+Description: Looks right for enemy
+
+#95 Remobit1 *
+Damage: 80
+Element: Normal
+Description: Remote contorl smasher!
+
+#96 Remobit2 *
+Damage: 100
+Element: Normal
+Description: Remote contorl smasher!
+
+#97 Remobit3 *
+Damage: 120
+Element: Normal
+Description: Remote contorl smasher!
+
+#98 Lockon1 *
+Damage: 10
+Element: Normal
+Description: Creates a lock on satellite!
+
+#99 Lockon 2 **
+Damage: 15
+Element: Normal
+Description: Creates a lock on satellite!
+
+#100 Lockon3 ***
+Damage: 20
+Element: Normal
+Description: Creates a lock on satellite!
+
+#101 Candle1 **
+Damage: None
+Element: Fire
+Description: Set candle & recover some HP
+
+#102 Candle2 ***
+Damage: None
+Element: Fire
+Description: Set candle & recover some HP
+
+#103 Candle 3 ****
+Damage: None
+Element: Fire
+Description: Set candle & recover some HP
+
+#104 Anubis *****
+Damage: ???
+Element: Normal
+Description: Set Anubis statue to reduce HP
+
+#105 IceCube **
+Damage: None
+Element: Aqua
+Description: Creates ice cube Range=1
+
+#106 RockCube ***
+Damage: None
+Element: Normal
+Description: Creats 3 rock cubes randomly
+
+#107 BstrGard ***
+Damage: None
+Element: Normal
+Description: 1-turn of MetGuard w/ B Btn.
+
+#108 BstrBomb ****
+Damage: None
+Element: Normal
+Description: 1-turn of MiniBomb w. B Btn.
+
+#109 BstrSwrd ****
+Damage: None
+Element: Normal
+Description: 1-turn use of Sword with B Btn
+
+#110 BstrPnch ****
+Damage: None
+Element: Normal
+Description: 1-turn of GutsPnch with B Btn
+
+#111 SloGauge **
+Damage: None
+Element: Normal
+Description: Slow down Custom gauge
+
+#112 FstGauge **
+Damage: None
+Element: Normal
+Description: Speeds up custom gauge
+
+#113 Invis1 **
+Damage: None
+Element: Normal
+Description: Temporary immunity
+
+#114 Invis2 ***
+Damage: None
+Element: Normal
+Description: Temporary immunity
+
+#115 Invis3 ****
+Damage: None
+Element: Normal
+Description: Temporary immunity
+
+#116 Dropdown *****
+Damage: None
+Element: Normal
+Description: Invisible until you attack!
+
+#117 Popup *****
+Damage: None
+Element: Normal
+Description: Invisible when not attacking!
+
+#118 IronBody **
+Damage: None
+Element: Normal
+Description: 30 seconds of stoneshape Defense UP
+
+#119 Barrier **
+Damage: None
+Element: Normal
+Description: Nullify 1 enemy attack
+
+#120 BblWrap1 **
+Damage: None
+Element: Aqua
+Description: Aqua wall Comes back if damaged
+
+#121 BblWrap2 **
+Damage: None
+Element: Aqua
+Description: Aqua wall Comes back if damaged
+
+#122 BblWrap3 ***
+Damage: None
+Element: Aqua
+Description: Aqua wall Comes back if damaged
+
+#123 LeafShld ***
+Damage: None
+Element: Normal
+Description: Turns dmg from 1 hit into HP
+
+#124 AquaAura **
+Damage: None
+Element: Aqua
+Description: Null<10dmg Weak vs. [Elec]
+
+#125 FireAura ***
+Damage: None
+Element: Fire
+Description: Null<40dmg Weak vs. [Aqua]
+
+#126 WoodAura ****
+Damage: None
+Element: Wood
+Description: Null<80dmn Weak vs. [Fire]
+
+#127 LifeAura *****
+Damage: None
+Element: Normal
+Description: Negate all attacks w/ damage<100
+
+#128 Roll ***
+Damage: None
+Element: Normal
+Description: Hit enemy and heal some HP
+
+#129 Roll2 ****
+Damage: None
+Element: Normal
+Description: Hit enemy and heal some HP
+
+#130 Roll3 *****
+Damage: None
+Element: Normal
+Description: Hit enemy and heal some HP
+
+#131 GutsMan ***
+Damage: 40
+Element: Normal
+Description: Shock foe and crack enemy area
+
+#132 GutsMan2 ****
+Damage: 70
+Element: Normal
+Description: Shock foe and crack enemy area
+
+#133 GutsMan3 *****
+Damage: 100
+Element: Normal
+Description: Shock foe and crack enemy area
+
+#134 ProtoMan ***
+Damage: 140
+Element: Normal
+Description: Hit column w/ nearest enemy
+
+#135 ProtoMan2 ****
+Damage: 160
+Element: Normal
+Description: Hit column w/ nearest enemy
+
+#136 ProtoMan3 *****
+Damage: 180
+Element: Normal
+Description: Hit column w/ nearest enemy
+
+#137 FireMan ***
+Damage: 100
+Element: Fire
+Description: 1 row fire arm
+
+#138 FireMan2 ****
+Damage: 120
+Element: Fire
+Description: 1 row fire arm
+
+#139 FireMan3 *****
+Damage: 150
+Element: Fire
+Description: 1 row fire arm
+
+#140 NumbrMan ***
+Damage: ???
+Element: Normal
+Description: Die Rollx10 damage to enemy area
+
+#141 NumbrMn2 ****
+Damage: ???
+Element: Normal
+Description: Die Rollx20 damage to enemy area
+
+#142 NumbrMn3 *****
+Damage: ???
+Element: Normal
+Description: Die Rollx30 damage to enemy area
+
+#143 StoneMan ***
+Damage: 100
+Element: Normal
+Description: Drops 3x3 stones on enemy area
+
+#144 StoneMn2 ****
+Damage: 100
+Element: Normal
+Description: Drops 4x3 stones on enemy area
+
+#145 StoneMn3 *****
+Damage: 100
+Element: Normal
+Description: Drops 5x3 stones on enemy area
+
+#146 IceMan ***
+Damage: 60
+Element: Aqua
+Description: Blizzard attack on enemy area
+
+#147 IceMan2 ****
+Damage: 80
+Element: Aqua
+Description: Blizzard attack on enemy area
+
+#148 IceMan3 *****
+Damage: 100
+Element: Aqua
+Description: Blizzard attack on enemy area
+
+#149 ColorMan ***
+Damage: 90
+Element: Normal
+Description: Towers of [Aqua] & [Fire]!
+
+#150 ColorMn ****
+Damage: 110
+Element: Normal
+Description: Towers of [Aqua] & [Fire]!
+
+#151 ColorMn *****
+Damage: 130
+Element: Normal
+Description: Towers of [Aqua] & [Fire]!
+
+#152 ElecMan ***
+Damage: 90
+Element: Elec
+Description: Lightning hits enemy panel!
+
+#153 ElecMan2 ****
+Damage: 120
+Element: Elec
+Description: Lightning hits enemy panel!
+
+#154 ElecMan3 ****
+Damage: 150
+Element: Elec
+Description: Lightning hits enemy panel!
+
+#155 BombMan ***
+Damage: 120
+Element: Normal
+Description: Enemy area CrossBomb Depth=3
+
+#156 BombMan2 ****
+Damage: 140
+Element: Normal
+Description: Enemy area CrossBomb Depth=3
+
+#157 BombMan3 *****
+Damage: 160
+Element: Normal
+Description: Enemy area CrossBomb Depth=3
+
+#158 MagicMan ***
+Damage: 100
+Element: Normal
+Description: Magic fire =instant delete!?
+
+#159 MagicMn2 ****
+Damage: 120
+Element: Normal
+Description: Magic fire =instant delete!?
+
+#160 MagicMn3 *****
+Damage: 140
+Element: Normal
+Description: Magic fire =instant delete!?
+
+#161 WoodMan ***
+Damage: 60
+Element: Wood
+Description: Skewer entire enemy area
+
+#162 WoodMan2 ****
+Damage: 80
+Element: Wood
+Description: Skewer entire enemy area
+
+#163 WoodMan3 *****
+Damage: 100
+Element: Wood
+Description: Skewer entire enemy area
+
+#164 SkullMan ***
+Damage: 150
+Element: Normal
+Description: Big skull attack on one enemy
+
+#165 SkullMn2 ****
+Damage: 180
+Element: Normal
+Description: Big skull attack on one enemy
+
+#166 SkullMn3 *****
+Damage: 210
+Element: Normal
+Description: Big skull attack on one enemy
+
+#167 SharkMan ***
+Damage: 90
+Element: Aqua
+Description: 3-row shark fin attack
+
+#168 SharkMn2 ****
+Damage: 110
+Element: Aqua
+Description: 3-row shark fin attack
+
+#169 SharkMn3 *****
+Damage: 130
+Element: Aqua
+Description: 3-row shark fin attack
+
+#170 PharoMan *****
+Damage: 100
+Element: Normal
+Description: 3-row coffin laser!
+
+#171 PharoMn2 *****
+Damage: 120
+Element: Normal
+Description: 3-row coffin laser!
+
+#172 PharoMn3 *****
+Damage: 140
+Element: Normal
+Description: 3-row coffin laser!
+
+#173 ShadoMan *****
+Damage: 80
+Element: Normal
+Description: Split into 3 for star attack
+
+#174 ShadoMn2 *****
+Damage: 90
+Element: Normal
+Description: Split into 3 for star attack
+
+#175 ShadoMn3 *****
+Damage: 100
+Element: Normal
+Description: Split into 3 for star attack
+
+#176 Bass ****
+Damage: 200
+Element: Normal
+Description: Explodes on entire area!
+
+===Contact, Legal, & Credits===
+Everything from this Chip List FAQ was written and done by BF_Gamer unless
+noted below.  This is copyrighted to BF_Gamer.  All characters,
+graphics, music, and any other part of this game is copyrighted to Capcom.
+
+If you would like to contact me about anything in this FAQ feel free to do so,
+with only one rule.  That one rule is that you put MMBN Chip List Version # 
+in the subject.  If you fail to do so I will simply delete the email as if it
+were junk.  My email is BF_Gamer@yahoo.com DON'T FORGET THE RULE!
+
+This FAQ is to only be on the following sites (if it is on another email me):
+GameFAQs (Gamefaqs.com)
