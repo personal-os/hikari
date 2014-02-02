@@ -14,7 +14,7 @@ TL;DR: I had the idea that it would be nifty if my smartphone could dock into so
 ![Screenshot](http://hikar.io/images/in-progress/01-04-2014.png)
 <sup>01&middot;04&middot;14
 
-### Running hikari
+### Installation and running hikari
 &middot; Make sure you have <a href="http://nodejs.org">node</a> installed! Then, type the following commands in Terminal:<br/>
 &middot; `npm install -g express`<br/>
 &middot; `npm install -g nodemon`<br/>
@@ -24,6 +24,9 @@ CD into hikari directory and type these in:<br/>
 &middot; `nodemon app`
 
 Take a look at <a href="localhost:1343">localhost:1343</a>!
+
+### License
+You can find the licenses for this and other included software in the `credits` folder. If it wasn't for open-source, hikari wouldn't exist. Thank you, Internet!
 
 =
 <sup>The MIT License (MIT)</sup>
