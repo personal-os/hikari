@@ -3,21 +3,48 @@ var $vW = $(window).width(), $vH = $(window).height();
 
 $(document).on("ready", function () {
 
-	var $verticalMenu = $(".left.hikari-menu ul").height();
-
-	// will remove this soon
-	$(".left.hikari-menu").css("padding-top", $vH / 6);
-
-	$(".wm-overlay").append('<div class="desktop"></div>');
-	$(".desktop").css("height", $vH - 50 + "px");
+	$(".wm-overlay").append('<div class="desktop"></div>'); // for desktop context menu
+	$(".desktop").css("height", $vH - 50 + "px"); // taskbar is 50px tall
 
 	// Wallpaper
-	// $(".hikari-content-inner").backstretch("shell/wallpaper/spring-sriram.jpg");
 	$(".hikari-content-inner").backstretch("shell/wallpaper/tokyoSkytree-observationDeck/14.darwinfish105.jpg");
 
 });
 
 // focus mousedown
+$(document).on("click", "#contentView-icons", function () {
+
+	var xhr;
+	if (window.XMLHttpRequest) xhr = new XMLHttpRequest(); // All browsers, except IE. Fuck IE.
+	else xhr = new ActiveXObject("Microsoft.XMLHTTP"); // For IE. Fuck IE.
+
+	xhr.open("GET", "chips/BN-I/data.json", false);
+
+	xhr.onreadystatechange = function () {
+
+		if (xhr.readyState === 4 && xhr.status === 200) {
+			var
+			items = JSON.parse(xhr.responseText),
+			output = '<ul class="inline-list">';
+
+			for (var key in items) {
+				output += "<li>";
+				output += "<img src=" + items[key].image + ">";
+				output += "<span class=\"filename-title\" contenteditable=\"false\">" + items[key].name + "</span>";
+				output += "</li>";
+			}
+
+			output += "</ul>";
+
+			document.getElementById("chip-folder").innerHTML = output;
+		}
+
+	};
+
+	xhr.send();
+
+});
+
 $(document).on("click", "#contentView-list", function () {
 
 	var xhr;
