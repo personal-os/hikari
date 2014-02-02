@@ -90,7 +90,7 @@
 		"image"				: "chips/BN-I/010.gif"
 	},
 	{
-		"number"			: "11",
+		"number"			: "011",
 		"name"				: "CrosBomb",
 		"damage"			: "70",
 		"element"			: "null",
@@ -99,7 +99,7 @@
 		"image"				: "chips/BN-I/011.gif"
 	},
 	{
-		"number"			: "12",
+		"number"			: "012",
 		"name"				: "Big Bomb",
 		"damage"			: "90",
 		"element"			: "null",
@@ -108,7 +108,7 @@
 		"image"				: "chips/BN-I/012.gif"
 	},
 	{
-		"number"			: "13",
+		"number"			: "013",
 		"name"				: "Sword",
 		"damage"			: "80",
 		"element"			: "null",
@@ -117,7 +117,7 @@
 		"image"				: "chips/BN-I/013.gif"
 	},
 	{
-		"number"			: "14",
+		"number"			: "014",
 		"name"				: "WideSwrd",
 		"damage"			: "80",
 		"element"			: "null",
@@ -126,7 +126,7 @@
 		"image"				: "chips/BN-I/014.gif"
 	},
 	{
-		"number"			: "15",
+		"number"			: "015",
 		"name"				: "LongSwrd",
 		"damage"			: "80",
 		"element"			: "null",
@@ -135,7 +135,7 @@
 		"image"				: "chips/BN-I/015.gif"
 	},
 	{
-		"number"			: "16",
+		"number"			: "016",
 		"name"				: "FtrSword",
 		"damage"			: "100",
 		"element"			: "null",
@@ -144,7 +144,7 @@
 		"image"				: "chips/BN-I/016.gif"
 	},
 	{
-		"number"			: "17",
+		"number"			: "017",
 		"name"				: "KngtSwrd",
 		"damage"			: "150",
 		"element"			: "null",
@@ -153,7 +153,7 @@
 		"image"				: "chips/BN-I/017.gif"
 	},
 	{
-		"number"			: "18",
+		"number"			: "018",
 		"name"				: "HeroSwrd",
 		"damage"			: "200",
 		"element"			: "null",
@@ -162,7 +162,7 @@
 		"image"				: "chips/BN-I/018.gif"
 	},
 	{
-		"number"			: "19",
+		"number"			: "019",
 		"name"				: "FireSwrd",
 		"damage"			: "100",
 		"element"			: "fire",
@@ -171,7 +171,7 @@
 		"image"				: "chips/BN-I/019.gif"
 	},
 	{
-		"number"			: "20",
+		"number"			: "020",
 		"name"				: "AquaSwrd",
 		"damage"			: "150",
 		"element"			: "aqua",
@@ -180,715 +180,715 @@
 		"image"				: "chips/BN-I/020.gif"
 	},
 	{
-		"number"			: "21",
+		"number"			: "021",
 		"name"				: "ElecSwrd",
 		"damage"			: "120",
 		"element"			: "elec",
 		"description"	: "Cuts down column Range=1",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/021.gif"
 	},
 	{
-		"number"			: "22",
+		"number"			: "022",
 		"name"				: "Muramasa",
 		"damage"			: "???",
 		"element"			: "null",
 		"description"	: "Do damage = to your HP loss",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/022.gif"
 	},
 	{
-		"number"			: "23",
+		"number"			: "023",
 		"name"				: "ShokWave",
 		"damage"			: "60",
 		"element"			: "null",
 		"description"	: "Piercing ground wave",
 		"rarity"			: "*",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/023.gif"
 	},
 	{
-		"number"			: "24",
+		"number"			: "024",
 		"name"				: "SoniWave",
 		"damage"			: "80",
 		"element"			: "null",
 		"description"	: "Piercing ground wave",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/024.gif"
 	},
 	{
-		"number"			: "25",
+		"number"			: "025",
 		"name"				: "DynaWave",
 		"damage"			: "100",
 		"element"			: "null",
 		"description"	: "Piercing ground wave",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/025.gif"
 	},
 	{
-		"number"			: "26",
+		"number"			: "026",
 		"name"				: "FireTowr",
 		"damage"			: "100",
 		"element"			: "fire",
 		"description"	: "Fire that can move up & down",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/026.gif"
 	},
 	{
-		"number"			: "27",
+		"number"			: "027",
 		"name"				: "AquaTowr",
 		"damage"			: "120",
 		"element"			: "aqua",
 		"description"	: "Water that can move up & down",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/027.gif"
 	},
 	{
-		"number"			: "28",
+		"number"			: "028",
 		"name"				: "WoodTowr",
 		"damage"			: "140",
 		"element"			: "wood",
 		"description"	: "Log that can move up & down",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/028.gif"
 	},
 	{
-		"number"			: "29",
+		"number"			: "029",
 		"name"				: "Quake1",
 		"damage"			: "90",
 		"element"			: "null",
 		"description"	: "Cracks a panel Depth=3",
 		"rarity"			: "*",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/029.gif"
 	},
 	{
-		"number"			: "30",
+		"number"			: "030",
 		"name"				: "Quake2",
 		"damage"			: "120",
 		"element"			: "null",
 		"description"	: "Cracks a panel Depth=3",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/030.gif"
 	},
 	{
-		"number"			: "31",
+		"number"			: "031",
 		"name"				: "Quake3",
 		"damage"			: "150",
 		"element"			: "null",
 		"description"	: "Cracks a panel Depth=3",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/031.gif"
 	},
 	{
-		"number"			: "32",
+		"number"			: "032",
 		"name"				: "GutsPnch",
 		"damage"			: "60",
 		"element"			: "null",
 		"description"	: "Knocks stuff over Range=1",
 		"rarity"			: "*",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/032.gif"
 	},
 	{
-		"number"			: "33",
+		"number"			: "033",
 		"name"				: "IcePunch",
 		"damage"			: "80",
 		"element"			: "aqua",
 		"description"	: "Knocks stuff over Range=1",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/033.gif"
 	},
 	{
-		"number"			: "34",
+		"number"			: "034",
 		"name"				: "Dash",
 		"damage"			: "50",
 		"element"			: "null",
 		"description"	: "Knock over all in your path!",
 		"rarity"			: "*",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/034.gif"
 	},
 	{
-		"number"			: "35",
+		"number"			: "035",
 		"name"				: "Howitzer",
 		"damage"			: "150",
 		"element"			: "null",
 		"description"	: "Breaks panels Depth=3",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/035.gif"
 	},
 	{
-		"number"			: "36",
+		"number"			: "036",
 		"name"				: "TriArrow",
 		"damage"			: "40",
 		"element"			: "null",
 		"description"	: "Fires a 3-arrow burst",
 		"rarity"			: "*",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/036.gif"
 	},
 	{
-		"number"			: "37",
+		"number"			: "037",
 		"name"				: "TriSpear",
 		"damage"			: "50",
 		"element"			: "null",
 		"description"	: "Fires a 3-spear burst",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/037.gif"
 	},
 	{
-		"number"			: "38",
+		"number"			: "038",
 		"name"				: "TriLance",
 		"damage"			: "60",
 		"element"			: "null",
 		"description"	: "Fires a 3-lance burst",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/038.gif"
 	},
 	{
-		"number"			: "39",
+		"number"			: "039",
 		"name"				: "Ratton1",
 		"damage"			: "80",
 		"element"			: "null",
 		"description"	: "Missile that can turn once",
 		"rarity"			: "*",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/039.gif"
 	},
 	{
-		"number"			: "40",
+		"number"			: "040",
 		"name"				: "Ratton2",
 		"damage"			: "100",
 		"element"			: "null",
 		"description"	: "Missile that can turn once",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/040.gif"
 	},
 	{
-		"number"			: "41",
+		"number"			: "041",
 		"name"				: "Ratton3",
 		"damage"			: "120",
 		"element"			: "null",
 		"description"	: "Missile that can turn once",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/041.gif"
 	},
 	{
-		"number"			: "42",
+		"number"			: "042",
 		"name"				: "Wave",
 		"damage"			: "80",
 		"element"			: "aqua",
 		"description"	: "3-row wave! [Aqua]",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/042.gif"
 	},
 	{
-		"number"			: "43",
+		"number"			: "043",
 		"name"				: "RedWave",
 		"damage"			: "100",
 		"element"			: "fire",
 		"description"	: "3-row wave! [Fire]",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/043.gif"
 	},
 	{
-		"number"			: "44",
+		"number"			: "044",
 		"name"				: "BigWave",
 		"damage"			: "160",
 		"element"			: "aqua",
 		"description"	: "3-row giant wave [Aqua]",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/044.gif"
 	},
 	{
-		"number"			: "45",
+		"number"			: "045",
 		"name"				: "Gaia1",
 		"damage"			: "100",
 		"element"			: "null",
 		"description"	: "Rolling 3-column explosion!",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/045.gif"
 	},
 	{
-		"number"			: "46",
+		"number"			: "046",
 		"name"				: "Gaia2",
 		"damage"			: "130",
 		"element"			: "null",
 		"description"	: "Rolling 3-column explosion!",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/046.gif"
 	},
 	{
-		"number"			: "47",
+		"number"			: "047",
 		"name"				: "Gaia3",
 		"damage"			: "160",
 		"element"			: "null",
 		"description"	: "Rolling 3-column explosion!",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/047.gif"
 	},
 	{
-		"number"			: "48",
+		"number"			: "048",
 		"name"				: "Thunder1",
 		"damage"			: "90",
 		"element"			: "elec",
 		"description"	: "A rolling lightning attack",
 		"rarity"			: "*",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/048.gif"
 	},
 	{
-		"number"			: "49",
+		"number"			: "049",
 		"name"				: "Thunder2",
 		"damage"			: "120",
 		"element"			: "elec",
 		"description"	: "A rolling lightning attack",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/049.gif"
 	},
 	{
-		"number"			: "50",
+		"number"			: "050",
 		"name"				: "Thunder3",
 		"damage"			: "150",
 		"element"			: "elec",
 		"description"	: "A rolling lightning attack",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/050.gif"
 	},
 	{
-		"number"			: "51",
+		"number"			: "051",
 		"name"				: "RingZap1",
 		"damage"			: "100",
 		"element"			: "elec",
 		"description"	: "Lightning circles you once",
 		"rarity"			: "*",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/051.gif"
 	},
 	{
-		"number"			: "52",
+		"number"			: "052",
 		"name"				: "RingZap2",
 		"damage"			: "120",
 		"element"			: "elec",
 		"description"	: "Lightning circles you twice",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/052.gif"
 	},
 	{
-		"number"			: "53",
+		"number"			: "053",
 		"name"				: "RingZap3",
 		"damage"			: "100",
 		"element"			: "elec",
 		"description"	: "Lightning circles you thrice",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/053.gif"
 	},
 	{
-		"number"			: "54",
+		"number"			: "054",
 		"name"				: "Typhoon",
 		"damage"			: "30",
 		"element"			: "null",
 		"description"	: "Creates a twister w/ 3 hits",
 		"rarity"			: "*",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/054.gif"
 	},
 	{
-		"number"			: "55",
+		"number"			: "055",
 		"name"				: "Huricane",
 		"damage"			: "30",
 		"element"			: "null",
 		"description"	: "Creates a twister w/ 5 hits",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/055.gif"
 	},
 	{
-		"number"			: "56",
+		"number"			: "056",
 		"name"				: "Cyclone",
 		"damage"			: "30",
 		"element"			: "null",
 		"description"	: "Creates a twister w/ 8 hits",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/056.gif"
 	},
 	{
-		"number"			: "57",
+		"number"			: "057",
 		"name"				: "Snakegg1",
 		"damage"			: "130",
 		"element"			: "wood",
 		"description"	: "Squirming snake attack!",
 		"rarity"			: "*",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/057.gif"
 	},
 	{
-		"number"			: "58",
+		"number"			: "058",
 		"name"				: "Snakegg2",
 		"damage"			: "140",
 		"element"			: "elec",
 		"description"	: "Shocking snake attack!",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/058.gif"
 	},
 	{
-		"number"			: "59",
+		"number"			: "059",
 		"name"				: "Snakegg3",
 		"damage"			: "150",
 		"element"			: "fire",
 		"description"	: "Scorching snake attack!",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/059.gif"
 	},
 	{
-		"number"			: "60",
+		"number"			: "060",
 		"name"				: "Drain1",
 		"damage"			: "50",
 		"element"			: "null",
 		"description"	: "Charge to drain HP from enemy",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/060.gif"
 	},
 	{
-		"number"			: "61",
+		"number"			: "061",
 		"name"				: "Drain2",
 		"damage"			: "70",
 		"element"			: "null",
 		"description"	: "Charge to drain HP from enemy",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/061.gif"
 	},
 	{
-		"number"			: "62",
+		"number"			: "062",
 		"name"				: "Drain3",
 		"damage"			: "90",
 		"element"			: "null",
 		"description"	: "Charge to drain HP from enemy",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/062.gif"
 	},
 	{
-		"number"			: "63",
+		"number"			: "063",
 		"name"				: "BodyBurn",
 		"damage"			: "100",
 		"element"			: "fire",
 		"description"	: "Engulf all around you in flames!",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/063.gif"
 	},
 	{
-		"number"			: "64",
+		"number"			: "064",
 		"name"				: "X-Panel1",
 		"damage"			: "none",
 		"element"			: "null",
 		"description"	: "Erase 1 panel Range=1",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/064.gif"
 	},
 	{
-		"number"			: "65",
+		"number"			: "065",
 		"name"				: "X-Panel3",
 		"damage"			: "none",
 		"element"			: "null",
 		"description"	: "Erase column Range=1",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/065.gif"
 	},
 	{
-		"number"			: "66",
+		"number"			: "066",
 		"name"				: "Hammer",
 		"damage"			: "100",
 		"element"			: "null",
 		"description"	: "Breaks cubes Range=1",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/066.gif"
 	},
 	{
-		"number"			: "67",
+		"number"			: "067",
 		"name"				: "MetGuard",
 		"damage"			: "none",
 		"element"			: "null",
 		"description"	: "Hold A Btn for 3 sec defence!",
 		"rarity"			: "*",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/067.gif"
 	},
 	{
-		"number"			: "68",
+		"number"			: "068",
 		"name"				: "IronShld",
 		"damage"			: "none",
 		"element"			: "null",
 		"description"	: "Hold btn. to create shield!",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/068.gif"
 	},
 	{
-		"number"			: "69",
+		"number"			: "069",
 		"name"				: "Recov10",
 		"damage"			: "none",
 		"element"			: "null",
 		"description"	: "Recover 10HP",
 		"rarity"			: "*",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/069.gif"
 	},
 	{
-		"number"			: "70",
+		"number"			: "070",
 		"name"				: "Recov30",
 		"damage"			: "none",
 		"element"			: "null",
 		"description"	: "Recover 30HP",
 		"rarity"			: "*",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/070.gif"
 	},
 	{
-		"number"			: "71",
+		"number"			: "071",
 		"name"				: "Recov50",
 		"damage"			: "none",
 		"element"			: "null",
 		"description"	: "Recover 50HP",
 		"rarity"			: "*",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/071.gif"
 	},
 	{
-		"number"			: "72",
+		"number"			: "072",
 		"name"				: "Recov80",
 		"damage"			: "none",
 		"element"			: "null",
 		"description"	: "Recover 80HP",
 		"rarity"			: "*",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/072.gif"
 	},
 	{
-		"number"			: "73",
+		"number"			: "073",
 		"name"				: "Recov120",
 		"damage"			: "none",
 		"element"			: "null",
 		"description"	: "Recover 120HP",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/073.gif"
 	},
 	{
-		"number"			: "74",
+		"number"			: "074",
 		"name"				: "Recov150",
 		"damage"			: "none",
 		"element"			: "null",
 		"description"	: "Recover 150HP",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/074.gif"
 	},
 	{
-		"number"			: "75",
+		"number"			: "075",
 		"name"				: "Recov200",
 		"damage"			: "none",
 		"element"			: "null",
 		"description"	: "Recover 200HP",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/077.gif"
 	},
 	{
-		"number"			: "76",
+		"number"			: "076",
 		"name"				: "Recov300",
 		"damage"			: "none",
 		"element"			: "null",
 		"description"	: "Recover 300HP",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/076.gif"
 	},
 	{
-		"number"			: "77",
+		"number"			: "077",
 		"name"				: "Steal",
 		"damage"			: "none",
 		"element"			: "null",
 		"description"	: "Steal left column of enemy area",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/077.gif"
 	},
 	{
-		"number"			: "78",
+		"number"			: "078",
 		"name"				: "Geddon1",
 		"damage"			: "none",
 		"element"			: "null",
 		"description"	: "All Panels become cracked!",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/078.gif"
 	},
 	{
-		"number"			: "79",
+		"number"			: "079",
 		"name"				: "Geddon 2",
 		"damage"			: "none",
 		"element"			: "null",
 		"description"	: "Erases all empty panels",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/079.gif"
 	},
 	{
-		"number"			: "80",
+		"number"			: "080",
 		"name"				: "Escape",
 		"damage"			: "none",
 		"element"			: "null",
 		"description"	: "Escape from most enemies",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/080.gif"
 	},
 	{
-		"number"			: "81",
+		"number"			: "081",
 		"name"				: "Interupt",
 		"damage"			: "none",
 		"element"			: "null",
 		"description"	: "Destroy enemy chip data",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/081.gif"
 	},
 	{
-		"number"			: "82",
+		"number"			: "082",
 		"name"				: "Repair",
 		"damage"			: "none",
 		"element"			: "null",
 		"description"	: "Repair panels in your area",
 		"rarity"			: "*",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/082.gif"
 	},
 	{
-		"number"			: "83",
+		"number"			: "083",
 		"name"				: "TimeBom1",
 		"damage"			: "80",
 		"element"			: "null",
 		"description"	: "Sets time bomb in enemy area",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/083.gif"
 	},
 	{
-		"number"			: "84",
+		"number"			: "084",
 		"name"				: "TimeBom2",
 		"damage"			: "120",
 		"element"			: "null",
 		"description"	: "Sets time bomb in enemy area",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/084.gif"
 	},
 	{
-		"number"			: "85",
+		"number"			: "085",
 		"name"				: "TimeBom3",
 		"damage"			: "160",
 		"element"			: "null",
 		"description"	: "Sets time bomb in enemy area",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/085.gif"
 	},
 	{
-		"number"			: "86",
+		"number"			: "086",
 		"name"				: "Cloud",
 		"damage"			: "30",
 		"element"			: "aqua",
 		"description"	: "Rains up & down on 1 column",
 		"rarity"			: "*",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/086.gif"
 	},
 	{
-		"number"			: "87",
+		"number"			: "087",
 		"name"				: "Cloudier",
 		"damage"			: "50",
 		"element"			: "aqua",
 		"description"	: "Rains up & down on 1 column",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/087.gif"
 	},
 	{
-		"number"			: "88",
+		"number"			: "088",
 		"name"				: "Cloudest",
 		"damage"			: "100",
 		"element"			: "aqua",
 		"description"	: "Rains up & down on 1 column",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/088.gif"
 	},
 	{
-		"number"			: "89",
+		"number"			: "089",
 		"name"				: "Mine1",
 		"damage"			: "160",
 		"element"			: "null",
 		"description"	: "Hides a mine in enemy area",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/089.gif"
 	},
 	{
-		"number"			: "90",
+		"number"			: "090",
 		"name"				: "Mine2",
 		"damage"			: "180",
 		"element"			: "null",
 		"description"	: "Hides a mine in enemy area",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/090.gif"
 	},
 	{
-		"number"			: "91",
+		"number"			: "091",
 		"name"				: "Mine3",
 		"damage"			: "200",
 		"element"			: "null",
 		"description"	: "Hides a mine in enemy area",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/091.gif"
 	},
 	{
-		"number"			: "92",
+		"number"			: "092",
 		"name"				: "Dynamyt1",
 		"damage"			: "100",
 		"element"			: "null",
 		"description"	: "Looks right for enemy",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/092.gif"
 	},
 	{
-		"number"			: "93",
+		"number"			: "093",
 		"name"				: "Dynamyt2",
 		"damage"			: "120",
 		"element"			: "null",
 		"description"	: "Looks right for enemy",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/093.gif"
 	},
 	{
-		"number"			: "94",
+		"number"			: "094",
 		"name"				: "Dynamyt3",
 		"damage"			: "150",
 		"element"			: "null",
 		"description"	: "Looks right for enemy",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/094.gif"
 	},
 	{
-		"number"			: "95",
+		"number"			: "095",
 		"name"				: "Remobit1",
 		"damage"			: "80",
 		"element"			: "null",
 		"description"	: "Remote control smasher!",
 		"rarity"			: "*",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/095.gif"
 	},
 	{
-		"number"			: "96",
+		"number"			: "096",
 		"name"				: "Remobit2",
 		"damage"			: "100",
 		"element"			: "null",
 		"description"	: "Remote control smasher!",
 		"rarity"			: "*",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/096.gif"
 	},
 	{
-		"number"			: "97",
+		"number"			: "097",
 		"name"				: "Remobit3",
 		"damage"			: "120",
 		"element"			: "null",
 		"description"	: "Remote control smasher!",
 		"rarity"			: "*",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/097.gif"
 	},
 	{
-		"number"			: "98",
+		"number"			: "098",
 		"name"				: "Lockon1",
 		"damage"			: "10",
 		"element"			: "null",
 		"description"	: "Creates a lock on satellite!",
 		"rarity"			: "*",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/098.gif"
 	},
 	{
-		"number"			: "99",
+		"number"			: "099",
 		"name"				: "Lockon2",
 		"damage"			: "15",
 		"element"			: "null",
 		"description"	: "Creates a lock on satellite!",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/099.gif"
 	},
 	{
 		"number"			: "100",
@@ -897,7 +897,7 @@
 		"element"			: "null",
 		"description"	: "Creates a lock on satellite!",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/100.gif"
 	},
 	{
 		"number"			: "101",
@@ -906,7 +906,7 @@
 		"element"			: "fire",
 		"description"	: "Set candle & recover some HP",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/101.gif"
 	},
 	{
 		"number"			: "102",
@@ -915,7 +915,7 @@
 		"element"			: "fire",
 		"description"	: "Set candle & recover some HP",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/102.gif"
 	},
 	{
 		"number"			: "103",
@@ -924,7 +924,7 @@
 		"element"			: "fire",
 		"description"	: "Set candle & recover some HP",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/103.gif"
 	},
 	{
 		"number"			: "104",
@@ -933,7 +933,7 @@
 		"element"			: "null",
 		"description"	: "Set Anubis statue to reduce HP",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/104.gif"
 	},
 	{
 		"number"			: "105",
@@ -942,7 +942,7 @@
 		"element"			: "aqua",
 		"description"	: "Creates ice cube Range=1",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/105.gif"
 	},
 	{
 		"number"			: "106",
@@ -951,7 +951,7 @@
 		"element"			: "null",
 		"description"	: "Creats 3 rock cubes randomly",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/106.gif"
 	},
 	{
 		"number"			: "107",
@@ -960,7 +960,7 @@
 		"element"			: "null",
 		"description"	: "1-turn of MetGuard w/ B Btn.",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/107.gif"
 	},
 	{
 		"number"			: "108",
@@ -969,7 +969,7 @@
 		"element"			: "null",
 		"description"	: "1-turn of MiniBomb w. B Btn.",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/108.gif"
 	},
 	{
 		"number"			: "109",
@@ -978,7 +978,7 @@
 		"element"			: "null",
 		"description"	: "1-turn use of Sword with B Btn",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/109.gif"
 	},
 	{
 		"number"			: "110",
@@ -987,7 +987,7 @@
 		"element"			: "null",
 		"description"	: "1-turn of GutsPnch with B Btn",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/110.gif"
 	},
 	{
 		"number"			: "111",
@@ -996,7 +996,7 @@
 		"element"			: "null",
 		"description"	: "Slow down Custom gauge",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/111.gif"
 	},
 	{
 		"number"			: "112",
@@ -1005,7 +1005,7 @@
 		"element"			: "null",
 		"description"	: "Speeds up Custom gauge",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/112.gif"
 	},
 	{
 		"number"			: "113",
@@ -1014,7 +1014,7 @@
 		"element"			: "null",
 		"description"	: "Temporary immunity",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/113.gif"
 	},
 	{
 		"number"			: "114",
@@ -1023,7 +1023,7 @@
 		"element"			: "null",
 		"description"	: "Temporary immunity",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/114.gif"
 	},
 	{
 		"number"			: "115",
@@ -1032,7 +1032,7 @@
 		"element"			: "null",
 		"description"	: "Temporary immunity",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/115.gif"
 	},
 	{
 		"number"			: "116",
@@ -1041,7 +1041,7 @@
 		"element"			: "null",
 		"description"	: "Invisible until you attack!",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/116.gif"
 	},
 	{
 		"number"			: "117",
@@ -1050,7 +1050,7 @@
 		"element"			: "null",
 		"description"	: "Invisible when not attacking!",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/117.gif"
 	},
 	{
 		"number"			: "118",
@@ -1059,7 +1059,7 @@
 		"element"			: "null",
 		"description"	: "30 seconds of stoneshape Defense UP",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/118.gif"
 	},
 	{
 		"number"			: "119",
@@ -1068,7 +1068,7 @@
 		"element"			: "null",
 		"description"	: "Nullify 1 enemy attack",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/119.gif"
 	},
 	{
 		"number"			: "120",
@@ -1077,7 +1077,7 @@
 		"element"			: "aqua",
 		"description"	: "Aqua wall Comes back if damaged",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/120.gif"
 	},
 	{
 		"number"			: "121",
@@ -1086,7 +1086,7 @@
 		"element"			: "aqua",
 		"description"	: "Aqua wall Comes back if damaged",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/121.gif"
 	},
 	{
 		"number"			: "122",
@@ -1095,7 +1095,7 @@
 		"element"			: "aqua",
 		"description"	: "Aqua wall Comes back if damaged",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/122.gif"
 	},
 	{
 		"number"			: "123",
@@ -1104,7 +1104,7 @@
 		"element"			: "null",
 		"description"	: "Turns dmg from 1 hit into HP",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/123.gif"
 	},
 	{
 		"number"			: "124",
@@ -1113,7 +1113,7 @@
 		"element"			: "aqua",
 		"description"	: "Null<10dmg Weak vs. [Elec]",
 		"rarity"			: "**",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/124.gif"
 	},
 	{
 		"number"			: "125",
@@ -1122,7 +1122,7 @@
 		"element"			: "fire",
 		"description"	: "Null<40dmg Weak vs. [Aqua]",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/125.gif"
 	},
 	{
 		"number"			: "126",
@@ -1131,7 +1131,7 @@
 		"element"			: "wood",
 		"description"	: "Null<80dmg Weak vs. [Fire]",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/126.gif"
 	},
 	{
 		"number"			: "127",
@@ -1140,7 +1140,7 @@
 		"element"			: "null",
 		"description"	: "Negate all attacks w/ damage<100",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/127.gif"
 	},
 	{
 		"number"			: "128",
@@ -1149,7 +1149,7 @@
 		"element"			: "null",
 		"description"	: "Hit enemy and heal some HP",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/128.gif"
 	},
 	{
 		"number"			: "129",
@@ -1158,7 +1158,7 @@
 		"element"			: "null",
 		"description"	: "Hit enemy and heal some HP",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/129.gif"
 	},
 	{
 		"number"			: "130",
@@ -1167,7 +1167,7 @@
 		"element"			: "null",
 		"description"	: "Hit enemy and heal some HP",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/130.gif"
 	},
 	{
 		"number"			: "131",
@@ -1176,7 +1176,7 @@
 		"element"			: "null",
 		"description"	: "Shock foe and crack enemy area",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/131.gif"
 	},
 	{
 		"number"			: "132",
@@ -1185,7 +1185,7 @@
 		"element"			: "null",
 		"description"	: "Shock foe and crack enemy area",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/132.gif"
 	},
 	{
 		"number"			: "133",
@@ -1194,7 +1194,7 @@
 		"element"			: "null",
 		"description"	: "Shock foe and crack enemy area",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/133.gif"
 	},
 	{
 		"number"			: "134",
@@ -1203,7 +1203,7 @@
 		"element"			: "null",
 		"description"	: "Hit column w/ nearest enemy",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/134.gif"
 	},
 	{
 		"number"			: "135",
@@ -1212,7 +1212,7 @@
 		"element"			: "null",
 		"description"	: "Hit column w/ nearest enemy",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/135.gif"
 	},
 	{
 		"number"			: "136",
@@ -1221,7 +1221,7 @@
 		"element"			: "null",
 		"description"	: "Hit column w/ nearest enemy",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/136.gif"
 	},
 	{
 		"number"			: "137",
@@ -1230,7 +1230,7 @@
 		"element"			: "fire",
 		"description"	: "1 row fire arm",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/137.gif"
 	},
 	{
 		"number"			: "138",
@@ -1239,7 +1239,7 @@
 		"element"			: "fire",
 		"description"	: "1 row fire arm",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/138.gif"
 	},
 	{
 		"number"			: "139",
@@ -1248,7 +1248,7 @@
 		"element"			: "fire",
 		"description"	: "1 row fire arm",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/139.gif"
 	},
 	{
 		"number"			: "140",
@@ -1257,7 +1257,7 @@
 		"element"			: "null",
 		"description"	: "Die Rollx10 damage to enemy area",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/140.gif"
 	},
 	{
 		"number"			: "141",
@@ -1266,7 +1266,7 @@
 		"element"			: "null",
 		"description"	: "Die Rollx20 damage to enemy area",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/141.gif"
 	},
 	{
 		"number"			: "142",
@@ -1275,7 +1275,7 @@
 		"element"			: "null",
 		"description"	: "Die Rollx30 damage to enemy area",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/142.gif"
 	},
 	{
 		"number"			: "143",
@@ -1284,7 +1284,7 @@
 		"element"			: "null",
 		"description"	: "Drops 3x3 stones on enemy area",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/143.gif"
 	},
 	{
 		"number"			: "144",
@@ -1293,7 +1293,7 @@
 		"element"			: "null",
 		"description"	: "Drops 4x3 stones on enemy area",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/144.gif"
 	},
 	{
 		"number"			: "145",
@@ -1302,7 +1302,7 @@
 		"element"			: "null",
 		"description"	: "Drops 5x3 stones on enemy area",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/145.gif"
 	},
 	{
 		"number"			: "146",
@@ -1311,7 +1311,7 @@
 		"element"			: "aqua",
 		"description"	: "Blizzard attack on enemy area",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/146.gif"
 	},
 	{
 		"number"			: "147",
@@ -1320,7 +1320,7 @@
 		"element"			: "aqua",
 		"description"	: "Blizzard attack on enemy area",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/147.gif"
 	},
 	{
 		"number"			: "148",
@@ -1329,7 +1329,7 @@
 		"element"			: "aqua",
 		"description"	: "Blizzard attack on enemy area",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/148.gif"
 	},
 	{
 		"number"			: "149",
@@ -1338,7 +1338,7 @@
 		"element"			: "null",
 		"description"	: "Towers of [Aqua] & [Fire]!",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/149.gif"
 	},
 	{
 		"number"			: "150",
@@ -1347,7 +1347,7 @@
 		"element"			: "null",
 		"description"	: "Towers of [Aqua] & [Fire]!",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/150.gif"
 	},
 	{
 		"number"			: "151",
@@ -1356,7 +1356,7 @@
 		"element"			: "null",
 		"description"	: "Towers of [Aqua] & [Fire]!",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/151.gif"
 	},
 	{
 		"number"			: "152",
@@ -1365,7 +1365,7 @@
 		"element"			: "elec",
 		"description"	: "Lightning hits enemy panel!",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/152.gif"
 	},
 	{
 		"number"			: "153",
@@ -1374,7 +1374,7 @@
 		"element"			: "elec",
 		"description"	: "Lightning hits enemy panel!",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/153.gif"
 	},
 	{
 		"number"			: "154",
@@ -1383,7 +1383,7 @@
 		"element"			: "elec",
 		"description"	: "Lightning hits enemy panel!",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/154.gif"
 	},
 	{
 		"number"			: "155",
@@ -1392,7 +1392,7 @@
 		"element"			: "null",
 		"description"	: "Enemy area CrossBomb Depth=3",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/155.gif"
 	},
 	{
 		"number"			: "156",
@@ -1401,7 +1401,7 @@
 		"element"			: "null",
 		"description"	: "Enemy area CrossBomb Depth=3",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/156.gif"
 	},
 	{
 		"number"			: "157",
@@ -1410,7 +1410,7 @@
 		"element"			: "null",
 		"description"	: "Enemy area CrossBomb Depth=3",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/157.gif"
 	},
 	{
 		"number"			: "158",
@@ -1419,7 +1419,7 @@
 		"element"			: "null",
 		"description"	: "Magic fire =instant delete!?",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/158.gif"
 	},
 	{
 		"number"			: "159",
@@ -1428,7 +1428,7 @@
 		"element"			: "null",
 		"description"	: "Magic fire =instant delete!?",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/159.gif"
 	},
 	{
 		"number"			: "160",
@@ -1437,7 +1437,7 @@
 		"element"			: "null",
 		"description"	: "Magic fire =instant delete!?",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/160.gif"
 	},
 	{
 		"number"			: "161",
@@ -1446,7 +1446,7 @@
 		"element"			: "wood",
 		"description"	: "Skewer entire enemy area",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/161.gif"
 	},
 	{
 		"number"			: "162",
@@ -1455,7 +1455,7 @@
 		"element"			: "wood",
 		"description"	: "Skewer entire enemy area",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/162.gif"
 	},
 	{
 		"number"			: "163",
@@ -1464,7 +1464,7 @@
 		"element"			: "wood",
 		"description"	: "Skewer entire enemy area",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/163.gif"
 	},
 	{
 		"number"			: "164",
@@ -1473,7 +1473,7 @@
 		"element"			: "null",
 		"description"	: "Big skull attack on one enemy",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/164.gif"
 	},
 	{
 		"number"			: "165",
@@ -1482,7 +1482,7 @@
 		"element"			: "null",
 		"description"	: "Big skull attack on one enemy",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/165.gif"
 	},
 	{
 		"number"			: "166",
@@ -1491,7 +1491,7 @@
 		"element"			: "null",
 		"description"	: "Big skull attack on one enemy",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/166.gif"
 	},
 	{
 		"number"			: "167",
@@ -1500,7 +1500,7 @@
 		"element"			: "aqua",
 		"description"	: "3-row shark fin attack",
 		"rarity"			: "***",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/167.gif"
 	},
 	{
 		"number"			: "168",
@@ -1509,7 +1509,7 @@
 		"element"			: "aqua",
 		"description"	: "3-row shark fin attack",
 		"rarity"			: "****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/168.gif"
 	},
 	{
 		"number"			: "169",
@@ -1518,7 +1518,7 @@
 		"element"			: "aqua",
 		"description"	: "3-row shark fin attack",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/169.gif"
 	},
 	{
 		"number"			: "170",
@@ -1527,7 +1527,7 @@
 		"element"			: "null",
 		"description"	: "3-row coffin laser!",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/170.gif"
 	},
 	{
 		"number"			: "171",
@@ -1536,7 +1536,7 @@
 		"element"			: "null",
 		"description"	: "3-row coffin laser!",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/171.gif"
 	},
 	{
 		"number"			: "172",
@@ -1545,7 +1545,7 @@
 		"element"			: "null",
 		"description"	: "3-row coffin laser!",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/172.gif"
 	},
 	{
 		"number"			: "173",
@@ -1554,7 +1554,7 @@
 		"element"			: "null",
 		"description"	: "Split into 3 for star attack",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/173.gif"
 	},
 	{
 		"number"			: "174",
@@ -1563,7 +1563,7 @@
 		"element"			: "null",
 		"description"	: "Split into 3 for star attack",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/174.gif"
 	},
 	{
 		"number"			: "175",
@@ -1572,7 +1572,7 @@
 		"element"			: "null",
 		"description"	: "Split into 3 for star attack",
 		"rarity"			: "*****",
-		"image"				: "chips/BN-I/004.gif"
+		"image"				: "chips/BN-I/175.gif"
 	},
 	{
 		"number"			: "176",

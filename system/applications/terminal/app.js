@@ -103,34 +103,44 @@
 		var i, s, o = {}, u = {}, a = {}, f = {}, l = [].slice;
 
 		i = function (t, n, r, i) {
-			var s, a, l, c, p, y = [],
-				b;
+
+			var s, a, l, c, p, y = [], b;
+
 			i = i || t;
+
 			if (typeof r == "function") {
 				n = !n.length && r.length ? ["require", "exports", "module"] : n;
+
 				for (p = 0; p < n.length; p += 1) {
 					c = m(n[p], i), a = c.f;
 					if (a === "require") y[p] = h(t);
 					else if (a === "exports") y[p] = o[t] = {}, b = !0;
+
 					else if (a === "module") s = y[p] = {
 						id: t,
 						uri: "",
 						exports: o[t],
 						config: g(t)
 					};
+
 					else if (o.hasOwnProperty(a) || u.hasOwnProperty(a)) y[p] = v(a);
 					else if (c.p) c.p.load(c.n, h(i, !0), d(a), {}), y[p] = o[a];
 					else if (!f[a]) throw new Error(t + " missing " + a);
 				}
+
 				l = r.apply(o[t], y);
+
 				if (t)
 					if (s && s.exports !== e && s.exports !== o[t]) o[t] = s.exports;
 					else if (l !== e || !b) o[t] = l;
 			} else t && (o[t] = r);
+
 		}, t = n = s = function (t, n, r, o, u) {
+
 			return typeof t == "string" ? v(m(t, n).f) : (t.splice || (a = t, n.splice ? (t = n, n = r, r = null) : t = e), n = n || function () {}, typeof r == "function" && (r = o, o = u), o ? i(e, t, n, r) : setTimeout(function () {
 				i(e, t, n, r);
 			}, 15), s);
+
 		}, s.config = function (e) {
 			return a = e, s;
 		}, r = function (e, t, n) {
@@ -138,29 +148,37 @@
 		}, r.amd = {
 			jQuery: !0
 		};
-	})(), r("../vendor/almond", function () {}), ! function (e, t) {
-		typeof module != "undefined" ? module.exports = t() : typeof r == "function" && typeof r.amd == "object" ? r("vendor/domready", t) : this[e] = t();
+
+	})(), r("applications/terminal/vendor/almond", function () {}), ! function (e, t) {
+
+		typeof module != "undefined" ? module.exports = t() : typeof r == "function" && typeof r.amd == "object" ? r("applications/terminal/vendor/domready", t) : this[e] = t();
+
 	}("domready", function (e) {
+
 		function h(e) {
 			c = 1;
 			while (e = t.shift()) e();
 		}
-		var t = [],
-			n, r = !1,
-			i = document,
-			s = i.documentElement,
-			o = s.doScroll,
-			u = "DOMContentLoaded",
-			a = "addEventListener",
-			f = "onreadystatechange",
-			l = "readyState",
-			c = /^loade|c/.test(i[l]);
+
+		var
+		t = [],
+		n, r = !1,
+		i = document,
+		s = i.documentElement,
+		o = s.doScroll,
+		u = "DOMContentLoaded",
+		a = "addEventListener",
+		f = "onreadystatechange",
+		l = "readyState",
+		c = /^loade|c/.test(i[l]);
+
 		return i[a] && i[a](u, n = function () {
 			i.removeEventListener(u, n, r), h();
 		}, r), o && i.attachEvent(f, n = function () {
 			/^c/.test(i[l]) && (i.detachEvent(f, n), h());
 		}), e = o ? function (n) {
 			self != top ? c ? n() : t.push(n) : function () {
+
 				try {
 					s.doScroll("left");
 				} catch (t) {
@@ -168,76 +186,103 @@
 						e(n);
 					}, 50);
 				}
+
 				n();
+
 			}();
 		} : function (e) {
 			c ? e() : t.push(e);
 		};
-	}), r("core/events", [], function () {
+
+	}), r("applications/terminal/core/events", [], function () {
+
 		var e = function () {
 			this.__listeners = {};
 		};
+
 		return e.prototype = {
 			on: function (e, t, n) {
+
 				this.__listeners[e] || (this.__listeners[e] = []), t || console.error("events.on(): The listener doesn't exist"), this.__listeners[e].push(t.bind(n ? n : this));
+
 			},
+
 			emit: function () {
+
 				var e, t = Array.prototype.slice.call(arguments);
 				arguments.length === 0 && console.error("Events.emit(): Incorrect number of parameters"), e = arguments[0];
 				if (!this.__listeners[e]) return;
 				t.shift();
 				for (var n = this.__listeners[e].length; n--;) this.__listeners[e][n].apply(null, t);
+
 			}
 		}, e;
-	}), r("core/promise", ["require"], function (e) {
+
+	}), r("applications/terminal/core/promise", ["require"], function (e) {
+
 		function n() {
 			this._ondone = [], this._onerror = [], this._onprogress = [], this._state = "unfulfilled", this._args = null;
 		}
 
 		function r(e, t) {
 			setTimeout(function () {
+
 				if (typeof e == "function") return e.apply(null, t);
 				for (var n = 0, r = e.length; n < r; n++) e[n].apply(null, t);
+
 			}, 0);
 		}
 
 		function i(e) {
+
 			switch (e) {
-			case "unfulfilled":
-				return !0;
-			case "canceled":
-				return !1;
-			case "fulfilled":
-				throw new Error("Promise is done");
-			case "failed":
-				throw new Error("Promise is failed");
-			default:
-				throw new Error("Invalid promise state " + e);
+				case "unfulfilled":
+					return !0;
+				case "canceled":
+					return !1;
+				case "fulfilled":
+					throw new Error("Promise is done");
+				case "failed":
+					throw new Error("Promise is failed");
+				default:
+					throw new Error("Invalid promise state " + e);
 			}
+
 		}
 
 		function s(e, n, r, i, s) {
+
 			n.then(function () {
+
 				i[r] = !0, s[r] = t.call(arguments);
 				if (!e.isOpen()) return;
+
 				for (var n = i.length; n--;)
 					if (!i[n]) return;
+
 				e.done.apply(e, s);
+
 			}, function () {
 				e.isOpen() && e.fail.apply(e, arguments);
 			});
+
 		}
 
 		function o(e, t, r, i) {
+
 			if (r === t.length) return e.done.apply(e, i);
 			var s = t[r].apply(null, i);
+
 			s instanceof n ? s.then(function () {
 				nextSecuencial(e, t, r + 1, arguments);
 			}, function (t) {
 				e.fail.apply(e, arguments);
 			}) : nextSecuencial(e, t, r + 1, [s]);
+
 		}
+
 		var t = Array.prototype.slice;
+
 		return n.prototype = {
 			constructor: n,
 			done: function (e) {
@@ -300,7 +345,8 @@
 			var r = new n;
 			return arguments.length > 1 && (e = t.call(arguments)), e.length === 0 ? n.done() : (o(r, e, 0, []), r);
 		}, n;
-	}), r("core/util", [], function () {
+	}), r("applications/terminal/core/util", [], function () {
+
 		var e = {
 			String: {
 				htmlEntities: function (e) {
@@ -335,23 +381,32 @@
 				}
 			}
 		};
+
 		return e;
-	}), r("ui/input", ["require", "core/events", "core/util"], function (e) {
-		var t = e("core/events"),
-			n = e("core/util"),
-			r = function (e) {
-				var n = this;
-				this.settings = {
-					editable: !1
-				};
-				for (var r in e) e.hasOwnProperty(r) && (this.settings[r] = e[r]);
-				this.events = new t, this.$el = document.createElement("div"), this.$el.className = "dekaojs-input", this.$el.innerHTML = "", !this.settings.editable || (this.$el.contentEditable = !0, this.$el.addEventListener("keydown", function (e) {
-					switch (e.keyCode) {
+
+	}), r("applications/terminal/ui/input", ["require", "applications/terminal/core/events", "applications/terminal/core/util"], function (e) {
+
+		var
+		t = e("applications/terminal/core/events"),
+		n = e("applications/terminal/core/util"),
+		r = function (e) {
+
+			var n = this;
+
+			this.settings = { editable: !1 };
+			for (var r in e) e.hasOwnProperty(r) && (this.settings[r] = e[r]);
+
+			this.events = new t, this.$el = document.createElement("div"), this.$el.className = "dekaojs-input", this.$el.innerHTML = "", !this.settings.editable || (this.$el.contentEditable = !0, this.$el.addEventListener("keydown", function (e) {
+
+				switch (e.keyCode) {
 					case 13:
 						e.preventDefault(), e.stopPropagation(), n.events.emit("enter", n);
-					}
-				}));
-			};
+				}
+
+			}));
+
+		};
+
 		return r.prototype = {
 			get value() {
 				var e = this.$el.innerText || this.$el.textContent,
@@ -380,10 +435,10 @@
 				return document.createRange && (e = document.createRange(), e.selectNodeContents(this.$el), e.collapse(!1), t = window.getSelection(), t.removeAllRanges(), t.addRange(e)), this;
 			}
 		}, r;
-	}), r("ui/prompt", ["require", "core/events", "core/util", "ui/input"], function (e) {
-		var t = e("core/events"),
-			n = e("core/util"),
-			r = e("ui/input"),
+	}), r("applications/terminal/ui/prompt", ["require", "applications/terminal/core/events", "applications/terminal/core/util", "applications/terminal/ui/input"], function (e) {
+		var t = e("applications/terminal/core/events"),
+			n = e("applications/terminal/core/util"),
+			r = e("applications/terminal/ui/input"),
 			i = function (e) {
 				var n = this;
 				this.settings = {
@@ -393,17 +448,17 @@
 				for (var i in e) e.hasOwnProperty(i) && (this.settings[i] = e[i]);
 				this.events = new t, this.$el = document.createElement("div"), this.$el.className = "dekaojs-prompt", this.$el.className += " dekaojs-box", this.$ps = document.createElement("div"), this.$ps.className = "dekaojs-ps", this.$el.appendChild(this.$ps), this.input = new r(e), this.input.appendTo(this.$el), !this.settings.editable || this.input.$el.addEventListener("keydown", function (e) {
 					switch (e.keyCode) {
-					case 13:
-						e.preventDefault(), e.stopPropagation(), n.events.emit("enter", n.input);
-						break;
-					case 38:
-						n.events.emit("historyBack", n.input), e.preventDefault(), e.stopPropagation();
-						break;
-					case 40:
-						n.events.emit("historyForward", n.input), e.preventDefault(), e.stopPropagation();
-						break;
-					case 9:
-						n.events.emit("autocomplete", n.input), e.preventDefault(), e.stopPropagation()
+						case 13:
+							e.preventDefault(), e.stopPropagation(), n.events.emit("enter", n.input);
+							break;
+						case 38:
+							n.events.emit("historyBack", n.input), e.preventDefault(), e.stopPropagation();
+							break;
+						case 40:
+							n.events.emit("historyForward", n.input), e.preventDefault(), e.stopPropagation();
+							break;
+						case 9:
+							n.events.emit("autocomplete", n.input), e.preventDefault(), e.stopPropagation()
 					}
 				}), this.ps = this.settings.ps
 			};
@@ -425,8 +480,8 @@
 				return this.$el.style.display !== "none" && n.Styles.hasClass(this.$el, "dekaojs-box")
 			}
 		}, i
-	}), r("ui/outputline", ["require", "core/util"], function (e) {
-		var t = e("core/util"),
+	}), r("applications/terminal/ui/outputline", ["require", "applications/terminal/core/util"], function (e) {
+		var t = e("applications/terminal/core/util"),
 			n = !1,
 			r = function () {
 				var e, n = this.element = document.createElement("div");
@@ -452,9 +507,9 @@
 				t.Styles.removeClass(this.element, "visible"), this.element.style.height = "0"
 			}
 		}, r
-	}), r("ui/output", ["require", "core/util", "ui/outputline"], function (e) {
-		var t = e("core/util"),
-			n = e("ui/outputline"),
+	}), r("applications/terminal/ui/output", ["require", "applications/terminal/core/util", "applications/terminal/ui/outputline"], function (e) {
+		var t = e("applications/terminal/core/util"),
+			n = e("applications/terminal/ui/outputline"),
 			r = function () {
 				this.element = document.createElement("div"), this.element.className = "dekaojs-output"
 			};
@@ -485,13 +540,14 @@
 				return r.appendTo(this.element), r.setContent(e), r
 			}
 		}, r
-	}), r("ui/display", ["require", "core/events", "core/promise", "core/util", "ui/prompt", "ui/input", "ui/output"], function (e) {
-		var t = e("core/events"),
-			n = e("core/promise"),
-			r = e("core/util"),
-			i = e("ui/prompt"),
-			s = e("ui/input"),
-			o = e("ui/output"),
+	}), r("applications/terminal/ui/display", ["require", "applications/terminal/core/events", "applications/terminal/core/promise", "applications/terminal/core/util", "applications/terminal/ui/prompt", "applications/terminal/ui/input", "applications/terminal/ui/output"], function (e) {
+
+		var t = e("applications/terminal/core/events"),
+			n = e("applications/terminal/core/promise"),
+			r = e("applications/terminal/core/util"),
+			i = e("applications/terminal/ui/prompt"),
+			s = e("applications/terminal/ui/input"),
+			o = e("applications/terminal/ui/output"),
 			u = function (e, n) {
 				var s = this;
 				e || (this.$el = document.createElement("div"), document.body.appendChild(this.$el)), this.events = new t;
@@ -578,8 +634,10 @@
 				e.ps = this.prompt.ps, e.input.value = this.prompt.input.value, e.show(), this.output.print(e.$el.outerHTML, "web")
 			}
 		}, u
-	}), r("io/outputstream", ["require", "core/events"], function (e) {
-		var t = e("core/events"),
+
+	}), r("applications/terminal/io/outputstream", ["require", "applications/terminal/core/events"], function (e) {
+
+		var t = e("applications/terminal/core/events"),
 			n = function () {
 				this.events = new t, this.close = !1, this._buffer = [], this.writer = function (e) {
 					this._buffer.push(e)
@@ -605,10 +663,12 @@
 				e += "", this.events.emit("write", e), this._writer.call(this, e)
 			}
 		}, n
-	}), r("system/process", ["require", "core/events", "core/promise", "io/outputstream"], function (e) {
-		var t, n = e("core/events"),
-			r = e("core/promise"),
-			i = e("io/outputstream"),
+
+	}), r("applications/terminal/system/process", ["require", "applications/terminal/core/events", "applications/terminal/core/promise", "applications/terminal/io/outputstream"], function (e) {
+
+		var t, n = e("applications/terminal/core/events"),
+			r = e("applications/terminal/core/promise"),
+			i = e("applications/terminal/io/outputstream"),
 			s = {
 				list: [],
 				register: function (e) {
@@ -643,9 +703,11 @@
 				return typeof e != "function" && (console.error(this.toString + ": Could not execute process " + "because the given command is not a function"), this.exit(1)), e.apply(this, t), this._promise
 			}
 		}, t
-	}), r("io/inputstream", ["require", "core/promise", "core/events"], function (e) {
-		var t = e("core/promise"),
-			n = e("core/events"),
+
+	}), r("applications/terminal/io/inputstream", ["require", "applications/terminal/core/promise", "applications/terminal/core/events"], function (e) {
+
+		var t = e("applications/terminal/core/promise"),
+			n = e("applications/terminal/core/events"),
 			r = function () {
 				this.events = new n, this._buffer = [], this.reader = function (e) {
 					var t = this._buffer.join("");
@@ -671,20 +733,26 @@
 				}, this
 			}
 		}, r
-	}), r("system/shell", ["require", "core/util", "core/promise", "system/process", "io/inputstream", "io/outputstream"], function (e) {
-		var t = e("core/util"),
-			n = e("core/promise"),
-			r = e("system/process"),
-			i = e("io/inputstream"),
-			s = e("io/outputstream"),
-			o = function (e) {
-				this._environment = {}, e && this.include(e), this.streams = {
-					stdin: new i,
-					stdout: new s,
-					stderr: new s,
-					web: new s
-				}, this.bus = r.bus, this.streams.stdin.id = "STDIN", this.streams.stdout.id = "STDOUT", this.commands = [], this.history = []
-			};
+
+	}), r("applications/terminal/system/shell", ["require", "applications/terminal/core/util", "applications/terminal/core/promise", "applications/terminal/system/process", "applications/terminal/io/inputstream", "applications/terminal/io/outputstream"], function (e) {
+
+		var
+		t = e("applications/terminal/core/util"),
+		n = e("applications/terminal/core/promise"),
+		r = e("applications/terminal/system/process"),
+		i = e("applications/terminal/io/inputstream"),
+		s = e("applications/terminal/io/outputstream"),
+		o = function (e) {
+
+			this._environment = {}, e && this.include(e), this.streams = {
+				stdin: new i,
+				stdout: new s,
+				stderr: new s,
+				web: new s
+			}, this.bus = r.bus, this.streams.stdin.id = "STDIN", this.streams.stdout.id = "STDOUT", this.commands = [], this.history = []
+
+		};
+
 		return o.prototype = {
 			commands: null,
 			streams: null,
@@ -694,50 +762,78 @@
 			getEnv: function (e) {
 				return this._environment[e] ? this._environment[e] : null
 			},
+
 			exec: function (e) {
-				var t, o, u = [],
-					a = {
-						stdin: this.streams.stdin,
-						stdout: this.streams.stdout,
-						stderr: this.streams.stderr,
-						web: this.streams.web
-					};
+
+				var
+				t, o, u = [],
+				a = {
+					stdin: this.streams.stdin,
+					stdout: this.streams.stdout,
+					stderr: this.streams.stderr,
+					web: this.streams.web
+				};
+
 				return this.history.push(e), o = this._parse(e), o.forEach(function (e, f) {
+
 					var l, c;
+
 					f < o.length - 1 ? (a.stdout = new s, c = (new i).pipe(a.stdout)) : (a.stdout = this.streams.stdout, c = null), l = function (i) {
+
 						if (this.native[e.name]) return this.native[e.name].apply(this, e.args), n.done();
+
 						for (var s = this.commands.length; s--;) {
 							t = this.commands[s];
+
 							if (t[e.name]) {
 								var o = new r(i);
 								return o.exec(t[e.name], e.args)
 							}
 						}
+
 						return this.streams.stderr.write("Command '" + e.name + "' not found."), n.done()
+
 					}.call(this, a), c && (a.stdin = c), u.push(l)
+
 				}, this), n.parallel(u)
+
 			},
+
 			search: function (e) {
-				var n = [],
-					r = [];
+
+				var
+				n = [],
+				r = [];
+
 				for (var i = this.commands.length; i--;) r = t.Array.merge(r, Object.keys(this.commands[i]));
 				var s = new RegExp("^" + e, "i");
 				for (var o = r.length; o--;) s.test(r[o]) && n.push(r[o]);
+
 				return n
+
 			},
+
 			include: function (e) {
 				this.commands = this.commands.concat(e)
 			},
+
 			_parse: function (e) {
+
 				var t = e.split("|");
+
 				return t.map(function (e) {
+
 					var t = e.trim().split(" ");
+
 					return e = t[0], t.shift(), {
 						name: e,
 						args: t
 					}
+
 				})
+
 			},
+
 			"native": {
 				history: function () {
 					var e = "";
@@ -749,19 +845,27 @@
 				}
 			}
 		}, o
-	}), r("dekao", ["require", "vendor/domready", "ui/display", "system/shell", "system/process"], function (e) {
-		var t = e("vendor/domready"),
-			n = function (e, r) {
-				var i = this;
-				this.shell = r.shell || new n.Shell;
-				if (!this.shell || !(this.shell instanceof n.Shell)) {
-					console.error("Dekao.constructor: Provided shell not valid");
-					return
-				}
-				r.shell = this.shell, t(function () {
-					e = typeof e == "string" ? document.querySelector(e) : e, i.display = new n.Display(e, r)
-				})
-			};
+
+	}), r("dekao", ["require", "applications/terminal/vendor/domready", "applications/terminal/ui/display", "applications/terminal/system/shell", "applications/terminal/system/process"], function (e) {
+
+		var
+		t = e("applications/terminal/vendor/domready"),
+		n = function (e, r) {
+
+			var i = this;
+			this.shell = r.shell || new n.Shell;
+
+			if (!this.shell || !(this.shell instanceof n.Shell)) {
+				console.error("Dekao.constructor: Provided shell not valid");
+				return
+			}
+
+			r.shell = this.shell, t(function () {
+				e = typeof e == "string" ? document.querySelector(e) : e, i.display = new n.Display(e, r)
+			})
+
+		};
+
 		return n.prototype = {
 			set shell(e) {
 				this._shell || (this._shell = e)
@@ -772,75 +876,8 @@
 			}, get display() {
 				return this._display
 			}
-		}, n.version = "0.1", n.Display = e("ui/display"), n.Shell = e("system/shell"), n.Process = e("system/process"), n
+		}, n.version = "0.1", n.Display = e("applications/terminal/ui/display"), n.Shell = e("applications/terminal/system/shell"), n.Process = e("applications/terminal/system/process"), n
+
 	}), e.Dekao = n("dekao")
+	
 })(window);
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// Dekao.js example commands
-(function (global) {
-
-	"use strict";
-
-	var TestCommands = {
-		ls: function () {
-
-			// Fake 'ls' command for demo purposes
-			this.write("LICENSE\nMakefile\nREADME.md\nbuild/\nbuild.js\nexamples/\nsrc/\nvendor/\n");
-			this.exit();
-
-		},
-
-		ll: function () { TestCommands.ls.call(this, arguments); },
-
-		help: function () {
-
-			this.write("Press < tab > to see a list of available commands.");
-			this.exit();
-
-		},
-
-		pwd: function () {
-
-			// Fake 'pwd' command for demo purposes
-			this.write("github.com:IdeasNeverCease/hikari");
-			this.exit();
-
-		},
-
-		cd: function () {
-
-			// Fake 'cd' command for demo purposes
-			this.write("Sorry, access not granted");
-			this.exit();
-
-		},
-
-		exit: function () { location.reload(); },
-
-		sum: function (op1, op2) {
-
-			if (arguments.length < 2)
-				this.write("Please insert two numeric values (ex. > sum 5 6)", "stderr");
-			else
-				this.write(parseInt(op1, 10) + parseInt(op2, 10));
-
-			this.exit();
-
-		},
-
-		echo: function () {
-
-			var args = Array.prototype.slice.call(arguments, 0);
-			this.write(args.join(" "));
-
-			this.exit(0);
-
-		}
-	};
-
-	global.TestCommands = TestCommands;
-
-})(this);
-

@@ -1,7 +1,6 @@
 // based on sidebarEffects.js v1.0.0 from http://www.codrops.com
 
-$(window).on("ready", function() {
-
+$(window).on("ready", function () {
 	var hikariMenus = (function () {
 
 		function hasParentClass(e, classname) {
@@ -107,10 +106,10 @@ $(window).on("ready", function() {
 			$("#select-system-fonts, #select-system-language, #select-system-mail, #select-system-personalization, #select-system-progsFeats, #select-system-sync, #select-system-OS, #select-system-userAccounts, #select-system-update").on("click", function(ev) {
 				resetMenu();
 			});
+
 		}
 
 		init();
 
 	})();
-
 });
