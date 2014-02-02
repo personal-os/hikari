@@ -1,7 +1,4 @@
-/**
- * Terminus.js example commands
- * Copyright © 2012 Ramón Lamana
- */
+// Dekao.js example commands
 (function (global) {
 
 	"use strict";
