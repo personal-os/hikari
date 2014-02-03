@@ -1,6 +1,54 @@
 
 /////////////////////////////////////////////////////////////////////////////// SYSTEM.FOLDERS/SCSS ///
 
+.wm-settings-panel {
+	animation: slide 15s linear infinite;
+	background-image: url("../images/folders/panelBG.jpg");
+	background-size: 100%;
+	color: $white;
+	padding: 1rem;
+
+	-o-animation: slide 15s linear infinite;
+	-moz-animation: slide 15s linear infinite;
+	-webkit-animation: slide 15s linear infinite;
+
+	h1, p { z-index: 1; }
+
+	h1 {
+		margin: 0 0 1rem 0;
+	}
+
+	&:after {
+		top: 0; right: 0;
+		bottom: 0; left: 0;
+
+		background-image: linear-gradient(to bottom, transparent, $black);
+		content: "";
+		opacity: 0.9;
+		position: absolute;
+	}
+}
+
+@keyframes slide {
+	from { background-position: 0 0; }
+	to { background-position: 0 600px; }
+}
+
+@-o-keyframes slide {
+	from { background-position: 0 0; }
+	to { background-position: 0 600px; }
+}
+
+@-moz-keyframes slide {
+	from { background-position: 0 0; }
+	to { background-position: 0 600px; }
+}
+
+@-webkit-keyframes slide {
+	from { background-position: 0 0; }
+	to { background-position: 0 600px; }
+}
+
 #hikari-about {
 	width: 100%; height: 100%;
 

@@ -708,6 +708,7 @@
 
 			buffer += escapeExpression(stack1) + "\" >\n <div class=\"wm-settings-panel\">\n";
 			buffer += "<h1>Gaea Preferences</h1>";
+			buffer += "<p>Specific folder and system-wide folder options will appear here at some point.</p>";
 			buffer += "</div>\n <div class=\"wm-window-box\">\n <header class=\"wm-window-title\" unselectable=\"on\">\n <button class=\"wm-settings\">&nbsp;</button><h1 unselectable=\"on\">";
 
 			foundHelper = helpers.title;
@@ -720,12 +721,6 @@
 			}
 
 			buffer += escapeExpression(stack1) + "</h1>\n <div class=\"wm-button-group\">\n <button class=\"wm-minimize\">&nbsp;</button>\n <button class=\"wm-maximize\">&nbsp;</button>\n <button class=\"wm-close\">&nbsp;</button>\n </div>\n </header>\n\n <section class=\"wm-content\"></section>\n\n		<button class=\"wm-resize\">&nbsp;</button>\n	</div>\n	<div class=\"wm-window-overlay\"></div>\n</div>\n";
-
-			/*
-			viewStuff = "";
-			viewStuff += "<h1>Gaea Preferences</h1>";
-			this.el.find(".wm-settings-panel").css("left", "0").append(viewStuff);
-			*/
 
 			return buffer;
 
