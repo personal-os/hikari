@@ -8,6 +8,9 @@ Twitter: [http://twitter.com/tadashihikari](http://twitter.com/tadashihikari)
 TL;DR: I had the idea that it would be nifty if my smartphone could dock into something on my desk and the OS within the phone would become a full-fledged desktop. <a href="http://dsgn.io/thoughts/the-future-of-the-operating-system">Long version, ready to read</a>.
 
 ### Coded Screenshots
+![Screenshot](http://hikar.io/images/in-progress/02-02-2014.png)
+<sup>02&middot;02&middot;14
+
 ![Screenshot](http://hikar.io/images/in-progress/01-26-2014.png)
 <sup>01&middot;26&middot;14
 
