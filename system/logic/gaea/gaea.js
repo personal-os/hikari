@@ -704,7 +704,12 @@
 				stack1 = typeof stack1 === functionType ? stack1() : stack1;
 			}
 
-			buffer += escapeExpression(stack1) + "\" >\n <div class=\"wm-settings-panel\"></div>\n <div class=\"wm-window-box\">\n <header class=\"wm-window-title\" unselectable=\"on\">\n <button class=\"wm-settings\">&nbsp;</button><h1 unselectable=\"on\">";
+			// buffer += escapeExpression(stack1) + "\" >\n <div class=\"wm-settings-panel\"></div>\n <div class=\"wm-window-box\">\n <header class=\"wm-window-title\" unselectable=\"on\">\n <button class=\"wm-settings\">&nbsp;</button><h1 unselectable=\"on\">";
+
+			buffer += escapeExpression(stack1) + "\" >\n <div class=\"wm-settings-panel\">\n";
+			buffer += "<h1>Gaea Preferences</h1>";
+			buffer += "</div>\n <div class=\"wm-window-box\">\n <header class=\"wm-window-title\" unselectable=\"on\">\n <button class=\"wm-settings\">&nbsp;</button><h1 unselectable=\"on\">";
+
 			foundHelper = helpers.title;
 
 			if (foundHelper) {
@@ -715,6 +720,12 @@
 			}
 
 			buffer += escapeExpression(stack1) + "</h1>\n <div class=\"wm-button-group\">\n <button class=\"wm-minimize\">&nbsp;</button>\n <button class=\"wm-maximize\">&nbsp;</button>\n <button class=\"wm-close\">&nbsp;</button>\n </div>\n </header>\n\n <section class=\"wm-content\"></section>\n\n		<button class=\"wm-resize\">&nbsp;</button>\n	</div>\n	<div class=\"wm-window-overlay\"></div>\n</div>\n";
+
+			/*
+			viewStuff = "";
+			viewStuff += "<h1>Gaea Preferences</h1>";
+			this.el.find(".wm-settings-panel").css("left", "0").append(viewStuff);
+			*/
 
 			return buffer;
 
@@ -883,7 +894,6 @@
 					},
 
 					".wm-window-title h1 dblclick": function () {
-					// ".wm-window-title dblclick": function () {
 						if (this.enabled && this.resizable)
 							this.maximize();
 					},
@@ -1336,6 +1346,7 @@
 				restore: function (win, restore) {
 					restore.call(win);
 
+					// needed to close panel
 					this.el.removeClass("panel-open");
 					this.el.find(".wm-content").css("margin", "0");
 					this.el.find(".wm-settings").css("margin", "0 0.5rem 0 0.3rem");
@@ -1348,6 +1359,7 @@
 				panel: function (win) {
 
 					/*
+					// 02
 					viewStuff = "";
 					viewStuff += "<h1>Gaea Preferences</h1>";
 					this.el.find(".wm-settings-panel").css("left", "0").append(viewStuff);
@@ -2284,7 +2296,6 @@
 				win.signals.on("blur", this._blur, this);
 				win.signals.on("close", this._close, this);
 				win.signals.on("panel", this._panel, this);
-				// win.signals.on("unpanel", this._unpanel, this);
 
 				// Connect window signals to manager mode actions
 				this.actions.forEach(function (action) {
@@ -2370,9 +2381,12 @@
 
 			_panel: function (win) {
 
+				/*
+				// 01
 				viewStuff = "";
 				viewStuff += "<h1>Gaea Preferences</h1>";
 				this.el.find(".wm-settings-panel").css("left", "0").append(viewStuff);
+				*/
 
 			}
 		};
