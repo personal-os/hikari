@@ -21,10 +21,10 @@ $(function () {
 				"name": "Desktop",
 
 				"items": {
-					"desktop-group-key1": { "name": "Change Background", "id": "context-changeBG" },
+					"desktop-group-key1": { "name": "Change Background", "id": "contextDesktop-changeBG" },
 					"desktop-group-key2": { "name": "Hide Icons" },
 					"desktop-group-key3": { "name": "Personalize" },
-					"desktop-group-key4": { "name": "Showcase", "id": "context-showcase" }
+					"desktop-group-key4": { "name": "Showcase", "id": "contextDesktop-showcase" }
 				}
 			},
 
@@ -67,7 +67,7 @@ $(function () {
 		}
 	});
 
-	$("#context-showcase").click(_.throttle(function () {
+	$("#contextDesktop-showcase").click(_.throttle(function () {
 
 		if (wm.mode === "showcase") {
 			wm.mode = "default";
