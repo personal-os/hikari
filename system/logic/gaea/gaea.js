@@ -535,11 +535,7 @@
 			root.Emitter = Emitter;
 	})(this);
 
-	/**
-	 * Gaea
-	 * Copyright © 2012 Ramón Lamana
-	 * https://github.com/rlamana
-	 */
+	// Gaea
 	define("gaea/core/view", ["$"], function ($, _) {
 
 		var splitter = /^(?:(.*)\s)?(\w+)$/;
