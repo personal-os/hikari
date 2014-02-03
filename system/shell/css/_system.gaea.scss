@@ -7,7 +7,8 @@ html, body, .hikari-container, .hikari-pusher, .hikari-content {
 
 html {
 	background-color: $teal !important;
-	background-image: linear-gradient(to top, saturate($white, 100%), darken($teal, 10%)) !important;
+	// background-image: linear-gradient(to top, saturate($white, 100%), darken($teal, 10%)) !important;
+	background-image: linear-gradient(to top, saturate($black, 100%), darken($teal, 10%)) !important;
 }
 
 body {

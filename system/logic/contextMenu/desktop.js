@@ -80,4 +80,8 @@ $(function () {
 
 	}, 1000));
 
+	$("#contextGaea").click(function () {
+		$(".context-menu-root").trigger("contextmenu:hide");
+	});
+
 });
