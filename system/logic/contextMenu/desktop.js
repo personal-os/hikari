@@ -13,7 +13,7 @@ $(function () {
 					"system-group-key1": { "name": "Log Off" },
 					"system-group-key2": { "name": "Shutdown" },
 					"system-sep": "---------",
-					"system-group-key3": { "name": "About", "id": "context-about"  },
+					"system-group-key3": { "name": "About", "id": "contextSystem-about"  },
 				}
 			},
 
