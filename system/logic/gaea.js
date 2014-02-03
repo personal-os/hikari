@@ -501,8 +501,8 @@ $(document).on("click", "#contextSystem-about", function () {
 		classname: "folder",
 		width: 300,
 		height: 350,
-		x: 283,
-		y: 100,
+		x: $vW / 2 - 150,
+		y: $vH / 2 - 175,
 		resizable: false,
 		widget: true
 
