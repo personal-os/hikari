@@ -29,9 +29,8 @@ $(window).on("ready", function () {
 			var
 			container = document.getElementById("hikari-container"),
 			reset = document.getElementById("closeMenu"),
-			buttons = Array.prototype.slice.call(document.querySelectorAll("#hikari-trigger-effects > button")),
 			buttons = Array.prototype.slice.call(document.querySelectorAll("#start > button")),
-			// buttons = document.getElementById("contextGaea"),
+
 			// event type (if mobile use touch events)
 			eventtype = mobilecheck() ? "touchstart" : "click",
 			resetMenu = function () { classie.remove(container, "hikari-menu-open"); },

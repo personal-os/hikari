@@ -397,15 +397,16 @@ body {
 			overflow-y: auto;
 			transition: all 0.2s ease-out;
 
-			-o-flex: 1;
 			-o-box-flex: 1;
-			-moz-flex: 1;
 			-moz-box-flex: 1;
-			-webkit-flex: 1;
 			-webkit-box-flex: 1;
 
+			-o-flex: 1;
+			-moz-flex: 1;
+			-webkit-flex: 1;
+
 			section {
-				margin: -0.5rem; padding: 1rem;
+				margin: 0; padding: 1rem; // margin: -0.5rem;
 				height: 100%;
 			}
 		}
