@@ -490,7 +490,7 @@ $(document).on("click", "#context-changeBG", function () {
 });
 
 // About hikari
-$(document).on("click", "#context-about", function () {
+$(document).on("click", "#contextSystem-about", function () {
 
 	$(".context-menu-root").trigger("contextmenu:hide");
 	$(".wm-space").append('<section id="hikari-about"></section>');
@@ -505,6 +505,19 @@ $(document).on("click", "#context-about", function () {
 		y: 100
 
 	});
+
+	stuff = "";
+	stuff += "<h1 id=\"about-logo\">hikari</h1>";
+	stuff += "<p>hikari is an experimental operating system, built by Paul Anthony Webb.</p>";
+	stuff += "<p>GitHub repo: <a href=\"https://github.com/IdeasNeverCease/hikari\">here</a>. Origin story: <a href=\"http://dsgn.io/thoughts/the-future-of-the-operating-system\">here</a>. Official site: <a href=\"http://hikar.io\">hikar.io</a>.</p>";
+	stuff += "<p id=\"about-copy\">&copy; 2014 Paul Anthony Webb</p>";
+
+	$("#hikari-about").parent().css({
+		"overflow-x": "hidden",
+		"overflow-y": "hidden"
+	});
+
+	$("#hikari-about").append(stuff);
 
 });
 
