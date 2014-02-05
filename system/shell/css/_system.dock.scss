@@ -17,14 +17,98 @@
 	.left, .right { vertical-align: middle; }
 
 	#running-apps {
-		float: left;
-		padding: 0.6rem 0;
+		width: auto; height: 50px;
+		top: 0; left: 5rem;
 
+		position: absolute;
+
+		/* "Squircle" code from http://codepen.io/rogie/pen/alBcH */
 		li {
-			float: left;
-			margin: 0 1rem 0 0;
+			width: 50px; height: 50px;
 
-			&:last-child { margin: 0; }
+			display: inline-block;
+			// float: left;
+			margin: 0.7rem auto; // 0 1rem 0 0
+			position: relative; //
+			transform: scale(0.5);
+			transform-origin: 50% 0;
+			vertical-align: middle;
+
+			-o-transform: scale(0.5);
+			-o-transform-origin: 50% 0;
+			-moz-transform: scale(0.5);
+			-moz-transform-origin: 50% 0;
+			-webkit-transform: scale(0.5);
+			-webkit-transform-origin: 50% 0;
+
+			& > * {
+				width: 100%; height: 100%;
+
+				background: 50% 50% no-repeat;
+				display: inline-block;
+				position: absolute;
+				z-index: 5;
+			}
+
+			&:before,
+			&:after,
+			> *:before,
+			> *:after {
+				background-color: #00aeef;
+				position: absolute;
+			}
+
+			/*
+			&:before {
+				top: 0; left: 4em;
+
+				border-top-left-radius: 20em 10em;
+				border-bottom-left-radius: 20em 10em;
+				bottom: 0;
+				content: "";
+				width: 50%;
+			}
+			*/
+
+			&:before {
+				top: 0; left: 0;
+
+				border-top-left-radius: 80% 20%;
+				border-bottom-left-radius: 80% 20%;
+				bottom: 0;
+				content: "";
+				width: 25px;
+			}
+
+			&:after {
+				top: 0; bottom: 0; right: 0;
+
+				border-top-right-radius: 80% 20%;
+				border-bottom-right-radius: 80% 20%;
+				content: "";
+				width: 25px;
+			}
+
+			> *:before {
+				top: 0; bottom: 0;
+
+				border-top-left-radius: 80% 20%;
+				border-bottom-left-radius: 80% 20%;
+				content: "";
+				width: 25px;
+			}
+
+			> *:after {
+				top: 0; bottom: 0; right: 0;
+
+				border-top-right-radius: 80% 20%;
+				border-bottom-right-radius: 80% 20%;
+				content: "";
+				width: 25px;
+				z-index: 4;
+			}
+
+			// &:last-child { margin: 0; }
 		}
 	}
 
