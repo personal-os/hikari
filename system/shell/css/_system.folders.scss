@@ -201,3 +201,176 @@
 		color: $white;
 	}
 }
+
+#network {
+	background-color: $black;
+	height: 1000px;
+	overflow: hidden;
+
+	div {
+		width: 150px; height: 150px;
+		top: 50%; left: 50%;
+
+		border: 2px solid $white;
+		position: absolute;
+		transform: perspective(600px) rotateX(64.5deg) rotate(45deg);
+		transform-origin: top left;
+		transform-style: preserve-3D;
+
+		-o-transform: perspective(600px) rotateX(64.5deg) rotate(45deg);
+		-moz-transform: perspective(600px) rotateX(64.5deg) rotate(45deg);
+		-webkit-transform: perspective(600px) rotateX(64.5deg) rotate(45deg);
+
+		-o-transform-origin: top left;
+		-moz-transform-origin: top left;
+		-webkit-transform-origin: top left;
+
+		-o-transform-style: preserve-3D;
+		-moz-transform-style: preserve-3D;
+		-webkit-transform-style: preserve-3D;
+
+		&:nth-child(1) {
+			animation: first 3.5s infinite;
+			top: 50%;
+
+			-o-animation: first 3.5s infinite;
+			-moz-animation: first 3.5s infinite;
+			-webkit-animation: first 3.5s infinite;
+		}
+
+		&:nth-child(2) {
+			animation: second 3.5s infinite;
+			top: 47.5%;
+
+			-o-animation: second 3.5s infinite;
+			-moz-animation: second 3.5s infinite;
+			-webkit-animation: second 3.5s infinite;
+		}
+
+		&:nth-child(3) {
+			animation: third 3.5s infinite;
+			top: 45%;
+
+			-o-animation: third 3.5s infinite;
+			-moz-animation: third 3.5s infinite;
+			-webkit-animation: third 3.5s infinite;
+		}
+
+		&:nth-child(4) {
+			animation: fourth 3.5s infinite;
+			top: 42.5%;
+
+			-o-animation: fourth 3.5s infinite;
+			-moz-animation: fourth 3.5s infinite;
+			-webkit-animation: fourth 3.5s infinite;
+		}
+
+		&:nth-child(5) {
+			animation: fifth 3.5s infinite;
+			top: 40%;
+
+			-o-animation: fifth 3.5s infinite;
+			-moz-animation: fifth 3.5s infinite;
+			-webkit-animation: fifth 3.5s infinite;
+		}
+
+		&:nth-child(6) {
+			animation: sixth 3.5s infinite;
+			top: 37.5%;
+
+			-o-animation: sixth 3.5s infinite;
+			-moz-animation: sixth 3.5s infinite;
+			-webkit-animation: sixth 3.5s infinite;
+		}
+
+		&:nth-child(7) {
+			animation: seventh 3.5s infinite;
+			top: 35%;
+
+			-o-animation: seventh 3.5s infinite;
+			-moz-animation: seventh 3.5s infinite;
+			-webkit-animation: seventh 3.5s infinite;
+		}
+
+		&:nth-child(8) {
+			animation: eighth 3.5s infinite;
+			top: 32.5%;
+
+			-o-animation: eighth 3.5s infinite;
+			-moz-animation: eighth 3.5s infinite;
+			-webkit-animation: eighth 3.5s infinite;
+		}
+
+		&:nth-child(9) {
+			animation: ninth 3.5s infinite;
+			top: 30%;
+
+			-o-animation: ninth 3.5s infinite;
+			-moz-animation: ninth 3.5s infinite;
+			-webkit-animation: ninth 3.5s infinite;
+		}
+	}
+}
+
+@keyframes first {
+	98%			{ top: 50%; }
+	3%			{ top: 50%; }
+	50%			{ top: -37%; }
+	50.001% { top: 125%; }
+}
+
+@keyframes second {
+	98.5%		{ top: 47.5%; }
+	3.5%		{ top: 47.5%; }
+	50%			{ top: -38%; }
+	50.001% { top: 125%; }
+}
+
+@keyframes third {
+	99%			{ top: 45%; }
+	4%			{ top: 45%; }
+	50%			{ top: -40%; }
+	50.001% { top: 125%; }
+}
+
+@keyframes fourth {
+	99.5%		{ top: 42.5%; }
+	4.5%		{ top: 42.5%; }
+	50%			{ top: -41%; }
+	50.001% { top: 125%; }
+}
+
+@keyframes fifth {
+	0%			{ top: 40%; }
+	5%			{ top: 40%; }
+	50%			{ top: -43%; }
+	50.001% { top: 125%; }
+}
+
+@keyframes sixth {
+	0.5%		{ top: 37.5%; }
+	5.5%		{ top: 37.5%; }
+	50%			{ top: -44%; }
+	50.001% { top: 125%; }
+}
+
+@keyframes seventh {
+	1%			{ top: 35%; }
+	6%			{ top: 35%; }
+	50%			{ top: -45%; }
+	50.001% { top: 125%; }
+}
+
+@keyframes eighth {
+	1.5%		{ top: 32.5%; }
+	6.5%		{ top: 32.5%; }
+	50%			{ top: -47%; }
+	50.001% { top: 125%; }
+}
+
+@keyframes ninth {
+	2%			{ top: 30%; }
+	7%			{ top: 30%; }
+	50%			{ top: -48%; }
+	50.001% { top: 125%; }
+}

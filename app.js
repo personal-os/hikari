@@ -9,6 +9,7 @@ app.set("view engine", "html");
 app.engine("html", require("hbs").__express);
 
 // Maintain continuous time synchronization
+/*
 Sntp.offset(function (err, offset) {
 
 	console.log(offset); // New (served fresh)
@@ -19,6 +20,7 @@ Sntp.offset(function (err, offset) {
 	});
 
 });
+*/
 
 // Start up hikari!
 app.get("/", function(req, res) {
