@@ -540,8 +540,8 @@
 
 		var splitter = /^(?:(.*)\s)?(\w+)$/;
 
-		var transitionEventNames = "transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd";
-		var animationEventNames = "animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd";
+		var transitionEventNames = "transitionend oTransitionEnd webkitTransitionEnd";
+		var animationEventNames = "animationend oAnimationEnd webkitAnimationEnd";
 
 		// CSS3 transform, transition, animation hooks, prefixless
 		var hooks = ["transform", "transition", "animation", "transform-origin"];
@@ -709,6 +709,8 @@
 			buffer += escapeExpression(stack1) + "\" >\n <div class=\"wm-settings-panel\">\n";
 			buffer += "<h1>Gaea Preferences</h1>";
 			buffer += "<p>Specific folder and system-wide folder options will appear here at some point.</p>";
+			buffer += "<input class=\"switch\" type=\"checkbox\" checked>";
+			buffer += "<input type=\"range\" min=\"1\" max=\"100\" value=\"20\" id=\"range\"/>";
 			buffer += "</div>\n <div class=\"wm-window-box\">\n <header class=\"wm-window-title\" unselectable=\"on\">\n <button class=\"wm-settings\">&nbsp;</button><h1 unselectable=\"on\">";
 
 			foundHelper = helpers.title;
@@ -830,7 +832,6 @@
 			this.maximized = false;
 			this.minimized = false;
 			this.paneled = false;
-			// this.unpaneled = false;
 
 			// Properties
 			this.widget = false;
@@ -1349,7 +1350,16 @@
 
 				},
 
-				minimize: function (win) { win.resize(0, 0); },
+				minimize: function (win) {
+
+					// this.el.hide();
+					// win.move(100, 0);
+					// win.resize(50, 50);
+
+					// this is fucking stupid
+					// win.resize(0, 0);
+
+				},
 				
 				panel: function (win) {
 
@@ -2050,10 +2060,10 @@
 					win.movable = false;
 
 					win.el.addClass("exposing");
-					win.el.css("transform-origin", "0 0");
-					win.el.css("transform", "scale(" + scale + ")");
 					win.el.css("top", top);
 					win.el.css("left", left);
+					win.el.css("transform-origin", "0 0");
+					win.el.css("transform", "scale(" + scale + ")");
 
 					win.el.onTransitionEnd(function () {
 						win.el.removeClass("exposing");
@@ -2132,6 +2142,7 @@
 
 					win.el.css({
 						"transform": "translate3d(0, 0, 0);",
+						"-o-transform": "translate3d(0, 0, 0);",
 						"-moz-transform": "translate3d(0, 0, 0);",
 						"-webkit-transform": "translate3d(0, 0, 0);"
 					});
@@ -2301,6 +2312,10 @@
 
 				win.space = this.el;
 
+				// options.title
+
+				$("<li>" + options.title + "</li>").appendTo("#running-apps");
+
 				win.focus();
 				return win;
 
@@ -2375,14 +2390,6 @@
 			},
 
 			_panel: function (win) {
-
-				/*
-				// 01
-				viewStuff = "";
-				viewStuff += "<h1>Gaea Preferences</h1>";
-				this.el.find(".wm-settings-panel").css("left", "0").append(viewStuff);
-				*/
-
 			}
 		};
 

@@ -1,10 +1,24 @@
 // Express makes nodeJS easy...almost too easy
-var express = require("express");
-var app = express();
+var
+express = require("express"),
+Sntp = require("sntp"),
+app = express();
 
 // Fuck that fancy shit, I like good ol' HTML
 app.set("view engine", "html");
 app.engine("html", require("hbs").__express);
+
+// Maintain continuous time synchronization
+Sntp.offset(function (err, offset) {
+
+	console.log(offset); // New (served fresh)
+
+	// Request offset again
+	Sntp.offset(function (err, offset) {
+		console.log(offset); // Identical (served from cache)
+	});
+
+});
 
 // Start up hikari!
 app.get("/", function(req, res) {

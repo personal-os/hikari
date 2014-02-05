@@ -6,9 +6,10 @@ html, body, .hikari-container, .hikari-pusher, .hikari-content {
 }
 
 html {
-	background-color: $teal !important;
-	// background-image: linear-gradient(to top, saturate($white, 100%), darken($teal, 10%)) !important;
-	background-image: linear-gradient(to top, saturate($black, 100%), darken($teal, 10%)) !important;
+	background-color: $teal;
+	background: linear-gradient(to top, saturate($black, 100%), darken($teal, 10%));
+	transition: background 0.5s ease;
+	// background: linear-gradient(135deg, #b3cae5 12%, #dbdde4 46%, #e4e3e4 70%, #f7ddbb 94%, #efcab2 100%) !important;
 }
 
 body {
