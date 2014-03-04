@@ -582,6 +582,7 @@ $(function () {
 	day = new Date();		// get the date
 	x = day.getHours();	// get the hour
 
+	/*
 	if (x >= 0 && x < 1) {
 		// $("html").removeClass().addClass("sand-babe");
 		$("html").css("background", "linear-gradient(135deg, #b3cae5 12%, #dbdde4 46%, #e4e3e4 70%, #f7ddbb 94%, #efcab2 100%)");
@@ -706,6 +707,7 @@ $(function () {
 		// $("html").removeClass().addClass("indigo-magic");
 		$("html").css("background", "linear-gradient(135deg, #20202f 0%, #273550 16%, #416081 41%, #adacb2 78%, #eac3a2 100%)");
 	}
+	*/
 
 });
 
