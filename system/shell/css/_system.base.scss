@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/********************************************************************************* SYSTEM.BASE/SCSS **/
+////////////////////////////////////////////////////////////////////////////////// SYSTEM.BASE/SCSS ///
 
 * {
 	margin: 0; padding: 0;
@@ -33,7 +33,7 @@ header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, v
 	vertical-align: baseline;
 }
 
-/** [-] HTML5 DISPLAY RESET FOR CLUNKERS **************************************************************/
+/// HTML5 DISPLAY RESET FOR CLUNKERS //////////////////////////////////////////////////////////////////
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -54,13 +54,13 @@ a {
 	&:visited { text-decoration: none; }
 }
 
-/** [-] CLEARFIX **************************************************************************************/
+/// CLEARFIX //////////////////////////////////////////////////////////////////////////////////////////
 
 .cf { zoom: 1; }
 .cf:before, .cf:after { content: " "; display: table; }
 .cf:after { clear: both; }
 
-/** [-] SUPER-BASIC STLYES ****************************************************************************/
+/// SUPER BASIC STYLES ////////////////////////////////////////////////////////////////////////////////
 
 em, .em { font-style: italic; }
 strong, .strong { font-weight: 700; }
@@ -68,26 +68,21 @@ strong, .strong { font-weight: 700; }
 .left { float: left; }
 .right { float: right; }
 
-/**************************************************************************************** [+] COLORS **/
+/////////////////////////////////////////////////////////////////////////////////////////// COLOURS ///
 
 $black:     rgba(25, 25, 25, 1);    // #191919;
 $white:     rgba(254, 254, 254, 1); // #fefefe;
 $dark-gray:	rgba(61, 66, 72, 1);		// #3d4248;
 $teal:			rgba(80, 190, 191, 1);	// #50bebf;
-//
+
 $red:				rgba(255, 49, 49, 1);		// #ff3131;
 $orange:		rgba(255, 136, 49, 1);	// #ff8831;
 $yellow:		rgba(255, 222, 0, 1);		// #ffde00;
 $green:			rgba(0, 255, 0, 1);			// #00ff00;
 $blue:			rgba(0, 96, 255, 1);		// #0060ff;
 $purple:		rgba(162, 0, 255, 1);		// #a200ff;
-//
-$maroon:    rgba(140, 41, 63, 1);   // #8c293f;
-//
+
 .bg-black			{ background-color: $black; }
-// .bg-gray-i		{ background-color: $gray-i; }
-// .bg-gray-ii		{ background-color: $gray-ii; }
-// .bg-gray-iii	{ background-color: $gray-iii; }
 .bg-white			{ background-color: $white; }
 .bg-teal			{ background-color: $teal; }
 .bg-red				{ background-color: $red; }
