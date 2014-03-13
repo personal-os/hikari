@@ -1,0 +1,501 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'c:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'bcrypt' ]
+2 info using npm@1.3.21
+3 info using node@v0.10.24
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'bcrypt', null ]
+6 verbose cache add name=undefined spec="bcrypt" args=["bcrypt",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'bcrypt',
+7 verbose parsed url   path: 'bcrypt',
+7 verbose parsed url   href: 'bcrypt' }
+8 silly lockFile 51684124-bcrypt bcrypt
+9 verbose lock bcrypt C:\Users\PaulAnthony\AppData\Roaming\npm-cache\51684124-bcrypt.lock
+10 silly lockFile 51684124-bcrypt bcrypt
+11 silly lockFile 51684124-bcrypt bcrypt
+12 verbose addNamed [ 'bcrypt', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 1351601c-bcrypt bcrypt@
+15 verbose lock bcrypt@ C:\Users\PaulAnthony\AppData\Roaming\npm-cache\1351601c-bcrypt.lock
+16 silly addNameRange { name: 'bcrypt', range: '*', hasData: false }
+17 verbose url raw bcrypt
+18 verbose url resolving [ 'https://registry.npmjs.org/', './bcrypt' ]
+19 verbose url resolved https://registry.npmjs.org/bcrypt
+20 info trying registry request attempt 1 at 20:54:27
+21 http GET https://registry.npmjs.org/bcrypt
+22 http 200 https://registry.npmjs.org/bcrypt
+23 silly registry.get cb [ 200,
+23 silly registry.get   { date: 'Mon, 10 Mar 2014 00:54:28 GMT',
+23 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B)',
+23 silly registry.get     etag: '"82LVPLDKWJOIL6C5HJP2FVDLA"',
+23 silly registry.get     'content-type': 'application/json',
+23 silly registry.get     'cache-control': 'max-age=1',
+23 silly registry.get     'content-length': '136213',
+23 silly registry.get     'accept-ranges': 'bytes',
+23 silly registry.get     via: '1.1 varnish',
+23 silly registry.get     age: '135',
+23 silly registry.get     'x-served-by': 'cache-v36-ASH',
+23 silly registry.get     'x-cache': 'MISS',
+23 silly registry.get     'x-cache-hits': '0',
+23 silly registry.get     'x-timer': 'S1394412868.350453615,VS0,VE76',
+23 silly registry.get     vary: 'Accept',
+23 silly registry.get     'keep-alive': 'timeout=10, max=50',
+23 silly registry.get     connection: 'Keep-Alive' } ]
+24 silly addNameRange number 2 { name: 'bcrypt', range: '*', hasData: true }
+25 silly addNameRange versions [ 'bcrypt',
+25 silly addNameRange   [ '0.1.2',
+25 silly addNameRange     '0.2.0',
+25 silly addNameRange     '0.2.1',
+25 silly addNameRange     '0.1.3',
+25 silly addNameRange     '0.2.2',
+25 silly addNameRange     '0.2.3',
+25 silly addNameRange     '0.2.4',
+25 silly addNameRange     '0.3.0',
+25 silly addNameRange     '0.3.1',
+25 silly addNameRange     '0.3.2',
+25 silly addNameRange     '0.4.0',
+25 silly addNameRange     '0.4.1',
+25 silly addNameRange     '0.5.0',
+25 silly addNameRange     '0.6.0',
+25 silly addNameRange     '0.7.0',
+25 silly addNameRange     '0.7.1',
+25 silly addNameRange     '0.7.2',
+25 silly addNameRange     '0.7.3',
+25 silly addNameRange     '0.7.4',
+25 silly addNameRange     '0.7.5',
+25 silly addNameRange     '0.7.6',
+25 silly addNameRange     '0.7.7' ] ]
+26 verbose addNamed [ 'bcrypt', '0.7.7' ]
+27 verbose addNamed [ '0.7.7', '0.7.7' ]
+28 silly lockFile ad2a9212-bcrypt-0-7-7 bcrypt@0.7.7
+29 verbose lock bcrypt@0.7.7 C:\Users\PaulAnthony\AppData\Roaming\npm-cache\ad2a9212-bcrypt-0-7-7.lock
+30 silly lockFile cf81592e-pmjs-org-bcrypt-bcrypt-0-7-7-tgz https://registry.npmjs.org/bcrypt/-/bcrypt-0.7.7.tgz
+31 verbose lock https://registry.npmjs.org/bcrypt/-/bcrypt-0.7.7.tgz C:\Users\PaulAnthony\AppData\Roaming\npm-cache\cf81592e-pmjs-org-bcrypt-bcrypt-0-7-7-tgz.lock
+32 verbose addRemoteTarball [ 'https://registry.npmjs.org/bcrypt/-/bcrypt-0.7.7.tgz',
+32 verbose addRemoteTarball   '966a2e709b8cf62c2e05408baf7c5ed663b3c868' ]
+33 info retry fetch attempt 1 at 20:54:27
+34 verbose fetch to= C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412867868-0.024659926537424326\tmp.tgz
+35 http GET https://registry.npmjs.org/bcrypt/-/bcrypt-0.7.7.tgz
+36 http 200 https://registry.npmjs.org/bcrypt/-/bcrypt-0.7.7.tgz
+37 verbose tar unpack C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412867868-0.024659926537424326\tmp.tgz
+38 silly lockFile 58ef40c3-868-0-024659926537424326-package tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412867868-0.024659926537424326\package
+39 verbose lock tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412867868-0.024659926537424326\package C:\Users\PaulAnthony\AppData\Roaming\npm-cache\58ef40c3-868-0-024659926537424326-package.lock
+40 silly lockFile 5e09efaa-868-0-024659926537424326-tmp-tgz tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412867868-0.024659926537424326\tmp.tgz
+41 verbose lock tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412867868-0.024659926537424326\tmp.tgz C:\Users\PaulAnthony\AppData\Roaming\npm-cache\5e09efaa-868-0-024659926537424326-tmp-tgz.lock
+42 silly gunzTarPerm modes [ '755', '644' ]
+43 silly gunzTarPerm extractEntry package.json
+44 silly gunzTarPerm extractEntry .npmignore
+45 silly gunzTarPerm extractEntry README.md
+46 silly gunzTarPerm extractEntry LICENSE
+47 silly gunzTarPerm extractEntry bcrypt.js
+48 silly gunzTarPerm extractEntry Makefile
+49 silly gunzTarPerm extractEntry .travis.yml
+50 silly gunzTarPerm extractEntry binding.gyp
+51 silly gunzTarPerm extractEntry examples/async_compare.js
+52 silly gunzTarPerm extractEntry examples/forever_gen_salt.js
+53 silly gunzTarPerm extractEntry CHANGELOG
+54 silly gunzTarPerm extractEntry src/bcrypt.cc
+55 silly gunzTarPerm extractEntry src/bcrypt_node.cc
+56 silly gunzTarPerm extractEntry src/blowfish.cc
+57 silly gunzTarPerm extractEntry src/node_blf.h
+58 silly gunzTarPerm extractEntry test/async.js
+59 silly gunzTarPerm extractEntry test/deprecated.js
+60 silly gunzTarPerm extractEntry test/repetitions.js
+61 silly gunzTarPerm extractEntry test/sync.js
+62 silly gunzTarPerm extractEntry wscript
+63 silly lockFile 58ef40c3-868-0-024659926537424326-package tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412867868-0.024659926537424326\package
+64 silly lockFile 58ef40c3-868-0-024659926537424326-package tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412867868-0.024659926537424326\package
+65 silly lockFile 5e09efaa-868-0-024659926537424326-tmp-tgz tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412867868-0.024659926537424326\tmp.tgz
+66 silly lockFile 5e09efaa-868-0-024659926537424326-tmp-tgz tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412867868-0.024659926537424326\tmp.tgz
+67 verbose tar pack [ 'C:\\Users\\PaulAnthony\\AppData\\Roaming\\npm-cache\\bcrypt\\0.7.7\\package.tgz',
+67 verbose tar pack   'C:\\Users\\PAULAN~1\\AppData\\Local\\Temp\\npm-13240-DbCEh8zW\\1394412867868-0.024659926537424326\\package' ]
+68 verbose tarball C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package.tgz
+69 verbose folder C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412867868-0.024659926537424326\package
+70 silly lockFile 58ef40c3-868-0-024659926537424326-package tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412867868-0.024659926537424326\package
+71 verbose lock tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412867868-0.024659926537424326\package C:\Users\PaulAnthony\AppData\Roaming\npm-cache\58ef40c3-868-0-024659926537424326-package.lock
+72 silly lockFile e161a61f-m-cache-bcrypt-0-7-7-package-tgz tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package.tgz
+73 verbose lock tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package.tgz C:\Users\PaulAnthony\AppData\Roaming\npm-cache\e161a61f-m-cache-bcrypt-0-7-7-package-tgz.lock
+74 silly lockFile 58ef40c3-868-0-024659926537424326-package tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412867868-0.024659926537424326\package
+75 silly lockFile 58ef40c3-868-0-024659926537424326-package tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412867868-0.024659926537424326\package
+76 silly lockFile e161a61f-m-cache-bcrypt-0-7-7-package-tgz tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package.tgz
+77 silly lockFile e161a61f-m-cache-bcrypt-0-7-7-package-tgz tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package.tgz
+78 silly lockFile a5556369-g-npm-cache-bcrypt-0-7-7-package C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package
+79 verbose lock C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package C:\Users\PaulAnthony\AppData\Roaming\npm-cache\a5556369-g-npm-cache-bcrypt-0-7-7-package.lock
+80 silly lockFile a5556369-g-npm-cache-bcrypt-0-7-7-package C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package
+81 silly lockFile a5556369-g-npm-cache-bcrypt-0-7-7-package C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package
+82 verbose tar unpack C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package.tgz
+83 silly lockFile f25e6cd3-g-npm-cache-bcrypt-0-7-7-package tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package
+84 verbose lock tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package C:\Users\PaulAnthony\AppData\Roaming\npm-cache\f25e6cd3-g-npm-cache-bcrypt-0-7-7-package.lock
+85 silly lockFile e161a61f-m-cache-bcrypt-0-7-7-package-tgz tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package.tgz
+86 verbose lock tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package.tgz C:\Users\PaulAnthony\AppData\Roaming\npm-cache\e161a61f-m-cache-bcrypt-0-7-7-package-tgz.lock
+87 silly gunzTarPerm modes [ '755', '644' ]
+88 silly gunzTarPerm extractEntry package.json
+89 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+90 silly gunzTarPerm extractEntry .npmignore
+91 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+92 silly gunzTarPerm extractEntry README.md
+93 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+94 silly gunzTarPerm extractEntry LICENSE
+95 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+96 silly gunzTarPerm extractEntry bcrypt.js
+97 silly gunzTarPerm modified mode [ 'bcrypt.js', 438, 420 ]
+98 silly gunzTarPerm extractEntry CHANGELOG
+99 silly gunzTarPerm modified mode [ 'CHANGELOG', 438, 420 ]
+100 silly gunzTarPerm extractEntry examples/async_compare.js
+101 silly gunzTarPerm modified mode [ 'examples/async_compare.js', 438, 420 ]
+102 silly gunzTarPerm extractEntry examples/forever_gen_salt.js
+103 silly gunzTarPerm modified mode [ 'examples/forever_gen_salt.js', 438, 420 ]
+104 silly gunzTarPerm extractEntry .travis.yml
+105 silly gunzTarPerm modified mode [ '.travis.yml', 438, 420 ]
+106 silly gunzTarPerm extractEntry Makefile
+107 silly gunzTarPerm modified mode [ 'Makefile', 438, 420 ]
+108 silly gunzTarPerm extractEntry binding.gyp
+109 silly gunzTarPerm modified mode [ 'binding.gyp', 438, 420 ]
+110 silly gunzTarPerm extractEntry src/bcrypt.cc
+111 silly gunzTarPerm modified mode [ 'src/bcrypt.cc', 438, 420 ]
+112 silly gunzTarPerm extractEntry src/bcrypt_node.cc
+113 silly gunzTarPerm modified mode [ 'src/bcrypt_node.cc', 438, 420 ]
+114 silly gunzTarPerm extractEntry src/blowfish.cc
+115 silly gunzTarPerm modified mode [ 'src/blowfish.cc', 438, 420 ]
+116 silly gunzTarPerm extractEntry src/node_blf.h
+117 silly gunzTarPerm modified mode [ 'src/node_blf.h', 438, 420 ]
+118 silly gunzTarPerm extractEntry test/async.js
+119 silly gunzTarPerm modified mode [ 'test/async.js', 438, 420 ]
+120 silly gunzTarPerm extractEntry test/deprecated.js
+121 silly gunzTarPerm modified mode [ 'test/deprecated.js', 438, 420 ]
+122 silly gunzTarPerm extractEntry test/repetitions.js
+123 silly gunzTarPerm modified mode [ 'test/repetitions.js', 438, 420 ]
+124 silly gunzTarPerm extractEntry test/sync.js
+125 silly gunzTarPerm modified mode [ 'test/sync.js', 438, 420 ]
+126 silly gunzTarPerm extractEntry wscript
+127 silly gunzTarPerm modified mode [ 'wscript', 438, 420 ]
+128 silly lockFile f25e6cd3-g-npm-cache-bcrypt-0-7-7-package tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package
+129 silly lockFile f25e6cd3-g-npm-cache-bcrypt-0-7-7-package tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package
+130 silly lockFile e161a61f-m-cache-bcrypt-0-7-7-package-tgz tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package.tgz
+131 silly lockFile e161a61f-m-cache-bcrypt-0-7-7-package-tgz tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package.tgz
+132 verbose chmod C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package.tgz 644
+133 silly chown skipping for windows C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package.tgz
+134 silly lockFile cf81592e-pmjs-org-bcrypt-bcrypt-0-7-7-tgz https://registry.npmjs.org/bcrypt/-/bcrypt-0.7.7.tgz
+135 silly lockFile cf81592e-pmjs-org-bcrypt-bcrypt-0-7-7-tgz https://registry.npmjs.org/bcrypt/-/bcrypt-0.7.7.tgz
+136 silly lockFile ad2a9212-bcrypt-0-7-7 bcrypt@0.7.7
+137 silly lockFile ad2a9212-bcrypt-0-7-7 bcrypt@0.7.7
+138 silly lockFile 1351601c-bcrypt bcrypt@
+139 silly lockFile 1351601c-bcrypt bcrypt@
+140 silly resolved [ { name: 'bcrypt',
+140 silly resolved     description: 'A bcrypt library for NodeJS.',
+140 silly resolved     keywords:
+140 silly resolved      [ 'bcrypt',
+140 silly resolved        'password',
+140 silly resolved        'auth',
+140 silly resolved        'authentication',
+140 silly resolved        'encryption',
+140 silly resolved        'crypt',
+140 silly resolved        'crypto' ],
+140 silly resolved     main: './bcrypt',
+140 silly resolved     version: '0.7.7',
+140 silly resolved     author: { name: 'Nick Campbell', url: 'http://github.com/ncb000gt' },
+140 silly resolved     engines: { node: '>= 0.6.0' },
+140 silly resolved     repository:
+140 silly resolved      { type: 'git',
+140 silly resolved        url: 'http://github.com/ncb000gt/node.bcrypt.js.git' },
+140 silly resolved     licenses: [ [Object] ],
+140 silly resolved     bugs: { url: 'http://github.com/ncb000gt/node.bcrypt.js/issues' },
+140 silly resolved     scripts:
+140 silly resolved      { test: 'node-gyp configure build && nodeunit test',
+140 silly resolved        install: 'node-gyp rebuild' },
+140 silly resolved     dependencies: { bindings: '1.0.0' },
+140 silly resolved     devDependencies: { nodeunit: '>=0.6.4' },
+140 silly resolved     contributors:
+140 silly resolved      [ [Object],
+140 silly resolved        [Object],
+140 silly resolved        [Object],
+140 silly resolved        [Object],
+140 silly resolved        [Object],
+140 silly resolved        [Object],
+140 silly resolved        [Object],
+140 silly resolved        [Object],
+140 silly resolved        [Object],
+140 silly resolved        [Object],
+140 silly resolved        [Object],
+140 silly resolved        [Object],
+140 silly resolved        [Object],
+140 silly resolved        [Object] ],
+140 silly resolved     gypfile: true,
+140 silly resolved     readme: '# node.bcrypt.js\n\n[![Build Status](https://secure.travis-ci.org/ncb000gt/node.bcrypt.js.png)](http://travis-ci.org/#!/ncb000gt/node.bcrypt.js) \n\nLib to help you hash passwords.\n[bcrypt on wikipedia][bcryptwiki]\n\nCatalyst for this module: [How To Safely Store A Password][codahale]\n\n## If You Are Submitting Bugs/Issues\n\nBecause we can\'t magically know what you are doing to expose an issue, it is best if you provide a snippet of code. This snippet need not include your secret sauce, but it must replicate the issue you are describing. The issues that get closed without resolution tend to be the ones without code examples. Thanks.\n\n\n## Version Compatability\n\n<table>\n<tr>\n<td>Node Ver</td><td>Bcrypt Version</td>\n</tr>\n<tr>\n<td>&lt;= 0.4.x</td><td>&lt;= 0.4.x</td>\n</tr>\n<tr>\n<td>&gt;= 0.6.x</td><td>&gt;= 0.5.x</td>\n</tr>\n</table>\n\nWindows users should make sure to have at least node 0.8.5 installed and version >= 0.7.1 of this module.  \n`node-gyp` only works with stable/released versions of node. Since the `bcrypt` module uses `node-gyp` to build and install you\'ll need a stable version of node to use bcrypt. If you do not you\'ll likely see an error that starts with:\n\n    gyp ERR! stack Error: "pre" versions of node cannot be installed, use the --nodedir flag instead\n\n\n\n## Security Issues/Concerns\n\nAs should be the case with any security tool, this library should be scrutinized by anyone using it. If you find or suspect an issue with the code- please bring it to my attention and I\'ll spend some time trying to make sure that this tool is as secure as possible.\n\nTo make it easier for people using this tool to analyze what has been surveyed, here is a list of BCrypt related security issues/concerns as they\'ve come up.\n\n* An [issue with passwords][jtr] was found with a version of the Blowfish algorithm developed for John the Ripper. This is not present in the OpenBSD version and is thus not a problem for this module. HT [zooko][zooko].\n\n## Dependencies\n\n* NodeJS\n* OpenSSL (Development Libraries (header files) for compilation)\n * For Windows you\'ll need http://slproweb.com/products/Win32OpenSSL.html installed to the default location of `C:\\OpenSSL-Win32`\n  * When installing OpenSSL, you must tell it to put DLLs in `The Windows system directory` to avoid `The specified module could not be found.` errors.\n  * Please note that for this to build properly you\'ll need the Normal version of OpenSSL-Win<arch>, not the Light version. The reason for this is that we need to be able to compile the code using the header files that exist in the Normal version.\n  * For 64 bit use the 64 bit version and install to `C:\\OpenSSL-Win64`\n* `node-gyp`\n * Please check the dependencies for this tool at: https://github.com/TooTallNate/node-gyp/\n  * Windows users will need the options for c# and c++ installed with their visual studio instance.\n  * Python 2.x\n\n## Install via NPM\n```\nnpm install bcrypt\n```\n\n## Usage\n\n### async (recommended)\n\nTo hash a password:\n\n```javascript\nvar bcrypt = require(\'bcrypt\');\nbcrypt.genSalt(10, function(err, salt) {\n    bcrypt.hash("B4c0/\\/", salt, function(err, hash) {\n        // Store hash in your password DB.\n    });\n});\n```\n\nTo check a password:\n\n```javascript\n// Load hash from your password DB.\nbcrypt.compare("B4c0/\\/", hash, function(err, res) {\n    // res == true\n});\nbcrypt.compare("not_bacon", hash, function(err, res) {\n    // res = false\n});\n```\n\nAuto-gen a salt and hash:\n\n```javascript\nbcrypt.hash(\'bacon\', 8, function(err, hash) {\n});\n```\n\n\n### sync\n\nTo hash a password:\n\n```javascript\nvar bcrypt = require(\'bcrypt\');\nvar salt = bcrypt.genSaltSync(10);\nvar hash = bcrypt.hashSync("B4c0/\\/", salt);\n// Store hash in your password DB.\n```\n\nTo check a password:\n\n```javascript\n// Load hash from your password DB.\nbcrypt.compareSync("B4c0/\\/", hash); // true\nbcrypt.compareSync("not_bacon", hash); // false\n```\n\nAuto-gen a salt and hash:\n\n```javascript\nvar hash = bcrypt.hashSync(\'bacon\', 8);\n```\n\n## API\n\n`BCrypt.`\n\n  * `genSaltSync(rounds, seed_length)`\n    * `rounds` - [OPTIONAL] - the number of rounds to process the data for. (default - 10)\n    * `seed_length` - [OPTIONAL] - RAND_bytes wants a length. to make that a bit flexible, you can specify a seed_length. (default - 20)\n  * `genSalt(rounds, seed_length, cb)`\n    * `rounds` - [OPTIONAL] - the number of rounds to process the data for. (default - 10)\n    * `seed_length` - [OPTIONAL] - RAND_bytes wants a length. to make that a bit flexible, you can specify a seed_length. (default - 20)\n    * `cb` - [REQUIRED] - a callback to be fired once the salt has been generated. uses eio making it asynchronous.\n      * `err` - First parameter to the callback detailing any errors.\n      * `salt` - Second parameter to the callback providing the generated salt.\n  * `hashSync(data, salt)`\n    * `data` - [REQUIRED] - the data to be encrypted.\n    * `salt` - [REQUIRED] - the salt to be used in encryption.\n  * `hash(data, salt, cb)`\n    * `data` - [REQUIRED] - the data to be encrypted.\n    * `salt` - [REQUIRED] - the salt to be used to hash the password. if specified as a number then a salt will be generated and used (see examples).\n    * `cb` - [REQUIRED] - a callback to be fired once the data has been encrypted. uses eio making it asynchronous.\n      * `err` - First parameter to the callback detailing any errors.\n      * `encrypted` - Second parameter to the callback providing the encrypted form.\n  * `compareSync(data, encrypted)`\n    * `data` - [REQUIRED] - data to compare.\n    * `encrypted` - [REQUIRED] - data to be compared to.\n  * `compare(data, encrypted, cb)`\n    * `data` - [REQUIRED] - data to compare.\n    * `encrypted` - [REQUIRED] - data to be compared to.\n    * `cb` - [REQUIRED] - a callback to be fired once the data has been compared. uses eio making it asynchronous.\n      * `err` - First parameter to the callback detailing any errors.\n      * `same` - Second parameter to the callback providing whether the data and encrypted forms match [true | false].\n  * `getRounds(encrypted)` - return the number of rounds used to encrypt a given hash\n    * `encrypted` - [REQUIRED] - hash from which the number of rounds used should be extracted.\n\n\n## Hash Info\n\nThe characters that comprise the resultant hash are `./ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789$`.\n\n## Testing\n\nIf you create a pull request, tests better pass :)\n\n```\nnpm install\nnpm test\n```\n\n## Credits\n\nThe code for this comes from a few sources:\n\n* blowfish.cc - OpenBSD\n* bcrypt.cc - OpenBSD\n* bcrypt::gen_salt - [gen_salt inclusion to bcrypt][bcryptgs]\n* bcrypt_node.cc - me\n\n## Contributors\n\n* [Antonio Salazar Cardozo][shadowfiend] - Early MacOS X support (when we used libbsd)\n* [Ben Glow][pixelglow] - Fixes for thread safety with async calls\n* [Van Nguyen][thegoleffect] - Found a timing attack in the comparator\n* [NewITFarmer][newitfarmer] - Initial Cygwin support\n* [David Trejo][dtrejo] - packaging fixes\n* [Alfred Westerveld][alfredwesterveld] - packaging fixes\n* [Vincent Côté-Roy][vincentr] - Testing around concurrency issues\n* [Lloyd Hilaiel][lloyd] - Documentation fixes\n* [Roman Shtylman][shtylman] - Code refactoring, general rot reduction, compile options, better memory management with delete and new, and an upgrade to libuv over eio/ev.\n* [Vadim Graboys][vadimg] - Code changes to support 0.5.5+\n* [Ben Noordhuis][bnoordhuis] - Fixed a thread safety issue in nodejs that was perfectly mappable to this module.\n* [Nate Rajlich][tootallnate] - Bindings and build process.\n* [Sean McArthur][seanmonstar] - Windows Support\n* [Fanie Oosthuysen][weareu] - Windows Support\n\n## License\nUnless stated elsewhere, file headers or otherwise, the license as stated in the LICENSE file.\n\n[bcryptwiki]: http://en.wikipedia.org/wiki/Bcrypt\n[bcryptgs]: http://mail-index.netbsd.org/tech-crypto/2002/05/24/msg000204.html\n[codahale]: http://codahale.com/how-to-safely-store-a-password/\n[gh13]: https://github.com/ncb000gt/node.bcrypt.js/issues/13\n[jtr]: http://www.openwall.com/lists/oss-security/2011/06/20/2\n\n[shadowfiend]:https://github.com/Shadowfiend\n[thegoleffect]:https://github.com/thegoleffect\n[pixelglow]:https://github.com/pixelglow\n[dtrejo]:https://github.com/dtrejo\n[alfredwesterveld]:https://github.com/alfredwesterveld\n[newitfarmer]:https://github.com/newitfarmer\n[zooko]:https://twitter.com/zooko\n[vincentr]:https://twitter.com/vincentcr\n[lloyd]:https://github.com/lloyd\n[shtylman]:https://github.com/shtylman\n[vadimg]:https://github.com/vadimg\n[bnoordhuis]:https://github.com/bnoordhuis\n[tootallnate]:https://github.com/tootallnate\n[seanmonstar]:https://github.com/seanmonstar\n[weareu]:https://github.com/weareu\n',
+140 silly resolved     readmeFilename: 'README.md',
+140 silly resolved     homepage: 'https://github.com/ncb000gt/node.bcrypt.js',
+140 silly resolved     _id: 'bcrypt@0.7.7',
+140 silly resolved     dist: { shasum: '7969869bacd36b895e793baba08d43f4b3ba00a4' },
+140 silly resolved     _from: 'bcrypt@',
+140 silly resolved     _resolved: 'https://registry.npmjs.org/bcrypt/-/bcrypt-0.7.7.tgz' } ]
+141 info install bcrypt@0.7.7 into c:\Users\PaulAnthony\Desktop\Projects\Ideas Never Cease\hikari
+142 info installOne bcrypt@0.7.7
+143 info c:\Users\PaulAnthony\Desktop\Projects\Ideas Never Cease\hikari\node_modules\bcrypt unbuild
+144 verbose tar unpack C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package.tgz
+145 silly lockFile f7709039-Cease-hikari-node-modules-bcrypt tar://c:\Users\PaulAnthony\Desktop\Projects\Ideas Never Cease\hikari\node_modules\bcrypt
+146 verbose lock tar://c:\Users\PaulAnthony\Desktop\Projects\Ideas Never Cease\hikari\node_modules\bcrypt C:\Users\PaulAnthony\AppData\Roaming\npm-cache\f7709039-Cease-hikari-node-modules-bcrypt.lock
+147 silly lockFile e161a61f-m-cache-bcrypt-0-7-7-package-tgz tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package.tgz
+148 verbose lock tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package.tgz C:\Users\PaulAnthony\AppData\Roaming\npm-cache\e161a61f-m-cache-bcrypt-0-7-7-package-tgz.lock
+149 silly gunzTarPerm modes [ '755', '644' ]
+150 silly gunzTarPerm extractEntry package.json
+151 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+152 silly gunzTarPerm extractEntry .npmignore
+153 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+154 silly gunzTarPerm extractEntry README.md
+155 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+156 silly gunzTarPerm extractEntry LICENSE
+157 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+158 silly gunzTarPerm extractEntry bcrypt.js
+159 silly gunzTarPerm modified mode [ 'bcrypt.js', 438, 420 ]
+160 silly gunzTarPerm extractEntry CHANGELOG
+161 silly gunzTarPerm modified mode [ 'CHANGELOG', 438, 420 ]
+162 silly gunzTarPerm extractEntry examples/async_compare.js
+163 silly gunzTarPerm modified mode [ 'examples/async_compare.js', 438, 420 ]
+164 silly gunzTarPerm extractEntry examples/forever_gen_salt.js
+165 silly gunzTarPerm modified mode [ 'examples/forever_gen_salt.js', 438, 420 ]
+166 silly gunzTarPerm extractEntry .travis.yml
+167 silly gunzTarPerm modified mode [ '.travis.yml', 438, 420 ]
+168 silly gunzTarPerm extractEntry Makefile
+169 silly gunzTarPerm modified mode [ 'Makefile', 438, 420 ]
+170 silly gunzTarPerm extractEntry binding.gyp
+171 silly gunzTarPerm modified mode [ 'binding.gyp', 438, 420 ]
+172 silly gunzTarPerm extractEntry src/bcrypt.cc
+173 silly gunzTarPerm modified mode [ 'src/bcrypt.cc', 438, 420 ]
+174 silly gunzTarPerm extractEntry src/bcrypt_node.cc
+175 silly gunzTarPerm modified mode [ 'src/bcrypt_node.cc', 438, 420 ]
+176 silly gunzTarPerm extractEntry src/blowfish.cc
+177 silly gunzTarPerm modified mode [ 'src/blowfish.cc', 438, 420 ]
+178 silly gunzTarPerm extractEntry src/node_blf.h
+179 silly gunzTarPerm modified mode [ 'src/node_blf.h', 438, 420 ]
+180 silly gunzTarPerm extractEntry test/async.js
+181 silly gunzTarPerm modified mode [ 'test/async.js', 438, 420 ]
+182 silly gunzTarPerm extractEntry test/deprecated.js
+183 silly gunzTarPerm modified mode [ 'test/deprecated.js', 438, 420 ]
+184 silly gunzTarPerm extractEntry test/repetitions.js
+185 silly gunzTarPerm modified mode [ 'test/repetitions.js', 438, 420 ]
+186 silly gunzTarPerm extractEntry test/sync.js
+187 silly gunzTarPerm modified mode [ 'test/sync.js', 438, 420 ]
+188 silly gunzTarPerm extractEntry wscript
+189 silly gunzTarPerm modified mode [ 'wscript', 438, 420 ]
+190 silly lockFile f7709039-Cease-hikari-node-modules-bcrypt tar://c:\Users\PaulAnthony\Desktop\Projects\Ideas Never Cease\hikari\node_modules\bcrypt
+191 silly lockFile f7709039-Cease-hikari-node-modules-bcrypt tar://c:\Users\PaulAnthony\Desktop\Projects\Ideas Never Cease\hikari\node_modules\bcrypt
+192 silly lockFile e161a61f-m-cache-bcrypt-0-7-7-package-tgz tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package.tgz
+193 silly lockFile e161a61f-m-cache-bcrypt-0-7-7-package-tgz tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bcrypt\0.7.7\package.tgz
+194 info preinstall bcrypt@0.7.7
+195 verbose readDependencies using package.json deps
+196 verbose readDependencies using package.json deps
+197 verbose cache add [ 'bindings@1.0.0', null ]
+198 verbose cache add name=undefined spec="bindings@1.0.0" args=["bindings@1.0.0",null]
+199 verbose parsed url { protocol: null,
+199 verbose parsed url   slashes: null,
+199 verbose parsed url   auth: null,
+199 verbose parsed url   host: null,
+199 verbose parsed url   port: null,
+199 verbose parsed url   hostname: null,
+199 verbose parsed url   hash: null,
+199 verbose parsed url   search: null,
+199 verbose parsed url   query: null,
+199 verbose parsed url   pathname: 'bindings@1.0.0',
+199 verbose parsed url   path: 'bindings@1.0.0',
+199 verbose parsed url   href: 'bindings@1.0.0' }
+200 verbose cache add name="bindings" spec="1.0.0" args=["bindings","1.0.0"]
+201 verbose parsed url { protocol: null,
+201 verbose parsed url   slashes: null,
+201 verbose parsed url   auth: null,
+201 verbose parsed url   host: null,
+201 verbose parsed url   port: null,
+201 verbose parsed url   hostname: null,
+201 verbose parsed url   hash: null,
+201 verbose parsed url   search: null,
+201 verbose parsed url   query: null,
+201 verbose parsed url   pathname: '1.0.0',
+201 verbose parsed url   path: '1.0.0',
+201 verbose parsed url   href: '1.0.0' }
+202 verbose addNamed [ 'bindings', '1.0.0' ]
+203 verbose addNamed [ '1.0.0', '1.0.0' ]
+204 silly lockFile f01e5454-bindings-1-0-0 bindings@1.0.0
+205 verbose lock bindings@1.0.0 C:\Users\PaulAnthony\AppData\Roaming\npm-cache\f01e5454-bindings-1-0-0.lock
+206 verbose url raw bindings/1.0.0
+207 verbose url resolving [ 'https://registry.npmjs.org/', './bindings/1.0.0' ]
+208 verbose url resolved https://registry.npmjs.org/bindings/1.0.0
+209 info trying registry request attempt 1 at 20:54:28
+210 http GET https://registry.npmjs.org/bindings/1.0.0
+211 http 200 https://registry.npmjs.org/bindings/1.0.0
+212 silly registry.get cb [ 200,
+212 silly registry.get   { date: 'Mon, 10 Mar 2014 00:54:30 GMT',
+212 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B)',
+212 silly registry.get     etag: '"5ICVC458DUISOTZR1VP3RL2DG"',
+212 silly registry.get     'content-type': 'application/json',
+212 silly registry.get     'cache-control': 'max-age=1',
+212 silly registry.get     'content-length': '4520',
+212 silly registry.get     'accept-ranges': 'bytes',
+212 silly registry.get     via: '1.1 varnish',
+212 silly registry.get     age: '150',
+212 silly registry.get     'x-served-by': 'cache-v43-ASH',
+212 silly registry.get     'x-cache': 'MISS',
+212 silly registry.get     'x-cache-hits': '0',
+212 silly registry.get     'x-timer': 'S1394412870.081192255,VS0,VE75',
+212 silly registry.get     vary: 'Accept',
+212 silly registry.get     'keep-alive': 'timeout=10, max=50',
+212 silly registry.get     connection: 'Keep-Alive' } ]
+213 silly lockFile ccf0f56a--org-bindings-bindings-1-0-0-tgz https://registry.npmjs.org/bindings/-/bindings-1.0.0.tgz
+214 verbose lock https://registry.npmjs.org/bindings/-/bindings-1.0.0.tgz C:\Users\PaulAnthony\AppData\Roaming\npm-cache\ccf0f56a--org-bindings-bindings-1-0-0-tgz.lock
+215 verbose addRemoteTarball [ 'https://registry.npmjs.org/bindings/-/bindings-1.0.0.tgz',
+215 verbose addRemoteTarball   'c3ccde60e9de6807c6f1aa4ef4843af29191c828' ]
+216 info retry fetch attempt 1 at 20:54:28
+217 verbose fetch to= C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412868698-0.2487415629439056\tmp.tgz
+218 http GET https://registry.npmjs.org/bindings/-/bindings-1.0.0.tgz
+219 http 200 https://registry.npmjs.org/bindings/-/bindings-1.0.0.tgz
+220 verbose tar unpack C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412868698-0.2487415629439056\tmp.tgz
+221 silly lockFile f69a0620-68698-0-2487415629439056-package tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412868698-0.2487415629439056\package
+222 verbose lock tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412868698-0.2487415629439056\package C:\Users\PaulAnthony\AppData\Roaming\npm-cache\f69a0620-68698-0-2487415629439056-package.lock
+223 silly lockFile 6b9e4f01-68698-0-2487415629439056-tmp-tgz tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412868698-0.2487415629439056\tmp.tgz
+224 verbose lock tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412868698-0.2487415629439056\tmp.tgz C:\Users\PaulAnthony\AppData\Roaming\npm-cache\6b9e4f01-68698-0-2487415629439056-tmp-tgz.lock
+225 silly gunzTarPerm modes [ '755', '644' ]
+226 silly gunzTarPerm extractEntry package.json
+227 silly gunzTarPerm extractEntry README.md
+228 silly gunzTarPerm extractEntry bindings.js
+229 silly lockFile f69a0620-68698-0-2487415629439056-package tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412868698-0.2487415629439056\package
+230 silly lockFile f69a0620-68698-0-2487415629439056-package tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412868698-0.2487415629439056\package
+231 silly lockFile 6b9e4f01-68698-0-2487415629439056-tmp-tgz tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412868698-0.2487415629439056\tmp.tgz
+232 silly lockFile 6b9e4f01-68698-0-2487415629439056-tmp-tgz tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412868698-0.2487415629439056\tmp.tgz
+233 verbose tar pack [ 'C:\\Users\\PaulAnthony\\AppData\\Roaming\\npm-cache\\bindings\\1.0.0\\package.tgz',
+233 verbose tar pack   'C:\\Users\\PAULAN~1\\AppData\\Local\\Temp\\npm-13240-DbCEh8zW\\1394412868698-0.2487415629439056\\package' ]
+234 verbose tarball C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz
+235 verbose folder C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412868698-0.2487415629439056\package
+236 silly lockFile f69a0620-68698-0-2487415629439056-package tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412868698-0.2487415629439056\package
+237 verbose lock tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412868698-0.2487415629439056\package C:\Users\PaulAnthony\AppData\Roaming\npm-cache\f69a0620-68698-0-2487415629439056-package.lock
+238 silly lockFile c9d124a7-cache-bindings-1-0-0-package-tgz tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz
+239 verbose lock tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz C:\Users\PaulAnthony\AppData\Roaming\npm-cache\c9d124a7-cache-bindings-1-0-0-package-tgz.lock
+240 silly lockFile f69a0620-68698-0-2487415629439056-package tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412868698-0.2487415629439056\package
+241 silly lockFile f69a0620-68698-0-2487415629439056-package tar://C:\Users\PAULAN~1\AppData\Local\Temp\npm-13240-DbCEh8zW\1394412868698-0.2487415629439056\package
+242 silly lockFile c9d124a7-cache-bindings-1-0-0-package-tgz tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz
+243 silly lockFile c9d124a7-cache-bindings-1-0-0-package-tgz tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz
+244 silly lockFile 3ca4eefa-npm-cache-bindings-1-0-0-package C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package
+245 verbose lock C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package C:\Users\PaulAnthony\AppData\Roaming\npm-cache\3ca4eefa-npm-cache-bindings-1-0-0-package.lock
+246 silly lockFile 3ca4eefa-npm-cache-bindings-1-0-0-package C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package
+247 silly lockFile 3ca4eefa-npm-cache-bindings-1-0-0-package C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package
+248 verbose tar unpack C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz
+249 silly lockFile dd3874a5-npm-cache-bindings-1-0-0-package tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package
+250 verbose lock tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package C:\Users\PaulAnthony\AppData\Roaming\npm-cache\dd3874a5-npm-cache-bindings-1-0-0-package.lock
+251 silly lockFile c9d124a7-cache-bindings-1-0-0-package-tgz tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz
+252 verbose lock tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz C:\Users\PaulAnthony\AppData\Roaming\npm-cache\c9d124a7-cache-bindings-1-0-0-package-tgz.lock
+253 silly gunzTarPerm modes [ '755', '644' ]
+254 silly gunzTarPerm extractEntry package.json
+255 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+256 silly gunzTarPerm extractEntry README.md
+257 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+258 silly gunzTarPerm extractEntry bindings.js
+259 silly gunzTarPerm modified mode [ 'bindings.js', 438, 420 ]
+260 silly lockFile dd3874a5-npm-cache-bindings-1-0-0-package tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package
+261 silly lockFile dd3874a5-npm-cache-bindings-1-0-0-package tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package
+262 silly lockFile c9d124a7-cache-bindings-1-0-0-package-tgz tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz
+263 silly lockFile c9d124a7-cache-bindings-1-0-0-package-tgz tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz
+264 verbose chmod C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz 644
+265 silly chown skipping for windows C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz
+266 silly lockFile ccf0f56a--org-bindings-bindings-1-0-0-tgz https://registry.npmjs.org/bindings/-/bindings-1.0.0.tgz
+267 silly lockFile ccf0f56a--org-bindings-bindings-1-0-0-tgz https://registry.npmjs.org/bindings/-/bindings-1.0.0.tgz
+268 silly lockFile f01e5454-bindings-1-0-0 bindings@1.0.0
+269 silly lockFile f01e5454-bindings-1-0-0 bindings@1.0.0
+270 silly resolved [ { name: 'bindings',
+270 silly resolved     description: 'Helper module for loading your native module\'s .node file',
+270 silly resolved     keywords: [ 'native', 'addon', 'bindings', 'gyp', 'waf', 'c', 'c++' ],
+270 silly resolved     version: '1.0.0',
+270 silly resolved     author:
+270 silly resolved      { name: 'Nathan Rajlich',
+270 silly resolved        email: 'nathan@tootallnate.net',
+270 silly resolved        url: 'http://tootallnate.net' },
+270 silly resolved     repository:
+270 silly resolved      { type: 'git',
+270 silly resolved        url: 'git://github.com/TooTallNate/node-bindings.git' },
+270 silly resolved     main: './bindings.js',
+270 silly resolved     readme: 'node-bindings\n=============\n### Helper module for loading your native module\'s .node file\n\nThis is a helper module for authors of Node.js native addon modules.\nIt is basically the "swiss army knife" of `require()`ing your native module\'s\n`.node` file.\n\nThroughout the course of Node\'s native addon history, addons have ended up being\ncompiled in a variety of different places, depending on which build tool and which\nversion of node was used. To make matters worse, now the _gyp_ build tool can\nproduce either a _Release_ or _Debug_ build, each being built into different\nlocations.\n\nThis module checks _all_ the possible locations that a native addon would be built\nat, and returns the first one that loads successfully.\n\n\nInstallation\n------------\n\nInstall with `npm`:\n\n``` bash\n$ npm install bindings\n```\n\nOr add it to the `"dependencies"` section of your _package.json_ file.\n\n\nExample\n-------\n\n`require()`ing the proper bindings file for the current node version, platform\nand architecture is as simple as:\n\n``` js\nvar bindings = require(\'bindings\')(\'binding.node\')\n\n// Use your bindings defined in your C files\nbindings.your_c_function()\n```\n\n\nNice Error Output\n-----------------\n\nWhen the `.node` file could not be loaded, `node-bindings` throws an Error with\na nice error message telling you exactly what was tried. You can also check the\n`err.tries` Array property.\n\n```\nError: Could not load the bindings file. Tried:\n → /Users/nrajlich/ref/build/binding.node\n → /Users/nrajlich/ref/build/Debug/binding.node\n → /Users/nrajlich/ref/build/Release/binding.node\n → /Users/nrajlich/ref/out/Debug/binding.node\n → /Users/nrajlich/ref/Debug/binding.node\n → /Users/nrajlich/ref/out/Release/binding.node\n → /Users/nrajlich/ref/Release/binding.node\n → /Users/nrajlich/ref/build/default/binding.node\n → /Users/nrajlich/ref/compiled/0.8.2/darwin/x64/binding.node\n    at bindings (/Users/nrajlich/ref/node_modules/bindings/bindings.js:84:13)\n    at Object.<anonymous> (/Users/nrajlich/ref/lib/ref.js:5:47)\n    at Module._compile (module.js:449:26)\n    at Object.Module._extensions..js (module.js:467:10)\n    at Module.load (module.js:356:32)\n    at Function.Module._load (module.js:312:12)\n    ...\n```\n\n\nLicense\n-------\n\n(The MIT License)\n\nCopyright (c) 2012 Nathan Rajlich &lt;nathan@tootallnate.net&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+270 silly resolved     readmeFilename: 'README.md',
+270 silly resolved     bugs: { url: 'https://github.com/TooTallNate/node-bindings/issues' },
+270 silly resolved     homepage: 'https://github.com/TooTallNate/node-bindings',
+270 silly resolved     _id: 'bindings@1.0.0',
+270 silly resolved     dist: { shasum: 'e6a359c7f9ad29caf18bb1fdbaefd4b44175a698' },
+270 silly resolved     _from: 'bindings@1.0.0',
+270 silly resolved     _resolved: 'https://registry.npmjs.org/bindings/-/bindings-1.0.0.tgz' } ]
+271 info install bindings@1.0.0 into c:\Users\PaulAnthony\Desktop\Projects\Ideas Never Cease\hikari\node_modules\bcrypt
+272 info installOne bindings@1.0.0
+273 info c:\Users\PaulAnthony\Desktop\Projects\Ideas Never Cease\hikari\node_modules\bcrypt\node_modules\bindings unbuild
+274 verbose tar unpack C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz
+275 silly lockFile f5d61509-les-bcrypt-node-modules-bindings tar://c:\Users\PaulAnthony\Desktop\Projects\Ideas Never Cease\hikari\node_modules\bcrypt\node_modules\bindings
+276 verbose lock tar://c:\Users\PaulAnthony\Desktop\Projects\Ideas Never Cease\hikari\node_modules\bcrypt\node_modules\bindings C:\Users\PaulAnthony\AppData\Roaming\npm-cache\f5d61509-les-bcrypt-node-modules-bindings.lock
+277 silly lockFile c9d124a7-cache-bindings-1-0-0-package-tgz tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz
+278 verbose lock tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz C:\Users\PaulAnthony\AppData\Roaming\npm-cache\c9d124a7-cache-bindings-1-0-0-package-tgz.lock
+279 silly gunzTarPerm modes [ '755', '644' ]
+280 silly gunzTarPerm extractEntry package.json
+281 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+282 silly gunzTarPerm extractEntry README.md
+283 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+284 silly gunzTarPerm extractEntry bindings.js
+285 silly gunzTarPerm modified mode [ 'bindings.js', 438, 420 ]
+286 silly lockFile f5d61509-les-bcrypt-node-modules-bindings tar://c:\Users\PaulAnthony\Desktop\Projects\Ideas Never Cease\hikari\node_modules\bcrypt\node_modules\bindings
+287 silly lockFile f5d61509-les-bcrypt-node-modules-bindings tar://c:\Users\PaulAnthony\Desktop\Projects\Ideas Never Cease\hikari\node_modules\bcrypt\node_modules\bindings
+288 silly lockFile c9d124a7-cache-bindings-1-0-0-package-tgz tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz
+289 silly lockFile c9d124a7-cache-bindings-1-0-0-package-tgz tar://C:\Users\PaulAnthony\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz
+290 info preinstall bindings@1.0.0
+291 verbose readDependencies using package.json deps
+292 verbose readDependencies using package.json deps
+293 silly resolved []
+294 verbose about to build c:\Users\PaulAnthony\Desktop\Projects\Ideas Never Cease\hikari\node_modules\bcrypt\node_modules\bindings
+295 info build c:\Users\PaulAnthony\Desktop\Projects\Ideas Never Cease\hikari\node_modules\bcrypt\node_modules\bindings
+296 verbose linkStuff [ false,
+296 verbose linkStuff   false,
+296 verbose linkStuff   false,
+296 verbose linkStuff   'c:\\Users\\PaulAnthony\\Desktop\\Projects\\Ideas Never Cease\\hikari\\node_modules\\bcrypt\\node_modules' ]
+297 info linkStuff bindings@1.0.0
+298 verbose linkBins bindings@1.0.0
+299 verbose linkMans bindings@1.0.0
+300 verbose rebuildBundles bindings@1.0.0
+301 info install bindings@1.0.0
+302 info postinstall bindings@1.0.0
+303 verbose about to build c:\Users\PaulAnthony\Desktop\Projects\Ideas Never Cease\hikari\node_modules\bcrypt
+304 info build c:\Users\PaulAnthony\Desktop\Projects\Ideas Never Cease\hikari\node_modules\bcrypt
+305 verbose linkStuff [ false,
+305 verbose linkStuff   false,
+305 verbose linkStuff   false,
+305 verbose linkStuff   'c:\\Users\\PaulAnthony\\Desktop\\Projects\\Ideas Never Cease\\hikari\\node_modules' ]
+306 info linkStuff bcrypt@0.7.7
+307 verbose linkBins bcrypt@0.7.7
+308 verbose linkMans bcrypt@0.7.7
+309 verbose rebuildBundles bcrypt@0.7.7
+310 verbose rebuildBundles [ 'bindings' ]
+311 info install bcrypt@0.7.7
+312 verbose unsafe-perm in lifecycle true
+313 info bcrypt@0.7.7 Failed to exec install script
+314 info c:\Users\PaulAnthony\Desktop\Projects\Ideas Never Cease\hikari\node_modules\bcrypt unbuild
+315 info preuninstall bcrypt@0.7.7
+316 info uninstall bcrypt@0.7.7
+317 verbose true,c:\Users\PaulAnthony\Desktop\Projects\Ideas Never Cease\hikari\node_modules,c:\Users\PaulAnthony\Desktop\Projects\Ideas Never Cease\hikari\node_modules unbuild bcrypt@0.7.7
+318 info postuninstall bcrypt@0.7.7
+319 error bcrypt@0.7.7 install: `node-gyp rebuild`
+319 error Exit status 1
+320 error Failed at the bcrypt@0.7.7 install script.
+320 error This is most likely a problem with the bcrypt package,
+320 error not with npm itself.
+320 error Tell the author that this fails on your system:
+320 error     node-gyp rebuild
+320 error You can get their info via:
+320 error     npm owner ls bcrypt
+320 error There is likely additional logging output above.
+321 error System Windows_NT 6.2.9200
+322 error command "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "bcrypt"
+323 error cwd c:\Users\PaulAnthony\Desktop\Projects\Ideas Never Cease\hikari
+324 error node -v v0.10.24
+325 error npm -v 1.3.21
+326 error code ELIFECYCLE
+327 verbose exit [ 1, true ]

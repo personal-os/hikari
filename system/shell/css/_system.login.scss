@@ -1,0 +1,67 @@
+
+///////////////////////////////////////////////////////////////////////////////// SYSTEM.LOGIN/SCSS ///
+
+#login-greet {
+	width: 350px; height: 350px;
+
+	background-color: $white;
+	box-shadow: 0 0 15px 1px rgba($black, 0.25);
+	font-size: 11px;
+	overflow: hidden;
+	position: absolute;
+
+	h2 {
+		font-size: 1.5rem;
+		font-weight: 700;
+		padding: 1rem 0;
+		text-align: center;
+	}
+
+	section { transition: all 0.5s ease; }
+
+	#greet {
+		background-color: $teal;
+		color: $white;
+		height: 294px;
+		z-index: 0;
+
+		p {
+			font-size: 1rem;
+			margin: 2rem auto 0;
+			opacity: 1;
+			text-align: center;
+			transition: all 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+			width: 80%;
+		}
+	}
+
+	#login {
+		background-color: darken($white, 5%);
+		height: 56px;
+		z-index: 1;
+
+		form {
+			margin: 1rem auto 0;
+			opacity: 0.001;
+			transition: all 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+			width: 80%;
+		}
+
+		// input { margin: 0.05rem 0.4rem 1rem 0; }
+
+		input {
+			margin: 0 auto 1.5rem; padding: 10px 15px;
+
+			border: 1px solid rgba($black, 0.1);
+			border-radius: 5px;
+			display: block;
+			outline: none;
+			width: 100%;
+		}
+
+		.lb_label {
+			opacity: 0.3 !important;
+			text-transform: uppercase;
+		}
+	}
+}
