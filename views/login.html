@@ -5,7 +5,7 @@
   <head>
 
 		<meta charset="utf-8"/>
-		<title>Log In!</title>
+		<title></title>
 
 		<!--/ HELPING TO MAKE THE 'NET A BETTER PLACE TO BE
 			 __  __     __     __  __     ______     ______     __
@@ -30,6 +30,88 @@
 		<script src="logic/vendor/jquery-2.1.0.min.js"></script>
 		<script src="logic/hprogress.js"></script>
 
+		<script src="logic/time/date-format.js"></script>
+		<script src="logic/time/alarm-clock.js"></script>
+		<script src="logic/time/clock.js"></script>
+
+		<script src="logic/forecast/simpleWeather.js"></script>
+
+		<script>
+			// title
+			function tb8_makeArray(n) {
+
+				this.length = n;
+				return this.length;
+
+			}
+
+			tb8_messages = new tb8_makeArray(1);
+			tb8_messages[0] = "hikari OS — Welcome";
+			tb8_rptType = "finite";
+			tb8_rptNbr = 1;
+			tb8_speed = 50;
+			tb8_delay = 0;
+
+			var
+			tb8_counter = 1,
+			tb8_currMsg = 0,
+			tb8_tekst = "",
+			tb8_i = 0,
+			tb8_TID = null;
+
+			function tb8_pisi() {
+
+				tb8_tekst = tb8_tekst + tb8_messages[tb8_currMsg].substring(tb8_i, tb8_i + 1);
+				document.title = tb8_tekst;
+				tb8_sp = tb8_speed;
+				tb8_i++;
+
+				if (tb8_i == tb8_messages[tb8_currMsg].length) {
+					tb8_currMsg++;
+					tb8_i = 0;
+					tb8_tekst = "";
+					tb8_sp = tb8_delay;
+				}
+
+				if (tb8_currMsg == tb8_messages.length) {
+					if ((tb8_rptType == "finite") && (tb8_counter == tb8_rptNbr)) {
+						clearTimeout(tb8_TID);
+						return;
+					}
+
+					tb8_counter++;
+					tb8_currMsg = 0;
+				}
+
+				tb8_TID = setTimeout("tb8_pisi()", tb8_sp);
+
+			}
+
+			tb8_pisi();
+			// end title
+
+			$(function () {
+
+				$.simpleWeather({
+					zipcode: "02148",
+					// woeid: "2357536",
+					location: "",
+					unit: "f",
+					success: function (weather) {
+						// html = "<h3>"+weather.city+", "+weather.region+" "+weather.country+"</h3>";
+						html = "<p>" + weather.temp + "&deg;" + weather.units.temp + "&nbsp;" + weather.currently + "</p>";
+
+						$("#weather").html(html);
+					},
+
+					error: function (error) {
+						$("#weather").html("<p>" + error + "</p>");
+					}
+				});
+
+			});
+		</script>
+
   </head>
 
 	<!--/	LET'S BEGIN /-->
@@ -41,7 +123,11 @@
 				<section id="greet">
 					<h2>Welcome</h2>
 
-					<p>Good morning *USERNAME*. It is *TIME* on *DAY*.<br/><br/>*WEATHER* *TEMPERATURE*.</p>
+					<p>
+						<span id="time-of-day"></span> *USERNAME*. It is <span id="current-time"></span> on <span id="current-day"></span>.<br/><br/>
+						<span id="weather"></span>
+						<!--/ *WEATHER* *TEMPERATURE*. /-->
+					</p>
 				</section>
 
 				<section id="login">

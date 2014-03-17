@@ -39,7 +39,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	display: block;
 }
 
-input:focus { outline: 0; }
+input[type=text], input[type=password] {
+	cursor: url("../cursors/osx/text.cur"), default !important;
+}
+
+input[type=submit] {
+	cursor: url("../cursors/osx/link.cur"), default !important;
+}
+
+input {
+	&:focus { outline: 0; }
+}
 
 body { line-height: 1; }
 ol, ul { list-style: none; }
