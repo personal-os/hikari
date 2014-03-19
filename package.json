@@ -5,7 +5,8 @@
 	"version": "0.0.5",
 	"dependencies": {
 		"express": "3.4.8",
+		"hbs": "2.4.0",
 		"mongodb": "*",
-		"hbs": "2.4.0"
+		"monk": "0.8.1"
 	}
 }
