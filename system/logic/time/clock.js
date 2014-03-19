@@ -20,7 +20,7 @@ $(function() {
 	full_date = new Clock({ id: "full-date", format: "dddd, mmmm dd yyyy" }),		// Thursday, June 27 2014
 	time = new Clock({ id: "time", format: "hh:MMtt" }),												// 03:00pm
 	currentDay = new Clock({ id: "current-day", format: "dddd" }),
-	currentTime = new Clock({ id: "current-time", format: "hh:MMtt" });
+	currentTime = new Clock({ id: "current-time", format: "h:MMtt" });
 
 	var now = new Date();
 	var hrs = now.getHours();
