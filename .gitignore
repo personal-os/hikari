@@ -37,12 +37,12 @@ ehthumbs.db
 Thumbs.db
 
 # ignore folders
-/boot/*
+boot/*
 pre
 ref
 
 # don't ignore this folder
-!/boot/kernel
+!boot/kernel
 
 # Development files #
 #####################
