@@ -25,6 +25,8 @@ TL;DR: I had the idea that it would be nifty if my smartphone could dock into so
 &middot; `npm install -g express`<br/>
 &middot; `npm install -g nodemon`<br/>
 
+&middot;  Open oauth.copy.js and follow the instructions inside.
+
 CD into hikari directory and type these in:<br/>
 &middot; `npm install`<br/>
 &middot; `nodemon app`
