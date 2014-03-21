@@ -36,13 +36,10 @@
 ehthumbs.db
 Thumbs.db
 
-# ignore folders
-boot/*
+# ignore folders and files
 pre
 ref
-
-# don't ignore this folder
-!boot/kernel
+oauth.js
 
 # Development files #
 #####################
