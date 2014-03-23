@@ -8,11 +8,10 @@
 
 	var $vW = $(window).width(), $vH = $(window).height();
 
-	// $(document).on("ready", function () {
 	$(function () {
 
-		$(".wm-overlay").append('<div class="desktop"></div>'); // for desktop context menu
-		$(".desktop").css("height", $vH - 50 + "px"); // taskbar is 50px tall
+		// $(".wm-overlay").append('<div class="desktop"></div>'); // for desktop context menu
+		// $(".desktop").css("height", $vH - 50 + "px"); // taskbar is 50px tall
 
 		// Wallpaper
 		$(".hikari-content-inner").backstretch("shell/wallpaper/tokyoSkytree-observationDeck/14.darwinfish105.jpg");

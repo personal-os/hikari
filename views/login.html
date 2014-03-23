@@ -124,7 +124,7 @@
 					<h2>Welcome</h2>
 
 					<p>
-						<span id="time-of-day"></span> *USERNAME*. It is <span id="current-time"></span> on <span id="current-day"></span>.<br/><br/>
+						<span id="time-of-day"></span> <span id="username"></span>. It is <span id="current-time"></span> on <span id="current-day"></span>.<br/><br/>
 						<span id="weather"></span><br/><a href="/auth/github">GitHub</a>
 					</p>
 				</section>
@@ -188,6 +188,19 @@
 
 					window.location.href = "/";
 					return false;
+
+				});
+
+				var jqxhr = $.getJSON("account/githubProfile.json", function (data) {
+
+					console.log(data.username);
+					console.log(data._json.avatar_url);
+					console.log(data._json.avatar_name);
+
+					var githubAvatar = data._json.avatar_url;
+
+					$("#username").text(data._json.name);
+					$(".user-avatar img").attr("src", githubAvatar);
 
 				});
 
