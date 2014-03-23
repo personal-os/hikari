@@ -46,10 +46,6 @@
 		<script src="logic/forecast/simpleWeather.js"></script>
 
 		<script>
-			$(function () {
-				hProgress.start();
-			});
-
 			// title
 			function tb8_makeArray(n) {
 
@@ -104,6 +100,8 @@
 			// end title
 
 			$(function () {
+
+				hProgress.start();
 
 				$.simpleWeather({
 					zipcode: "02148",
@@ -215,6 +213,17 @@
 
 				var wm = new Gaea.WindowManager();
 				window.wm = wm; // For debugging reasons
+
+				var jqxhr = $.getJSON("account/githubProfile.json", function (data) {
+
+					console.log(data.username);
+					console.log(data._json.avatar_url);
+
+					var githubAvatar = data._json.avatar_url;
+
+					$(".user-avatar img").attr("src", githubAvatar);
+
+				});
 
 				hProgress.done();
 

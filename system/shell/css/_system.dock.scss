@@ -16,13 +16,54 @@
 
 	.left, .right { vertical-align: middle; }
 
-	#running-apps {
-		width: auto; height: 50px;
-		top: 0; left: 5rem;
+	#start, .user-avatar, #running-apps {
+		display: inline-block;
+		vertical-align: top;
+	}
 
+	#start {
+		width: 47px; height: 47px;
+		transition: all 0.2s ease;
+
+		@include hide-text;
+
+		&:hover { opacity: 0.7; }
+
+		button {
+			width: 100%; height: 100%;
+			margin: 0; padding: 0;
+
+			background-color: transparent;
+			background-image: url("../images/startup.png");
+			background-position: 7px 8px;
+			background-repeat: no-repeat;
+			border: 0;
+
+			@include hide-text;
+
+			&:hover {
+				margin: 0; padding: 0;
+			}
+		}
+	}
+
+	.user-avatar {
+		width: 47px; height: 47px;
+
+		background-color: transparent; // #07d0eb
 		position: absolute;
+		right: 0;
 
-		/* "Squircle" code from http://codepen.io/rogie/pen/alBcH */
+		img {
+			width: 100%; height: auto;
+		}
+	}
+
+	#running-apps {
+		width: auto; height: 47px;
+
+		// "Squircle" code from http://codepen.io/rogie/pen/alBcH
+
 		li {
 			width: 50px; height: 50px;
 
@@ -35,10 +76,11 @@
 			vertical-align: middle;
 
 			-o-transform: scale(0.5);
-			-o-transform-origin: 50% 0;
 			-moz-transform: scale(0.5);
-			-moz-transform-origin: 50% 0;
 			-webkit-transform: scale(0.5);
+
+			-o-transform-origin: 50% 0;
+			-moz-transform-origin: 50% 0;
 			-webkit-transform-origin: 50% 0;
 
 			& > * {
@@ -115,32 +157,6 @@
 	.minimized-app {
 		width: 32px; height: 32px;
 		background-color: $teal;
-	}
-
-	#start {
-		width: 47px; height: 47px;
-		transition: all 0.2s ease;
-
-		@include hide-text;
-
-		&:hover { opacity: 0.7; }
-
-		button {
-			width: 100%; height: 100%;
-			margin: 0; padding: 0;
-
-			background-color: transparent;
-			background-image: url("../images/startup.png");
-			background-position: 7px 8px;
-			background-repeat: no-repeat;
-			border: 0;
-
-			@include hide-text;
-
-			&:hover {
-				margin: 0; padding: 0;
-			}
-		}
 	}
 
 	#weather {
