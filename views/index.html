@@ -212,7 +212,11 @@
 		<script>
 			$(function () {
 
-				var wm = new Gaea.WindowManager();
+				var
+				$vW = $(window).width(),
+				$vH = $(window).height(),
+				wm = new Gaea.WindowManager();
+
 				window.wm = wm; // For debugging reasons
 
 				var jqxhr = $.getJSON("account/githubProfile.json", function (data) {
@@ -225,6 +229,9 @@
 					$(".user-avatar img").attr("src", githubAvatar);
 
 				});
+
+				$(".wm-overlay").append("<div class='desktop'></div>");
+				$(".desktop").css("height", $vH - 50 + "px");
 
 				hProgress.done();
 
