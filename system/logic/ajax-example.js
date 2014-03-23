@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
 
 	$.ajax({
 		type: "GET",
@@ -6,16 +6,16 @@ $(document).ready(function () {
 		dataType: "xml",
 		success: function (xml) {
 
-			$(xml).find('testimonials').each(function () {
+			$(xml).find("testimonials").each(function () {
 
-				xml_name = $(this).find('name').text();
-				$('#slide').append('<li>' + xml_name + '</li>');
+				xml_name = $(this).find("name").text();
+				$("#slide").append("<li>" + xml_name + "</li>");
 
 			});
 
 			$(function () {
 
-				mySlider = $('#slide').bxSlider({
+				mySlider = $("#slide").bxSlider({
 					auto: true,
 					controls: false
 				});
