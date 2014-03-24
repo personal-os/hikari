@@ -1,13 +1,19 @@
-$(function () {
 
-	$.contextMenu("html5", true);
+	// contextMenu/image.js
+	// @IdeasNeverCease
+	// ========================================================
 
-	$.contextMenu({
-		selector: ".folder .wm-content .image",
+	$(function () {
 
-		items: {
-			"preview": { "name": "Preview", "id": "", "data-effect": "" }
-		}
+		$.contextMenu("html5", true);
+
+		$.contextMenu({
+			// selector: ".folder .wm-content .image",
+			selector: ".folder .wm-content img",
+
+			items: {
+				"preview": { "name": "Preview", "id": "", "data-effect": "" }
+			}
+		});
+
 	});
-
-});

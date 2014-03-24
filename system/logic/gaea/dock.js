@@ -1,26 +1,33 @@
-var HIKARI;
 
-if (!HIKARI) HIKARI = {};
-if (!HIKARI.gaea) HIKARI.gaea = {};
-if (!HIKARI.gaea.wm) HIKARI.gaea.wm = {};
+	// gaea/dock.js
+	// @IdeasNeverCease
+	// ========================================================
 
-if (!HIKARI.gaea.wm.dock) {
-	HIKARI.gaea.wm.dock = {
+	$(function () {
 
-		init: function () {
+		$(".hikari-content-inner").append("<section id='taskbar' class='docked-top'></section>");
 
-			this.dock = $("<section>").appendTo(".hikari-content-inner").attr("id", "taskbar").addClass("docked-top");
-			// $("<div>").appendTo("#taskbar").attr("id", "start").html('<button data-effect="left">Start</button>');
-			$('<div id="start"><button data-effect="left">Start</button></div><ul id="running-apps"></ul>').appendTo("#taskbar");
-			$('<div class="user-avatar"><img src="" alt=""/></div>').appendTo("#taskbar");
-			$('<div id="subtaskbar"></div>').appendTo("#taskbar");
-			$('<div id="weather"></div>').appendTo("#subtaskbar");
-			$('<div id="full-time"><span id="full-date"></span> | <span id="time"></span></div>').appendTo("#subtaskbar");
+		var taskbarStuff = "";
+		var subtaskbarStuff = "";
 
-		},
+		taskbarStuff += "<div id=\"start\">";
+		taskbarStuff += "<button data-effect=\"left\">Start</button>";
+		taskbarStuff += "</div>";
+		taskbarStuff += "<ul id=\"running-apps\">";
+		taskbarStuff += "</ul>";
+		taskbarStuff += "<div class=\"user-avatar\">";
+		taskbarStuff += "<img src=\"\" alt=\"\"/>";
+		taskbarStuff += "</div>";
+		taskbarStuff += "<div id=\"subtaskbar\">";
+		taskbarStuff += "</div>";
 
-		addIcon: function (icon) {
-			$(icon).appendTo(this.dock);
-		}
-	};
-}
+		subtaskbarStuff += "<div id=\"weather\"></div>";
+		subtaskbarStuff += "<div id=\"full-time\">";
+		subtaskbarStuff += "<span id=\"full-date\"></span>";
+		subtaskbarStuff += "<span id=\"time\"></span>";
+		subtaskbarStuff += "</div>";
+
+		$("#taskbar").append(taskbarStuff);
+		$("#subtaskbar").append(subtaskbarStuff);
+
+	});

@@ -26,7 +26,7 @@
 		template: '<div class="bar" role="bar"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
 	};
 
-	// Update configuration.
+	// Update configuration
 	// hProgress.configure({ minimum: 0.1 });
 
 	hProgress.configure = function (options) {
@@ -38,7 +38,7 @@
 
 	hProgress.status = null;
 
-	// Sets the progress bar status, where "n" is a number from "0.0" to "1.0".
+	// Sets the progress bar status, where "n" is a number from "0.0" to "1.0"
 	// hProgress.set(0.4);
 	// hProgress.set(1.0);
 
@@ -60,7 +60,7 @@
 		$progress.queue(function (next) {
 
 			// Set positionUsing if it hasn't already been set
-			if (Settings.positionUsing === '') Settings.positionUsing = hProgress.getPositioningCSS();
+			if (Settings.positionUsing === "") Settings.positionUsing = hProgress.getPositioningCSS();
 			
 			// Add transition
 			$bar.css(barPositionCSS(n, speed, ease));
@@ -96,8 +96,8 @@
 		return typeof hProgress.status === "number";
 	};
 
-	// Shows the progress bar.
-	// This is the same as setting the status to 0%, except that it doesn't go backwards.
+	// Shows the progress bar
+	// This is the same as setting the status to 0%, except that it doesn't go backwards
 	// hProgress.start();
 
 	hProgress.start = function () {
@@ -125,7 +125,7 @@
 	// difference being "done()" makes some placebo effect of some realistic motion.
 
 	// hProgress.done();
-	// If "true" is passed, it will show the progress bar even if its hidden.
+	// If "true" is passed, it will show the progress bar even if its hidden
 
 	// hProgress.done(true);
 
@@ -159,7 +159,7 @@
 		return hProgress.inc(Math.random() * Settings.trickleRate);
 	};
 
-	// (Internal) renders the progress bar markup based on the "template" setting.
+	// (Internal) renders the progress bar markup based on the "template" setting
 
 	hProgress.render = function (fromStart) {
 
@@ -185,7 +185,7 @@
 
 	};
 
-	// Removes the element. Opposite of render().
+	// Removes the element. Opposite of render()
 
 	hProgress.remove = function () {
 
@@ -194,13 +194,13 @@
 
 	};
 
-	// Checks if the progress bar is rendered.
+	// Checks if the progress bar is rendered
 
 	hProgress.isRendered = function () {
 		return ($("#hprogress").length > 0);
 	};
 
-	// Determine which positioning CSS rule to use.
+	// Determine which positioning CSS rule to use
 
 	hProgress.getPositioningCSS = function () {
 
@@ -235,7 +235,7 @@
 
 	}
 
-	// (Internal) converts a percentage ("0..1") to a bar translateX percentage ("-100%..0%").
+	// (Internal) converts a percentage ("0..1") to a bar translateX percentage ("-100%..0%")
 
 	function toBarPerc(n) {
 		return (-1 + n) * 100;

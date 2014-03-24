@@ -1,4 +1,4 @@
-/* Backstretch * http://srobbin.com/jquery-plugins/backstretch * Copyright (c) Scott Robbin */
+// Backstretch × http://srobbin.com/jquery-plugins/backstretch × by Scott Robbin
 ;(function ($, window, undefined) {
 
 	"use strict";

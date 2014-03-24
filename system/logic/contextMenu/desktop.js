@@ -1,88 +1,92 @@
 
-$(function () {
+	// contextMenu/desktop.js
+	// @IdeasNeverCease
+	// ========================================================
 
-	$.contextMenu("html5", true);
+	$(function () {
 
-	$.contextMenu({
-		selector: ".desktop",
+		$.contextMenu("html5", true);
 
-		items: {
-			"system-group": {
-				"name": "System",
+		$.contextMenu({
+			selector: ".desktop",
 
-				"items": {
-					"system-group-key1": { "name": "Log Off" },
-					"system-group-key2": { "name": "Shutdown" },
-					"system-sep": "---------",
-					"system-group-key3": { "name": "About", "id": "contextSystem-about"  },
-				}
-			},
+			items: {
+				"system-group": {
+					"name": "System",
 
-			"desktop-group": {
-				"name": "Desktop",
+					"items": {
+						"system-group-key1": { "name": "Log Off" },
+						"system-group-key2": { "name": "Shutdown" },
+						"system-sep": "---------",
+						"system-group-key3": { "name": "About", "id": "contextSystem-about" },
+					}
+				},
 
-				"items": {
-					"desktop-group-key1": { "name": "Change Background", "id": "contextDesktop-changeBG" },
-					"desktop-group-key2": { "name": "Hide Icons" },
-					"desktop-group-key3": { "name": "Personalize" },
-					"desktop-group-key4": { "name": "Showcase", "id": "contextDesktop-showcase" }
-				}
-			},
+				"desktop-group": {
+					"name": "Desktop",
 
-			"config-group": {
-				"name": "Config",
+					"items": {
+						"desktop-group-key1": { "name": "Change Background", "id": "contextDesktop-changeBG" },
+						"desktop-group-key2": { "name": "Hide Icons" },
+						"desktop-group-key3": { "name": "Personalize" },
+						"desktop-group-key4": { "name": "Showcase", "id": "contextDesktop-showcase" }
+					}
+				},
 
-				"items": {
-					"config-group-key1": { "name": "Notifications" },
-					"config-group-key2": { "name": "Security" },
-					"config-group-key3": { "name": "Startup" }
-				}
-			},
+				"config-group": {
+					"name": "Config",
 
-			"sep1": "---------",
+					"items": {
+						"config-group-key1": { "name": "Notifications" },
+						"config-group-key2": { "name": "Security" },
+						"config-group-key3": { "name": "Startup" }
+					}
+				},
 
-			"programs-group": {
-				"name": "Programs",
+				"sep1": "---------",
 
-				"items": {
-					"programs-group-key1": { "name": "Aries" },
-					"programs-group-key2": { "name": "Hermes" },
-					"programs-group-key3": { "name": "Writer" }
-				}
-			},
+				"programs-group": {
+					"name": "Programs",
 
-			"terminal-group": { "name": "Run", "id": "context-run" },
-			"sep2": "---------",
+					"items": {
+						"programs-group-key1": { "name": "Aries" },
+						"programs-group-key2": { "name": "Hermes" },
+						"programs-group-key3": { "name": "Writer" }
+					}
+				},
 
-			"new-group": {
-				"name": "New",
+				"terminal-group": { "name": "Run", "id": "context-run" },
+				"sep2": "---------",
 
-				"items": {
-					"new-group-key1": { "name": "Folder" },
-					"new-group-key2": { "name": "Image" },
-					"new-group-key3": { "name": "Text Document" }
-				}
-			},
+				"new-group": {
+					"name": "New",
 
-			"gaea": { "name": "Gaea", "id": "contextGaea", "data-effect": "bottom" }
-		}
+					"items": {
+						"new-group-key1": { "name": "Folder" },
+						"new-group-key2": { "name": "Image" },
+						"new-group-key3": { "name": "Text Document" }
+					}
+				},
+
+				"gaea": { "name": "Gaea", "id": "contextGaea", "data-effect": "bottom" }
+			}
+		});
+
+		$("#contextDesktop-showcase").click(_.throttle(function () {
+
+			if (wm.mode === "showcase") {
+				wm.mode = "default";
+			} else {
+				wm.mode = "showcase";
+			}
+
+			$(".context-menu-root").trigger("contextmenu:hide");
+			return false;
+
+		}, 1000));
+
+		$("#contextGaea").click(function () {
+			$(".context-menu-root").trigger("contextmenu:hide");
+		});
+
 	});
-
-	$("#contextDesktop-showcase").click(_.throttle(function () {
-
-		if (wm.mode === "showcase") {
-			wm.mode = "default";
-		} else {
-			wm.mode = "showcase";
-		}
-
-		$(".context-menu-root").trigger("contextmenu:hide");
-		return false;
-
-	}, 1000));
-
-	$("#contextGaea").click(function () {
-		$(".context-menu-root").trigger("contextmenu:hide");
-	});
-
-});
