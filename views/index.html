@@ -207,6 +207,7 @@
 		<script src="logic/online.js"></script>
 
 		<script src="logic/gaea/gaea.js"></script>
+		<script src="logic/playSound.js"></script>
 
 		<script>
 			$(function () {
@@ -231,6 +232,8 @@
 
 				$(".wm-overlay").append("<div class='desktop'></div>");
 				$(".desktop").css("height", $vH - 50 + "px");
+
+				$.playSound("shell/sounds/gaia-09/logon-sound");
 
 				hProgress.done();
 
