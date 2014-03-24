@@ -1,17 +1,10 @@
-var HIKARI;
 
-if (!HIKARI) HIKARI = {};
-if (!HIKARI.gaea) HIKARI.gaea = {};
-if (!HIKARI.gaea.wm) HIKARI.gaea.wm = {};
+	// gaea/background.js
+	// @IdeasNeverCease
+	// ========================================================
 
-HIKARI.gaea.wm.background = function (bgImg, width, height) {
+	$(function () {
 
-	$("<div>").attr("class", "hikari-content-inner").appendTo(".hikari-content");
+		$(".hikari-content").append("<div class='hikari-content-inner'></div>");
 
-	this.setBackground = function (_img) {
-		// $("#background").css({ "background": "url(" + _img + ")" });
-		// $(".hikari-content-inner").css({ "background": "url(" + _img + ")" });
-		// $(".hikari-content-inner").backstretch("system/shell/wallpaper/summer-sky.jpg");
-	};
-
-};
+	});

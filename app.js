@@ -55,19 +55,6 @@ app.get("/auth/facebook/callback", passport.authenticate("facebook", { successRe
 app.get("/", function (req, res) { res.render("login.html"); });
 app.get("/s", function (req, res) { res.render("index.html"); });
 
-/*
-passport.use(new GitHubStrategy({
-    // authentication stuff here, per `passport-github` docs
-  },
-  function(accessToken, refreshToken, profile, done) {
-      // skipping error handling &c for brevity...
-      fs.writeFile("githubProfile.json", JSON.stringify(profile));
-      return done(null, profile);
-    });
-  }
-));
-*/
-
 // Authentication with GitHub
 passport.use(new GitHubStrategy({
 		clientID: githubID,

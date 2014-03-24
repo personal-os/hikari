@@ -1,50 +1,11 @@
-/*!
- * jQuery contextMenu - Plugin for simple contextMenu handling
- *
- * Version: git-master
- *
- * Authors: Rodney Rehm, Addy Osmani (patches for FF)
- * Web: http://medialize.github.com/jQuery-contextMenu
- *
- * Licensed under
- *   MIT License http://www.opensource.org/licenses/mit-license
- *   GPL v3 http://opensource.org/licenses/GPL-3.0
- *
-**/
-(function ($, undefined) {
+// jQuery contextMenu × Rodney Rehm + Addy Osmani
 
-	// TODO: -
-	// ARIA stuff: menuitem, menuitemcheckbox und menuitemradio
-	// create <menu> structure if $.support[htmlCommand || htmlMenuitem] and !opt.disableNative
+(function ($, undefined) {
 
 	// determine html5 compatibility
 	$.support.htmlMenuitem = ("HTMLMenuItemElement" in window);
 	$.support.htmlCommand = ("HTMLCommandElement" in window);
 	$.support.eventSelectstart = ("onselectstart" in document.documentElement);
-
-	/*
-	// should the need arise, test for css user-select
-	$.support.cssUserSelect = (function() {
-		var t = false,
-		e = document.createElement("div");
-
-		$.each('Moz|Webkit|Khtml|O|ms|Icab|'.split('|'), function(i, prefix) {
-			var propCC = prefix + (prefix ? 'U' : 'u') + 'serSelect',
-			prop = (prefix ? ('-' + prefix.toLowerCase() + '-') : '') + 'user-select';
-
-			e.style.cssText = prop + ': text;';
-
-			if (e.style[propCC] == 'text') {
-				t = true;
-				return false;
-			}
-
-			return true;
-		});
-
-		return t;
-	})();
-	*/
 
 	// duck punch $.cleanData like jQueryUI does to get that remove event
 	// https://github.com/jquery/jquery-ui/blob/master/ui/jquery.ui.widget.js#L16-24
