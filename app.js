@@ -64,6 +64,7 @@ passport.use(new GitHubStrategy({
 	function (accessToken, refreshToken, profile, done) {
 		process.nextTick(function () {
 
+			// should probably disable this and use callbacks...womp, will do later
 			fs.writeFile("system/account/githubProfile.json", JSON.stringify(profile));
 
 			var userAvatar = profile._json.gravatar_id;

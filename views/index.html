@@ -106,10 +106,11 @@
 					location: "",
 					unit: "f",
 					success: function (weather) {
+
 						// html = "<h3>"+weather.city+", "+weather.region+" "+weather.country+"</h3>";
 						html = "<p>" + weather.temp + "&deg;" + weather.units.temp + "&nbsp;" + weather.currently + "</p>";
-
 						$("#weather").html(html);
+
 					},
 
 					error: function (error) {
