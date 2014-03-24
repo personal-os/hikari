@@ -22,6 +22,10 @@ body {
 
 .hikari-content, .hikari-content-inner { position: relative !important; } //
 
+.playSound-embed, .playSound-audio {
+	position: absolute;
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 .button, button {
