@@ -39,6 +39,7 @@
 		<meta name="author" content="NetOperator Wibby"/>
 		<meta name="description" content="The world's first responsive operating system"/>
 		<meta name="keywords" content="hikari, OS, light, mmbn, rokkuman, dr thomas, mega man, megaman"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 		<link rel="stylesheet" href="http://brick.a.ssl.fastly.net/EB+Garamond:400,400i/Source+Sans+Pro:400"/>
 		<link rel="shortcut icon" href="favicon.png"/>
@@ -46,6 +47,9 @@
 		<style>
 			* {
 				margin: 0; padding: 0;
+
+				box-sizing: border-box;
+				-moz-box-sizing: border-box;
 			}
 
 			::selection {
@@ -89,25 +93,23 @@
 			a:hover { opacity: 0.3; }
 
 			@media all and (max-width: 800px), screen and (max-width: 800px) and (-webkit-min-device-pixel-ratio: 2) {
-
-				h1 { margin: 0 0 2rem 0; }
-				p { font-size: 2.5rem; }
-
 				a:hover { opacity: 1; }
-
 			}
 
 			@media all and (max-width: 600px), screen and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2) {
-
-				p { font-size: 3rem; }
-				a { border-bottom: 3px solid #50bebf; }
-
+				body { padding: 4rem; }
 			}
 
 			@media all and (max-width: 320px), screen and (max-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
 
-				h1 { font-size: 7.5rem; }
-				p { font-size: 5rem; }
+				body { padding: 2rem; }
+
+				h1 { font-size: 4rem; }
+
+				p {
+					font-size: 1.5rem;
+					line-height: 2rem;
+				}
 
 			}
 		</style>
