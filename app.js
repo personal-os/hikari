@@ -35,6 +35,7 @@ passport.use(new FacebookStrategy({
 		clientID: fbID,
 		clientSecret: fbSecret,
 		callbackURL: "http://localhost:1343/auth/facebook/callback"
+		// profileFields: ["id", "displayName", "photos"]
 	},
 	function (accessToken, refreshToken, profile, done) {
 		process.nextTick(function () {

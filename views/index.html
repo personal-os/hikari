@@ -220,6 +220,7 @@
 
 				window.wm = wm; // For debugging reasons
 
+				/*
 				var jqxhr = $.getJSON("account/githubProfile.json", function (data) {
 
 					console.log(data.username);
@@ -230,8 +231,22 @@
 					$(".user-avatar img").attr("src", githubAvatar);
 
 				});
+				*/
 
-				// $.playSound("shell/sounds/gaia-09/logon-sound");
+				var jqxhr = $.getJSON("account/facebookProfile.json", function (data) {
+
+					console.log(data.username);
+					// https://graph.facebook.com/USERNAME/picture?type=large
+					// console.log(data._json.avatar_url);
+
+					// var facebookAvatar = data._json.avatar_url;
+					var facebookAvatar = "https://graph.facebook.com/" + data.username + "/picture?type=large";
+
+					$(".user-avatar img").attr("src", facebookAvatar);
+
+				});
+
+				$.playSound("shell/sounds/gaia-09/logon-sound");
 
 				hProgress.done();
 
