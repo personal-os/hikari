@@ -39,6 +39,9 @@ passport.use(new FacebookStrategy({
 	function (accessToken, refreshToken, profile, done) {
 		process.nextTick(function () {
 
+			// should probably disable this and use callbacks...womp, will do later
+			fs.writeFile("system/account/facebookProfile.json", JSON.stringify(profile));
+
 			console.log(profile);
 			return done(null, profile);
 
