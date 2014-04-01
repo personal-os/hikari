@@ -1709,7 +1709,7 @@
 								disabled: !! $node.attr("disabled"),
 								name: $node.attr("label"),
 								radio: $node.attr("radiogroup"),
-								value: $node.attr("id"),
+								// value: $node.attr("id"), // hikari
 								selected: !! $node.attr("checked")
 							};
 

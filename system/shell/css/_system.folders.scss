@@ -172,7 +172,7 @@
 	background-color: $teal;
 	color: $white;
 	margin: 0;
-	
+
 	h1 {
 		width: 100%; height: 100px;
 
@@ -191,9 +191,7 @@
 		margin: 0 0 1rem 0;
 		text-align: center;
 
-		&:last-child {
-			margin: 1.5rem 0;
-		}
+		&:last-child { margin: 1.5rem 0; }
 	}
 
 	a {

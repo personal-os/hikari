@@ -12,7 +12,7 @@
 			selector: ".folder .wm-content img",
 
 			items: {
-				"preview": { "name": "Preview", "id": "", "data-effect": "" }
+				"preview": { "name": "Preview", "id": "contextImage-01", "data-effect": "" }
 			}
 		});
 

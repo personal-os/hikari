@@ -33,6 +33,14 @@ header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, v
 	vertical-align: baseline;
 }
 
+body {
+	user-select: none;
+
+	-o-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
 /// HTML5 DISPLAY RESET FOR CLUNKERS //////////////////////////////////////////////////////////////////
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {

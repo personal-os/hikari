@@ -711,7 +711,7 @@
 			buffer += "<p>Specific folder and system-wide folder options will appear here at some point.</p>";
 			buffer += "<input class=\"switch\" type=\"checkbox\" checked>";
 			buffer += "<input type=\"range\" min=\"1\" max=\"100\" value=\"20\" id=\"range\"/>";
-			buffer += "</div>\n <div class=\"wm-window-box\">\n <header class=\"wm-window-title\" unselectable=\"on\">\n <button class=\"wm-settings\">&nbsp;</button><h1 unselectable=\"on\">";
+			buffer += "</div>\n <div class=\"wm-window-box\">\n <header class=\"wm-window-title\">\n <button class=\"wm-settings\">&nbsp;</button><h1>";
 
 			foundHelper = helpers.title;
 
@@ -2420,10 +2420,8 @@
 			browser: {
 				animationEventName: function () {
 
-					var
-					style = $(".hikari-content-inner"),
 					// style = document.body.style,
-					event = null;
+					var style = $(".hikari-content-inner"), event = null;
 
 					if (style.animation === "")
 						event = "animationend";

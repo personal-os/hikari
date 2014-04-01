@@ -110,7 +110,7 @@
 
 		// Preload images
 		$.each(this.images, function () {
-			$("<img />")[0].src = this;
+			$("<img/>")[0].src = this;
 		});
 
 		// Convenience reference to know if the container is body.
@@ -146,9 +146,7 @@
 			});
 
 			// Needs a higher z-index
-			this.$wrap.css({
-				zIndex: -999998
-			});
+			this.$wrap.css({ zIndex: -999998 });
 		}
 
 		// Fixed or absolute positioning?
@@ -245,7 +243,7 @@
 			clearInterval(self.interval);
 
 			// New image
-			self.$img = $("<img />").css(styles.img).bind("load", function (e) {
+			self.$img = $("<img alt=\"\"/>").css(styles.img).bind("load", function (e) {
 
 				var
 				imgWidth = this.width || $(e.target).width(),

@@ -18,9 +18,10 @@ $(function() {
 	var
 	clock2 = new Clock({ id: "japan-time", format: "HH:MM Z", tz: "+0900" }),
 	full_date = new Clock({ id: "full-date", format: "dddd, mmmm dd yyyy" }),		// Thursday, June 27 2014
+	date = new Clock({ id: "date", format: "dddd, mmmm dS" }),									// Thursday, June 27th
 	time = new Clock({ id: "time", format: "hh:MMtt" }),												// 03:00pm
-	currentDay = new Clock({ id: "current-day", format: "dddd" }),
-	currentTime = new Clock({ id: "current-time", format: "h:MMtt" });
+	currentDay = new Clock({ id: "current-day", format: "dddd" }),							// Thursday
+	currentTime = new Clock({ id: "current-time", format: "h:MMtt" });					// 3:00pm
 
 	var now = new Date();
 	var hrs = now.getHours();
