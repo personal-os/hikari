@@ -1,67 +1,241 @@
 
 ///////////////////////////////////////////////////////////////////////////////// SYSTEM.LOGIN/SCSS ///
 
-#login-greet {
-	width: 350px; height: 350px;
+html#login-page {
 
-	background-color: $white;
-	box-shadow: 0 0 15px 1px rgba($black, 0.25);
-	font-size: 11px;
 	overflow: hidden;
-	position: absolute;
 
-	h2 {
-		font-size: 1.5rem;
-		font-weight: 700;
-		padding: 1rem 0;
-		text-align: center;
+	#login-module, #login-message {
+		float: left;
+		height: 100%;
+		transition: all 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
 	}
 
-	section { transition: all 0.5s ease; }
-
-	#greet {
-		background-color: $teal;
+	#login-module {
+		background-color: $dark-gray; // $teal
 		color: $white;
-		height: 294px;
-		z-index: 0;
+		position: relative;
+		text-align: center;
+		/* width: 25%; */ max-width: 342px; min-width: 67px;
+		width: 5%;
 
-		p {
-			font-size: 1rem;
-			margin: 2rem auto 0;
-			opacity: 1;
-			text-align: center;
-			transition: all 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
-			width: 80%;
-		}
-	}
+		h1 {
+			top: 3rem; left: 0;
 
-	#login {
-		background-color: darken($white, 5%);
-		height: 56px;
-		z-index: 1;
-
-		form {
-			margin: 1rem auto 0;
-			opacity: 0.001;
-			transition: all 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
-			width: 80%;
-		}
-
-		// input { margin: 0.05rem 0.4rem 1rem 0; }
-
-		input {
-			margin: 0 auto 1.5rem; padding: 10px 15px;
-
-			border: 1px solid rgba($black, 0.1);
-			border-radius: 5px;
-			display: block;
-			outline: none;
+			@include icons;
+			font-size: 2rem;
+			position: absolute;
+			transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
 			width: 100%;
 		}
 
-		.lb_label {
-			opacity: 0.3 !important;
-			text-transform: uppercase;
+		#header, #login-choices {
+			left: -100%;
+			transition: all 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		}
+
+		#header {			
+			margin: 6rem 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+
+			svg {
+				display: inline-block;
+				vertical-align: middle;
+
+				#hikari-star-01 { fill: $white; }
+				#hikari-star-02 { fill: $white; }
+				#hikari-star-03 { fill: $white; }
+			}
+		}
+
+		#login-choices {
+			bottom: 3rem;
+			@include icons;
+			font-size: 2.5rem;
+			position: absolute;
+			width: 100%;
+
+			form {
+				margin: 5rem auto 0;
+				width: 80%;
+			}
+
+			input {
+				margin: 0 auto 1.5rem; padding: 10px 15px 10px 45px;
+
+				background-color: rgba($white, 0.3);
+				border: none;
+				border-radius: 0;
+				color: $white;
+				display: block;
+				@include mono;
+				font-weight: 200;
+				letter-spacing: 1px;
+				outline: none;
+				width: 100%;
+			}
+
+			#username-field, #password-field {
+				position: relative;
+
+				&:before {
+					width: 36px; height: 36px;
+
+					color: $white;
+					display: block;
+					@include icons;
+					font-size: 1.3rem;
+					padding: 0.5rem 0.3rem;
+					position: absolute;
+					text-align: center;
+				}
+			}
+
+			#username-field {
+				&:before { content: "\f1c2"; }
+			}
+
+			#password-field {
+				&:before { content: "\f1a8"; }
+
+				#capslock-check {
+					background-color: transparent;
+					color: $white;
+					@include mono;
+					font-size: 0.6rem;
+					left: 0;
+					padding: 0.1rem;
+					position: absolute;
+					text-align: left;
+					text-transform: uppercase;
+					top: 36px;
+					width: 100%;
+				}
+			}
+
+			input[type=submit] {
+				margin: 0; padding: 10px 15px;
+
+				background-color: $white;
+				color: $teal;
+				font-weight: 700;
+				text-transform: uppercase;
+			}
+
+			::-moz-placeholder {
+				color: $white;
+				text-transform: uppercase;
+			}
+
+			::-webkit-input-placeholder {
+				color: $white;
+				text-transform: uppercase;
+			}
+
+			hr {
+				border: 0;
+				border-top: 3px solid rgba($black, 0.05);
+				margin: 3rem 0;
+				opacity: 0.001;
+				transition: all 0.5s ease;
+			}
+
+			ul {
+				&:before {
+					content: "or, log in via";
+					display: block;
+					@include serif;
+					font-size: 1rem;
+					font-style: italic;
+					margin: 0 0 0.5rem 0;
+				}
+
+				li {
+					display: inline-block;
+					margin: 0 1rem 0 0;
+					opacity: 0.5;
+					transition: opacity 0.2s ease;
+
+					&:last-child { margin: 0; }
+				}
+			}
+		}
+
+		a { color: $white; }
+	}
+
+	// Without this, hovering over links when activating the menu slows it down.
+	// Fucking ugly experience.
+	.mask {
+		top: 0; left: 0;
+		bottom: 0; right: 0;
+
+		background-color: $red;
+		content: "";
+		opacity: 0;
+		position: absolute;
+		z-index: 10;
+	}
+
+	#login-message {
+		background-color: rgba($white, 0.9);
+		background-position: 50% 50%;
+		background-repeat: no-repeat no-repeat;
+		background-size: cover;
+		color: rgba($white, 0.9);
+		position: relative;
+		width: 95%;
+
+		.wrapper {
+			width: 100%; height: 30%; min-height: 230px;
+			bottom: 0; left: 0;
+
+			padding: 2rem;
+			position: absolute;
+			z-index: 1;
+
+			#current-time {
+				display: block;
+				font-size: 4rem;
+				margin: 0 0 1rem 0;
+			}
+
+			#date {
+				font-size: 1.5rem;
+				margin: 0 0 0 0.3rem;
+			}
+
+			#weather {
+				display: block;
+				font-size: 1rem;
+				margin: 2rem 0 0 0.5rem;
+			}
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			margin: 0 0 2rem 0;
+			top: 3rem;
+		}
+
+		#username {
+			&:before {
+				content: "\0020";
+			}
+		}
+
+		&:after {
+			top: 0; left: 0;
+			bottom: 0; right: 0;
+
+			background-color: $black;
+			content: "";
+			opacity: 0.6;
+			position: absolute;
+			transition: all 0.5s ease;
 		}
 	}
+
 }

@@ -1,475 +1,11 @@
 
-/****************************************************************************** SYSTEM.WINDOWS/SCSS **/
+/////////////////////////////////////////////////////////////////////////////// SYSTEM.WINDOWS/SCSS ///
 
-.window {
-	min-width: 550px; min-height: 300px;
-	top: 10rem; left: 4rem; /**/
-
-	border: 1px solid rgba($black, 0.3); /**/
-	box-shadow: 0 1px 4px rgba($black, 0.3);
-	overflow: hidden;
-	position: absolute; /**/
-	/* transition: all 0.5s ease; */
-	z-index: 1;
-
-	.window-titlebar {
-	}
-
-	.header {
-	}
-
-	.window-titlebar, .window-header {
-		width: 100%; height: auto;
-
-		background-color: $teal;
-		padding: 0.5rem 0;
-		/* margin: -48px 0 0 0; */
-	}
-
-	.window-title {
-	}
-
-	.window-actions {
-		top: 0; right: 0.3em;
-
-		padding: 0.3em 0 0 0;
-		position: absolute;
-		white-space: nowrap;
-
-		.window-action {
-			width: 16px; height: 16px;
-			margin: 0 0 0 0.5rem; padding: 2px;
-
-			background-color: #fcfcfc;
-			display: inline-block;
-			opacity: 0.7;
-			text-decoration: none;
-			vertical-align: middle;
-
-			@include hide-text;
-
-			.window-action-icon {
-				color: transparent;
-				font: 0/0 a;
-				line-height: 0;
-
-				margin: 0;
-				vertical-align: top;
-			}
-		}
-	}
-
-	.window-content {
-		width: 100%; min-height: 300px; height: 100%; /* height: auto; */
-
-		background-color: $white;
-		outline: 0;
-		overflow: auto;
-		padding: 0.58em;
-		position: relative;
-
-		> .scroll-container { height: 100% }
-	}
-
-	.window-statusbar {
-		width: 100%; height: 20px;
-		background-color: $yellow;
-	}
-
-	/* .window-inner-wrapper { position: relative; } */
-}
-
-:-webkit-any(body):after {
-	content: "";
-	display: block;
-	font: 0/0;
-	height: 0;
-	visibility: hidden;
-
-	-webkit-transform: translateZ();
-}
-
-.k-window {
-	min-width: 90px; min-height: 50px;
-
-	border: 1px solid #191919;
-	padding: 37px 0 0 0;
-	position: absolute;
-}
-
-
-.k-window-titlebar {
-	width: 100%; height: auto; min-height: 16px;
-	margin-top: -2em; padding: 0.4em 0;
-
-	background-color: #50bebf;
-	border-bottom: 1px solid #191919;
-	font-size: 1.2em;
-	line-height: 1.1em;
-	position: absolute;
-	white-space: nowrap;
-
-	.k-window-actions {
-		top: 0; right: 0.3em;
-
-		padding: 0.3em 0 0 0;
-		position: absolute;
-		white-space: nowrap;
-	}
-
-	.k-window-action {
-		width: 16px; height: 16px;
-		margin: 0 0 0 0.5rem; padding: 2px;
-
-		background-color: #fcfcfc;
-		display: inline-block;
-		opacity: 0.7;
-		text-decoration: none;
-		vertical-align: middle;
-
-		.window-action-icon {
-			color: transparent;
-			font: 0/0 a;
-			line-height: 0;
-
-			margin: 0;
-			vertical-align: top;
-		}
-	}
-
-	.k-state-hover {
-		border: 1px solid #191919;
-		opacity: 1;
-		padding: 1px;
-	}
-}
-
-/* get rid of that dumb pin/unpin button */
-/* .k-window-action:first-child { display: none; } */
-
-div.k-window-content {
-	height: 100%;
-	outline: 0;
-	overflow: auto;
-	padding: 0.58em;
-	position: relative;
-	/* z-index: -1; */
-}
-
-.k-window-content > .km-scroll-container { height: 100% }
-
-.resize-handle {
-	background-color: #fff;
-	font-size: 0;
-	line-height: 6px;
-	opacity: 0;
-	position: absolute;
-	zoom: 1;
-	z-index: 1;
-}
-
-.k-resize-n {
-	width: 100%; height: 6px;
-	top: -3px; left: 0;
-
-	cursor: n-resize;
-}
-
-.k-resize-e {
-	width: 6px; height: 100%;
-	top: 0; right: -3px;
-
-	cursor: e-resize;
-}
-
-.k-resize-s {
-	width: 100%; height: 6px;
-	bottom: -3px; left: 0;
-
-	cursor: s-resize;
-}
-
-.k-resize-w {
-	width: 6px; height: 100%;
-	top: 0; left: -3px;
-
-	cursor: w-resize;
-}
-
-.k-resize-se {
-	width: 16px; height: 16px;
-	bottom: -3px; right: -3px;
-
-	cursor: se-resize;
-}
-
-.k-resize-sw {
-	width: 6px; height: 6px;
-	bottom: -3px; left: -3px;
-
-	cursor: sw-resize;
-}
-
-.k-resize-ne {
-	width: 6px; height: 6px;
-	top: -3px; right: -3px;
-
-	cursor: ne-resize;
-}
-
-.k-resize-nw {
-	width: 6px; height: 6px;
-	top: -3px; left: -3px;
-
-	cursor: nw-resize;
-}
-
-/********************************************************************************** [+] LIGHTWINDOW **/
-/****************************************************************************************** DEFAULT **/
-
-.LightWindow, .AriesWindow {
-	display: block;
-  overflow: hidden;
-	position: absolute;
-  z-index: 100;
-
-	.titlebar {
-		width: 100%; height: 31px;
-
-		background-color: $white;
-		border-bottom: 1px solid #d9d9d9;
-		cursor: default;
-
-		.menu-btn, .title, .buttons {
-			display: inline-block;
-		}
-
-		.menu-btn {
-			width: 31px; height: 31px;
-			background-image: url(../window/menu-btn.png);
-
-			&:hover {
-				background-color: darken($white, 8);
-
-				&:after {
-					width: 1px; height: 31px;
-					background-color: #d9d9d9;
-				}
-			}
-
-			&:after {
-				width: 1px; height: 31px;
-
-				background-image: url(../window/btn-divider.png);
-				content: "\00a0";
-				display: block;
-				float: right;
-			}
-		}
-
-		.title {
-			width: auto; max-width: auto; height: auto;
-
-			color: $black;
-			@include mono;
-			font-size: 13px;
-			position: absolute;
-			margin: 0 0 0 10px;
-			top: 6px;
-		}
-
-		.buttons {
-			float: right;
-			position: relative;
-
-			a {
-				cursor: default;
-				text-decoration: none;
-			}
-
-			.win-min-btn, .win-max-btn, .win-reg-btn, .win-close-btn {
-				width: 31px; height: 31px;
-
-				display: block;
-				float: left;
-
-				&:hover {
-					background-color: darken($white, 8);
-
-					&:before, &:after {
-						width: 1px; height: 31px;
-					}
-
-					&:before { background-color: #d9d9d9; }
-
-					&:after {
-						border-right: 1px solid #d9d9d9;
-						content: "\00a0";
-						float: right;
-						margin: 0 -1px 0 0;
-					}
-				}
-
-				&:before {
-					width: 1px; height: 31px;
-
-					background-image: url(../window/btn-divider.png);
-					content: "\00a0";
-					display: block;
-					float: left;
-				}
-			}
-
-			.win-close-btn {
-				&:hover {
-					&:after {
-						border-right: none;
-						content: "";
-						margin: 0;
-						width: 0;
-					}
-				}
-			}
-
-			.win-min-btn { background-image: url(../window/min-btn.png); }
-			.win-max-btn { background-image: url(../window/max-btn.png); }
-			.win-reg-btn { background-image: url(../window/max-btn.png); }
-			.win-close-btn { background-image: url(../window/close-btn.png); }
-
-			.WinBtnSet { float: left; }
-		}
-	}
-
-	.table-mm-container {
-		overflow: hidden;
-
-		.table-mm-content {
-			background-color: $white;
-			box-sizing: border-box;
-			overflow-x: hidden;
-			overflow-y: auto;
-			padding: 1rem;
-
-			ul {
-				margin: 0; padding: 0;
-				li { float: left; }
-			}
-		}
-	}
-}
-
-/*********************************************************************************** [+] ARIESWINDOW **/
-
-.AriesWindow {
-	.titlebar {
-		.menu-btn, .back-btn, .forward-btn {
-			width: 31px; height: 31px;
-			display: inline-block;
-
-			&:hover {
-				background-color: darken($white, 8);
-
-				&:after {
-					width: 1px; height: 31px;
-					background-color: #d9d9d9;
-				}
-			}
-
-			&:after {
-				width: 1px; height: 31px;
-
-				/* background-image: url(../window/btn-divider.png); */
-				background-color: #d9d9d9;
-				content: "\00a0";
-				display: block;
-				float: right;
-			}
-		}
-
-		form {
-			margin: 0; padding: 0;
-
-			display: inline-block;
-			vertical-align: top;
-		}
-
-		.url-bar {
-			width: 250px; height: 31px;
-			margin: 0 0 0 -3px; padding: 0 0.5rem;
-
-			border: 0;
-			border-right: 1px solid #d9d9d9;
-			box-sizing: border-box;
-			display: inline-block;
-			font-weight: 700;
-			vertical-align: top;
-		}
-
-		.title { display: none; }
-
-		.back-btn {
-			background-image: url(../images/applications/aries/btn-back.png);
-		}
-
-		.forward-btn {
-			background-image: url(../images/applications/aries/btn-forward.png);
-		}
-	}
-
-	.table-mm-container {
-		overflow: hidden;
-
-		.table-mm-content {
-			background-color: $white;
-			box-sizing: border-box;
-			overflow-x: hidden;
-			overflow-y: hidden;
-			padding: 0;
-
-			ul {
-				margin: 0; padding: 0;
-				li { float: left; }
-			}
-		}
-	}
-}
-
-/********************************************************************************** [+] LIGHTWINDOW **/
-/******************************************************************************************* RESIZE **/
-
-.ui-resizable-e { right: 0 !important; }
-.ui-resizable-s { bottom: 0 !important; }
-
-.ui-icon {
-  width: 24px; height: 24px;
-}
-
-/* .ui-icon-gripsmall-diagonal-se { background-position: -76px -220px } */
-.ui-resizable-handle {
-}
-
-/********************************************************************************** [+] LIGHTWINDOW **/
-/********************************************************************************************* DEMO **/
-
-#iframeHelper {
-  width: 100%; height: 100%;
-	top: 0; left: 0;
-
-	background: url(../windowsLightStyle/empty.gif);
-	display: none;
-  position: absolute;
-  z-index: 0;
-}
-
-/*****************************************************************************************************/
-
-/************************************************************************************** WINDOW/SCSS **/
-
-.wm-space { z-index: inherit; } /* Fixes z-index issues */
+.wm-space { z-index: inherit; } // Fixes z-index issues
 .wm-content { color: $black !important; }
 
 .wm-space.expose {
-	/* z-index: 1111; */
+	// z-index: 1111;
 
 	.wm-window.active, .wm-window {
 		transform: translate3d(0, 0, 0);
@@ -482,7 +18,7 @@ div.k-window-content {
 		}
 	}
 
-	/* .context-menu-list { display: none !important; } */
+	// .context-menu-list { display: none !important; }
 }
 
 .wm-space.fullscreen {
@@ -506,17 +42,21 @@ div.k-window-content {
 }
 
 .wm-window {
-	min-width: 200px; min-height: 38px; /* to look good minimized /* min-height: 60px; */
+	min-width: 200px; min-height: 38px; // to look good minimized / min-height: 60px;
 
 	background-color: $white;
-	/* border: 1px solid $black; */
+	// border: 1px solid $black;
 	display: none;
-	/* opacity: 0.98; */
+	// opacity: 0.98;
 	opacity: 1;
 	overflow: hidden;
 	position: absolute;
 	touch-callout: none;
 	user-select: none;
+
+	-o-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
 
 	.wm-window-box {
 		width: 100%; min-height: 60px;
@@ -541,6 +81,10 @@ div.k-window-content {
 			touch-callout: none;
 			user-select: none;
 
+			-o-user-select: none;
+			-moz-user-select: none;
+			-webkit-user-select: none;
+
 			h1 {
 				margin: 0; padding: 0 0 0 8px;
 
@@ -557,6 +101,10 @@ div.k-window-content {
 				font-weight: 400;
 				touch-callout: none;
 				user-select: none;
+
+				-o-user-select: none;
+				-moz-user-select: none;
+				-webkit-user-select: none;
 			}
 
 			.wm-button-group {
@@ -600,6 +148,10 @@ div.k-window-content {
 			position: absolute;
 			touch-callout: none;
 			user-select: none;
+
+			-o-user-select: none;
+			-moz-user-select: none;
+			-webkit-user-select: none;
 		}
 
 		section.wm-content {
@@ -641,10 +193,10 @@ div.k-window-content {
 	.wm-window-box section.wm-content { overflow-y: hidden; }
 }
 
-.wm-window.closing { animation: close 0.3s 1 ease-in forwards; }
-.wm-window.opening { animation: appear 0.4s 1 ease-out forwards; }
+// .wm-window.closing { animation: close 0.3s 1 ease-in forwards; }
+// .wm-window.opening { animation: appear 0.4s 1 ease-out forwards; }
 .wm-window.resizing { transition: none; }
-.wm-window.move { animation: wobbly 0.5s 0.2s infinite; }
+// .wm-window.move { animation: wobbly 0.5s 0.2s infinite; }
 
 .wm-space {
 	width: 100%; height: 100%;
@@ -655,7 +207,11 @@ div.k-window-content {
 	position: absolute;
 	touch-callout: none;
 	user-select: none;
-	/* z-index: -1; */
+	// z-index: -1;
+
+	-o-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
 
 	.wm-overlay {
 		width: 100%; height: 100%;
@@ -668,6 +224,10 @@ div.k-window-content {
 		touch-callout: none;
 		transition: opacity 0.5s ease-out;
 		user-select: none;
+
+		-o-user-select: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
 	}
 }
 
@@ -678,6 +238,10 @@ div.k-window-content {
 .wm-window.move * {
 	touch-callout: none;
 	user-select: none;
+
+	-o-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
 }
 
 .wm-space.fullscreen .wm-window,
@@ -695,7 +259,76 @@ div.k-window-content {
 .wm-window.noresizable .wm-window-box header.wm-window-title button.wm-minimize,
 .wm-window.noresizable .wm-window-box button.wm-resize,.wm-window.closed { display: none; }
 
-50% { transform: rotate(-4deg); }
-80%, 20% { transform: scale(1.2, 1.2); }
-100% { transform: scale(0, 0); }
+/*
+@keyframes appear {
+	0% { transform: scale(0,0); }
+	80% { transform: scale(1.2,1.2); }
+	100% { transform: rotate(1,1); }
+}
 
+@keyframes close {
+	0% { transform: scale(1,1); }
+	20% { transform: scale(1.2,1.2); }
+	100% { transform: scale(0,0); }
+}
+
+@keyframes wobbly {
+	0% { transform: rotate(4deg); }
+	50% { transform: rotate(-4deg); }
+	100% { transform: rotate(4deg); }
+}
+
+@-o-keyframes appear {
+	0% { -o-transform: scale(0,0); }
+	80% { -o-transform: scale(1.2,1.2); }
+	100% { -o-transform: rotate(1,1); }
+}
+
+@-o-keyframes close {
+	0% { -o-transform: scale(1,1); }
+	20% { -o-transform: scale(1.2,1.2); }
+	100% { -o-transform: scale(0,0); }
+}
+
+@-o-keyframes wobbly {
+	0% { -o-transform: rotate(4deg); }
+	50% { -o-transform: rotate(-4deg); }
+	100% { -o-transform: rotate(4deg); }
+}
+
+@-moz-keyframes appear {
+	0% { -moz-transform: scale(0,0); }
+	80% { -moz-transform: scale(1.2,1.2); }
+	100% { -moz-transform: rotate(1,1); }
+}
+
+@-moz-keyframes close {
+	0% { -moz-transform: scale(1,1); }
+	20% { -moz-transform: scale(1.2,1.2); }
+	100% { -moz-transform: scale(0,0); }
+}
+
+@-moz-keyframes wobbly {
+	0% { -moz-transform: rotate(4deg); }
+	50% { -moz-transform: rotate(-4deg); }
+	100% { -moz-transform: rotate(4deg); }
+}
+
+@-webkit-keyframes appear {
+	0% { -webkit-transform: scale(0,0); }
+	80% { -webkit-transform: scale(1.2,1.2); }
+	100% { -webkit-transform: rotate(1,1); }
+}
+
+@-webkit-keyframes close {
+	0% { -webkit-transform: scale(1,1); }
+	20% { -webkit-transform: scale(1.2,1.2); }
+	100% { -webkit-transform: scale(0,0); }
+}
+
+@-webkit-keyframes wobbly {
+	0% { -webkit-transform: rotate(4deg); }
+	50% { -webkit-transform: rotate(-4deg); }
+	100% { -webkit-transform: rotate(4deg); }
+}
+*/

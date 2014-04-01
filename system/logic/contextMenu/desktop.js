@@ -15,8 +15,8 @@
 					"name": "System",
 
 					"items": {
-						"system-group-key1": { "name": "Log Off" },
-						"system-group-key2": { "name": "Shutdown" },
+						"system-group-key1": { "name": "Log Off", "id": "contextDesktop-01" },
+						"system-group-key2": { "name": "Shutdown", "id": "contextDesktop-02" },
 						"system-sep": "---------",
 						"system-group-key3": { "name": "About", "id": "contextSystem-about" },
 					}
@@ -27,8 +27,8 @@
 
 					"items": {
 						"desktop-group-key1": { "name": "Change Background", "id": "contextDesktop-changeBG" },
-						"desktop-group-key2": { "name": "Hide Icons" },
-						"desktop-group-key3": { "name": "Personalize" },
+						"desktop-group-key2": { "name": "Hide Icons", "id": "contextDesktop-03" },
+						"desktop-group-key3": { "name": "Personalize", "id": "contextDesktop-04" },
 						"desktop-group-key4": { "name": "Showcase", "id": "contextDesktop-showcase" }
 					}
 				},
@@ -37,9 +37,9 @@
 					"name": "Config",
 
 					"items": {
-						"config-group-key1": { "name": "Notifications" },
-						"config-group-key2": { "name": "Security" },
-						"config-group-key3": { "name": "Startup" }
+						"config-group-key1": { "name": "Notifications", "id": "contextDesktop-05" },
+						"config-group-key2": { "name": "Security", "id": "contextDesktop-06" },
+						"config-group-key3": { "name": "Startup", "id": "contextDesktop-07" }
 					}
 				},
 
@@ -49,9 +49,9 @@
 					"name": "Programs",
 
 					"items": {
-						"programs-group-key1": { "name": "Aries" },
-						"programs-group-key2": { "name": "Hermes" },
-						"programs-group-key3": { "name": "Writer" }
+						"programs-group-key1": { "name": "Aries", "id": "contextDesktop-08" },
+						"programs-group-key2": { "name": "Hermes", "id": "contextDesktop-09" },
+						"programs-group-key3": { "name": "Writer", "id": "contextDesktop-10" }
 					}
 				},
 
@@ -62,9 +62,9 @@
 					"name": "New",
 
 					"items": {
-						"new-group-key1": { "name": "Folder" },
-						"new-group-key2": { "name": "Image" },
-						"new-group-key3": { "name": "Text Document" }
+						"new-group-key1": { "name": "Folder", "id": "contextDesktop-11" },
+						"new-group-key2": { "name": "Image", "id": "contextDesktop-12" },
+						"new-group-key3": { "name": "Text Document", "id": "contextDesktop-13" }
 					}
 				},
 

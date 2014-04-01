@@ -69,7 +69,7 @@
 
 				for (var key in items) {
 					output += "<li>";
-					output += "<img src=" + items[key].image + ">";
+					output += "<img src=" + items[key].image + " alt=\"\">";
 					output += "<span class=\"filename-title\" contenteditable=\"false\">" + items[key].name + "</span>";
 					output += "</li>";
 				}
@@ -106,7 +106,7 @@
 
 				for (var key in items) {
 					output += "<li>";
-					output += "<img src=" + items[key].image + ">";
+					output += "<img src=" + items[key].image + " alt=\"\">";
 					output += "<span class=\"filename-title\" contenteditable=\"false\">" + items[key].name + "</span>";
 					output += "</li>";
 				}

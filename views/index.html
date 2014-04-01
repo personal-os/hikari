@@ -131,7 +131,8 @@
 
 	<!--/	LET'S BEGIN /-->
 
-	<body unselectable="on">
+	<!--/ <body unselectable="on"> /-->
+	<body>
 
 		<div id="hikari-container" class="hikari-container">
 
@@ -230,15 +231,14 @@
 
 				});
 
-				$(".wm-overlay").append("<div class='desktop'></div>");
-				$(".desktop").css("height", $vH - 50 + "px");
-
-				$.playSound("shell/sounds/gaia-09/logon-sound");
+				// $.playSound("shell/sounds/gaia-09/logon-sound");
 
 				hProgress.done();
 
 			});
 		</script>
+
+		<script src="logic/gaea/desktop.js"></script>
 		<!--//logic /-->
 
 	</body>
