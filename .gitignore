@@ -41,6 +41,7 @@ pre
 ref
 oauth.js
 githubProfile.json
+facebookProfile.json
 
 # Development files #
 #####################
