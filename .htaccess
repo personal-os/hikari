@@ -1,0 +1,5 @@
+RewriteEngine on
+
+# Block Semalt and their wack selves
+RewriteCond %{HTTP_REFERER} semalt\.com [NC]
+RewriteRule (.*) http://www.semalt.com [R=403,L]
