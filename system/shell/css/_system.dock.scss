@@ -1,11 +1,10 @@
 
-/********************************************************************************* SYSTEM.DOCK/SCSS **/
+////////////////////////////////////////////////////////////////////////////////// SYSTEM.DOCK/SCSS ///
 
 #taskbar {
 	background-color: $white;
 	border-bottom: 3px solid $black;
 	color: $black;
-	font-family: "OpenSansLight";
 	font-size: 12px;
 	height: 50px;
 	padding: 0 1rem;
@@ -171,6 +170,13 @@
 		position: absolute;
 
 		#full-date, #time { color: $white; }
+
+		#full-date {
+			&:after {
+				content: " | ";
+				// padding: 0 0.5rem 0 0;
+			}
+		}
 	}
 
 	/*
