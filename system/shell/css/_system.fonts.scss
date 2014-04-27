@@ -142,6 +142,57 @@
 	src: url("../../fonts/alegreya/900i.woff") format("woff");
 }
 
+////////////////////////////////////////////// SANS-SERIF //////////////////////////////////////////////
+/// OPEN SANS //////////////////////////////////////////////////////////////////////////////////////////
+
+@font-face {
+	font-family: "OpenSans";
+	font-style: normal;
+	font-weight: 300;
+
+	src: url("../../fonts/opensans/300.woff") format("woff");
+}
+
+@font-face {
+	font-family: "OpenSans";
+	font-style: normal;
+	font-weight: 400;
+
+	src: url("../../fonts/opensans/400.woff") format("woff");
+}
+
+@font-face {
+	font-family: "OpenSans";
+	font-style: normal;
+	font-weight: 500;
+
+	src: url("../../fonts/opensans/500.woff") format("woff");
+}
+
+@font-face {
+	font-family: "OpenSans";
+	font-style: normal;
+	font-weight: 600;
+
+	src: url("../../fonts/opensans/600.woff") format("woff");
+}
+
+@font-face {
+	font-family: "OpenSans";
+	font-style: normal;
+	font-weight: 700;
+
+	src: url("../../fonts/opensans/700.woff") format("woff");
+}
+
+@font-face {
+	font-family: "OpenSans";
+	font-style: normal;
+	font-weight: 900;
+
+	src: url("../../fonts/opensans/900.woff") format("woff");
+}
+
 /*
 /// AMBLE //////////////////////////////////////////////////////////////////////////////////////////////
 @font-face {
@@ -639,7 +690,7 @@
 }
 
 @mixin sans {
-	font-family: "Open Sans", sans-serif;
+	font-family: "OpenSans", sans-serif;
 }
 
 @mixin serif {
