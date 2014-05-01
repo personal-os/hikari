@@ -8,7 +8,7 @@
 	box-sizing: border-box;
 	// cursor: url("../cursors/osx/normal.cur"), default !important;
 	// cursor: url("../cursors/cursor3.svg"), auto !important;
-	cursor: none;
+	cursor: none !important;
 	outline: none;
 	text-rendering: optimizeLegibility !important;
 	text-shadow: 1px 1px 1px rgba(25, 25, 25, 0.004);
@@ -41,10 +41,6 @@ body {
 	-o-user-select: none;
 	-moz-user-select: none;
 	-webkit-user-select: none;
-}
-
-#cursor {
-	z-index: 2000;
 }
 
 /// HTML5 DISPLAY RESET FOR CLUNKERS //////////////////////////////////////////////////////////////////
@@ -115,3 +111,30 @@ $purple:		rgba(162, 0, 255, 1);		// #a200ff;
 .bg-green			{ background-color: $green; }
 .bg-blue			{ background-color: $blue; }
 .bg-purple		{ background-color: $purple; }
+
+/////////////////////////////////////////////////////////////////////////////////////////// CURSORS ///
+
+#cursor {
+	z-index: 2000;
+
+	#cursor-01 {
+	}
+
+	#cursor-02 {
+		// default
+		path, circle {
+			transition: all 0.2s ease;
+		}
+
+		path { fill: $white; }
+		circle { fill: $black; }
+	}
+}
+
+#cursor.cursor-link {
+	#cursor-02 {
+		path { fill: $white; }
+		circle { fill: $teal; }
+	}
+}
+
