@@ -6,7 +6,9 @@
 	margin: 0; padding: 0;
 
 	box-sizing: border-box;
-	cursor: url("../cursors/osx/normal.cur"), default !important;
+	// cursor: url("../cursors/osx/normal.cur"), default !important;
+	// cursor: url("../cursors/cursor3.svg"), auto !important;
+	cursor: none;
 	outline: none;
 	text-rendering: optimizeLegibility !important;
 	text-shadow: 1px 1px 1px rgba(25, 25, 25, 0.004);
@@ -41,6 +43,10 @@ body {
 	-webkit-user-select: none;
 }
 
+#cursor {
+	z-index: 2000;
+}
+
 /// HTML5 DISPLAY RESET FOR CLUNKERS //////////////////////////////////////////////////////////////////
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -48,11 +54,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 input[type=text], input[type=password] {
-	cursor: url("../cursors/osx/text.cur"), default !important;
+	// cursor: url("../cursors/osx/text.cur"), default !important;
 }
 
 input[type=submit] {
-	cursor: url("../cursors/osx/link.cur"), default !important;
+	// cursor: url("../cursors/osx/link.cur"), default !important;
 }
 
 input {
@@ -66,7 +72,7 @@ blockquote:before, blockquote:after, q:before, q:after { content: " "; content: 
 table { border-collapse: collapse; border-spacing: 0; }
 
 a {
-	cursor: url("../cursors/osx/link.cur"), default !important;
+	// cursor: url("../cursors/osx/link.cur"), default !important;
 	text-decoration: none;
 
 	&:visited { text-decoration: none; }
