@@ -1,6 +1,12 @@
 /* TEAM */
-  Author:       Paul Anthony Webb
-  Location:     USA
+	Author: Paul Anthony Webb
+	Contact: paul@dsgn.io
+	Location: Boston, MA USA
+	Principal Developer: Ideas Never Cease
+	Twitter @TadashiHikari
 
-/* SITE */
-  Version:      1.0
+/* APP */
+	Doctype: HTML5
+	Frameworks: jQuery, Node.JS, Sass
+	Language: English
+	Version: 1.0
