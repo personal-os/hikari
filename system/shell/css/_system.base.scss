@@ -6,8 +6,6 @@
 	margin: 0; padding: 0;
 
 	box-sizing: border-box;
-	// cursor: url("../cursors/osx/normal.cur"), default !important;
-	// cursor: url("../cursors/cursor3.svg"), auto !important;
 	cursor: none !important;
 	outline: none;
 	text-rendering: optimizeLegibility !important;
@@ -49,14 +47,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	display: block;
 }
 
-input[type=text], input[type=password] {
-	// cursor: url("../cursors/osx/text.cur"), default !important;
-}
-
-input[type=submit] {
-	// cursor: url("../cursors/osx/link.cur"), default !important;
-}
-
 input {
 	&:focus { outline: 0; }
 }
@@ -68,7 +58,6 @@ blockquote:before, blockquote:after, q:before, q:after { content: " "; content: 
 table { border-collapse: collapse; border-spacing: 0; }
 
 a {
-	// cursor: url("../cursors/osx/link.cur"), default !important;
 	text-decoration: none;
 
 	&:visited { text-decoration: none; }
@@ -117,6 +106,18 @@ $purple:		rgba(162, 0, 255, 1);		// #a200ff;
 #cursor {
 	z-index: 2000;
 
+	&:after {
+		width: 0; height: 0;
+		top: 0; right: 0;
+		bottom: 0; left: 0;
+
+		background-color: $orange;
+		color: $red;
+		content: "\f122";
+		fill: $orange;
+		@include icons;
+	}
+
 	#cursor-01 {
 	}
 
@@ -130,11 +131,3 @@ $purple:		rgba(162, 0, 255, 1);		// #a200ff;
 		circle { fill: $black; }
 	}
 }
-
-#cursor.cursor-link {
-	#cursor-02 {
-		path { fill: $white; }
-		circle { fill: $teal; }
-	}
-}
-
