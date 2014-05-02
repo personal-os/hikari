@@ -7,8 +7,7 @@
 
 		// Set up cursor
 		cursor = "";
-		
-		// if ($("#featured-nav").css("display") == "block") {
+
 		cursor += "<svg id=\"cursor\" width=\"8px\" height=\"8px\" viewBox=\"0 0 16 16\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">";
 		cursor += "<title>Auto</title>";
 		cursor += "<description>The default cursor for hikari</description>";
@@ -23,8 +22,31 @@
 		$("#login-page, #hikari-container").append(cursor); // gif causes slowness on login, will change later
 		// $("body").append(cursor); // this causes issues
 
-		$(document).on("hover", "a", function () {
-			$("svg#cursor").addClass("cursor-link");
+		// Link Behavior
+		$(document).on("mouseover", "a", function () {
+			$("#cursor-02 circle").css("fill", "#50bebf");
+		});
+
+		$(document).on("mouseout", "a", function () {
+			$("#cursor-02 circle").css("fill", "#191919");
+		});
+
+		// Text Field Behavior
+		$(document).on("mouseover", "input[type=text], input[type=password]", function () {
+			$("#cursor-02 circle").css("fill", "#ffde00");
+		});
+
+		$(document).on("mouseout", "input[type=text], input[type=password]", function () {
+			$("#cursor-02 circle").css("fill", "#191919");
+		});
+
+		// Submit Button Behavior
+		$(document).on("mouseover", "input[type=submit]", function () {
+			$("#cursor-02 circle").css("fill", "#00ff00");
+		});
+
+		$(document).on("mouseout", "input[type=submit]", function () {
+			$("#cursor-02 circle").css("fill", "#191919");
 		});
 
 		// Make cursor functional
