@@ -1,28 +1,5 @@
 
-/************************************************************************* SYSTEM.CONTEXT-MENU/SCSS **/
-
-/*
-#context-menu {
-	background-color: rgba($black, 0.55);
-	color: $white;
-	cursor: default;
-	display: none;
-	@include mono;
-	font-size: 12px;
-	text-transform: uppercase;
-
-	li {
-		padding: 2px 5px;
-
-		&:hover {
-			background-color: $white;
-			color: $black;
-		}
-	}
-}
-*/
-
-// .css("opacity", "1")
+////////////////////////////////////////////////////////////////////////// SYSTEM.CONTEXT-MENU/SCSS ///
 
 .context-menu-list {
 	margin: 0; padding: 0;
@@ -33,13 +10,13 @@
 	@include mono;
 	font-size: 12px;
 	display: inline-block;
-	// opacity: 0;
 	transition: opacity 5s ease-out;
 	padding: 0.5rem 0;
 	position: absolute;
-	width: auto;
+	width: auto; min-width: 135px;
 
 	.context-menu-item {
+		line-height: 1.5rem;
 		padding: 6px 15px;
 		position: relative;
 		user-select: none;
