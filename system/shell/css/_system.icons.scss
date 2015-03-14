@@ -1,4 +1,3 @@
-
 ///////////////////////////////////////////////////////////////////////////////// SYSTEM.ICONS/SCSS ///
 // MIT License: https://github.com/driftyco/ionicons
 
@@ -534,18 +533,18 @@
 .ion-woman,
 .ion-wrench,
 .ion-xbox {
-	display: inline-block;
-	font-family: "Ionicons";
-	font-style: normal;
-	font-variant: normal;
-	font-weight: normal;
-	line-height: 1;
-	speak: none;
-	text-transform: none;
-	text-rendering: auto;
+  display: inline-block;
+  font-family: "Ionicons";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  text-rendering: auto;
 
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 .ion-spin, .ion-loading-a,
@@ -555,39 +554,16 @@
 .ion-looping,
 .ion-refreshing,
 .ion-ios7-reloading {
-	animation: spin 1s infinite linear;
-
-	-o-animation: spin 1s infinite linear;
-	-moz-animation: spin 1s infinite linear;
-	-webkit-animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
 }
 
 @keyframes spin {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(359deg); }
-}
-
-@-o-keyframes spin {
-	0% { -o-transform: rotate(0deg); }
-	100% { -o-transform: rotate(359deg); }
-}
-
-@-moz-keyframes spin {
-	0% { -moz-transform: rotate(0deg); }
-	100% { -moz-transform: rotate(359deg); }
-}
-
-@-webkit-keyframes spin {
-	0% { -webkit-transform: rotate(0deg); }
-	100% { -webkit-transform: rotate(359deg); }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
 }
 
 .ion-loading-a {
-	animation-timing-function: steps(8, start);
-
-	-o-animation-timing-function: steps(8, start);
-	-moz-animation-timing-function: steps(8, start);
-	-webkit-animation-timing-function: steps(8, start);
+  animation-timing-function: steps(8, start);
 }
 
 .ion-alert:before { content: "\f101"; }

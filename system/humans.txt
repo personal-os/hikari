@@ -1,6 +1,6 @@
 /* TEAM */
-	Author: Paul Anthony Webb
-	Contact: paul@dsgn.io
+	Author: Tadashi Hikari
+	Contact: tadashi@hikar.io
 	Location: Boston, MA USA
 	Principal Developer: Ideas Never Cease
 	Twitter @TadashiHikari
@@ -9,4 +9,4 @@
 	Doctype: HTML5
 	Frameworks: jQuery, Node.JS, Sass
 	Language: English
-	Version: 1.0
+	Version: 1.0.0

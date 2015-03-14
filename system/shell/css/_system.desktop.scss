@@ -1,77 +1,71 @@
-
 /////////////////////////////////////////////////////////////////////////////// SYSTEM.DESKTOP/SCSS ///
 
 .desktop {
-	width: 100%; height: 100%;
-	bottom: 0; left: 0;
+  width: 100%; height: 100%;
+  bottom: 0; left: 0;
 
-	position: absolute;
+  position: absolute;
 }
 
 .folder {
-	display: block !important; // force windows to show up
+  display: block !important; // force windows to show up
 }
 
 .inline-list {
-	li {
-		display: inline-block;
-		margin: 0 0 0.8rem 0;
-		text-align: center;
-		width: 75px;
+  li {
+    display: inline-block;
+    margin: 0 0 0.8rem 0;
+    text-align: center;
+    width: 75px;
 
-		.filename-title {
-			display: block;
-			margin: 0.2rem 0 0 0;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			white-space: nowrap;
-		}
-	}
+    .filename-title {
+      display: block;
+      margin: 0.2rem 0 0 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
 }
 
 .list-list {
-	li {
-		display: inline-block;
-		font-size: 0.7rem;
-		margin: 0 0.5rem 0.5rem 0;
-		width: 10rem;
+  li {
+    display: inline-block;
+    font-size: 0.7rem;
+    margin: 0 0.5rem 0.5rem 0;
+    width: 10rem;
 
-		img, .filename-title {
-			vertical-align: middle;
-		}
+    img, .filename-title {
+      vertical-align: middle;
+    }
 
-		img {
-			width: 16px; height: auto;
-			margin: 0 0.5rem 0 0;
-		}
-	}
+    img {
+      width: 16px; height: auto;
+      margin: 0 0.5rem 0 0;
+    }
+  }
 }
 
 #hprogress {
-	pointer-events: none;
-	-webkit-pointer-events: none;
+  pointer-events: none;
 
-	.bar {
-		width: 100%; height: 3px;
-		top: 47px; left: 0;
+  .bar {
+    width: 100%; height: 3px;
+    top: 47px; left: 0;
 
-		background-color: $teal;
-		position: fixed;
-		z-index: 100;
-	}
+    background-color: $teal;
+    position: fixed;
+    z-index: 100;
+  }
 
-	.peg {
-		width: 20px; height: 100%;
+  .peg {
+    width: 20px; height: 100%;
 
-		box-shadow: 0 0 10px $teal, 0 0 15px $teal;
-		display: block;
-		opacity: 1;
-		position: absolute;
-		right: 0;
-		transform: rotate(3deg) translate(0, -4px);
-
-		-o-transform: rotate(3deg) translate(0, -4px);
-		-moz-transform: rotate(3deg) translate(0, -4px);
-		-webkit-transform: rotate(0deg) translate(0, 0);
-	}
+    box-shadow: 0 0 10px $teal, 0 0 15px $teal;
+    display: block;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    transform: rotate(3deg) translate(0, -4px);
+  }
 }
