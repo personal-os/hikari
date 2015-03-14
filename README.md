@@ -3,7 +3,7 @@ hikari
 
 
 
-[![GitHub](http://img.shields.io/badge/GitHub-IdeasNeverCease/hikari-a0a060.svg?style=flatsquare)](https://github.com/IdeasNeverCease/hikari)
+[![GitHub](http://img.shields.io/badge/GitHub-IdeasNeverCease/hikari-a0a060.svg?style=flat-square)](https://github.com/IdeasNeverCease/hikari)
 
 An operating system concept, *very* much in progress.<br/><br/>
 Official Site: [http://hikar.io](http://hikar.io)<br/>
