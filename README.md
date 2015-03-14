@@ -33,14 +33,13 @@ TL;DR: I had the idea that it would be nifty if my smartphone could dock into so
 
 
 ### Installation and running hikari
-* Make sure you have [node](http://nodejs.org) installed! Then, type the following commands in Terminal:<br/>
-* `npm install -g express`<br/>
-* `npm install -g nodemon`<br/>
-
+* Make sure you have [node](http://nodejs.org) installed! Then, type the following commands in Terminal:
+* `npm install -g express`
+* `npm install -g nodemon`
 *  Open oauth.copy.js and follow the instructions inside.
 
-CD into hikari directory and type these in:<br/>
-* `npm install`<br/>
+CD into hikari directory and type these in:
+* `npm install`
 * `nodemon app`
 
 Take a look at [localhost:1343](http://localhost:1343)!
