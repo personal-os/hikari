@@ -1,10 +1,8 @@
+// gaea/background.js
+// @IdeasNeverCease
+// ========================================================
+$(function() {
 
-	// gaea/background.js
-	// @IdeasNeverCease
-	// ========================================================
+  $(".hikari-content").append("<div class='hikari-content-inner'></div>");
 
-	$(function () {
-
-		$(".hikari-content").append("<div class='hikari-content-inner'></div>");
-
-	});
+});

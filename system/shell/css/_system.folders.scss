@@ -1,374 +1,286 @@
-
 /////////////////////////////////////////////////////////////////////////////// SYSTEM.FOLDERS/SCSS ///
 
 .wm-settings-panel {
-	animation: slide 15s linear infinite;
-	background-image: url("../images/folders/panelBG.jpg");
-	background-size: 100%;
-	color: $white;
-	padding: 1rem;
+  animation: slide 15s linear infinite;
+  background-image: url("../images/folders/panelBG.jpg");
+  background-size: 100%;
+  color: $white;
+  padding: 1rem;
 
-	-o-animation: slide 15s linear infinite;
-	-moz-animation: slide 15s linear infinite;
-	-webkit-animation: slide 15s linear infinite;
+  h1, p { z-index: 1; }
 
-	h1, p { z-index: 1; }
+  h1 {
+    margin: 0 0 1rem 0;
+  }
 
-	h1 {
-		margin: 0 0 1rem 0;
-	}
+  .switch {
+    width: 50px; height: 30px;
 
-	.switch {
-		width: 50px; height: 30px;
+    appearance: none;
+    background-clip: padding-box;
+    background-color: rgba($black, 0.3); // #e6e6e6
+    border: none;
+    border-radius: 300rem;
+    display: inline-block;
+    outline: none;
+    position: relative;
+    tap-highlight-color: rgba($white, 0);
+    transition: background-color 100ms;
+    vertical-align: middle;
 
-		appearance: none;
-		background-clip: padding-box;
-		background-color: rgba($black, 0.3); // #e6e6e6
-		border: none;
-		border-radius: 300rem;
-		display: inline-block;
-		outline: none;
-		position: relative;
-		tap-highlight-color: rgba($white, 0);
-		transition: background-color 100ms;
-		vertical-align: middle;
+    &:checked { background-color: $green; }
 
-		-o-appearance: none;
-		-moz-appearance: none;
-		-webkit-appearance: none;
+    &:before,
+    &:after {
+      top: 1px; left: 1px;
 
-		-o-tap-highlight-color: rgba($white, 0);
-		-moz-tap-highlight-color: rgba($white, 0);
-		-webkit-tap-highlight-color: rgba($white, 0);
+      background-clip: padding-box;
+      background-color: $white;
+      border: none;
+      border-radius: 300rem;
+      content: " ";
+      display: inline-block;
+      position: absolute;
+    }
 
-		&:checked { background-color: $green; }
+    &:before {
+      bottom: 1px; right: 1px;
 
-		&:before, &:after {
-			top: 1px; left: 1px;
+      transition: transform 400ms;
+      z-index: 1;
+    }
 
-			background-clip: padding-box;
-			background-color: $white;
-			border: none;
-			border-radius: 300rem;
-			content: " ";
-			display: inline-block;
-			position: absolute;
-		}
+    &:after {
+      width: 28px; height: 28px;
 
-		&:before {
-			bottom: 1px; right: 1px;
+      backface-visibility: hidden;
+      box-shadow: 0 0 1px rgba($black, 0.3), 0 3px 2px rgba($black, 0.08), 0 3px 6px rgba($black, 0.1);
+      transition: transform 400ms cubic-bezier(0.455, 0.03, 0.115, 1.33);
+      vertical-align: middle;
+      z-index: 2;
+    }
 
-			transition: transform 400ms;
-			z-index: 1;
+    &:checked {
+      &:before {
+        transform: scale(0);
+      }
 
-			-o-transition: -o-transform 400ms;
-			-moz-transition: -moz-transform 400ms;
-			-webkit-transition: -webkit-transform 400ms;
-		}
+      &:after {
+        transform: translateX(20px);
+      }
+    }
+  }
 
-		&:after {
-			width: 28px; height: 28px;
+  input[type="range"] {
+    width: 100%; height: 4px;
 
-			backface-visibility: hidden;
-			box-shadow: 0 0 1px rgba($black, 0.3), 0 3px 2px rgba($black, 0.08), 0 3px 6px rgba($black, 0.1);
-			transition: transform 400ms cubic-bezier(0.455, 0.03, 0.115, 1.33);
-			vertical-align: middle;
-			z-index: 2;
+    appearance: none;
+    background-color: rgba($black, 0.3);
+    background-image: linear-gradient(linear, left top, right top, color-stop(0.2, $teal), color-stop(0.2, rgba($black, 0.3)));
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0.2, $teal), color-stop(0.2, rgba($black, 0.3)));
+    border-radius: 4px;
+    margin: 1rem 0;
+    position: relative;
+    z-index: 2;
+  }
 
-			-o-backface-visibility: hidden;
-			-moz-backface-visibility: hidden;
-			-webkit-backface-visibility: hidden;
+  // &::-webkit-slider-thumb {
+  input[type="range"]::-webkit-slider-thumb {
+    width: 20px; height: 20px;
 
-			-o-transition: -o-transform 400ms cubic-bezier(0.455, 0.03, 0.115, 1.33);
-			-moz-transition: -moz-transform 400ms cubic-bezier(0.455, 0.03, 0.115, 1.33);
-			-webkit-transition: -webkit-transform 400ms cubic-bezier(0.455, 0.03, 0.115, 1.33);
-		}
+    appearance: none;
+    background-color: $white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba($black, 0.3);
+    cursor: pointer;
+  }
 
-		&:checked {
-			&:before {
-				transform: scale(0);
+  &:after {
+    top: 0; right: 0;
+    bottom: 0; left: 0;
 
-				-o-transform: scale(0);
-				-moz-transform: scale(0);
-				-webkit-transform: scale(0);
-			}
-
-			&:after {
-				transform: translateX(20px);
-				
-				-o-transform: translateX(20px);
-				-moz-transform: translateX(20px);
-				-webkit-transform: translateX(20px);
-			}
-		}
-	}
-
-	input[type="range"] {
-		width: 100%; height: 4px;
-
-		appearance: none;
-		background-color: rgba($black, 0.3);
-		background-image: linear-gradient(linear, left top, right top, color-stop(0.2, $teal), color-stop(0.2, rgba($black, 0.3)));
-		background-image: -webkit-gradient(linear, left top, right top, color-stop(0.2, $teal), color-stop(0.2, rgba($black, 0.3)));
-		border-radius: 4px;
-		margin: 1rem 0;
-		position: relative;
-		z-index: 2;
-
-		-o-appearance: none;
-		-moz-appearance: none;
-		-webkit-appearance: none;
-	}
-
-	input[type="range"]::-webkit-slider-thumb {
-	// &::-webkit-slider-thumb {
-		width: 20px; height: 20px;
-
-		appearance: none;
-		background-color: $white;
-		border-radius: 50%;
-		box-shadow: 0 2px 4px rgba($black, 0.3);
-		cursor: pointer;
-
-		-o-appearance: none;
-		-moz-appearance: none;
-		-webkit-appearance: none;
-	}
-
-	&:after {
-		top: 0; right: 0;
-		bottom: 0; left: 0;
-
-		background-image: linear-gradient(to bottom, transparent, $black);
-		content: "";
-		opacity: 0.9;
-		position: absolute;
-	}
+    background-image: linear-gradient(to bottom, transparent, $black);
+    content: "";
+    opacity: 0.9;
+    position: absolute;
+  }
 }
 
 @keyframes slide {
-	from { background-position: 0 0; }
-	to { background-position: 0 600px; }
+  from { background-position: 0 0; }
+  to { background-position: 0 600px; }
 }
 
 @-o-keyframes slide {
-	from { background-position: 0 0; }
-	to { background-position: 0 600px; }
+  from { background-position: 0 0; }
+  to { background-position: 0 600px; }
 }
 
 @-moz-keyframes slide {
-	from { background-position: 0 0; }
-	to { background-position: 0 600px; }
+  from { background-position: 0 0; }
+  to { background-position: 0 600px; }
 }
 
 @-webkit-keyframes slide {
-	from { background-position: 0 0; }
-	to { background-position: 0 600px; }
+  from { background-position: 0 0; }
+  to { background-position: 0 600px; }
 }
 
 #hikari-about {
-	width: 100%; height: 100%;
+  width: 100%; height: 100%;
 
-	background-color: $teal;
-	color: $white;
-	margin: 0;
+  background-color: $teal;
+  color: $white;
+  margin: 0;
 
-	h1 {
-		width: 100%; height: 100px;
+  h1 {
+    width: 100%; height: 100px;
 
-		background-image: url("../images/about/logo.png");
-		background-position: 50% 0;
-		background-repeat: no-repeat;
-		margin: 0 0 1rem 0;
-		text-align: center;
+    background-image: url("../images/about/logo.png");
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    margin: 0 0 1rem 0;
+    text-align: center;
 
-		@include hide-text;
-	}
+    @include hide-text;
+  }
 
-	p {
-		font-size: 1rem;
-		line-height: 1.5rem;
-		margin: 0 0 1rem 0;
-		text-align: center;
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 0 0 1rem 0;
+    text-align: center;
 
-		&:last-child { margin: 1.5rem 0; }
-	}
+    &:last-child { margin: 1.5rem 0; }
+  }
 
-	a {
-		border-bottom: 2px solid $white;
-		color: $white;
-	}
+  a {
+    border-bottom: 2px solid $white;
+    color: $white;
+  }
 }
 
 #network {
-	background-color: $black;
-	height: 1000px;
-	overflow: hidden;
+  background-color: $black;
+  height: 1000px;
+  overflow: hidden;
 
-	div {
-		width: 150px; height: 150px;
-		top: 50%; left: 50%;
+  div {
+    width: 150px; height: 150px;
+    top: 50%; left: 50%;
 
-		border: 2px solid $white;
-		position: absolute;
-		transform: perspective(600px) rotateX(64.5deg) rotate(45deg);
-		transform-origin: top left;
-		transform-style: preserve-3D;
+    border: 2px solid $white;
+    position: absolute;
+    transform: perspective(600px) rotateX(64.5deg) rotate(45deg);
+    transform-origin: top left;
+    transform-style: preserve-3D;
 
-		-o-transform: perspective(600px) rotateX(64.5deg) rotate(45deg);
-		-moz-transform: perspective(600px) rotateX(64.5deg) rotate(45deg);
-		-webkit-transform: perspective(600px) rotateX(64.5deg) rotate(45deg);
+    &:nth-child(1) {
+      animation: first 3.5s infinite;
+      top: 50%;
+    }
 
-		-o-transform-origin: top left;
-		-moz-transform-origin: top left;
-		-webkit-transform-origin: top left;
+    &:nth-child(2) {
+      animation: second 3.5s infinite;
+      top: 47.5%;
+    }
 
-		-o-transform-style: preserve-3D;
-		-moz-transform-style: preserve-3D;
-		-webkit-transform-style: preserve-3D;
+    &:nth-child(3) {
+      animation: third 3.5s infinite;
+      top: 45%;
+    }
 
-		&:nth-child(1) {
-			animation: first 3.5s infinite;
-			top: 50%;
+    &:nth-child(4) {
+      animation: fourth 3.5s infinite;
+      top: 42.5%;
+    }
 
-			-o-animation: first 3.5s infinite;
-			-moz-animation: first 3.5s infinite;
-			-webkit-animation: first 3.5s infinite;
-		}
+    &:nth-child(5) {
+      animation: fifth 3.5s infinite;
+      top: 40%;
+    }
 
-		&:nth-child(2) {
-			animation: second 3.5s infinite;
-			top: 47.5%;
+    &:nth-child(6) {
+      animation: sixth 3.5s infinite;
+      top: 37.5%;
+    }
 
-			-o-animation: second 3.5s infinite;
-			-moz-animation: second 3.5s infinite;
-			-webkit-animation: second 3.5s infinite;
-		}
+    &:nth-child(7) {
+      animation: seventh 3.5s infinite;
+      top: 35%;
+    }
 
-		&:nth-child(3) {
-			animation: third 3.5s infinite;
-			top: 45%;
+    &:nth-child(8) {
+      animation: eighth 3.5s infinite;
+      top: 32.5%;
+    }
 
-			-o-animation: third 3.5s infinite;
-			-moz-animation: third 3.5s infinite;
-			-webkit-animation: third 3.5s infinite;
-		}
-
-		&:nth-child(4) {
-			animation: fourth 3.5s infinite;
-			top: 42.5%;
-
-			-o-animation: fourth 3.5s infinite;
-			-moz-animation: fourth 3.5s infinite;
-			-webkit-animation: fourth 3.5s infinite;
-		}
-
-		&:nth-child(5) {
-			animation: fifth 3.5s infinite;
-			top: 40%;
-
-			-o-animation: fifth 3.5s infinite;
-			-moz-animation: fifth 3.5s infinite;
-			-webkit-animation: fifth 3.5s infinite;
-		}
-
-		&:nth-child(6) {
-			animation: sixth 3.5s infinite;
-			top: 37.5%;
-
-			-o-animation: sixth 3.5s infinite;
-			-moz-animation: sixth 3.5s infinite;
-			-webkit-animation: sixth 3.5s infinite;
-		}
-
-		&:nth-child(7) {
-			animation: seventh 3.5s infinite;
-			top: 35%;
-
-			-o-animation: seventh 3.5s infinite;
-			-moz-animation: seventh 3.5s infinite;
-			-webkit-animation: seventh 3.5s infinite;
-		}
-
-		&:nth-child(8) {
-			animation: eighth 3.5s infinite;
-			top: 32.5%;
-
-			-o-animation: eighth 3.5s infinite;
-			-moz-animation: eighth 3.5s infinite;
-			-webkit-animation: eighth 3.5s infinite;
-		}
-
-		&:nth-child(9) {
-			animation: ninth 3.5s infinite;
-			top: 30%;
-
-			-o-animation: ninth 3.5s infinite;
-			-moz-animation: ninth 3.5s infinite;
-			-webkit-animation: ninth 3.5s infinite;
-		}
-	}
+    &:nth-child(9) {
+      animation: ninth 3.5s infinite;
+      top: 30%;
+    }
+  }
 }
 
 @keyframes first {
-	98%			{ top: 50%; }
-	3%			{ top: 50%; }
-	50%			{ top: -37%; }
-	50.001% { top: 125%; }
+  98% { top: 50%; }
+  3% { top: 50%; }
+  50% { top: -37%; }
+  50.001% { top: 125%; }
 }
 
 @keyframes second {
-	98.5%		{ top: 47.5%; }
-	3.5%		{ top: 47.5%; }
-	50%			{ top: -38%; }
-	50.001% { top: 125%; }
+  98.5% { top: 47.5%; }
+  3.5% { top: 47.5%; }
+  50% { top: -38%; }
+  50.001% { top: 125%; }
 }
 
 @keyframes third {
-	99%			{ top: 45%; }
-	4%			{ top: 45%; }
-	50%			{ top: -40%; }
-	50.001% { top: 125%; }
+  99% { top: 45%; }
+  4% { top: 45%; }
+  50% { top: -40%; }
+  50.001% { top: 125%; }
 }
 
 @keyframes fourth {
-	99.5%		{ top: 42.5%; }
-	4.5%		{ top: 42.5%; }
-	50%			{ top: -41%; }
-	50.001% { top: 125%; }
+  99.5% { top: 42.5%; }
+  4.5% { top: 42.5%; }
+  50% { top: -41%; }
+  50.001% { top: 125%; }
 }
 
 @keyframes fifth {
-	0%			{ top: 40%; }
-	5%			{ top: 40%; }
-	50%			{ top: -43%; }
-	50.001% { top: 125%; }
+  0% { top: 40%; }
+  5% { top: 40%; }
+  50% { top: -43%; }
+  50.001% { top: 125%; }
 }
 
 @keyframes sixth {
-	0.5%		{ top: 37.5%; }
-	5.5%		{ top: 37.5%; }
-	50%			{ top: -44%; }
-	50.001% { top: 125%; }
+  0.5% { top: 37.5%; }
+  5.5% { top: 37.5%; }
+  50% { top: -44%; }
+  50.001% { top: 125%; }
 }
 
 @keyframes seventh {
-	1%			{ top: 35%; }
-	6%			{ top: 35%; }
-	50%			{ top: -45%; }
-	50.001% { top: 125%; }
+  1% { top: 35%; }
+  6% { top: 35%; }
+  50% { top: -45%; }
+  50.001% { top: 125%; }
 }
 
 @keyframes eighth {
-	1.5%		{ top: 32.5%; }
-	6.5%		{ top: 32.5%; }
-	50%			{ top: -47%; }
-	50.001% { top: 125%; }
+  1.5% { top: 32.5%; }
+  6.5% { top: 32.5%; }
+  50% { top: -47%; }
+  50.001% { top: 125%; }
 }
 
 @keyframes ninth {
-	2%			{ top: 30%; }
-	7%			{ top: 30%; }
-	50%			{ top: -48%; }
-	50.001% { top: 125%; }
+  2% { top: 30%; }
+  7% { top: 30%; }
+  50% { top: -48%; }
+  50.001% { top: 125%; }
 }

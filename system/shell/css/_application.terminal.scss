@@ -1,87 +1,56 @@
 .dekaojs {
-	width: 100%; height: 100%;
-	margin: 0; padding: 0 18px;
+  width: 100%; height: 100%;
+  margin: 0; padding: 0 18px;
 
-	background-color: $black;
-	color: $white;
-	@include mono;
-	font-size: 0.8rem;
-	font-weight: 400;
-	line-height: 1rem;
+  background-color: $black;
+  color: $white;
+  @include mono;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1rem;
 
-	.identity {
-		margin: 0; padding: 0 0 10px 0; 
+  .identity {
+    margin: 0; padding: 0 0 10px 0;
 
-		h1 {
-			display: inline-block;
-			font-size: 1.3rem;
-			margin: 0 0.5rem 0 0;
-		}
-	}
+    h1 {
+      display: inline-block;
+      font-size: 1.3rem;
+      margin: 0 0.5rem 0 0;
+    }
+  }
 
-	.dekaojs-box {
-		display: flex;
+  .dekaojs-box {
+    display: flex;
+  }
 
-		display: -o-box;
-		display: -moz-box;
-		display: -webkit-box;
+  .dekaojs-prompt {
+    box-orient: horizontal;
+    clear: both;
+    flex-flow: row;
+  }
 
-		display: -o-flex;
-		display: -moz-flex;
-		display: -webkit-flex;
-	}
+  .dekaojs-input {
+    flex: 1;
+    display: block;
+    outline: 0;
+  }
 
-	.dekaojs-prompt {
-		clear: both;
-		flex-flow: row;
+  .dekaojs-ps {  margin: 0 5px 0 0; }
 
-		-o-box-orient: horizontal;
-		-moz-box-orient: horizontal;
-		-webkit-box-orient: horizontal;
+  .dekaojs-output {
+    clear: both;
 
-		-o-flex-flow: row;
-		-moz-flex-flow: row;
-		-webkit-flex-flow: row;
-	}
+    .dekaojs-output-line {
+      height: 0;
+      overflow: hidden;
+    }
 
-	.dekaojs-input {
-		flex: 1;
-		display: block;
-		outline: 0;
+    .dekaojs-output-line.animate {
+      transition: height 0.2s ease-in-out;
+    }
 
-		-o-box-flex: 1;
-		-moz-box-flex: 1;
-		-webkit-box-flex: 1;
-
-		-o-flex: 1;
-		-moz-flex: 1;
-		-webkit-flex: 1;
-	}
-
-	.dekaojs-ps {  margin: 0 5px 0 0; }
-
-	.dekaojs-output {
-		clear: both;
-
-		.dekaojs-output-line {
-			height: 0;
-			overflow: hidden;
-		}
-
-		.dekaojs-output-line.animate {
-			transition: height 0.2s ease-in-out;
-
-			-o-transition: height 0.2s ease-in-out;
-			-moz-transition: height 0.2s ease-in-out;
-			-webkit-transition: height 0.2s ease-in-out;
-		}
-
-		.dekaojs-output-line.dekaojs-userinput {
-			transition: none !important;
-
-			-o-transition: none !important;
-			-moz-transition: none !important;
-			-webkit-transition: none !important;
-		}
-	}
+    .dekaojs-output-line.dekaojs-userinput {
+      transition: none !important;
+    }
+  }
 }

@@ -1,264 +1,242 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
   <head>
+    <meta charset="utf-8"/>
+    <title>hikari</title>
 
-		<meta charset="utf-8"/>
-		<title>hikari</title>
+    <!--/ HELPING TO MAKE THE 'NET A BETTER PLACE TO BE
+         __  __     __     __  __     ______     ______     __
+        /\ \_\ \   /\ \   /\ \/ /    /\  __ \   /\  == \   /\ \
+        \ \  __ \  \ \ \  \ \  _"-.  \ \  __ \  \ \  __<   \ \ \
+         \ \_\ \_\  \ \_\  \ \_\ \_\  \ \_\ \_\  \ \_\ \_\  \ \_\
+          \/_/\/_/   \/_/   \/_/\/_/   \/_/\/_/   \/_/ /_/   \/_/
 
-		<!--/ HELPING TO MAKE THE 'NET A BETTER PLACE TO BE
-			 __  __     __     __  __     ______     ______     __
-			/\ \_\ \   /\ \   /\ \/ /    /\  __ \   /\  == \   /\ \
-			\ \  __ \  \ \ \  \ \  _"-.  \ \  __ \  \ \  __<   \ \ \
-			 \ \_\ \_\  \ \_\  \ \_\ \_\  \ \_\ \_\  \ \_\ \_\  \ \_\
-			  \/_/\/_/   \/_/   \/_/\/_/   \/_/\/_/   \/_/ /_/   \/_/
+        01101000 01101001 01101011 01100001 01110010 01101001
 
-			01101000 01101001 01101011 01100001 01110010 01101001 
+    /-->
 
-		/-->
+    <meta name="application-name" content="hikari"/>
+    <meta name="author" content="Paul Anthony Webb × Ideas Never Cease"/>
+    <meta name="description" content="The OS of the future. http://hikar.io"/>
 
-		<meta name="application-name" content="hikari"/>
-		<meta name="author" content="Paul Anthony Webb × Ideas Never Cease"/>
-		<meta name="description" content="The OS of the future. http://hikar.io"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" href="shell/css/style.css"/>
+    <link rel="shortcut icon" href="shell/favicon.png"/>
 
-		<link rel="stylesheet" href="shell/css/style.css"/>
-		<link rel="shortcut icon" href="shell/favicon.png"/>
+    <script src="logic/vendor/jquery-2.1.0.min.js"></script>
+    <script src="logic/hprogress.js"></script>
+    <script src="logic/cursor.js"></script>
+    <script src="logic/vendor/handlebars.js"></script>
 
-		<script src="logic/vendor/jquery-2.1.0.min.js"></script>
-		<script src="logic/hprogress.js"></script>
-		<script src="logic/cursor.js"></script>
-		<script src="logic/vendor/handlebars.js"></script>
+    <script src="logic/backstretch.js"></script>
 
-		<script src="logic/backstretch.js"></script>
+    <script src="logic/gaea/background.js"></script>
+    <script src="logic/gaea/dock.js"></script>
 
-		<script src="logic/gaea/background.js"></script>
-		<script src="logic/gaea/dock.js"></script>
+    <script src="logic/time/date-format.js"></script>
+    <script src="logic/time/alarm-clock.js"></script>
+    <script src="logic/time/clock.js"></script>
 
-		<script src="logic/time/date-format.js"></script>
-		<script src="logic/time/alarm-clock.js"></script>
-		<script src="logic/time/clock.js"></script>
+    <script src="logic/forecast/simpleWeather.js"></script>
 
-		<script src="logic/forecast/simpleWeather.js"></script>
+    <script>
+      /*
+      // title
+      function tb8_makeArray(n) {
+        this.length = n;
+        return this.length;
+      }
 
-		<script>
-			/*
-			// title
-			function tb8_makeArray(n) {
+      tb8_messages = new tb8_makeArray(1);
+      tb8_messages[0] = "hikari OS";
+      tb8_rptType = "finite";
+      tb8_rptNbr = 1;
+      tb8_speed = 50;
+      tb8_delay = 0;
 
-				this.length = n;
-				return this.length;
+      var
+        tb8_counter = 1,
+        tb8_currMsg = 0,
+        tb8_tekst = "",
+        tb8_i = 0,
+        tb8_TID = null;
 
-			}
+      function tb8_pisi() {
+        tb8_tekst = tb8_tekst + tb8_messages[tb8_currMsg].substring(tb8_i, tb8_i + 1);
+        document.title = tb8_tekst;
+        tb8_sp = tb8_speed;
+        tb8_i++;
 
-			tb8_messages = new tb8_makeArray(1);
-			tb8_messages[0] = "hikari OS";
-			tb8_rptType = "finite";
-			tb8_rptNbr = 1;
-			tb8_speed = 50;
-			tb8_delay = 0;
+        if (tb8_i == tb8_messages[tb8_currMsg].length) {
+          tb8_currMsg++;
+          tb8_i = 0;
+          tb8_tekst = "";
+          tb8_sp = tb8_delay;
+        }
 
-			var
-			tb8_counter = 1,
-			tb8_currMsg = 0,
-			tb8_tekst = "",
-			tb8_i = 0,
-			tb8_TID = null;
+        if (tb8_currMsg == tb8_messages.length) {
+          if ((tb8_rptType == "finite") && (tb8_counter == tb8_rptNbr)) {
+            clearTimeout(tb8_TID);
+            return;
+          }
 
-			function tb8_pisi() {
+          tb8_counter++;
+          tb8_currMsg = 0;
+        }
 
-				tb8_tekst = tb8_tekst + tb8_messages[tb8_currMsg].substring(tb8_i, tb8_i + 1);
-				document.title = tb8_tekst;
-				tb8_sp = tb8_speed;
-				tb8_i++;
+        tb8_TID = setTimeout("tb8_pisi()", tb8_sp);
+      }
 
-				if (tb8_i == tb8_messages[tb8_currMsg].length) {
-					tb8_currMsg++;
-					tb8_i = 0;
-					tb8_tekst = "";
-					tb8_sp = tb8_delay;
-				}
+      tb8_pisi();
+      // end title
+      */
 
-				if (tb8_currMsg == tb8_messages.length) {
-					if ((tb8_rptType == "finite") && (tb8_counter == tb8_rptNbr)) {
-						clearTimeout(tb8_TID);
-						return;
-					}
+      $(function () {
+        hProgress.start();
 
-					tb8_counter++;
-					tb8_currMsg = 0;
-				}
+        $.simpleWeather({
+          zipcode: "02148",
+          // woeid: "2357536",
+          location: "",
+          unit: "f",
+          success: function (weather) {
+            // html = "<h3>"+weather.city+", "+weather.region+" "+weather.country+"</h3>";
+            html = "<p>" + weather.temp + "&deg;" + weather.units.temp + "&nbsp;" + weather.currently + "</p>";
+            $("#weather").html(html);
+          },
 
-				tb8_TID = setTimeout("tb8_pisi()", tb8_sp);
+          error: function (error) {
+            $("#weather").html("<p>" + error + "</p>");
+          }
+        });
+      });
+    </script>
 
-			}
-
-			tb8_pisi();
-			// end title
-			*/
-
-			$(function () {
-
-				hProgress.start();
-
-				$.simpleWeather({
-					zipcode: "02148",
-					// woeid: "2357536",
-					location: "",
-					unit: "f",
-					success: function (weather) {
-
-						// html = "<h3>"+weather.city+", "+weather.region+" "+weather.country+"</h3>";
-						html = "<p>" + weather.temp + "&deg;" + weather.units.temp + "&nbsp;" + weather.currently + "</p>";
-						$("#weather").html(html);
-
-					},
-
-					error: function (error) {
-						$("#weather").html("<p>" + error + "</p>");
-					}
-				});
-
-			});
-		</script>
-
-		<script src="logic/contextMenu.js"></script>
-		<script src="logic/contextMenu/taskbar.js"></script>
-		<script src="logic/contextMenu/desktop.js"></script>
-		<script src="logic/contextMenu/folder.js"></script>
-		<script src="logic/contextMenu/image.js"></script>
-
+    <script src="logic/contextMenu.js"></script>
+    <script src="logic/contextMenu/taskbar.js"></script>
+    <script src="logic/contextMenu/desktop.js"></script>
+    <script src="logic/contextMenu/folder.js"></script>
+    <script src="logic/contextMenu/image.js"></script>
   </head>
 
-	<!--/	LET'S BEGIN /-->
+  <!--/	LET'S BEGIN /-->
 
-	<!--/ <body unselectable="on"> /-->
-	<body>
+  <!--/ <body unselectable="on"> /-->
+  <body>
+    <div id="hikari-container" class="hikari-container">
+      <nav class="hikari-menu left">
+        <!--/ <h2>Access</h2> /-->
 
-		<div id="hikari-container" class="hikari-container">
+        <ul>
+          <li><a href="#" id="select-chip-folder">Chip Folder</a></li>
+          <li><a href="#" id="select-subchip-folder">Subchip Folder</a></li>
+          <li><a href="#" id="select-data-library">Data Library</a></li>
+          <li><a href="#" id="select-netnavi">NetNavi</a></li>
+          <li><a href="#" id="select-email">Email</a></li>
+          <li><a href="#" id="select-key-item">Key Item</a></li>
+          <li><a href="#" id="select-network">Network</a></li>
+          <li><a href="#" id="select-map">Map</a></li>
+          <li><a href="#" id="select-save">Save</a></li>
+        </ul>
+      </nav>
 
-			<nav class="hikari-menu left">
-				<!--/ <h2>Access</h2> /-->
+      <nav class="hikari-menu right">
+        <!--/ <h2>Notifications</h2> /-->
 
-				<ul>
-					<li><a href="#" id="select-chip-folder">Chip Folder</a></li>
-					<li><a href="#" id="select-subchip-folder">Subchip Folder</a></li>
-					<li><a href="#" id="select-data-library">Data Library</a></li>
-					<li><a href="#" id="select-netnavi">NetNavi</a></li>
-					<li><a href="#" id="select-email">Email</a></li>
-					<li><a href="#" id="select-key-item">Key Item</a></li>
-					<li><a href="#" id="select-network">Network</a></li>
-					<li><a href="#" id="select-map">Map</a></li>
-					<li><a href="#" id="select-save">Save</a></li>
-				</ul>
-			</nav>
+        <ul>
+          <li><a href="#">Chip Folder</a></li>
+          <li><a href="#">Subchip Folder</a></li>
+          <li><a href="#">Library</a></li>
+          <li><a href="#">NetNavi</a></li>
+          <li><a href="#">Key Items</a></li>
+        </ul>
+      </nav>
 
-			<nav class="hikari-menu right">
-				<!--/ <h2>Notifications</h2> /-->
+      <nav class="hikari-menu top">
+        <!--/ <h2>Running Apps</h2> /-->
 
-				<ul>
-					<li><a href="#">Chip Folder</a></li>
-					<li><a href="#">Subchip Folder</a></li>
-					<li><a href="#">Library</a></li>
-					<li><a href="#">NetNavi</a></li>
-					<li><a href="#">Key Items</a></li>
-				</ul>
-			</nav>
+        <ul>
+          <li><a href="#">Chip Folder</a></li>
+          <li><a href="#">Subchip Folder</a></li>
+          <li><a href="#">Library</a></li>
+          <li><a href="#">NetNavi</a></li>
+          <li><a href="#">Key Items</a></li>
+        </ul>
+      </nav>
 
-			<nav class="hikari-menu top">
-				<!--/ <h2>Running Apps</h2> /-->
+      <nav class="hikari-menu bottom">
+        <!--/ <h2>Admin Menu</h2> /-->
 
-				<ul>
-					<li><a href="#">Chip Folder</a></li>
-					<li><a href="#">Subchip Folder</a></li>
-					<li><a href="#">Library</a></li>
-					<li><a href="#">NetNavi</a></li>
-					<li><a href="#">Key Items</a></li>
-				</ul>
-			</nav>
+        <ul>
+          <li><a href="#" id="select-system-fonts">Fonts</a></li>
+          <li><a href="#" id="select-system-language">Language</a></li>
+          <li><a href="#" id="select-system-mail">Mail</a></li>
+          <li><a href="#" id="select-system-personalization">Personalization</a></li>
+          <li><a href="#" id="select-system-progsFeats">Programs and Features</a></li>
+          <li><a href="#" id="select-system-sync">Sync</a></li>
+          <li><a href="#" id="select-system-OS">System</a></li>
+          <li><a href="#" id="select-system-userAccounts">User Accounts</a></li>
+          <!--/ <li><a href="#"></a></li> /-->
+          <li><a href="#" id="select-system-update">System Update</a></li>
+        </ul>
+      </nav>
 
-			<nav class="hikari-menu bottom">
-				<!--/ <h2>Admin Menu</h2> /-->
+      <div class="hikari-pusher">
+        <div class="hikari-content"></div>
+      </div>
+    </div>
 
-				<ul>
-					<li><a href="#" id="select-system-fonts">Fonts</a></li>
-					<li><a href="#" id="select-system-language">Language</a></li>
-					<li><a href="#" id="select-system-mail">Mail</a></li>
-					<li><a href="#" id="select-system-personalization">Personalization</a></li>
-					<li><a href="#" id="select-system-progsFeats">Programs and Features</a></li>
-					<li><a href="#" id="select-system-sync">Sync</a></li>
-					<li><a href="#" id="select-system-OS">System</a></li>
-					<li><a href="#" id="select-system-userAccounts">User Accounts</a></li>
-					<!--/ <li><a href="#"></a></li> /-->
-					<li><a href="#" id="select-system-update">System Update</a></li>
-				</ul>
-			</nav>
+    <!--/	logic /-->
+    <script src="logic/classie.js"></script>
+    <script src="logic/hikariMenu.js"></script>
+    <script src="logic/gaea.js"></script>
+    <script src="logic/online.js"></script>
 
-			<div class="hikari-pusher">
-				<div class="hikari-content">
-				</div>
-			</div>
+    <script src="logic/gaea/gaea.js"></script>
+    <script src="logic/playSound.js"></script>
 
-		</div>
+    <script>
+      $(function () {
+        var
+          $vW = $(window).width(),
+          $vH = $(window).height(),
+          wm = new Gaea.WindowManager();
 
-		<!--/	logic /-->
-		<script src="logic/classie.js"></script>
-		<script src="logic/hikariMenu.js"></script>
-		<script src="logic/gaea.js"></script>
-		<script src="logic/online.js"></script>
+        window.wm = wm; // For debugging reasons
 
-		<script src="logic/gaea/gaea.js"></script>
-		<script src="logic/playSound.js"></script>
+        /*
+        var jqxhr = $.getJSON("account/githubProfile.json", function (data) {
+          console.log(data.username);
+          console.log(data._json.avatar_url);
 
-		<script>
-			$(function () {
+          var githubAvatar = data._json.avatar_url;
 
-				var
-				$vW = $(window).width(),
-				$vH = $(window).height(),
-				wm = new Gaea.WindowManager();
+          $(".user-avatar img").attr("src", githubAvatar);
+        });
+        */
 
-				window.wm = wm; // For debugging reasons
+        var jqxhr = $.getJSON("account/facebookProfile.json", function (data) {
+          console.log(data.username);
+          // https://graph.facebook.com/USERNAME/picture?type=large
+          // console.log(data._json.avatar_url);
 
-				/*
-				var jqxhr = $.getJSON("account/githubProfile.json", function (data) {
+          // var facebookAvatar = data._json.avatar_url;
+          var facebookAvatar = "https://graph.facebook.com/" + data.username + "/picture?type=large";
 
-					console.log(data.username);
-					console.log(data._json.avatar_url);
+          $(".user-avatar img").attr("src", facebookAvatar);
+        });
 
-					var githubAvatar = data._json.avatar_url;
+        // disable for testing
+        // $.playSound("shell/sounds/gaia-09/logon-sound");
 
-					$(".user-avatar img").attr("src", githubAvatar);
+        hProgress.done();
+      });
+    </script>
 
-				});
-				*/
-
-				var jqxhr = $.getJSON("account/facebookProfile.json", function (data) {
-
-					console.log(data.username);
-					// https://graph.facebook.com/USERNAME/picture?type=large
-					// console.log(data._json.avatar_url);
-
-					// var facebookAvatar = data._json.avatar_url;
-					var facebookAvatar = "https://graph.facebook.com/" + data.username + "/picture?type=large";
-
-					$(".user-avatar img").attr("src", facebookAvatar);
-
-				});
-
-				// disable for testing
-				// $.playSound("shell/sounds/gaia-09/logon-sound");
-
-				hProgress.done();
-
-			});
-		</script>
-
-		<script src="logic/gaea/desktop.js"></script>
-		<!--//logic /-->
-
-	</body>
+    <script src="logic/gaea/desktop.js"></script>
+    <!--//logic /-->
+  </body>
 
 </html>

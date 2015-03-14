@@ -2,22 +2,17 @@
 
 ////////////////////////////////////////////////////////////////////////////////// SYSTEM.BASE/SCSS ///
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 * {
-	margin: 0; padding: 0;
+  margin: 0; padding: 0;
 
-	box-sizing: border-box;
-	cursor: none !important;
-	outline: none;
-	text-rendering: optimizeLegibility !important;
-	text-shadow: 1px 1px 1px rgba(25, 25, 25, 0.004);
-
-	-moz-box-sizing: border-box;
-	-webkit-font-smoothing: antialiased !important;
-
-	&:before, &:after {
-		box-sizing: border-box;
-		-moz-box-sizing: border-box;
-	}
+  cursor: none !important;
+  outline: none;
+  text-rendering: optimizeLegibility !important;
+  text-shadow: 1px 1px 1px rgba(25, 25, 25, 0.004);
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr,
@@ -25,30 +20,26 @@ acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, smal
 sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,
 tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer,
 header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video {
-	margin: 0; padding: 0;
+  margin: 0; padding: 0;
 
-	border: 0;
+  border: 0;
   font: inherit;
-	font-size: 100%;
-	vertical-align: baseline;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
 body {
-	user-select: none;
-
-	-o-user-select: none;
-	-moz-user-select: none;
-	-webkit-user-select: none;
+  user-select: none;
 }
 
 /// HTML5 DISPLAY RESET FOR CLUNKERS //////////////////////////////////////////////////////////////////
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 
 input {
-	&:focus { outline: 0; }
+  &:focus { outline: 0; }
 }
 
 body { line-height: 1; }
@@ -58,9 +49,8 @@ blockquote:before, blockquote:after, q:before, q:after { content: " "; content: 
 table { border-collapse: collapse; border-spacing: 0; }
 
 a {
-	text-decoration: none;
-
-	&:visited { text-decoration: none; }
+  text-decoration: none;
+  &:visited { text-decoration: none; }
 }
 
 /// CLEARFIX //////////////////////////////////////////////////////////////////////////////////////////
@@ -104,30 +94,30 @@ $purple:		rgba(162, 0, 255, 1);		// #a200ff;
 /////////////////////////////////////////////////////////////////////////////////////////// CURSORS ///
 
 #cursor {
-	z-index: 2000;
+  z-index: 2000;
 
-	&:after {
-		width: 0; height: 0;
-		top: 0; right: 0;
-		bottom: 0; left: 0;
+  &:after {
+    width: 0; height: 0;
+    top: 0; right: 0;
+    bottom: 0; left: 0;
 
-		background-color: $orange;
-		color: $red;
-		content: "\f122";
-		fill: $orange;
-		@include icons;
-	}
+    background-color: $orange;
+    color: $red;
+    content: "\f122";
+    fill: $orange;
+    @include icons;
+  }
 
-	#cursor-01 {
-	}
+  #cursor-01 {
+  }
 
-	#cursor-02 {
-		// default
-		path, circle {
-			transition: all 0.2s ease;
-		}
+  #cursor-02 {
+    // default
+    path, circle {
+      transition: all 0.2s ease;
+    }
 
-		path { fill: $white; }
-		circle { fill: $black; }
-	}
+    path { fill: $white; }
+    circle { fill: $black; }
+  }
 }

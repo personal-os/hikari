@@ -1,335 +1,304 @@
-
 <!DOCTYPE html>
 <html lang="en" id="login-page">
 
   <head>
+    <meta charset="utf-8"/>
+    <title></title>
 
-		<meta charset="utf-8"/>
-		<title></title>
+    <!--/ HELPING TO MAKE THE 'NET A BETTER PLACE TO BE
+         __  __     __     __  __     ______     ______     __
+        /\ \_\ \   /\ \   /\ \/ /    /\  __ \   /\  == \   /\ \
+        \ \  __ \  \ \ \  \ \  _"-.  \ \  __ \  \ \  __<   \ \ \
+         \ \_\ \_\  \ \_\  \ \_\ \_\  \ \_\ \_\  \ \_\ \_\  \ \_\
+          \/_/\/_/   \/_/   \/_/\/_/   \/_/\/_/   \/_/ /_/   \/_/
 
-		<!--/ HELPING TO MAKE THE 'NET A BETTER PLACE TO BE
-			 __  __     __     __  __     ______     ______     __
-			/\ \_\ \   /\ \   /\ \/ /    /\  __ \   /\  == \   /\ \
-			\ \  __ \  \ \ \  \ \  _"-.  \ \  __ \  \ \  __<   \ \ \
-			 \ \_\ \_\  \ \_\  \ \_\ \_\  \ \_\ \_\  \ \_\ \_\  \ \_\
-			  \/_/\/_/   \/_/   \/_/\/_/   \/_/\/_/   \/_/ /_/   \/_/
+        01101000 01101001 01101011 01100001 01110010 01101001
 
-			01101000 01101001 01101011 01100001 01110010 01101001 
+    /-->
 
-		/-->
+    <meta name="application-name" content="hikari"/>
+    <meta name="author" content="Paul Anthony Webb × Ideas Never Cease"/>
+    <meta name="description" content="The OS of the future. http://hikar.io"/>
 
-		<meta name="application-name" content="hikari"/>
-		<meta name="author" content="Paul Anthony Webb × Ideas Never Cease"/>
-		<meta name="description" content="The OS of the future. http://hikar.io"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" href="shell/css/style.css"/>
+    <link rel="shortcut icon" href="shell/favicon.png"/>
 
-		<link rel="stylesheet" href="shell/css/style.css"/>
-		<link rel="shortcut icon" href="shell/favicon.png"/>
+    <script src="logic/vendor/jquery-2.1.0.min.js"></script>
+    <script src="logic/hprogress.js"></script>
+    <script src="logic/cursor.js"></script>
 
-		<script src="logic/vendor/jquery-2.1.0.min.js"></script>
-		<script src="logic/hprogress.js"></script>
-		<script src="logic/cursor.js"></script>
+    <script src="logic/time/date-format.js"></script>
+    <script src="logic/time/alarm-clock.js"></script>
+    <script src="logic/time/clock.js"></script>
 
-		<script src="logic/time/date-format.js"></script>
-		<script src="logic/time/alarm-clock.js"></script>
-		<script src="logic/time/clock.js"></script>
+    <script src="logic/forecast/simpleWeather.js"></script>
+    <script src="logic/capslockstate.js"></script>
 
-		<script src="logic/forecast/simpleWeather.js"></script>
-		<script src="logic/capslockstate.js"></script>
+    <script>
+      // title
+      function tb8_makeArray(n) {
+        this.length = n;
+        return this.length;
+      }
 
-		<script>
-			// title
-			function tb8_makeArray(n) {
+      tb8_messages = new tb8_makeArray(1);
+      tb8_messages[0] = "hikari OS — Welcome";
+      tb8_rptType = "finite";
+      tb8_rptNbr = 1;
+      tb8_speed = 50;
+      tb8_delay = 0;
 
-				this.length = n;
-				return this.length;
+      var
+        tb8_counter = 1,
+        tb8_currMsg = 0,
+        tb8_tekst = "",
+        tb8_i = 0,
+        tb8_TID = null;
 
-			}
+      function tb8_pisi() {
+        tb8_tekst = tb8_tekst + tb8_messages[tb8_currMsg].substring(tb8_i, tb8_i + 1);
+        document.title = tb8_tekst;
+        tb8_sp = tb8_speed;
+        tb8_i++;
 
-			tb8_messages = new tb8_makeArray(1);
-			tb8_messages[0] = "hikari OS — Welcome";
-			tb8_rptType = "finite";
-			tb8_rptNbr = 1;
-			tb8_speed = 50;
-			tb8_delay = 0;
+        if (tb8_i == tb8_messages[tb8_currMsg].length) {
+          tb8_currMsg++;
+          tb8_i = 0;
+          tb8_tekst = "";
+          tb8_sp = tb8_delay;
+        }
 
-			var
-			tb8_counter = 1,
-			tb8_currMsg = 0,
-			tb8_tekst = "",
-			tb8_i = 0,
-			tb8_TID = null;
+        if (tb8_currMsg == tb8_messages.length) {
+          if ((tb8_rptType == "finite") && (tb8_counter == tb8_rptNbr)) {
+            clearTimeout(tb8_TID);
+            return;
+          }
 
-			function tb8_pisi() {
+          tb8_counter++;
+          tb8_currMsg = 0;
+        }
 
-				tb8_tekst = tb8_tekst + tb8_messages[tb8_currMsg].substring(tb8_i, tb8_i + 1);
-				document.title = tb8_tekst;
-				tb8_sp = tb8_speed;
-				tb8_i++;
+        tb8_TID = setTimeout("tb8_pisi()", tb8_sp);
+      }
 
-				if (tb8_i == tb8_messages[tb8_currMsg].length) {
-					tb8_currMsg++;
-					tb8_i = 0;
-					tb8_tekst = "";
-					tb8_sp = tb8_delay;
-				}
+      tb8_pisi();
+      // end title
 
-				if (tb8_currMsg == tb8_messages.length) {
-					if ((tb8_rptType == "finite") && (tb8_counter == tb8_rptNbr)) {
-						clearTimeout(tb8_TID);
-						return;
-					}
-
-					tb8_counter++;
-					tb8_currMsg = 0;
-				}
-
-				tb8_TID = setTimeout("tb8_pisi()", tb8_sp);
-
-			}
-
-			tb8_pisi();
-			// end title
-
-			$(function () {
-
-				$.simpleWeather({
-					zipcode: "02148",
-					// woeid: "2357536",
-					location: "",
-					unit: "f",
-					success: function (weather) {
-
-						// html = "<h3>"+weather.city+", "+weather.region+" "+weather.country+"</h3>";
-						html = "<p>" + weather.temp + "&deg;" + weather.units.temp + "&nbsp;" + weather.currently + "</p>";
-						$("#weather").html(html);
-
-					},
-
-					error: function (error) {
-						$("#weather").html("<p>" + error + "</p>");
-					}
-				});
-
-			});
-		</script>
-
+      $(function () {
+        $.simpleWeather({
+          zipcode: "02148",
+          // woeid: "2357536",
+          location: "",
+          unit: "f",
+          success: function (weather) {
+            // html = "<h3>"+weather.city+", "+weather.region+" "+weather.country+"</h3>";
+            html = "<p>" + weather.temp + "&deg;" + weather.units.temp + "&nbsp;" + weather.currently + "</p>";
+            $("#weather").html(html);
+          },
+          error: function (error) {
+            $("#weather").html("<p>" + error + "</p>");
+          }
+        });
+      });
+    </script>
   </head>
 
-	<!--/	LET'S BEGIN /-->
+  <!--/	LET'S BEGIN /-->
 
-	<body>
+  <body>
+    <section id="login-module">
+      <h1>&#xf144;</h1>
 
-		<section id="login-module">
-			<h1>&#xf144;</h1>
+      <div id="header">
+        <svg width="60" height="61" xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
+          <g id="hikari-stars">
+            <path fill="#191919" d="m61,30.645004c-18.212997,2.022995 -26.886002,12.719986 -29.488007,29.776993c-0.866989,-8.384003 -3.757996,-15.322006 -10.118988,-20.815002c-6.070999,-5.492996 -13.587006,-7.806 -21.393005,-9.250992c3.179993,-0.289001 6.360001,-0.57901 9.251007,-1.735001c3.179993,-0.867004 5.781998,-2.313004 8.383987,-4.047012c2.602005,-2.023987 4.915009,-4.33699 6.649002,-6.938995c1.735001,-2.602005 3.180008,-5.492996 4.337006,-8.384003c1.155991,-2.890991 1.733994,-6.070999 2.313004,-9.250992c2.311996,18.212997 13.008987,27.464996 30.065994,30.645004z" id="hikari-star-01"/>
 
-			<div id="header">
-				<svg width="60" height="61" xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
-					<g id="hikari-stars">
-						<path fill="#191919" d="m61,30.645004c-18.212997,2.022995 -26.886002,12.719986 -29.488007,29.776993c-0.866989,-8.384003 -3.757996,-15.322006 -10.118988,-20.815002c-6.070999,-5.492996 -13.587006,-7.806 -21.393005,-9.250992c3.179993,-0.289001 6.360001,-0.57901 9.251007,-1.735001c3.179993,-0.867004 5.781998,-2.313004 8.383987,-4.047012c2.602005,-2.023987 4.915009,-4.33699 6.649002,-6.938995c1.735001,-2.602005 3.180008,-5.492996 4.337006,-8.384003c1.155991,-2.890991 1.733994,-6.070999 2.313004,-9.250992c2.311996,18.212997 13.008987,27.464996 30.065994,30.645004z" id="hikari-star-01"/>
+            <path fill="#191919" d="m56.085007,13.617004c-3.625,0.401993 -5.351013,2.531998 -5.869003,5.926987c-0.173004,-1.668991 -0.748001,-3.049988 -2.014008,-4.14299c-1.209,-1.094009 -2.705002,-1.554001 -4.259003,-1.84201c0.633011,-0.056992 1.266006,-0.11499 1.84201,-0.344986c0.632996,-0.173004 1.151001,-0.461014 1.667999,-0.806015c0.51799,-0.403 0.979004,-0.862991 1.32399,-1.380997c0.345001,-0.51799 0.633011,-1.093002 0.863007,-1.668991c0.229996,-0.575012 0.345001,-1.208008 0.460999,-1.841003c0.460007,3.625 2.589005,5.466995 5.984009,6.100006z" id="hikari-star-02"/>
 
-						<path fill="#191919" d="m56.085007,13.617004c-3.625,0.401993 -5.351013,2.531998 -5.869003,5.926987c-0.173004,-1.668991 -0.748001,-3.049988 -2.014008,-4.14299c-1.209,-1.094009 -2.705002,-1.554001 -4.259003,-1.84201c0.633011,-0.056992 1.266006,-0.11499 1.84201,-0.344986c0.632996,-0.173004 1.151001,-0.461014 1.667999,-0.806015c0.51799,-0.403 0.979004,-0.862991 1.32399,-1.380997c0.345001,-0.51799 0.633011,-1.093002 0.863007,-1.668991c0.229996,-0.575012 0.345001,-1.208008 0.460999,-1.841003c0.460007,3.625 2.589005,5.466995 5.984009,6.100006z" id="hikari-star-02"/>
+            <path fill="#191919" d="m43.654007,3.914993c-1.46701,0.16301 -2.166,1.025009 -2.376007,2.399002c-0.070007,-0.675995 -0.302994,-1.235001 -0.815002,-1.677002c-0.488998,-0.442993 -1.095001,-0.628998 -1.723999,-0.746002c0.257004,-0.022995 0.513,-0.04599 0.746002,-0.138992c0.255997,-0.070007 0.466003,-0.186996 0.675003,-0.326004c0.209991,-0.164001 0.395996,-0.349991 0.535995,-0.55899c0.139999,-0.210007 0.255997,-0.443008 0.348999,-0.67601c0.093002,-0.233002 0.139999,-0.488998 0.186996,-0.744995c0.186005,1.466995 1.048004,2.21199 2.422012,2.468994z" id="hikari-star-03"/>
+          </g>
+        </svg>
+      </div>
 
-						<path fill="#191919" d="m43.654007,3.914993c-1.46701,0.16301 -2.166,1.025009 -2.376007,2.399002c-0.070007,-0.675995 -0.302994,-1.235001 -0.815002,-1.677002c-0.488998,-0.442993 -1.095001,-0.628998 -1.723999,-0.746002c0.257004,-0.022995 0.513,-0.04599 0.746002,-0.138992c0.255997,-0.070007 0.466003,-0.186996 0.675003,-0.326004c0.209991,-0.164001 0.395996,-0.349991 0.535995,-0.55899c0.139999,-0.210007 0.255997,-0.443008 0.348999,-0.67601c0.093002,-0.233002 0.139999,-0.488998 0.186996,-0.744995c0.186005,1.466995 1.048004,2.21199 2.422012,2.468994z" id="hikari-star-03"/>
-					</g>
-				</svg>
-			</div>
+      <div id="login-choices">
+        <form action="/login" method="post">
+          <div id="username-field">
+            <input type="text" placeholder="Username"/>
+          </div>
 
-			<div id="login-choices">
-				<form action="/login" method="post">
-					<div id="username-field">
-						<input type="text" placeholder="Username"/>
-					</div>
+          <div id="password-field">
+            <input type="password" placeholder="Password"/>
+            <span id="capslock-check"></span>
+          </div>
 
-					<div id="password-field">
-						<input type="password" placeholder="Password"/>
-						<span id="capslock-check"></span>
-					</div>
+          <input id="confirm-login" type="submit" value="Log In"/>
+        </form>
 
-					<input id="confirm-login" type="submit" value="Log In"/>
-				</form>
+        <hr/>
 
-				<hr/>
+        <ul>
+          <li id="via-facebook"><a href="/auth/facebook">&#xf231;</a></li>
+          <li id="via-github"><a href="/auth/github">&#xf233;</a></li>
+          <li id="via-google"><a href="#">&#xf234;</a></li>
+          <li id="via-twitter"><a href="#">&#xf243;</a></li>
+        </ul>
+      </div>
+    </section>
 
-				<ul>
-					<li id="via-facebook"><a href="/auth/facebook">&#xf231;</a></li>
-					<li id="via-github"><a href="/auth/github">&#xf233;</a></li>
-					<li id="via-google"><a href="#">&#xf234;</a></li>
-					<li id="via-twitter"><a href="#">&#xf243;</a></li>
-				</ul>
-			</div>
+    <section id="login-message" style="background-image: url(/shell/weather/rain/01.gif);">
+      <!--/ <h2>Welcome</h2> /-->
 
-		</section>
+      <div class="wrapper">
+        <p>
+          <span id="current-time"></span>
+          <span id="date"></span><br/><br/>
+          <span id="weather"></span>
+        </p>
 
-		<section id="login-message" style="background-image: url(/shell/weather/rain/01.gif);">
-			<!--/ <h2>Welcome</h2> /-->
+        <!--/
+        <p>
+          <span id="time-of-day"></span><span id="username"></span>! It is <span id="current-time"></span> on <span id="current-day"></span>.<br/><br/>
+          <span id="weather"></span>
+        </p>
+        /-->
+      </div>
+    </section>
 
-			<div class="wrapper">
-				<p>
-					<span id="current-time"></span>
-					<span id="date"></span><br/><br/>
-					<span id="weather"></span>
-				</p>
+    <script>
+      $(function () {
+        var $vW = $(window).width(), $vH = $(window).height();
 
-				<!--/
-				<p>
-					<span id="time-of-day"></span><span id="username"></span>! It is <span id="current-time"></span> on <span id="current-day"></span>.<br/><br/>
-					<span id="weather"></span>
-				</p>
-				/-->
-			</div>
-		</section>
+        $("#login-module").prepend("<span class=\"mask\"></span>");
 
-		<script>
-			$(function () {
+        $("#login-choices li").each(function () {
+          $(this).mouseover(function () {
+            $(this).css("opacity", "1");
+          });
 
-				var $vW = $(window).width(), $vH = $(window).height();
+          $(this).mouseout(function () {
+            $(this).css("opacity", "0.5");
+          });
+        });
 
-				$("#login-module").prepend("<span class=\"mask\"></span>");
+        $("#login-message").css({
+          "min-width": $vW - 342 + "px",
+          "max-width": $vW - 62 + "px"
+        });
 
-				$("#login-choices li").each(function () {
 
-					$(this).mouseover(function () {
-						$(this).css("opacity", "1");
-					});
 
-					$(this).mouseout(function () {
-						$(this).css("opacity", "0.5");
-					});
+        // Bind to capslockstate events and update display based on state
+        $(window).bind("capsOn", function (event) {
+          $("#capslock-check").html("Caps Lock is on").css("background-color", "#ff8831");
+        });
 
-				});
+        $(window).bind("capsOff", function (event) {
+          $("#capslock-check").html("").css("background-color", "transparent");
+        });
 
-				$("#login-message").css({
-					"min-width": $vW - 342 + "px",
-					"max-width": $vW - 62 + "px"
-				});
 
-				// Bind to capslockstate events and update display based on state
-				$(window).bind("capsOn", function (event) {
-					$("#capslock-check").html("Caps Lock is on").css("background-color", "#ff8831");
-				});
 
-				$(window).bind("capsOff", function (event) {
-					$("#capslock-check").html("").css("background-color", "transparent");
-				});
+        // Initialize the capslockstate plugin, monitoring is happening at the window level
+        $(window).capslockstate();
 
-				// Initialize the capslockstate plugin, monitoring is happening at the window level
-				$(window).capslockstate();
+        $("#login-module").mouseenter(function () {
+          $(this).css({
+            "background-color": "#50bebf",
+            "width": "25%"
+          });
 
-				$("#login-module").mouseenter(function () {
+          $("#login-message").css("width", "75%");
+          $("#header, #login-choices").css("left", "0");
 
-					$(this).css({
-						"background-color": "#50bebf",
-						"width": "25%"
-					});
+          $("#login-choices hr").css("opacity", "1");
+          $("#login-module h1").css("left", "-20rem");
 
-					$("#login-message").css("width", "75%");
-					$("#header, #login-choices").css("left", "0");
+          setTimeout(function () {
+            $("#login-module .mask").remove();
+          }, 500);
+        });
 
-					$("#login-choices hr").css("opacity", "1");
-					$("#login-module h1").css("left", "-20rem");
+        $("#login-module").mouseleave(function () {
+          $(this).css({
+            "background-color": "#3d4248",
+            "width": "5%"
+          });
 
-					setTimeout(function () {
-						$("#login-module .mask").remove();
-					}, 500);
+          $("#login-message").css("width", "95%");
+          $("#header, #login-choices").css("left", "-100%");
 
-				});
+          $("#login-choices hr").css("opacity", "0.001");
+          $("#login-module h1").css("left", "0");
 
-				$("#login-module").mouseleave(function () {
+          $("#login-module").prepend("<span class=\"mask\"></span>");
+        });
 
-					$(this).css({
-						"background-color": "#3d4248",
-						"width": "5%"
-					});
+        /*
+        if ($("#login-module").css("width") == "25%") {
+          $("#login-module .mask").css({
+            "left": "-200%",
+            "right": "initial"
+          });
+        } else {
+          $("#login-module .mask").css({
+            "left": "0",
+            "right": "0"
+          });
+        }
+        */
 
-					$("#login-message").css("width", "95%");
-					$("#header, #login-choices").css("left", "-100%");
+        /*
+        // Find keycode for any key
+        document.onkeydown = function(evt) {
+          console.log(evt.keyCode);
+        }
+        */
 
-					$("#login-choices hr").css("opacity", "0.001");
-					$("#login-module h1").css("left", "0");
+        /*
+        $("#login-greet").css({
+          "top": $vH / 2 - 150 + "px",
+          "left": $vW / 2 - 150 + "px"
+        });
 
-					$("#login-module").prepend("<span class=\"mask\"></span>");
+        $("#greet").mouseover(function () {
+          $(this).css("height", "294px");
+          $("#greet p").css("opacity", "1");
 
-				});
+          $("#login").css("height", "56px");
+          $("#login form").css("opacity", "0.001");
+        });
 
-				/*
-				if ($("#login-module").css("width") == "25%") {
+        $("#login").mouseover(function () {
+          $(this).css("height", "294px");
+          $("#login form").css("opacity", "1");
 
-					$("#login-module .mask").css({
-						"left": "-200%",
-						"right": "initial"
-					});
+          $("#greet").css("height", "56px");
+          $("#greet p").css("opacity", "0.001");
+        });
 
-				} else {
+        // Pretend authentication actually works
+        $("#confirm-login").click(function () {
+          window.location.href = "/";
+          return false;
+        });
+        */
 
-					$("#login-module .mask").css({
-						"left": "0",
-						"right": "0"
-					});
+        var jqxhr = $.getJSON("account/githubProfile.json", function (data) {
+          console.log(data.username);
+          console.log(data._json.avatar_url);
+          console.log(data._json.avatar_name);
 
-				}
-				*/
+          var githubAvatar = data._json.avatar_url;
 
-				/*
-				// Find keycode for any key
-				document.onkeydown = function(evt) {
-					console.log(evt.keyCode);
-				}
-				*/
-
-				/*
-				$("#login-greet").css({
-					"top": $vH / 2 - 150 + "px",
-					"left": $vW / 2 - 150 + "px"
-				});
-
-				$("#greet").mouseover(function () {
-
-					$(this).css("height", "294px");
-					$("#greet p").css("opacity", "1");
-
-					$("#login").css("height", "56px");
-					$("#login form").css("opacity", "0.001");
-
-				});
-
-				$("#login").mouseover(function () {
-
-					$(this).css("height", "294px");
-					$("#login form").css("opacity", "1");
-
-					$("#greet").css("height", "56px");
-					$("#greet p").css("opacity", "0.001");
-
-				});
-
-				// Pretend authentication actually works
-				$("#confirm-login").click(function () {
-
-					window.location.href = "/";
-					return false;
-
-				});
-				*/
-
-				var jqxhr = $.getJSON("account/githubProfile.json", function (data) {
-
-					console.log(data.username);
-					console.log(data._json.avatar_url);
-					console.log(data._json.avatar_name);
-
-					var githubAvatar = data._json.avatar_url;
-
-					// $("#username").text(data._json.name);
-					$("#username").text(data.username);
-					$(".user-avatar img").attr("src", githubAvatar);
-
-				});
-
-			});
-		</script>
-
-	</body>
+          // $("#username").text(data._json.name);
+          $("#username").text(data.username);
+          $(".user-avatar img").attr("src", githubAvatar);
+        });
+      });
+    </script>
+  </body>
 
 </html>

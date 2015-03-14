@@ -1,71 +1,69 @@
+// online.js
+// @IdeasNeverCease
+// ========================================================
+$(function() {
 
-	// online.js
-	// @IdeasNeverCease
-	// ========================================================
+  $(".user-avatar").before("<div class='online-indicator'></div>");
 
-	$(function () {
+  // Detecting the internet connection
+  function updateConnectionStatus(msg, connected) {
 
-		$(".user-avatar").before("<div class='online-indicator'></div>");
+    var el = document.querySelector(".online-indicator");
 
-		// Detecting the internet connection
-		function updateConnectionStatus(msg, connected) {
+    if (connected) {
+      if (el.classList) {
+        el.classList.add("connected");
+        el.classList.remove("disconnected");
+      } else {
+        el.addClass("connected");
+        el.removeClass("disconnected");
+      }
+    } else {
+      if (el.classList) {
+        el.classList.remove("connected");
+        el.classList.add("disconnected");
+      } else {
+        el.removeClass("connected");
+        el.addClass("disconnected");
+      }
+    }
 
-			var el = document.querySelector(".online-indicator");
+    // el.innerHTML = msg + "<div></div>";
 
-			if (connected) {
-				if (el.classList) {
-					el.classList.add("connected");
-					el.classList.remove("disconnected");
-				} else {
-					el.addClass("connected");
-					el.removeClass("disconnected");
-				}
-			} else {
-				if (el.classList) {
-					el.classList.remove("connected");
-					el.classList.add("disconnected");
-				} else {
-					el.removeClass("connected");
-					el.addClass("disconnected");
-				}
-			}
+  }
 
-			// el.innerHTML = msg + "<div></div>";
+  window.addEventListener("load", function(e) {
 
-		}
+    if (navigator.onLine) {
 
-		window.addEventListener("load", function (e) {
+      $(".online-indicator").css("background-color", "#00ff00");
+      updateConnectionStatus("Online", true);
+      console.log("hikari is online");
 
-			if (navigator.onLine) {
+    } else {
 
-				$(".online-indicator").css("background-color", "#00ff00");
-				updateConnectionStatus("Online", true);
-				console.log("hikari is online");
+      $(".online-indicator").css("background-color", "#ff3131");
+      updateConnectionStatus("Offline", false);
+      console.log("hikari is offline");
 
-			} else {
+    }
 
-				$(".online-indicator").css("background-color", "#ff3131");
-				updateConnectionStatus("Offline", false);
-				console.log("hikari is offline");
+  }, false);
 
-			}
+  window.addEventListener("online", function(e) {
 
-		}, false);
+    $(".online-indicator").css("background-color", "#00ff00");
+    updateConnectionStatus("Online", true);
+    console.log("hikari is online");
 
-		window.addEventListener("online", function (e) {
+  }, false);
 
-			$(".online-indicator").css("background-color", "#00ff00");
-			updateConnectionStatus("Online", true);
-			console.log("hikari is online");
+  window.addEventListener("offline", function(e) {
 
-		}, false);
+    $(".online-indicator").css("background-color", "#ff3131");
+    updateConnectionStatus("Offline", false);
+    console.log("hikari is offline");
 
-		window.addEventListener("offline", function (e) {
+  }, false);
 
-			$(".online-indicator").css("background-color", "#ff3131");
-			updateConnectionStatus("Offline", false);
-			console.log("hikari is offline");
-
-		}, false);
-
-	});
+});

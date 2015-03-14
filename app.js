@@ -1,6 +1,14 @@
-
 // OAuth keys and secrets
-var fs = require("fs");
+var
+  require,
+  process,
+  __dirname,
+  fbID,
+  fbSecret,
+  githubID,
+  githubSecret,
+  fs = require("fs");
+
 eval(fs.readFileSync("./boot/oauth.js") + "");
 
 // hikari dependencies
@@ -11,6 +19,8 @@ var FacebookStrategy = require("passport-facebook").Strategy;
 var GitHubStrategy = require("passport-github").Strategy;
 
 var app = express();
+
+
 
 // Environment setup
 app.set("port", process.env.PORT || 1343);
@@ -25,29 +35,32 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(__dirname + "/system"));
 
+
+
 // Development only
 if ("development" == app.get("env")) {
   app.use(express.errorHandler());
 }
 
+
+
 // Authentication with Facebook
-passport.use(new FacebookStrategy({
-		clientID: fbID,
-		clientSecret: fbSecret,
-		callbackURL: "http://localhost:1343/auth/facebook/callback"
-		// profileFields: ["id", "displayName", "photos"]
-	},
-	function (accessToken, refreshToken, profile, done) {
-		process.nextTick(function () {
+passport.use(
+  new FacebookStrategy({
+    clientID: fbID,
+    clientSecret: fbSecret,
+    callbackURL: "http://localhost:1343/auth/facebook/callback"
+    // profileFields: ["id", "displayName", "photos"]
+  },
+  function (accessToken, refreshToken, profile, done) {
+    process.nextTick(function () {
+      // should probably disable this and use callbacks...womp, will do later
+      fs.writeFile("system/account/facebookProfile.json", JSON.stringify(profile));
 
-			// should probably disable this and use callbacks...womp, will do later
-			fs.writeFile("system/account/facebookProfile.json", JSON.stringify(profile));
-
-			console.log(profile);
-			return done(null, profile);
-
-		});
-	}
+      console.log(profile);
+      return done(null, profile);
+    });
+  }
 ));
 
 passport.serializeUser(function (user, done) { done(null, user); });
@@ -59,36 +72,43 @@ app.get("/auth/facebook/callback", passport.authenticate("facebook", { successRe
 app.get("/", function (req, res) { res.render("login.html"); });
 app.get("/s", function (req, res) { res.render("index.html"); });
 
+
+
 // Authentication with GitHub
-passport.use(new GitHubStrategy({
-		clientID: githubID,
-		clientSecret: githubSecret,
-		callbackURL: "http://localhost:1343/auth/github/callback"
-	},
-	function (accessToken, refreshToken, profile, done) {
-		process.nextTick(function () {
+passport.use(
+  new GitHubStrategy({
+    clientID: githubID,
+    clientSecret: githubSecret,
+    callbackURL: "http://localhost:1343/auth/github/callback"
+  },
+  function (accessToken, refreshToken, profile, done) {
+    process.nextTick(function () {
+      // should probably disable this and use callbacks...womp, will do later
+      fs.writeFile("system/account/githubProfile.json", JSON.stringify(profile));
 
-			// should probably disable this and use callbacks...womp, will do later
-			fs.writeFile("system/account/githubProfile.json", JSON.stringify(profile));
+      var userAvatar = profile._json.gravatar_id;
+      var userName = profile._json.username;
 
-			var userAvatar = profile._json.gravatar_id;
-			var userName = profile._json.username;
-
-			console.log(profile);
-			return done(null, profile);
-
-		});
-	}
+      console.log(profile);
+      return done(null, profile);
+    });
+  }
 ));
+
+
 
 app.get("/auth/github", passport.authenticate("github"));
 app.get("/auth/github/callback", passport.authenticate("github", { successRedirect: "/s", failureRedirect: "/" }));
 
+
+
 // Logout
 app.get("/logout", function(req, res) {
-	req.logout();
-	res.redirect("/");
+  req.logout();
+  res.redirect("/");
 });
+
+
 
 // Start hikari!
 http.createServer(app).listen(app.get("port"), function () {
