@@ -114,11 +114,13 @@
       });
     </script>
 
+    <!--/
     <script src="logic/contextMenu.js"></script>
     <script src="logic/contextMenu/taskbar.js"></script>
     <script src="logic/contextMenu/desktop.js"></script>
     <script src="logic/contextMenu/folder.js"></script>
     <script src="logic/contextMenu/image.js"></script>
+    /-->
   </head>
 
   <!--/	LET'S BEGIN /-->
@@ -206,7 +208,6 @@
 
         window.wm = wm; // For debugging reasons
 
-        /*
         var jqxhr = $.getJSON("account/githubProfile.json", function (data) {
           console.log(data.username);
           console.log(data._json.avatar_url);
@@ -215,8 +216,8 @@
 
           $(".user-avatar img").attr("src", githubAvatar);
         });
-        */
 
+        /*
         var jqxhr = $.getJSON("account/facebookProfile.json", function (data) {
           console.log(data.username);
           // https://graph.facebook.com/USERNAME/picture?type=large
@@ -227,6 +228,7 @@
 
           $(".user-avatar img").attr("src", facebookAvatar);
         });
+        */
 
         // disable for testing
         // $.playSound("shell/sounds/gaia-09/logon-sound");
