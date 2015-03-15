@@ -10,20 +10,20 @@
  *
  * Version 2.3.0 - Last updated: June 16 2013
  **/
-(function($) {
+(function ($) {
 
   "use strict";
 
   $.extend({
-    simpleWeather: function(options) {
+    simpleWeather: function (options) {
 
       options = $.extend({
         zipcode: "",
         woeid: "2357536",
         location: "",
         unit: "f",
-        success: function(weather) {},
-        error: function(message) {}
+        success: function (weather) {},
+        error: function (message) {}
       }, options);
 
       var now = new Date();
@@ -43,10 +43,10 @@
 
       $.getJSON(
         weatherUrl,
-        function(data) {
+        function (data) {
 
           if (data !== null && data.query.results !== null && data.query.results.channel.description !== "Yahoo! Weather Error") {
-            $.each(data.query.results, function(i, result) {
+            $.each(data.query.results, function (i, result) {
 
               if (result.constructor.toString().indexOf("Array") !== -1) {
                 result = result[0];

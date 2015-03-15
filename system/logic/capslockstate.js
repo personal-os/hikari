@@ -8,12 +8,12 @@
  *
  * Date: Sun Feb 3 2013 21:34:00 GMT
  */
-(function($) {
+(function ($) {
 
   var capsLockState = "unknown";
 
   var methods = {
-    init: function(options) {
+    init: function (options) {
 
       // Create some defaults, extending them with any options that were provided
       var settings = $.extend({
@@ -24,7 +24,7 @@
       var capsLockForcedUppercase = /MacPPC|MacIntel/.test(window.navigator.platform) === true;
 
       var helpers = {
-        isCapslockOn: function(event) {
+        isCapslockOn: function (event) {
 
           var shiftOn = false;
 
@@ -53,7 +53,7 @@
 
         },
 
-        isCapslockKey: function(event) {
+        isCapslockKey: function (event) {
 
           var keyCode = event.which; // logs which key was pressed
 
@@ -67,7 +67,7 @@
 
         },
 
-        hasStateChange: function(previousState, currentState) {
+        hasStateChange: function (previousState, currentState) {
 
           if (previousState !== currentState) {
             $("body").trigger("capsChanged");
@@ -85,7 +85,7 @@
       };
 
       // Check all keys
-      $("body").bind("keypress.capslockstate", function(event) {
+      $("body").bind("keypress.capslockstate", function (event) {
 
         var previousState = capsLockState;
 
@@ -95,7 +95,7 @@
       });
 
       // Check if key was Caps Lock key
-      $("body").bind("keydown.capslockstate", function(event) {
+      $("body").bind("keydown.capslockstate", function (event) {
 
         var previousState = capsLockState;
 
@@ -105,7 +105,7 @@
       });
 
       // If the window loses focus then we no longer know the state
-      $(window).bind("focus.capslockstate", function() {
+      $(window).bind("focus.capslockstate", function () {
 
         var previousState = capsLockState;
 
@@ -118,16 +118,16 @@
       helpers.hasStateChange(null, "unknown");
 
       // Maintain chainability
-      return this.each(function() {});
+      return this.each(function () {});
 
     },
 
-    state: function() {
+    state: function () {
       return capsLockState;
     },
 
-    destroy: function() {
-      return this.each(function() {
+    destroy: function () {
+      return this.each(function () {
 
         $("body").unbind(".capslockstate");
         $(window).unbind(".capslockstate");
@@ -136,7 +136,7 @@
     }
   };
 
-  jQuery.fn.capslockstate = function(method) {
+  jQuery.fn.capslockstate = function (method) {
 
     // Method calling logic
     if (methods[method]) {

@@ -3,14 +3,14 @@
 // ========================================================
 // base code by Steven Levithan, Scott Trenda,
 // and Kris Kowal
-var dateFormat = function() {
+var dateFormat = function () {
 
   var
   token = /d{1,4}|m{1,4}|yy(?:yy)?|([HhMsTt])\1?|[LloSZ]|"[^"]*"|'[^']*'/g,
       timezone = /\b(?:[PMCEA][SDP]T|(?:Pacific|Mountain|Central|Eastern|Atlantic) (?:Standard|Daylight|Prevailing) Time|(?:GMT|UTC)(?:[-+]\d{4})?)\b/g,
       timezoneClip = /[^-+\dA-Z]/g,
 
-      pad = function(val, len) {
+      pad = function (val, len) {
 
         val = String(val);
         len = len || 2;
@@ -21,7 +21,7 @@ var dateFormat = function() {
       };
 
   // Regexes and supporting functions are cached through closure
-  return function(date, mask, utc) {
+  return function (date, mask, utc) {
 
     var dF = dateFormat;
 
@@ -85,7 +85,7 @@ var dateFormat = function() {
           S: ["th", "st", "nd", "rd"][d % 10 > 3 ? 0 : (d % 100 - d % 10 != 10) * d % 10]
         };
 
-    return mask.replace(token, function($0) {
+    return mask.replace(token, function ($0) {
       return $0 in flags ? flags[$0] : $0.slice(1, $0.length - 1);
     });
 
@@ -123,6 +123,6 @@ dateFormat.i18n = {
 };
 
 // For convenience...
-Date.prototype.format = function(mask, utc) {
+Date.prototype.format = function (mask, utc) {
   return dateFormat(this, mask, utc);
 };

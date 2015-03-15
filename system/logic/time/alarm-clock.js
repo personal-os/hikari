@@ -3,9 +3,9 @@
 // ========================================================
 // http://neswork.com/javascript/alarm-clock version 0.4
 // Gavriel Fleischer
-eval(function(p, a, c, k, e, d) {
+eval(function (p, a, c, k, e, d) {
 
-  e = function(c) {
+  e = function (c) {
     return (c < a ? "" : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36));
   };
 

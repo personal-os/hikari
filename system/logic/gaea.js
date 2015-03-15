@@ -7,7 +7,7 @@
 var $vW = $(window).width(),
     $vH = $(window).height();
 
-$(function() {
+$(function () {
 
   // $(".wm-overlay").append('<div class="desktop"></div>'); // for desktop context menu
   // $(".desktop").css("height", $vH - 50 + "px"); // taskbar is 50px tall
@@ -18,7 +18,7 @@ $(function() {
 });
 
 // Icon view
-$(document).on("click", "#contentView-icons", function() {
+$(document).on("click", "#contentView-icons", function () {
 
   var xhr;
   if (window.XMLHttpRequest) xhr = new XMLHttpRequest(); // All browsers, except IE. Fuck IE.
@@ -26,7 +26,7 @@ $(document).on("click", "#contentView-icons", function() {
 
   xhr.open("GET", "chips/BN-I/data.json", false);
 
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = function () {
 
     if (xhr.readyState === 4 && xhr.status === 200) {
       var
@@ -51,7 +51,7 @@ $(document).on("click", "#contentView-icons", function() {
 
 });
 
-$(document).on("click", "#contentView-list", function() {
+$(document).on("click", "#contentView-list", function () {
 
   var xhr;
   if (window.XMLHttpRequest) xhr = new XMLHttpRequest(); // All browsers, except IE. Fuck IE.
@@ -59,7 +59,7 @@ $(document).on("click", "#contentView-list", function() {
 
   xhr.open("GET", "chips/BN-I/data.json", false);
 
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = function () {
 
     if (xhr.readyState === 4 && xhr.status === 200) {
       var
@@ -85,7 +85,7 @@ $(document).on("click", "#contentView-list", function() {
 });
 
 // Chips
-$("#select-chip-folder").click(function(e) {
+$("#select-chip-folder").click(function (e) {
 
   $(".wm-space").append('<section id="chip-folder"></section>');
 
@@ -96,7 +96,7 @@ $("#select-chip-folder").click(function(e) {
 
   xhr.open("GET", "chips/BN-I/data.json", false);
 
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = function () {
 
     if (xhr.readyState === 4 && xhr.status === 200) {
       var
@@ -136,7 +136,7 @@ $("#select-chip-folder").click(function(e) {
 });
 
 // SubChips
-$("#select-subchip-folder").click(function(e) {
+$("#select-subchip-folder").click(function (e) {
 
   $(".wm-space").append('<section id="subchip-folder">This is the SubChip Folder.</section>');
 
@@ -156,7 +156,7 @@ $("#select-subchip-folder").click(function(e) {
 });
 
 // Data Library
-$("#select-data-library").click(function(e) {
+$("#select-data-library").click(function (e) {
 
   $(".wm-space").append('<section id="data-library">Kind of like an encyclopedia of sorts, this will have information about every single BattleChip from MMBN1-MMBN6. Possibly even 4.5 and OSS.</section>');
 
@@ -176,7 +176,7 @@ $("#select-data-library").click(function(e) {
 });
 
 // NetNavi
-$("#select-netnavi").click(function(e) {
+$("#select-netnavi").click(function (e) {
 
   $(".wm-space").append('<section id="netnavi">Awesome NetNavi stuff to come soon. Like, the NaviCustomizer from MMBN3!</section>');
 
@@ -196,7 +196,7 @@ $("#select-netnavi").click(function(e) {
 });
 
 // EMail
-$("#select-email").click(function(e) {
+$("#select-email").click(function (e) {
 
   $(".wm-space").append('<section id="email">I will probably use <a href="https://github.com/khamidou/kite">Kite</a> for this.</section>');
 
@@ -216,7 +216,7 @@ $("#select-email").click(function(e) {
 });
 
 // Key Items
-$("#select-key-item").click(function(e) {
+$("#select-key-item").click(function (e) {
 
   $(".wm-space").append('<section id="key-item">This is the Key Items folder. Maybe NetBattler Licenses will reside here.</section>');
 
@@ -236,7 +236,7 @@ $("#select-key-item").click(function(e) {
 });
 
 // The Network × https://twitter.com/on_thenetwork
-$("#select-network").click(function(e) {
+$("#select-network").click(function (e) {
 
   // $(".wm-space").append('<section id="network">Hehe, this is gonna be awesome. And, take a bajillion years to create. You know how the Internet in MMBN and the anime was 3D? Yeah. Exactly. A bajillion years.</section>');
 
@@ -263,7 +263,7 @@ $("#select-network").click(function(e) {
 });
 
 // Internet Maps
-$("#select-map").click(function(e) {
+$("#select-map").click(function (e) {
 
   $(".wm-space").append('<section id="map">This is where maps of areas on The Network will reside.</section>');
 
@@ -283,7 +283,7 @@ $("#select-map").click(function(e) {
 });
 
 // Save
-$("#select-save").click(function(e) {
+$("#select-save").click(function (e) {
 
   $(".wm-space").append('<section id="save">Hmm, idk. Sync on demand?</section>');
 
@@ -303,7 +303,7 @@ $("#select-save").click(function(e) {
 });
 
 // System Fonts
-$("#select-system-fonts").click(function(e) {
+$("#select-system-fonts").click(function (e) {
 
   $(".wm-space").append('<section id="system-fonts"></section>');
 
@@ -323,7 +323,7 @@ $("#select-system-fonts").click(function(e) {
 });
 
 // System Language
-$("#select-system-language").click(function(e) {
+$("#select-system-language").click(function (e) {
 
   $(".wm-space").append('<section id="system-language"></section>');
 
@@ -343,7 +343,7 @@ $("#select-system-language").click(function(e) {
 });
 
 // System Mail Accounts
-$("#select-system-mail").click(function(e) {
+$("#select-system-mail").click(function (e) {
 
   $(".wm-space").append('<section id="system-mail"></section>');
 
@@ -363,7 +363,7 @@ $("#select-system-mail").click(function(e) {
 });
 
 // Personalization
-$("#select-system-personalization").click(function(e) {
+$("#select-system-personalization").click(function (e) {
 
   $(".wm-space").append('<section id="system-personalization"></section>');
 
@@ -383,7 +383,7 @@ $("#select-system-personalization").click(function(e) {
 });
 
 // Programs & Features
-$("#select-system-progsFeats").click(function(e) {
+$("#select-system-progsFeats").click(function (e) {
 
   $(".wm-space").append('<section id="system-progsFeats"></section>');
 
@@ -403,7 +403,7 @@ $("#select-system-progsFeats").click(function(e) {
 });
 
 // Sync
-$("#select-system-sync").click(function(e) {
+$("#select-system-sync").click(function (e) {
 
   $(".wm-space").append('<section id="system-sync"></section>');
 
@@ -423,7 +423,7 @@ $("#select-system-sync").click(function(e) {
 });
 
 // System
-$("#select-system-OS").click(function(e) {
+$("#select-system-OS").click(function (e) {
 
   $(".wm-space").append('<section id="system-OS"></section>');
 
@@ -443,7 +443,7 @@ $("#select-system-OS").click(function(e) {
 });
 
 // User Accounts
-$("#select-system-userAccounts").click(function(e) {
+$("#select-system-userAccounts").click(function (e) {
 
   $(".wm-space").append('<section id="system-userAccounts"></section>');
 
@@ -463,7 +463,7 @@ $("#select-system-userAccounts").click(function(e) {
 });
 
 // System Update
-$("#select-system-update").click(function(e) {
+$("#select-system-update").click(function (e) {
 
   $(".wm-space").append('<section id="system-update"></section>');
 
@@ -483,7 +483,7 @@ $("#select-system-update").click(function(e) {
 });
 
 // Change desktop background
-$(document).on("click", "#context-changeBG", function() {
+$(document).on("click", "#context-changeBG", function () {
 
   $(".wm-space").append('<section id="hikari-changeBG"></section>');
 
@@ -503,7 +503,7 @@ $(document).on("click", "#context-changeBG", function() {
 });
 
 // About hikari
-$(document).on("click", "#contextSystem-about", function() {
+$(document).on("click", "#contextSystem-about", function () {
 
   $(".context-menu-root").trigger("contextmenu:hide");
   $(".wm-space").append('<section id="hikari-about"></section>');
@@ -537,7 +537,7 @@ $(document).on("click", "#contextSystem-about", function() {
 });
 
 // Run/Dekao terminal
-$(document).on("click", "#context-run", function() {
+$(document).on("click", "#context-run", function () {
 
   $(".context-menu-root").trigger("contextmenu:hide");
   $(".wm-space").append('<section id="hikari-run"></section>');
@@ -555,7 +555,7 @@ $(document).on("click", "#context-run", function() {
 
   $("#hikari-run").parent().css("background-color", "#191919");
 
-  $.getScript("applications/terminal/app.js", function() {
+  $.getScript("applications/terminal/app.js", function () {
 
     var terminus = new Dekao("#hikari-run", {
       welcome: '<div class="identity"><h1>Dekao</h1>' + Dekao.version + '</div>Copyright 2014 Paul Anthony Webb.<br/>Press <span style="color: #07d0eb">&lt;tab&gt;</span> to see a list of available commands.'
@@ -583,7 +583,7 @@ $(document).on("click", "#context-run", function() {
 	};
 	*/
 
-$(function() {
+$(function () {
 
   day = new Date(); // get the date
   x = day.getHours(); // get the hour
@@ -718,9 +718,9 @@ $(function() {
 });
 
 // titleSignet × HubSpot × https://github.com/HubSpot/signet/tree/master/titleSignet
-(function() {
+(function () {
   var autoInit, deferConsole, draw, getContent, getOptions, orDefault, tag;
-  getOptions = function(options) {
+  getOptions = function (options) {
     options.title = orDefault(options.title, getContent('meta[name="application-name"]'), getContent('meta[property="og:title"]'), document.title.split(/\u0020[\/\\\|\-\u8211\u8212]\u0020|\:\u0020/)[0], "");
     options.author = orDefault(options.author, getContent('meta[name=author]'), '');
     options.description = orDefault(options.description, getContent("meta[name=description]"), getContent('meta[property="og:description"]'), "");
@@ -732,7 +732,7 @@ $(function() {
     options.descriptionStyles = orDefault(options.descriptionStyles, "" + options.baseStyles + "; font-size: 10px; line-height: 20px;");
     return options;
   };
-  orDefault = function() {
+  orDefault = function () {
     var argument, _i, _len;
     for (_i = 0, _len = arguments.length; _i < _len; _i++) {
       argument = arguments[_i];
@@ -742,23 +742,23 @@ $(function() {
     }
     return arguments[arguments.length - 1];
   };
-  getContent = function(selector) {
+  getContent = function (selector) {
     var _ref;
     return (_ref = document.head.querySelector(selector)) !== null ? _ref.content : void 0;
   };
-  deferConsole = function(fn) {
+  deferConsole = function (fn) {
     var callable, i, messages, old, type, types, _fn, _i, _len;
     types = ["log", "debug", "warn", "error"];
     old = {};
     callable = {};
     messages = [];
     i = types.length;
-    _fn = function(type) {
+    _fn = function (type) {
       old[type] = console[type];
-      callable[type] = function() {
+      callable[type] = function () {
         return old[type].apply(console, arguments);
       };
-      return console[type] = function() {
+      return console[type] = function () {
         messages.push([type, arguments]);
         return void 0;
       };
@@ -767,9 +767,9 @@ $(function() {
       type = types[i];
       _fn(type);
     }
-    return setTimeout((function() {
+    return setTimeout((function () {
       var _then;
-      _then = function() {
+      _then = function () {
         var block, message, _j, _len1, _results;
         while (messages.length) {
           block = messages.shift();
@@ -787,9 +787,9 @@ $(function() {
       return fn(callable, _then);
     }), 0);
   };
-  draw = function(options, _console, cb) {
+  draw = function (options, _console, cb) {
     var img, _draw;
-    _draw = function() {
+    _draw = function () {
       var args, hue, i;
       if (options.title) {
         if (!options.image) {
@@ -832,7 +832,7 @@ $(function() {
       return _draw();
     } else {
       img = new Image();
-      img.onload = function() {
+      img.onload = function () {
         _console.log("%c ", "font-size: 0; line-height: " + img.height + "px; padding: " + (Math.floor(img.height / 2)) + "px " + img.width + "px " + (Math.ceil(img.height / 2)) + "px 0; background-image: url(\"" + img.src + "\");");
         return _draw();
       };
@@ -842,7 +842,7 @@ $(function() {
   window.signet = window.signet || {};
   window.signet.options = window.signet.options || window.signetOptions || {};
   if (!window.console || !window.console.log || !document.head || !document.querySelector) {
-    window.signet.draw = function() {};
+    window.signet.draw = function () {};
     return;
   }
   autoInit = true;
@@ -854,7 +854,7 @@ $(function() {
     autoInit = false;
   }
   if (autoInit) {
-    deferConsole(function(_console, _then) {
+    deferConsole(function (_console, _then) {
       return draw(null, _console, _then);
     });
   }

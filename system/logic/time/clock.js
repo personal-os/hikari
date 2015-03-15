@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
 
   // var now = new Date();
   // var one_min = new Date(now.getTime() + 60000);

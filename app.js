@@ -23,17 +23,47 @@ var app = express();
 
 
 // Environment setup
+
 app.set("port", process.env.PORT || 1343);
 app.set("view engine", "html");
 app.engine("html", require("hbs").__express);
-app.use(express.favicon());
-app.use(express.logger("dev"));
-app.use(express.json());
-app.use(express.urlencoded());
-app.use(express.methodOverride());
+
+// app.use(express.favicon());
+app.use(favicon(__dirname + "/system/shell/favicon.png"));
+
+// app.use(express.logger("dev"));
+app.use(logger("dev"));
+
+// app.use(express.json());
+// app.use(express.urlencoded());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// app.use(express.methodOverride());
+app.use(methodOverride());
+
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(express.static(__dirname + "/system"));
+
+// app.use(express.static(__dirname + "/system"));
+app.set("views", path.join(__dirname, "views"));
+
+
+// app.set('view engine', 'jade');
+// app.use(logger('dev'));
+// app.use(methodOverride());
+/*
+app.use(session({ resave: true,
+                 saveUninitialized: true,
+                 secret: 'uwotm8' }));
+*/
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: true }));
+app.use(multer());
+// app.use(express.static(path.join(__dirname, "public")));
+
+app.get("/", routes.index);
+// app.get("/users", user.list);
 
 
 
@@ -111,6 +141,13 @@ app.get("/logout", function(req, res) {
 
 
 // Start hikari!
+/*
 http.createServer(app).listen(app.get("port"), function () {
   console.log("hikari initialized on " + app.get("port"));
+});
+*/
+
+var server = app.listen(app.get("port"), function() {
+  // debug('Express server listening on port ' + server.address().port);
+  console.log("hikari initialized on " + server.address().port);
 });

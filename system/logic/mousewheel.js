@@ -9,7 +9,7 @@
  *
  * Requires: 1.2.2+
  */
-(function(factory) {
+(function (factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
     define(['jquery'], factory);
@@ -20,7 +20,7 @@
     // Browser globals
     factory(jQuery);
   }
-}(function($) {
+}(function ($) {
 
   var toFix = ['wheel', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll'];
   var toBind = 'onwheel' in document || document.documentMode >= 9 ? ['wheel'] : ['mousewheel', 'DomMouseScroll', 'MozMousePixelScroll'];
@@ -33,7 +33,7 @@
   }
 
   $.event.special.mousewheel = {
-    setup: function() {
+    setup: function () {
       if (this.addEventListener) {
         for (var i = toBind.length; i;) {
           this.addEventListener(toBind[--i], handler, false);
@@ -43,7 +43,7 @@
       }
     },
 
-    teardown: function() {
+    teardown: function () {
       if (this.removeEventListener) {
         for (var i = toBind.length; i;) {
           this.removeEventListener(toBind[--i], handler, false);
@@ -55,11 +55,11 @@
   };
 
   $.fn.extend({
-    mousewheel: function(fn) {
+    mousewheel: function (fn) {
       return fn ? this.bind("mousewheel", fn) : this.trigger("mousewheel");
     },
 
-    unmousewheel: function(fn) {
+    unmousewheel: function (fn) {
       return this.unbind("mousewheel", fn);
     }
   });

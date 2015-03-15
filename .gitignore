@@ -42,6 +42,7 @@ ref
 oauth.js
 githubProfile.json
 facebookProfile.json
+node_modules
 
 # Development files #
 #####################

@@ -4,9 +4,12 @@
   "private": true,
   "version": "0.0.5",
   "dependencies": {
-    "express": "3.4.8",
-    "hbs": "2.4.0",
-    "mongodb": "*",
-    "monk": "0.8.1"
+    "express": "*",
+    "hbs": "*",
+    "nodemon": "*",
+    "passport": "*",
+    "passport-facebook": "*",
+    "passport-github": "*",
+    "passport-local": "*"
   }
 }

@@ -1,7 +1,7 @@
 // online.js
 // @IdeasNeverCease
 // ========================================================
-$(function() {
+$(function () {
 
   $(".user-avatar").before("<div class='online-indicator'></div>");
 
@@ -32,7 +32,7 @@ $(function() {
 
   }
 
-  window.addEventListener("load", function(e) {
+  window.addEventListener("load", function (e) {
 
     if (navigator.onLine) {
 
@@ -50,7 +50,7 @@ $(function() {
 
   }, false);
 
-  window.addEventListener("online", function(e) {
+  window.addEventListener("online", function (e) {
 
     $(".online-indicator").css("background-color", "#00ff00");
     updateConnectionStatus("Online", true);
@@ -58,7 +58,7 @@ $(function() {
 
   }, false);
 
-  window.addEventListener("offline", function(e) {
+  window.addEventListener("offline", function (e) {
 
     $(".online-indicator").css("background-color", "#ff3131");
     updateConnectionStatus("Offline", false);

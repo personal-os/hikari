@@ -1,11 +1,11 @@
 // Backstretch × http://srobbin.com/jquery-plugins/backstretch × by Scott Robbin
 ;
-(function($, window, undefined) {
+(function ($, window, undefined) {
 
   "use strict";
 
   // PLUGIN DEFINITION
-  $.fn.backstretch = function(images, options) {
+  $.fn.backstretch = function (images, options) {
 
     // We need at least one image or method name
     if (images === undefined || images.length === 0) {
@@ -18,7 +18,7 @@
       window.scrollTo(0, 0);
     }
 
-    return this.each(function() {
+    return this.each(function () {
 
       var
       $this = $(this),
@@ -51,13 +51,13 @@
   };
 
   // If no element is supplied, we'll attach to body
-  $.backstretch = function(images, options) {
+  $.backstretch = function (images, options) {
     // Return the instance
     return $("body").backstretch(images, options).data("backstretch");
   };
 
   // Custom selector
-  $.expr[":"].backstretch = function(elem) {
+  $.expr[":"].backstretch = function (elem) {
     return $(elem).data("backstretch") !== undefined;
   };
 
@@ -97,7 +97,7 @@
   };
 
   // CLASS DEFINITION
-  var Backstretch = function(container, images, options) {
+  var Backstretch = function (container, images, options) {
 
     this.options = $.extend({}, $.fn.backstretch.defaults, options || {});
 
@@ -110,7 +110,7 @@
     this.images = $.isArray(images) ? images : [images];
 
     // Preload images
-    $.each(this.images, function() {
+    $.each(this.images, function () {
       $("<img/>")[0].src = this;
     });
 
@@ -162,7 +162,7 @@
     this.show(this.index);
 
     // Listen for resize
-    $(window).on("resize.backstretch", $.proxy(this.resize, this)).on("orientationchange.backstretch", $.proxy(function() {
+    $(window).on("resize.backstretch", $.proxy(this.resize, this)).on("orientationchange.backstretch", $.proxy(function () {
       // Need to do this in order to get the right window height
       if (this.isBody && window.pageYOffset === 0) {
         window.scrollTo(0, 1);
@@ -174,7 +174,7 @@
 
   // PUBLIC METHODS
   Backstretch.prototype = {
-    resize: function() {
+    resize: function () {
 
       try {
         var
@@ -221,7 +221,7 @@
     },
 
     // Show the slide at a certain position
-    show: function(newIndex) {
+    show: function (newIndex) {
 
       // Validate index
       if (Math.abs(newIndex) > this.images.length - 1) {
@@ -246,7 +246,7 @@
       clearInterval(self.interval);
 
       // New image
-      self.$img = $("<img alt=\"\"/>").css(styles.img).bind("load", function(e) {
+      self.$img = $("<img alt=\"\"/>").css(styles.img).bind("load", function (e) {
 
         var
         imgWidth = this.width || $(e.target).width(),
@@ -257,7 +257,7 @@
 
         // Show the image, then delete the old one
         // "speed" option has been deprecated, but we want backwards compatibilty
-        $(this).fadeIn(self.options.speed || self.options.fade, function() {
+        $(this).fadeIn(self.options.speed || self.options.fade, function () {
 
           oldImage.remove();
 
@@ -268,7 +268,7 @@
 
           // Trigger the "after" and "show" events
           // "show" is being deprecated
-          $(["after", "show"]).each(function() {
+          $(["after", "show"]).each(function () {
             self.$container.trigger($.Event("backstretch." + this, evtOptions), [self, newIndex]);
           });
 
@@ -285,36 +285,36 @@
 
     },
 
-    next: function() {
+    next: function () {
       // Next slide
       return this.show(this.index < this.images.length - 1 ? this.index + 1 : 0);
     },
 
-    prev: function() {
+    prev: function () {
       // Previous slide
       return this.show(this.index === 0 ? this.images.length - 1 : this.index - 1);
     },
 
-    pause: function() {
+    pause: function () {
       // Pause the slideshow
       this.paused = true;
       return this;
     },
 
-    resume: function() {
+    resume: function () {
       // Resume the slideshow
       this.paused = false;
       this.next();
       return this;
     },
 
-    cycle: function() {
+    cycle: function () {
       // Start/resume the slideshow
       if (this.images.length > 1) {
         // Clear the interval, just in case
         clearInterval(this.interval);
 
-        this.interval = setInterval($.proxy(function() {
+        this.interval = setInterval($.proxy(function () {
           // Check for paused slideshow
           if (!this.paused) {
             this.next();
@@ -324,7 +324,7 @@
       return this;
     },
 
-    destroy: function(preserveBackground) {
+    destroy: function (preserveBackground) {
 
       // Stop the resize events
       $(window).off("resize.backstretch orientationchange.backstretch");
@@ -355,7 +355,7 @@
 		Modified to detect IE6
 	*/
 
-  var supportsFixedPosition = (function() {
+  var supportsFixedPosition = (function () {
 
     var
     ua = navigator.userAgent,

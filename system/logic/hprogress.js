@@ -1,6 +1,5 @@
 // based on hProgress by Rico Sta. Cruz
-;
-(function(factory) {
+(function (factory) {
 
   if (typeof module === "function") {
     module.exports = factory(this.jQuery || require("jquery"));
@@ -8,7 +7,7 @@
     this.hProgress = factory(this.jQuery);
   }
 
-})(function($) {
+})(function ($) {
 
   var hProgress = {};
 
@@ -29,7 +28,7 @@
   // Update configuration
   // hProgress.configure({ minimum: 0.1 });
 
-  hProgress.configure = function(options) {
+  hProgress.configure = function (options) {
     $.extend(Settings, options);
     return this;
   };
@@ -42,7 +41,7 @@
   // hProgress.set(0.4);
   // hProgress.set(1.0);
 
-  hProgress.set = function(n) {
+  hProgress.set = function (n) {
 
     var started = hProgress.isStarted();
 
@@ -57,7 +56,7 @@
 
     $progress[0].offsetWidth; // Repaint
 
-    $progress.queue(function(next) {
+    $progress.queue(function (next) {
 
       // Set positionUsing if it hasn't already been set
       if (Settings.positionUsing === "") Settings.positionUsing = hProgress.getPositioningCSS();
@@ -73,14 +72,14 @@
         });
         $progress[0].offsetWidth; /* Repaint */
 
-        setTimeout(function() {
+        setTimeout(function () {
 
           $progress.css({
             transition: "all " + speed + "ms linear",
             opacity: 0
           });
 
-          setTimeout(function() {
+          setTimeout(function () {
 
             hProgress.remove();
             next();
@@ -98,7 +97,7 @@
 
   };
 
-  hProgress.isStarted = function() {
+  hProgress.isStarted = function () {
     return typeof hProgress.status === "number";
   };
 
@@ -106,12 +105,12 @@
   // This is the same as setting the status to 0%, except that it doesn't go backwards
   // hProgress.start();
 
-  hProgress.start = function() {
+  hProgress.start = function () {
 
     if (!hProgress.status) hProgress.set(0);
 
-    var work = function() {
-      setTimeout(function() {
+    var work = function () {
+      setTimeout(function () {
 
         if (!hProgress.status) return;
         hProgress.trickle();
@@ -135,7 +134,7 @@
 
   // hProgress.done(true);
 
-  hProgress.done = function(force) {
+  hProgress.done = function (force) {
 
     if (!force && !hProgress.status) return this;
     return hProgress.inc(0.3 + 0.5 * Math.random()).set(1);
@@ -144,7 +143,7 @@
 
   // Increments by a random amount.
 
-  hProgress.inc = function(amount) {
+  hProgress.inc = function (amount) {
 
     var n = hProgress.status;
 
@@ -161,13 +160,13 @@
 
   };
 
-  hProgress.trickle = function() {
+  hProgress.trickle = function () {
     return hProgress.inc(Math.random() * Settings.trickleRate);
   };
 
   // (Internal) renders the progress bar markup based on the "template" setting
 
-  hProgress.render = function(fromStart) {
+  hProgress.render = function (fromStart) {
 
     if (hProgress.isRendered()) return $("#hprogress");
     $("html").addClass("hprogress-busy");
@@ -193,7 +192,7 @@
 
   // Removes the element. Opposite of render()
 
-  hProgress.remove = function() {
+  hProgress.remove = function () {
 
     $("html").removeClass("hprogress-busy");
     $("#hprogress").remove();
@@ -202,13 +201,13 @@
 
   // Checks if the progress bar is rendered
 
-  hProgress.isRendered = function() {
+  hProgress.isRendered = function () {
     return ($("#hprogress").length > 0);
   };
 
   // Determine which positioning CSS rule to use
 
-  hProgress.getPositioningCSS = function() {
+  hProgress.getPositioningCSS = function () {
 
     // Sniff on document.body.style
     var bodyStyle = document.body.style;

@@ -1,7 +1,7 @@
 // Cursor.js
 // @IdeasNeverCease
 // ========================================================
-$(function() {
+$(function () {
 
   // Set up cursor
   cursor = "";
@@ -21,36 +21,36 @@ $(function() {
   // $("body").append(cursor); // this causes issues
 
   // Link Behavior
-  $(document).on("mouseover", "a", function() {
+  $(document).on("mouseover", "a", function () {
     $("#cursor-02 circle").css("fill", "#50bebf");
   });
 
-  $(document).on("mouseout", "a", function() {
+  $(document).on("mouseout", "a", function () {
     $("#cursor-02 circle").css("fill", "#191919");
   });
 
   // Text Field Behavior
-  $(document).on("mouseover", "input[type=text], input[type=password]", function() {
+  $(document).on("mouseover", "input[type=text], input[type=password]", function () {
     $("#cursor-02 circle").css("fill", "#ffde00");
   });
 
-  $(document).on("mouseout", "input[type=text], input[type=password]", function() {
+  $(document).on("mouseout", "input[type=text], input[type=password]", function () {
     $("#cursor-02 circle").css("fill", "#191919");
   });
 
   // Submit Button Behavior
-  $(document).on("mouseover", "input[type=submit]", function() {
+  $(document).on("mouseover", "input[type=submit]", function () {
     $("#cursor-02 circle").css("fill", "#00ff00");
   });
 
-  $(document).on("mouseout", "input[type=submit]", function() {
+  $(document).on("mouseout", "input[type=submit]", function () {
     $("#cursor-02 circle").css("fill", "#191919");
   });
 
   // Make cursor functional
   var ElementCursor = {
     cursorElement: "",
-    setCursor: function(cursorId) {
+    setCursor: function (cursorId) {
 
       $("html").css("cursor", "none");
       ElementCursor.cursorElement = cursorId;
@@ -58,15 +58,15 @@ $(function() {
 
     },
 
-    removeCursor: function() {
+    removeCursor: function () {
 
       $("html").css("cursor", "");
       ElementCursor.cursorElement = "";
 
     },
 
-    updateCursor: function() {
-      $(document).mousemove(function(e) {
+    updateCursor: function () {
+      $(document).mousemove(function (e) {
 
         $("#" + ElementCursor.cursorElement).css({
           "top": e.pageY + 2 + "px",
