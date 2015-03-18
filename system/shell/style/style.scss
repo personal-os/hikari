@@ -1,0 +1,29 @@
+// System
+@import "default/system.base";
+@import "default/system.taskbar";
+@import "default/system.desktop";
+
+
+
+// Plugins
+@import "default/plugins/system.progress";
+@import "default/plugins/system.menu";
+
+
+
+// @import "default/system.fonts";
+// @import "default/system.icons";
+// @import "default/system.login";
+// @import "default/system.online";
+// @import "default/system.dock";
+// @import "default/system.background";
+// @import "default/system.gaea";
+// @import "default/system.folders";
+// @import "default/system.context-menu";
+
+// @import "default/helper";
+// @import "default/system.windows";
+// @import "default/system.notify-ticker";
+
+// from `shell` folder:
+// sass --watch style:style --style compressed

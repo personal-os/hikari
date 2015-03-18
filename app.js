@@ -29,7 +29,7 @@ app.set("view engine", "html");
 
 app.engine("html", require("hbs").__express);
 
-app.use(favicon(__dirname + "/system/shell/favicon.png"));
+app.use(favicon(__dirname + "/system/images/favicon.png"));
 app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

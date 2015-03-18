@@ -3,12 +3,12 @@
 // ========================================================
 $(function () {
 
-  $(".user-avatar").before("<div class='online-indicator'></div>");
+  $("#userDisplay").after("<div class='system__taskbar__item' id='onlineIndicator'></div>");
 
   // Detecting the internet connection
   function updateConnectionStatus(msg, connected) {
 
-    var el = document.querySelector(".online-indicator");
+    var el = document.querySelector("#onlineIndicator");
 
     if (connected) {
       if (el.classList) {
@@ -33,37 +33,27 @@ $(function () {
   }
 
   window.addEventListener("load", function (e) {
-
     if (navigator.onLine) {
-
-      $(".online-indicator").css("background-color", "#00ff00");
+      $("#onlineIndicator").css("background-color", "#00ff00");
       updateConnectionStatus("Online", true);
       console.log("hikari is online");
-
     } else {
-
-      $(".online-indicator").css("background-color", "#ff3131");
+      $("#onlineIndicator").css("background-color", "#ff3131");
       updateConnectionStatus("Offline", false);
       console.log("hikari is offline");
-
     }
-
   }, false);
 
   window.addEventListener("online", function (e) {
-
-    $(".online-indicator").css("background-color", "#00ff00");
+    $("#onlineIndicator").css("background-color", "#00ff00");
     updateConnectionStatus("Online", true);
     console.log("hikari is online");
-
   }, false);
 
   window.addEventListener("offline", function (e) {
-
-    $(".online-indicator").css("background-color", "#ff3131");
+    $("#onlineIndicator").css("background-color", "#ff3131");
     updateConnectionStatus("Offline", false);
     console.log("hikari is offline");
-
   }, false);
 
 });

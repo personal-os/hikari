@@ -1,0 +1,64 @@
+/////////////////////////////////////////////////////////////////////////////// SYSTEM.TASKBAR/SCSS ///
+
+.system__taskbar {
+  width: 100%; height: 50px;
+
+  background-color: $white;
+  color: rgba($dark-gray, 0.85);
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.system__taskbar__group {
+  width: auto; height: 100%;
+
+  &.left {
+    // border-right: 2px solid rgba($dark-gray, 0.2);
+  }
+
+  &.right {
+    border-left: 2px solid rgba($dark-gray, 0.2);
+  }
+}
+
+.system__taskbar__item {
+  width: auto; height: 100%;
+  float: left;
+}
+
+
+
+#systemMenu,
+#userDisplay {
+  height: 100%;
+  // background-color: $orange;
+}
+
+#systemMenu {
+  border-right: 2px solid rgba($dark-gray, 0.2);
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#userDisplay {
+  width: 50px;
+
+  img {
+    width: 100%; height: 100%;
+  }
+}
+
+#systemMenu,
+#timeDisplay {
+  font-size: 1rem;
+  line-height: 3;
+}
+
+#timeDisplay {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#onlineIndicator {
+  width: 5px;
+}

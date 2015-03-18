@@ -22,24 +22,27 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-    <link rel="stylesheet" href="shell/css/style.css"/>
-    <link rel="shortcut icon" href="shell/favicon.png"/>
+    <link rel="stylesheet" href="shell/style/style.css"/>
+    <link rel="shortcut icon" href="images/favicon.png"/>
 
-    <script src="logic/vendor/jquery-2.1.0.min.js"></script>
-    <script src="logic/hprogress.js"></script>
+    <script src="logic/vendor/prefixfree.js"></script>
+    <script src="logic/vendor/jquery-2.1.3.min.js"></script>
+
+    <script src="logic/plugins/hProgress.js"></script>
+    <script src="logic/plugins/backStretch.js"></script>
+    <script src="logic/desktop.js"></script>
+
     <script src="logic/cursor.js"></script>
-    <script src="logic/vendor/handlebars.js"></script>
 
-    <script src="logic/backstretch.js"></script>
+    <script src="logic/modules/weather/simpleWeather.js"></script>
+    <script src="logic/modules/time/date-format.js"></script>
+    <script src="logic/modules/time/alarm-clock.js"></script>
+    <script src="logic/modules/time/clock.js"></script>
 
+    <!--/
     <script src="logic/gaea/background.js"></script>
     <script src="logic/gaea/dock.js"></script>
-
-    <script src="logic/time/date-format.js"></script>
-    <script src="logic/time/alarm-clock.js"></script>
-    <script src="logic/time/clock.js"></script>
-
-    <script src="logic/forecast/simpleWeather.js"></script>
+    /-->
 
     <script>
       /*
@@ -102,13 +105,13 @@
           location: "",
           unit: "f",
           success: function (weather) {
-            // html = "<h3>"+weather.city+", "+weather.region+" "+weather.country+"</h3>";
-            html = "<p>" + weather.temp + "&deg;" + weather.units.temp + "&nbsp;" + weather.currently + "</p>";
-            $("#weather").html(html);
+            // html = weather.city+", "+weather.region+" "+weather.country; // Malden, MA US
+            html = weather.temp + "&deg;" + weather.units.temp + "&nbsp;" + weather.currently; // 32°F Snow/Fog
+            $("#weatherDisplay").html(html);
           },
 
           error: function (error) {
-            $("#weather").html("<p>" + error + "</p>");
+            $("#weatherDisplay").html(error);
           }
         });
       });
@@ -123,13 +126,55 @@
     /-->
   </head>
 
-  <!--/	LET'S BEGIN /-->
 
-  <!--/ <body unselectable="on"> /-->
-  <body>
-    <div id="hikari-container" class="hikari-container">
+
+  <body id="system__base" class="system__base">
+    <nav class="system__menu menu-effect-9" id="menu-9">
+      <h2 class="system__menu__header">System</h2>
+
+      <ul>
+        <li><a class="system__menu__item chipfolder" href="">Chip Folder</a></li>
+        <li><a class="system__menu__item subchips" href="">SubChips</a></li>
+        <li><a class="system__menu__item library" href="">Library</a></li>
+        <li><a class="system__menu__item netnavi" href="">NetNavi</a></li>
+        <li><a class="system__menu__item email" href="">E-mail</a></li>
+        <li><a class="system__menu__item keyitems" href="">Key Items</a></li>
+        <li><a class="system__menu__item comms" href="">Comms</a></li>
+        <li><a class="system__menu__item save" href="">Save</a></li>
+
+        <!--/
+        <li><a class="icon icon-data" href="#">Data Management</a></li>
+        <li><a class="icon icon-location" href="#">Location</a></li>
+        <li><a class="icon icon-study" href="#">Study</a></li>
+        <li><a class="icon icon-photo" href="#">Collections</a></li>
+        <li><a class="icon icon-wallet" href="#">Credits</a></li>
+        /-->
+      </ul>
+    </nav>
+
+    <main class="system__wrapper">
+      <menu class="system__taskbar">
+        <li class="system__taskbar__group left">
+          <div class="system__taskbar__item menu--activate" id="systemMenu" data-effect="menu-effect-9">hikari</div>
+        </li>
+
+        <li class="system__taskbar__group right">
+          <!--/ <div class="system__taskbar__item" id="weatherDisplay"></div> /-->
+          <div class="system__taskbar__item" id="timeDisplay"></div>
+
+          <div class="system__taskbar__item" id="userDisplay">
+            <img src="images/netscape.gif"/>
+            <!--/ TODO: Create a generic avatar image /-->
+          </div>
+        </li>
+      </menu>
+
+      <section class="system__desktop">
+      </section>
+
+      <!--/
       <nav class="hikari-menu left">
-        <!--/ <h2>Access</h2> /-->
+        <h2>Access</h2>
 
         <ul>
           <li><a href="#" id="select-chip-folder">Chip Folder</a></li>
@@ -145,7 +190,7 @@
       </nav>
 
       <nav class="hikari-menu right">
-        <!--/ <h2>Notifications</h2> /-->
+        <h2>Notifications</h2>
 
         <ul>
           <li><a href="#">Chip Folder</a></li>
@@ -157,7 +202,7 @@
       </nav>
 
       <nav class="hikari-menu top">
-        <!--/ <h2>Running Apps</h2> /-->
+        <h2>Running Apps</h2>
 
         <ul>
           <li><a href="#">Chip Folder</a></li>
@@ -169,7 +214,7 @@
       </nav>
 
       <nav class="hikari-menu bottom">
-        <!--/ <h2>Admin Menu</h2> /-->
+        <h2>Admin Menu</h2>
 
         <ul>
           <li><a href="#" id="select-system-fonts">Fonts</a></li>
@@ -180,53 +225,75 @@
           <li><a href="#" id="select-system-sync">Sync</a></li>
           <li><a href="#" id="select-system-OS">System</a></li>
           <li><a href="#" id="select-system-userAccounts">User Accounts</a></li>
-          <!--/ <li><a href="#"></a></li> /-->
+          <li><a href="#">--spacer--</a></li>
           <li><a href="#" id="select-system-update">System Update</a></li>
         </ul>
       </nav>
+      /-->
 
+      <!--/
       <div class="hikari-pusher">
-        <div class="hikari-content"></div>
+        <div class="hikari-content">
+          <div class="desktop">
+            <svg class="desktop-icon" data-icon="folder" viewBox="0 0 32 32" style="fill:#50bebf">
+              <path d="M0 4 L0 28 L32 28 L32 8 L16 8 L12 4 z"></path>
+            </svg>
+          </div>
+        </div>
       </div>
-    </div>
+      /-->
+
+    </main>
 
     <!--/	logic /-->
+    <!--/
     <script src="logic/classie.js"></script>
     <script src="logic/hikariMenu.js"></script>
     <script src="logic/gaea.js"></script>
-    <script src="logic/online.js"></script>
-
     <script src="logic/gaea/gaea.js"></script>
-    <script src="logic/playSound.js"></script>
+    /-->
+
+    <script src="logic/online.js"></script>
+    <script src="logic/plugins/playSound.js"></script>
+    <script src="logic/plugins/menuEffect.js"></script>
+    <script src="logic/gaea.js"></script>
 
     <script>
       $(function () {
+
+        /*
         var
           $vW = $(window).width(),
           $vH = $(window).height(),
           wm = new Gaea.WindowManager();
 
         window.wm = wm; // For debugging reasons
+        */
 
-        var jqxhr = $.getJSON("account/githubProfile.json", function (data) {
-          console.log(data.username);
-          console.log(data._json.avatar_url);
+        $.getJSON("account/githubProfile.json", function (data) {
+          var
+            githubUsername = data.username,
+            githubAvatar = data._json.avatar_url;
 
-          var githubAvatar = data._json.avatar_url;
+          console.log("GitHub Username: " + githubUsername);
+          console.log("GitHub Avatar URL: " + githubAvatar);
 
-          $(".user-avatar img").attr("src", githubAvatar);
+          // $("#userDisplay img").attr("src", githubAvatar);
         });
 
         /*
-        var jqxhr = $.getJSON("account/facebookProfile.json", function (data) {
-          console.log(data.username);
-          // https://graph.facebook.com/USERNAME/picture?type=large
-          // console.log(data._json.avatar_url);
+        $.getJSON("account/facebookProfile.json", function (data) {
+          var
+            facebookUsername = data.username,
+            facebookAvatar = "https://graph.facebook.com/" + data.username + "/picture?type=large";
 
           // var facebookAvatar = data._json.avatar_url;
-          var facebookAvatar = "https://graph.facebook.com/" + data.username + "/picture?type=large";
+          // https://graph.facebook.com/USERNAME/picture?type=large
 
-          $(".user-avatar img").attr("src", facebookAvatar);
+          console.log("Facebook Username: " + facebookUsername);
+          console.log("Facebook Avatar URL: " + facebookAvatar);
+
+          $("#userDisplay img").attr("src", facebookAvatar);
         });
         */
 
@@ -237,8 +304,7 @@
       });
     </script>
 
-    <script src="logic/gaea/desktop.js"></script>
-    <!--//logic /-->
+    <!--/ <script src="logic/gaea/desktop.js"></script> /-->
   </body>
 
 </html>

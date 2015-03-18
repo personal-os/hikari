@@ -17,21 +17,6 @@ TL;DR: I had the idea that it would be nifty if my smartphone could dock into so
 
 
 
-### Coded Screenshots
-![Screenshot](http://hikar.io/images/in-progress/03-16-2014.png)
-<sup>03.16.14</sup>
-
-![Screenshot](http://hikar.io/images/in-progress/02-02-2014.png)
-<sup>02.02.14</sup>
-
-![Screenshot](http://hikar.io/images/in-progress/01-26-2014.png)
-<sup>01.26.14</sup>
-
-![Screenshot](http://hikar.io/images/in-progress/01-04-2014.png)
-<sup>01.04.14</sup>
-
-
-
 ### Installation and running hikari
 * Make sure you have [node](http://nodejs.org) installed!
 * Open oauth.copy.js and follow the instructions inside.
@@ -46,6 +31,28 @@ Take a look at [localhost:1343](http://localhost:1343)!
 
 ### License
 You can find the licenses for this and other included software in the `credits` folder. If it wasn't for open-source, hikari wouldn't exist. Thank you, Internet!
+
+
+
+### Coded Screenshots
+![Screenshot](http://hikar.io/images/in-progress/03-18-2015-i.png)
+![Screenshot](http://hikar.io/images/in-progress/03-18-2015-ii.png)
+<sup>03.18.15</sup>
+
+
+
+### Old Screenshots
+![Screenshot](http://hikar.io/images/in-progress/03-16-2014.png)
+<sup>03.16.14</sup>
+
+![Screenshot](http://hikar.io/images/in-progress/02-02-2014.png)
+<sup>02.02.14</sup>
+
+![Screenshot](http://hikar.io/images/in-progress/01-26-2014.png)
+<sup>01.26.14</sup>
+
+![Screenshot](http://hikar.io/images/in-progress/01-04-2014.png)
+<sup>01.04.14</sup>
 
 
 

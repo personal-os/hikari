@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+
+
+////////////////////////////////////////////////////////////////////////////////// SYSTEM.BASE/SCSS ///
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0; padding: 0;
+
+  cursor: none; // necessary?
+  outline: none;
+  text-rendering: optimizeLegibility !important;
+  text-shadow: 1px 1px 1px rgba(25, 25, 25, 0.004);
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr,
+acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub,
+sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer,
+header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0; padding: 0;
+
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  // cursor: none;
+}
+
+body {
+  line-height: 1;
+  user-select: none;
+}
+
+main {
+  width: 100vw; height: 100vh;
+  position: relative;
+}
+
+a,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+menu,
+ol,
+ul {
+  list-style-type: none;
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////// COLOURS ///
+
+$black:     rgba(25, 25, 25, 1);    // #191919;
+$white:     rgba(254, 254, 254, 1); // #fefefe;
+$dark-gray: rgba(61, 66, 72, 1);    // #3d4248;
+$teal:      rgba(80, 190, 191, 1);  // #50bebf; // should probably call this color, `$system`
+
+$red:       rgba(255, 49, 49, 1);   // #ff3131;
+$orange:    rgba(255, 136, 49, 1);  // #ff8831;
+$yellow:    rgba(255, 222, 0, 1);   // #ffde00;
+$green:     rgba(0, 255, 0, 1);     // #00ff00;
+$blue:      rgba(0, 96, 255, 1);    // #0060ff;
+$purple:    rgba(162, 0, 255, 1);   // #a200ff;
+
+
+
+// Helpers
+.bg-black   { background-color: $black; }
+.bg-white   { background-color: $white; }
+.bg-teal    { background-color: $teal; }
+.bg-red     { background-color: $red; }
+.bg-orange  { background-color: $orange; }
+.bg-yellow  { background-color: $yellow; }
+.bg-green   { background-color: $green; }
+.bg-blue    { background-color: $blue; }
+.bg-purple  { background-color: $purple; }
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////// CURSORS ///
+
+#cursor {
+  z-index: 2000;
+
+  path,
+  circle {
+    transition: all 0.2s ease;
+  }
+
+  path {
+    fill: $white;
+  }
+
+  circle {
+    fill: $black;
+  }
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////////////// HELPER CLASSES ///
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}

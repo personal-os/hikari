@@ -1,0 +1,12 @@
+#hProgress {
+  pointer-events: none;
+
+  .bar {
+    width: 100%; height: 3px;
+    top: 50px; left: 0;
+
+    background-color: $teal;
+    position: fixed;
+    z-index: 1031;
+  }
+}
