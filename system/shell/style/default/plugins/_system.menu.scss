@@ -123,7 +123,15 @@ html,
 
   display: block;
   font-size: 1.5rem;
+  padding-top: 0.6rem;
   padding-left: 4rem;
+  padding-bottom: 1rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $black;
+    padding-left: 5rem;
+  }
 
   &:before {
     width: 3rem; height: 1.5rem;
@@ -132,10 +140,6 @@ html,
     display: inline-block;
     position: relative;
     top: 0.3rem;
-  }
-
-  &:not(last-of-type) {
-    margin-bottom: 2rem;
   }
 
   &.chipfolder:before,

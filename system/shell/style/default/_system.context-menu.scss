@@ -1,5 +1,36 @@
 ////////////////////////////////////////////////////////////////////////// SYSTEM.CONTEXT-MENU/SCSS ///
 
+.system__context-menu {
+  min-width: 160px; height: auto;
+
+  background-color: rgba($white, 0.9);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  position: absolute;
+
+  hr {
+    width: 100%; height: 2px;
+
+    background-color: rgba($dark-gray, 0.1);
+    border: none;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.system__context-menu__item {
+  color: rgba($dark-gray, 0.9);
+  font-size: 0.9rem;
+
+  &:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    display: block;
+  }
+}
+
+/*
 .context-menu-list {
   margin: 0; padding: 0;
 
@@ -53,3 +84,4 @@
   // background-color: $white;
   opacity: 1;
 }
+*/

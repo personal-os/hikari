@@ -45,57 +45,6 @@
     /-->
 
     <script>
-      /*
-      // title
-      function tb8_makeArray(n) {
-        this.length = n;
-        return this.length;
-      }
-
-      tb8_messages = new tb8_makeArray(1);
-      tb8_messages[0] = "hikari OS";
-      tb8_rptType = "finite";
-      tb8_rptNbr = 1;
-      tb8_speed = 50;
-      tb8_delay = 0;
-
-      var
-        tb8_counter = 1,
-        tb8_currMsg = 0,
-        tb8_tekst = "",
-        tb8_i = 0,
-        tb8_TID = null;
-
-      function tb8_pisi() {
-        tb8_tekst = tb8_tekst + tb8_messages[tb8_currMsg].substring(tb8_i, tb8_i + 1);
-        document.title = tb8_tekst;
-        tb8_sp = tb8_speed;
-        tb8_i++;
-
-        if (tb8_i == tb8_messages[tb8_currMsg].length) {
-          tb8_currMsg++;
-          tb8_i = 0;
-          tb8_tekst = "";
-          tb8_sp = tb8_delay;
-        }
-
-        if (tb8_currMsg == tb8_messages.length) {
-          if ((tb8_rptType == "finite") && (tb8_counter == tb8_rptNbr)) {
-            clearTimeout(tb8_TID);
-            return;
-          }
-
-          tb8_counter++;
-          tb8_currMsg = 0;
-        }
-
-        tb8_TID = setTimeout("tb8_pisi()", tb8_sp);
-      }
-
-      tb8_pisi();
-      // end title
-      */
-
       $(function () {
         hProgress.start();
 
@@ -231,23 +180,10 @@
       </nav>
       /-->
 
-      <!--/
-      <div class="hikari-pusher">
-        <div class="hikari-content">
-          <div class="desktop">
-            <svg class="desktop-icon" data-icon="folder" viewBox="0 0 32 32" style="fill:#50bebf">
-              <path d="M0 4 L0 28 L32 28 L32 8 L16 8 L12 4 z"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
-      /-->
-
     </main>
 
     <!--/	logic /-->
     <!--/
-    <script src="logic/classie.js"></script>
     <script src="logic/hikariMenu.js"></script>
     <script src="logic/gaea.js"></script>
     <script src="logic/gaea/gaea.js"></script>
@@ -256,6 +192,7 @@
     <script src="logic/online.js"></script>
     <script src="logic/plugins/playSound.js"></script>
     <script src="logic/plugins/menuEffect.js"></script>
+    <script src="logic/background.js"></script>
     <script src="logic/gaea.js"></script>
 
     <script>

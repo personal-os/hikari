@@ -1,3 +1,9 @@
+0.1.3 / 03.19.2015
+==================
+* created location-aware context menu
+
+
+
 0.1.2 / 03.18.2015
 ==================
 * updated dependecies, folder structure, and initiated a major rewrite
