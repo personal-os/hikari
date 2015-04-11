@@ -12,6 +12,7 @@ var FacebookStrategy = require("passport-facebook").Strategy;
 var GitHubStrategy = require("passport-github").Strategy;
 var path = require("path");
 var routes = require("routes");
+var sass = require("node-sass-middleware");
 var favicon = require("serve-favicon");
 
 var app = express();
@@ -20,6 +21,10 @@ var app = express();
 
 // OAuth keys and secrets
 eval(fs.readFileSync("./boot/oauth.js") + "");
+
+
+
+// Sass compilation
 
 
 

@@ -1,5 +1,81 @@
 /////////////////////////////////////////////////////////////////////////////// SYSTEM.WINDOWS/SCSS ///
 
+.window {
+  width: 550px; height: 250px;
+  top: 3rem; left: 3rem; //
+
+  background-color: $white;
+  overflow: auto;
+  position: absolute;
+
+  &.is-focused {
+    box-shadow: 0 0 10px 1px rgba($black, 0.3);
+  }
+}
+
+.window__header {
+  height: 25px;
+  overflow: hidden;
+}
+
+.window__controls,
+.window__title,
+.window__toggle {
+  float: left;
+}
+
+.window__controls {
+  height: 100%;
+  overflow: auto;
+}
+
+.window__title {
+  width: calc(100% - 100px); height: 100%;
+
+  background-color: aquamarine; //
+  font-size: 0.8rem;
+  line-height: 1.8;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.window__control {
+  width: 25px; height: 100%;
+  float: left;
+
+  &:first-child {
+    background-color: $red;
+  }
+
+  &:nth-child(2) {
+    background-color: $orange;
+  }
+
+  &:last-child {
+    background-color: $yellow;
+  }
+}
+
+.window__toggle {
+  width: 25px; height: 100%;
+  background-color: $green;
+}
+
+
+
+.window__sidebar,
+.window__content {
+  float: left;
+}
+
+.window__sidebar {
+  width: 180px; height: calc(100% - 20px);
+  background-color: $dark-gray;
+}
+
+
+
+/*
 .wm-space { z-index: inherit; } // Fixes z-index issues
 .wm-content { color: $black !important; }
 
@@ -249,6 +325,7 @@
 .wm-window.noresizable .wm-window-box header.wm-window-title button.wm-maximize,
 .wm-window.noresizable .wm-window-box header.wm-window-title button.wm-minimize,
 .wm-window.noresizable .wm-window-box button.wm-resize,.wm-window.closed { display: none; }
+*/
 
 /*
 @keyframes appear {
